@@ -1,0 +1,2490 @@
+[
+  {
+    "name": "AutoCAD",
+    "icon": "📐",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ACD/8658A469-1448-38DD-8981-8BED78BCCF9D/SFX/ACD_2027_english_us_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ACD/8658A469-1448-38DD-8981-8BED78BCCF9D/SFX/ACD_2027_english_us_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ACD/E55B46A2-B58D-3ABE-B345-8368D1AB33AA/SFX/ACD_2026_english_us_win_db_001_002.exe?authparam=1747187745_e5d87fc2e1b9820d620a95ca9d311aa3&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ACD/E55B46A2-B58D-3ABE-B345-8368D1AB33AA/SFX/ACD_2026_english_us_win_db_002_002.7z?authparam=1747187746_2ef133d67714f4a355498fc68c79c90e&ext=.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACD/99E57530-7CC1-31F4-89E9-24175C7690C2/SFX/AutoCAD_2025_English_Win_64bit_db_001_002.exe?authparam=1724310493_b72de663a1aae4f8c674e41ecb54a82a"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACD/99E57530-7CC1-31F4-89E9-24175C7690C2/SFX/AutoCAD_2025_English_Win_64bit_db_002_002.7z?authparam=1711877160_542926fd245cad939a1e4cba76eb6264"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/ACD/CC46AD7F-5075-3702-B2BF-CFCC5AB8468B/SFX/AutoCAD_2024_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1682821992_e5bd428c6a04cbb52744392a9cd5a669&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/ACD/CC46AD7F-5075-3702-B2BF-CFCC5AB8468B/SFX/AutoCAD_2024_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1682821992_9f2d65537a699ab92eab2790fac3eaa7&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/73A78CE1-E03A-3415-826E-91A699E39B17/SFX/AutoCAD_2023_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1672627950_0029f51b0dedd18a023052e4e9ec2255"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ACD/73A78CE1-E03A-3415-826E-91A699E39B17/SFX/AutoCAD_2023_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1672627950_d7ddd96bd5b445446edd9efd7b6a4a32"
+          }
+        ]
+      },
+      {
+        "v": "2023 Japanese",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/ACD/33807360-14CD-3CE0-89D4-EA4021D518CB/SFX/AutoCAD_2023_Japanese_Win_64bit_dlm_001_002.sfx.exe?authparam=1684553919_9756ce7d59d987fbf0484f44d9200bc2&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/ACD/33807360-14CD-3CE0-89D4-EA4021D518CB/SFX/AutoCAD_2023_Japanese_Win_64bit_dlm_002_002.sfx.exe?authparam=1684553919_c30a5b8412f0b619e685852f715d5900&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/ACD/1E7D4EF7-A28E-3D3E-BA3C-C6FAE4AAB2E0/SFX/AutoCAD_2022_English_Win_64bit_dlm.sfx.exe?authparam=1672627924_04c583057e5297a767364a200a405533"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/ACD/80A03A2D-8FA9-43FD-9B26-1604CAD1D9CF/SFX/AutoCAD_2021_English_Win_64bit_dlm.sfx.exe?authparam=1672627896_aaa4da2050eb3cc1d79d0c3b636c32f3"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ACD/A67710D5-98AE-4DD9-8EBE-2E12D3D0EA96/SFX/AutoCAD_2020_English_win_64bit_r1_dlm.sfx.exe?authparam=1672627864_7a3343e3a47e6dbbc3092033e4f5d7cb"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/ACD/22C837AA-0804-4C32-B5AF-B5A423960410/SFX/Autodesk_AutoCAD_2019_English_Win_64bit_dlm.sfx.exe?authparam=1672627840_268a5594db9684308c9f0c12ef1058a9"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/ACD/F424DCF4-DE2B-4968-BDF2-A1B535AC84BB/SFX/AutoCAD_2018_English_Win_64bit_r1_dlm_001_002.sfx.exe?authparam=1672627700_9bdbcec777495cbb52340b9c052e7b30"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/ACD/F424DCF4-DE2B-4968-BDF2-A1B535AC84BB/SFX/AutoCAD_2018_English_Win_64bit_r1_dlm_002_002.sfx.exe?authparam=1672627700_fc80e6d9e99c8dff5018b055498d1c14"
+          }
+        ]
+      },
+      {
+        "v": "2017",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NET17SWDLD/2017/ACD/4D616AF7-9F79-442D-A5F6-EEC7F35EAD02/SFX/AutoCAD_2017_English_Win_64bit_r1_dlm_001_002.sfx.exe?authparam=1703040537_23e9079a3999c359c30732b666c9b334&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NET17SWDLD/2017/ACD/4D616AF7-9F79-442D-A5F6-EEC7F35EAD02/SFX/AutoCAD_2017_English_Win_64bit_r1_dlm_002_002.sfx.exe?authparam=1703040537_1ef8f41c1fb0b5a4d1925f73c65cd54e&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2016",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NET16SWDLD/2016/ACD/DLM/AutoCAD_2016_English_Win_64bit_r1_dlm.sfx.exe?authparam=1703920631_8579a38e747aad391d2b8f51b758f6e2&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2015",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/SWDLDNET4/2015/ACD/DLM/AutoCAD_2015_English_Win_64bit_R1_dlm.sfx.exe?authparam=1694144538_63cea9be320075f7eca30026e5cc877b&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD LT",
+    "icon": "📏",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ACDLT/16D82284-5250-31A0-8CC0-08AD80F42024/SFX/ACDLT_2027_english_us_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ACDLT/16D82284-5250-31A0-8CC0-08AD80F42024/SFX/ACDLT_2027_english_us_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ACDLT/09E544DA-5EFC-3B5B-9E50-689C464B492B/SFX/ACDLT_2026_english_us_win_db_001_002.exe?authparam=1746935184_8b0bda6cb250eb95f8bc13098d0e3e23&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ACDLT/09E544DA-5EFC-3B5B-9E50-689C464B492B/SFX/ACDLT_2026_english_us_win_db_002_002.7z?authparam=1746935184_b33a6144b7d1118d92b64b38e9594622&ext=.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/5F84131A-A029-32CD-ADF6-66AC3C051E93/SFX/AutoCAD_LT_2025_English_Win_64bit_db_001_002.exe?authparam=1724310779_d10e7bd05aa3a99c11bbd2d62c3ba150"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACDLT/5F84131A-A029-32CD-ADF6-66AC3C051E93/SFX/AutoCAD_LT_2025_English_Win_64bit_db_002_002.7z?authparam=1713839712_a4ede3aacba0bcc46192c057bb13f1e1"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/ACDLT/4558A64D-DFA2-3773-BF42-92414FF3F3DF/SFX/AutoCAD_LT_2024_English_Win_64bit_dlm.sfx.exe?authparam=1682822092_0359423b4a46b7d1a02c0208d554e897&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/C8DC0A93-1BFB-3C0D-B3B6-1BD06D06CCC2/SFX/AutoCAD_LT_2023_English_Win_64bit_dlm.sfx.exe?authparam=1672628159_6a044f6c340ab71cc76ac6660306b776"
+          }
+        ]
+      },
+      {
+        "v": "2023 Japanese",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/ACDLT/4321A7C7-5F17-3A3C-9D67-8DB35B6AD99E/SFX/AutoCAD_LT_2023_Japanese_Win_64bit_dlm.sfx.exe?authparam=1684553703_28336f00ecedf71627476fbd2096de00&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/ACDLT/3E4FF57B-0533-3C99-A29F-C9E2838E11E5/SFX/AutoCAD_LT_2022_English_Win_64bit_dlm.sfx.exe?authparam=1672628183_c49e2a6516a37dd582b64a77bc1edadf"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/ACDLT/B1A1D73D-D894-441D-803D-BFFCF11A1340/SFX/AutoCAD_LT_2021_SWL_English_Win_64bit_dlm.sfx.exe?authparam=1672631306_a2138fb9f57edea388eedfa6be838d73"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ACDLT/1CA9F9A3-227C-4F59-81A4-BF05CC291F66/SFX/AutoCAD_LT_2020_English_win_64bit_r1_dlm.sfx.exe?authparam=1672631362_9bd3bf8fe9f7d8fb2dc609de8fe1646e"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/ACDLT/9541CCC0-8FC2-45BC-BB39-555CFC4B70EE/SFX/AutoCAD_LT_2019_SWL_English_Win_64bit_dlm.sfx.exe?authparam=1672631410_1123d558cfea89f99617e8a5106315b0"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/ACDLT/98262C1D-3CA8-47DA-9518-0CAD26C11828/SFX/AutoCAD_LT_2018_English_Win_64bit_r1_dlm.sfx.exe?authparam=1672631446_1b139147d6be532ade505357c121487f"
+          }
+        ]
+      },
+      {
+        "v": "2016",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NET16SWDLD/2016/ACDLT/DLM/AutoCAD_LT_2016_SWL_English_Win_64bit_dlm.sfx.exe?authparam=1659238983_626fb38ea8600b5ae043c94a7574dea4&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2015",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/SWDLDNET4/2015/ACDLT/DLM/AutoCADLT_2015_SWL_English_Win_64bit_R1_dlm.sfx.exe?authparam=1687938330_a9454c77315c58355f252e40f915e8ca&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD Architecture",
+    "icon": "🏛️",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ARCHDESK/BA26935C-5765-3051-BB1F-7B9347B1B224/SFX/ARCHDESK_2027_english_us_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ARCHDESK/BA26935C-5765-3051-BB1F-7B9347B1B224/SFX/ARCHDESK_2027_english_us_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ARCHDESK/292410F5-1F25-3C2A-BFBF-692AF1D02C85/SFX/AutoCAD_Architecture_2026_English_Win_64bit_db_001_002.exe?authparam=1746952717_1eee82e199edfebba11eb25d9608ec8e"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ARCHDESK/292410F5-1F25-3C2A-BFBF-692AF1D02C85/SFX/AutoCAD_Architecture_2026_English_Win_64bit_db_002_002.7z?authparam=1746952717_6a23bc483441559d5760c9757c0e80db"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ARCHDESK/A3738E04-E486-3978-9328-1450517AFF95/SFX/AutoCAD_Architecture_2025_English_Win_64bit_dlm_001_002.exe?authparam=1724311257_301191784cbb0655f284799e7160d936"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ARCHDESK/A3738E04-E486-3978-9328-1450517AFF95/SFX/AutoCAD_Architecture_2025_English_Win_64bit_dlm_002_002.7z?authparam=1713841135_903a9fde4646607d10865548cf0ca591"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/ARCHDESK/EDC5A170-AC34-34B1-854F-9B3831A6CBDC/SFX/AutoCAD_Architecture_2024_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690100169_38be59278d27bc5081bb62c67f2d9500"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/ARCHDESK/EDC5A170-AC34-34B1-854F-9B3831A6CBDC/SFX/AutoCAD_Architecture_2024_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690100169_d30a9e2916f190f52c933807ecd859db"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ARCHDESK/67A71D0C-9DFE-346E-AEEF-39D925050F45/SFX/AutoCAD_Architecture_2023_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690100264_c41dc4d743933c67293b6376b3a0c157"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ARCHDESK/67A71D0C-9DFE-346E-AEEF-39D925050F45/SFX/AutoCAD_Architecture_2023_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690100264_30d9ab3681bd5c01d549fa69aa2955db"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/ARCHDESK/6CE4BFB0-EB1D-3003-9B66-9D421F8291D8/SFX/AutoCAD_Architecture_2022_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690100312_555fead944626534ed1db997913a81d6"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/ARCHDESK/6CE4BFB0-EB1D-3003-9B66-9D421F8291D8/SFX/AutoCAD_Architecture_2022_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690100312_c992f6ed61f6938949fe355b300dcdac"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/ARCHDESK/C89051B8-3CB3-4C0C-AAEF-9A83DD9EB1C9/SFX/AutoCAD_Architecture_2021_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690100450_700918f49c9965a53c7ea022ca5b7163"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/ARCHDESK/C89051B8-3CB3-4C0C-AAEF-9A83DD9EB1C9/SFX/AutoCAD_Architecture_2021_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690100450_5c05e8846852cefa0fd6c3ff31a14c25"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ARCHDESK/6B7B4098-B868-4BC5-BAE9-55023FD693EB/SFX/AutoCAD_Architecture_2020_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690100513_15d9feeaf2bca16b5beb7914ab0c691d"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ARCHDESK/6B7B4098-B868-4BC5-BAE9-55023FD693EB/SFX/AutoCAD_Architecture_2020_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690100513_a251cb421b9c818ca8f7636e60eca70a"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/ARCHDESK/68DACC26-C351-4F3F-BDE0-AE589D4CD35B/SFX/AutoCAD_Architecture_2019_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690100556_1b4fd0e47f6969ccd7bdffa5b41d8cad"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/ARCHDESK/68DACC26-C351-4F3F-BDE0-AE589D4CD35B/SFX/AutoCAD_Architecture_2019_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690100556_978676cd94352805714e85172dc32a0f"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/ARCHDESK/98F6C577-BED3-4DA5-8C35-D7166769B09B/SFX/AutoCAD_Architecture_2018_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1713662584_9768b3af2e03e3f3ef043275e0444af6&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/ARCHDESK/98F6C577-BED3-4DA5-8C35-D7166769B09B/SFX/AutoCAD_Architecture_2018_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1713662584_b7f444de1bb4299e3cb759badb89d040&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD Electrical",
+    "icon": "⚡",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ACAD_E/D6FB926C-C05D-3F57-B41D-7B44FE73A72B/SFX/ACAD_E_2027_english_us_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ACAD_E/D6FB926C-C05D-3F57-B41D-7B44FE73A72B/SFX/ACAD_E_2027_english_us_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ACAD_E/3AFA34EE-442B-3D97-A28B-ED2C805E76E2/SFX/AutoCAD_Electrical_2026_English_Win_64bit_db_001_002.exe?authparam=1746950901_90ebd8f8e429896102b520e000021a6c"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ACAD_E/3AFA34EE-442B-3D97-A28B-ED2C805E76E2/SFX/AutoCAD_Electrical_2026_English_Win_64bit_db_002_002.7z?authparam=1746950901_bf2c0632f568083411fcabffc44bb637"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACAD_E/97922D96-846A-3B99-AEA5-9557ADF77F8D/SFX/AutoCAD_Electrical_2025_English_Win_64bit_db_001_002.exe?authparam=1724311137_fcf762ba71fb55cf9e48f3f62064fd3e"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ACAD_E/97922D96-846A-3B99-AEA5-9557ADF77F8D/SFX/AutoCAD_Electrical_2025_English_Win_64bit_db_002_002.7z?authparam=1713839914_30444a99b44fb2bdeed0b16e8be462f9"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/ACAD_E/EAA5522C-B134-3536-B63E-89DDCE11927D/SFX/AutoCAD_Electrical_2024_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690354506_1233ef8081661a95c4239f13466f7c7b&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/ACAD_E/EAA5522C-B134-3536-B63E-89DDCE11927D/SFX/AutoCAD_Electrical_2024_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690354506_94cad8aa44522b6925451d0a55027c69&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ACAD_E/DE663064-1A7C-3129-832C-6D36950C3559/SFX/AutoCAD_Electrical_2023_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690354467_40782a9147227fd031f7833b06034c47&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ACAD_E/DE663064-1A7C-3129-832C-6D36950C3559/SFX/AutoCAD_Electrical_2023_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690354467_91ae60dfe479f4b4ca41fce988014db0&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/ACAD_E/EE9C996C-F54A-349E-A913-64C473E5F053/SFX/AutoCAD_Electrical_2022_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690098996_8e4219528c37b5925bc655fe468ebec6"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/ACAD_E/EE9C996C-F54A-349E-A913-64C473E5F053/SFX/AutoCAD_Electrical_2022_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098996_bdabbe1e3ac0f80e08338484947eee3f"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/ACAD_E/4173D1C4-03FD-45DA-9619-0E0DB53E3B92/SFX/AutoCAD_Electrical_2021_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690099056_b846769b07477dbfef7109c47f56aa27"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/ACAD_E/4173D1C4-03FD-45DA-9619-0E0DB53E3B92/SFX/AutoCAD_Electrical_2021_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690099056_af68847c6b9567f67f96bb27cf1eccd3"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ACAD_E/E6E5783E-9B32-4275-AC81-05FEFB14EA74/SFX/AutoCAD_Electrical_2020_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690099106_420ba78e9055d4293895ef5748f1a7a8"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ACAD_E/E6E5783E-9B32-4275-AC81-05FEFB14EA74/SFX/AutoCAD_Electrical_2020_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690099106_037cf6160cfd1eb74354795b75657a68"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/ACAD_E/BC02A24C-34A0-4FC1-87F9-482D00978BDF/SFX/AutoCAD_Electrical_2019_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690099168_4dbb520efe3cbc828d6a506bbd3d1d3d"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/ACAD_E/BC02A24C-34A0-4FC1-87F9-482D00978BDF/SFX/AutoCAD_Electrical_2019_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690099168_a4c2c2e65a124da266d9f63fd5211416"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD Mechanical",
+    "icon": "🛠️",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/AMECH_PP/FF26EA8C-590D-3922-A00E-C3C56ED6E0CA/SFX/AMECH_PP_2027_english_us_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/AMECH_PP/FF26EA8C-590D-3922-A00E-C3C56ED6E0CA/SFX/AMECH_PP_2027_english_us_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/AMECH_PP/E6DF4833-FF97-3CC9-8BC0-34D9D04A85F7/SFX/AutoCAD_Mechanical_2026_English_Win_64bit_db_001_002.exe?authparam=1746951204_9d5921c4ea569d30f93bc4e8184ae800"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/AMECH_PP/E6DF4833-FF97-3CC9-8BC0-34D9D04A85F7/SFX/AutoCAD_Mechanical_2026_English_Win_64bit_db_002_002.7z?authparam=1746951204_89595dfd05c3fdbef6949e1b5ea3c6df"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/AMECH_PP/A8B40D69-D5C5-3B8B-B7AE-03C9580FB922/SFX/AutoCAD_Mechanical_2025_English_Win_64bit_db_001_002.exe?authparam=1724311189_6df5a68827e720fc02c0da1cc7dc27fd"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/AMECH_PP/A8B40D69-D5C5-3B8B-B7AE-03C9580FB922/SFX/AutoCAD_Mechanical_2025_English_Win_64bit_db_002_002.7z?authparam=1719454331_b0695b73ffaeb206e8b9393fa9d40259"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/AMECH_PP/00F59E39-BF7F-3230-B999-4E17C790A564/SFX/AutoCAD_Mechanical_2024_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690354230_ba15bf5254deb1e50c36fb868911eb4d&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/AMECH_PP/00F59E39-BF7F-3230-B999-4E17C790A564/SFX/AutoCAD_Mechanical_2024_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690354230_170af5e0cbb08a2791dd745dad9e7113&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/AMECH_PP/3577A1C0-9FF4-3E32-85C4-196755854976/SFX/AutoCAD_Mechanical_2023_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690354050_796e690079e8ea989f9de9f4f82e2367&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/AMECH_PP/3577A1C0-9FF4-3E32-85C4-196755854976/SFX/AutoCAD_Mechanical_2023_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690354050_c5624cd700da18b5df48c5a6e5fb9600&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/AMECH_PP/82C320DD-8EC4-3382-A19F-1AB2019EEFCE/SFX/AutoCAD_Mechanical_2022_English_Win_64bit_dlm.sfx.exe?authparam=1690099228_23e74c07421114364a88f2446b4e2dda"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/AMECH_PP/45741F88-45E9-4900-8207-06175D30A28B/SFX/AutoCAD_Mechanical_2021_English_Win_64bit_dlm.sfx.exe?authparam=1690099257_fb0bc8083a7300792e24c2d54394e3a0"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/AMECH_PP/0AF6D34F-9E17-4473-B268-A4E11BC0A93F/SFX/AutoCAD_Mechanical_2020_English_Win_64bit_dlm.sfx.exe?authparam=1690099279_ce4c35e8babf8e8493bf4aa88d319c34"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/AMECH_PP/42B8C565-5175-4EC7-B21B-D5142752E5A5/SFX/AutoCAD_Mechanical_2019_English_Win_64bit_dlm.sfx.exe?authparam=1690099311_e59bc4bc5116415c1e39ca2a95b235e5"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/AMECH_PP/555A6FD2-89CE-4870-957E-B2D70C59B863/SFX/AutoCAD_Mechanical_2018_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1703083680_c42d1657ba049aa54e298e74716158ef&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/AMECH_PP/555A6FD2-89CE-4870-957E-B2D70C59B863/SFX/AutoCAD_Mechanical_2018_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1703083680_c9e38f743073ad44d30542872a5890c8&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD Plant 3D",
+    "icon": "🏭",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/PLNT3D/9FE6B634-9AC5-3D1C-BC6F-EC2276373783/SFX/PLNT3D_2027_english_us_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/PLNT3D/9FE6B634-9AC5-3D1C-BC6F-EC2276373783/SFX/PLNT3D_2027_english_us_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/PLNT3D/08CDB1E7-053A-3833-8270-63FF2B4B5439/SFX/AutoCAD_Plant_3D_2026_English_Win_64bit_db_001_002.exe?authparam=1746952514_bacb666e3a8b3a28b6d6cc172a5de5e3"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/PLNT3D/08CDB1E7-053A-3833-8270-63FF2B4B5439/SFX/AutoCAD_Plant_3D_2026_English_Win_64bit_db_002_002.7z?authparam=1746952514_f255b40d3b2199182eaa22ccc3c3c0c5"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/PLNT3D/ED4540C1-F38F-3089-B114-1C0DA805F26D/SFX/AutoCAD_Plant_3D_2025_English_Win_64bit_db_001_002.exe?authparam=1724311314_212ee15e856109224457830d5fae178a"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/PLNT3D/ED4540C1-F38F-3089-B114-1C0DA805F26D/SFX/AutoCAD_Plant_3D_2025_English_Win_64bit_db_002_002.7z?authparam=1713841092_16bcab0bb50df942cd8992a462b4afb0"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/PLNT3D/32A02E2D-5775-3B4F-8D8B-DAA673593A27/SFX/AutoCAD_Plant_3D_2024_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1691718181_8bd29d2a292dbef8ce5d524de8850b22&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/PLNT3D/32A02E2D-5775-3B4F-8D8B-DAA673593A27/SFX/AutoCAD_Plant_3D_2024_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1691718181_80921a25b06e85a892e6fa2c786df91e&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/PLNT3D/A6C367FB-AF9E-3ACF-BC0C-E23837C4D402/SFX/AutoCAD_Plant_3D_2023_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690098756_02a6c3d28cd1015b4b3c971cf35b1010"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/PLNT3D/A6C367FB-AF9E-3ACF-BC0C-E23837C4D402/SFX/AutoCAD_Plant_3D_2023_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098756_e653254365b69b0bc2696e57b4432e4f"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/PLNT3D/6D0F56E4-48FB-3AC2-AD42-19667DAD54B7/SFX/AutoCAD_Plant_3D_2022_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690098814_56f6fc66dae75357bf2770761b6fc657"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/PLNT3D/6D0F56E4-48FB-3AC2-AD42-19667DAD54B7/SFX/AutoCAD_Plant_3D_2022_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098814_bb1e34a01db3aa7b8615f332107cfe6e"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/PLNT3D/D73C01E5-FA69-4D91-92B9-9BA7A8B4EA68/SFX/AutoCAD_Plant_3D_2021_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1691717878_f9aa19a1b5b844c88950de582c75d19f&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/PLNT3D/D73C01E5-FA69-4D91-92B9-9BA7A8B4EA68/SFX/AutoCAD_Plant_3D_2021_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1691717879_c2f3fdf57371ce400ba0b615d0c62902&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/PLNT3D/1896C40C-5BF8-4FB2-92D2-1F5D732E992A/SFX/AutoCAD_Plant_3D_2020_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690098869_ab36987520fdf3c7bb6e8447a01388b9"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/PLNT3D/1896C40C-5BF8-4FB2-92D2-1F5D732E992A/SFX/AutoCAD_Plant_3D_2020_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098869_dca4f1d90c7b751836c853cb5ad3ce42"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/PLNT3D/C33B2423-14F9-46AE-80CC-353E799129E4/SFX/AutoCAD_Plant_3D_2019_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690098921_ccdc1b55d852be55f32ded97bf295bbc"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/PLNT3D/C33B2423-14F9-46AE-80CC-353E799129E4/SFX/AutoCAD_Plant_3D_2019_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098921_be6b0548af58b9687391a13a2923b09b"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DWG TrueView",
+    "icon": "👁️",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/PLC0000037/045D668C-3014-35D6-A2BE-4C82327A8A3E/SFX/TrueView_2027_english_us_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/PLC0000037/045D668C-3014-35D6-A2BE-4C82327A8A3E/SFX/TrueView_2027_english_us_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Create Installer",
+            "url": "https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage1266970476276415.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2023_English_WIN64.exe%22&"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Create Installer",
+            "url": "https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage1266811043473759.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2022_English_WIN64.exe%22&"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Revit",
+    "icon": "🏢",
+    "group": "Revit & BIM",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RVT/8CA3AC7D-FAD3-34CE-B228-4EE1B50E2D3E/SFX/RVT_2027_NA_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RVT/8CA3AC7D-FAD3-34CE-B228-4EE1B50E2D3E/SFX/RVT_2027_NA_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/RVT/8986CA21-EA9C-32F3-A1DB-C34BD2BDA7A5/SFX/RVT_2026_NA_win_db_001_002.exe?authparam=1747189482_f580a721388ff94ddc59a06032b96859&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/RVT/8986CA21-EA9C-32F3-A1DB-C34BD2BDA7A5/SFX/RVT_2026_NA_win_db_002_002.7z?authparam=1747189482_c307fbd0dd3c7f8a6550b5947061141b&ext=.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/RVT/686CE2A3-7C33-3AD5-806A-75A6E648117F/SFX/Revit_2025_English_Win_64bit_dlm_001_002.exe?authparam=1724310834_b76c696278cee115f78a4034a2c4e2bc"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/RVT/686CE2A3-7C33-3AD5-806A-75A6E648117F/SFX/Revit_2025_English_Win_64bit_dlm_002_002.7z?authparam=1713839557_6fa1620df91236864294d16b68d2cc17"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVT/E7F68AA6-4954-3ACE-8543-D2FCC9B0A356/SFX/Revit_2024_G1_Win_64bit_dlm_001_005.sfx.exe?authparam=1682822663_496e62ac841013a911dd84131046788a&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVT/E7F68AA6-4954-3ACE-8543-D2FCC9B0A356/SFX/Revit_2024_G1_Win_64bit_dlm_002_005.sfx.exe?authparam=1682822663_a7e0d448d6422f25757b32a593aa2276&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVT/E7F68AA6-4954-3ACE-8543-D2FCC9B0A356/SFX/Revit_2024_G1_Win_64bit_dlm_003_005.sfx.exe?authparam=1682822663_7ac973ae8d2f434c062d4386eec3bc24&ext=.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVT/E7F68AA6-4954-3ACE-8543-D2FCC9B0A356/SFX/Revit_2024_G1_Win_64bit_dlm_004_005.sfx.exe?authparam=1682822664_6336bacf722a6436116163117b9cd715&ext=.exe"
+          },
+          {
+            "label": "Part 5",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVT/E7F68AA6-4954-3ACE-8543-D2FCC9B0A356/SFX/Revit_2024_G1_Win_64bit_dlm_005_005.sfx.exe?authparam=1682822664_56e767772f6d8513b06cb033da736db2&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/RVT/5A37FF7C-EA37-3FE6-8EF6-7382D03DEE46/SFX/Revit_2023_G1_Win_64bit_dlm_001_005.sfx.exe?authparam=1675412641_bae7d5d49334f1dedeea05bae58cf9f3"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/RVT/5A37FF7C-EA37-3FE6-8EF6-7382D03DEE46/SFX/Revit_2023_G1_Win_64bit_dlm_002_005.sfx.exe?authparam=1675412641_f2df5126c812d817ad2b42eabd447e1b"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/RVT/5A37FF7C-EA37-3FE6-8EF6-7382D03DEE46/SFX/Revit_2023_G1_Win_64bit_dlm_003_005.sfx.exe?authparam=1675412641_8aa6b33f21385393caccbeca87ccbb7d"
+          },
+          {
+            "label": "Part 4",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/RVT/5A37FF7C-EA37-3FE6-8EF6-7382D03DEE46/SFX/Revit_2023_G1_Win_64bit_dlm_004_005.sfx.exe?authparam=1675412641_f8454c62adb339f69ccb143b2a068239"
+          },
+          {
+            "label": "Part 5",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/RVT/5A37FF7C-EA37-3FE6-8EF6-7382D03DEE46/SFX/Revit_2023_G1_Win_64bit_dlm_005_005.sfx.exe?authparam=1675412641_c9741070a451652de2011aad794bc4aa"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/RVT/03BD6A4A-C858-3AD2-9353-DF2974C9918B/SFX/Revit_2022_G1_Win_64bit_dlm_001_005.sfx.exe?authparam=1675412511_b6a893d8539928ae9eb9ed07d98d9323"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/RVT/03BD6A4A-C858-3AD2-9353-DF2974C9918B/SFX/Revit_2022_G1_Win_64bit_dlm_002_005.sfx.exe?authparam=1675412511_65a6cbe08682532d9e94112f34275d3b"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/RVT/03BD6A4A-C858-3AD2-9353-DF2974C9918B/SFX/Revit_2022_G1_Win_64bit_dlm_003_005.sfx.exe?authparam=1675412511_517b49a9077e96176359e1c5a33f170b"
+          },
+          {
+            "label": "Part 4",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/RVT/03BD6A4A-C858-3AD2-9353-DF2974C9918B/SFX/Revit_2022_G1_Win_64bit_dlm_004_005.sfx.exe?authparam=1675412511_7f1cc3695277b519ec3ef5ffa6abc259"
+          },
+          {
+            "label": "Part 5",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/RVT/03BD6A4A-C858-3AD2-9353-DF2974C9918B/SFX/Revit_2022_G1_Win_64bit_dlm_005_005.sfx.exe?authparam=1675412511_b21b75798f90bae748c3d1f9a751271a"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/RVT/5A103FCF-A48C-4B74-A1FB-3B46BAE71CE5/SFX/Revit_2021_G1_Win_64bit_dlm_001_006.sfx.exe?authparam=1675412241_6690f1ff3eec6aaf87df637e2965028f"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/RVT/5A103FCF-A48C-4B74-A1FB-3B46BAE71CE5/SFX/Revit_2021_G1_Win_64bit_dlm_002_006.sfx.exe?authparam=1675412241_c14807f76641d46bb4322c8d93b526f6"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/RVT/5A103FCF-A48C-4B74-A1FB-3B46BAE71CE5/SFX/Revit_2021_G1_Win_64bit_dlm_003_006.sfx.exe?authparam=1675412241_23c2ff86db75092693c8697d8811ac0e"
+          },
+          {
+            "label": "Part 4",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/RVT/5A103FCF-A48C-4B74-A1FB-3B46BAE71CE5/SFX/Revit_2021_G1_Win_64bit_dlm_004_006.sfx.exe?authparam=1675412241_6830faa9340b6ca1223c6c097f1af275"
+          },
+          {
+            "label": "Part 5",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/RVT/5A103FCF-A48C-4B74-A1FB-3B46BAE71CE5/SFX/Revit_2021_G1_Win_64bit_dlm_005_006.sfx.exe?authparam=1675412241_5f87c3edd90774a4e88be509a28c8476"
+          },
+          {
+            "label": "Part 6",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/RVT/5A103FCF-A48C-4B74-A1FB-3B46BAE71CE5/SFX/Revit_2021_G1_Win_64bit_dlm_006_006.sfx.exe?authparam=1675412241_23abf289b6f802dd2189128f0acff4e0"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/RVT/45AD2BD9-8738-40BB-A298-9D6E03CDD6CD/SFX/Revit_2020_G1_Win_64bit_r3_dlm_001_007.sfx.exe?authparam=1675409805_a7dc75e943d8c8d729769b7842bff4bc"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/RVT/45AD2BD9-8738-40BB-A298-9D6E03CDD6CD/SFX/Revit_2020_G1_Win_64bit_r3_dlm_002_007.sfx.exe?authparam=1675409805_4d32be6c4021aaa288c20222d0d96e9f"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/RVT/45AD2BD9-8738-40BB-A298-9D6E03CDD6CD/SFX/Revit_2020_G1_Win_64bit_r3_dlm_003_007.sfx.exe?authparam=1675409805_c7a1f9c48b27918952d44447f969a9a3"
+          },
+          {
+            "label": "Part 4",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/RVT/45AD2BD9-8738-40BB-A298-9D6E03CDD6CD/SFX/Revit_2020_G1_Win_64bit_r3_dlm_004_007.sfx.exe?authparam=1675409805_c82130144d4e6672ef7c3e142c564ac0"
+          },
+          {
+            "label": "Part 5",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/RVT/45AD2BD9-8738-40BB-A298-9D6E03CDD6CD/SFX/Revit_2020_G1_Win_64bit_r3_dlm_005_007.sfx.exe?authparam=1675409805_6be7b1c5373c7340638035ce32782c5c"
+          },
+          {
+            "label": "Part 6",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/RVT/45AD2BD9-8738-40BB-A298-9D6E03CDD6CD/SFX/Revit_2020_G1_Win_64bit_r3_dlm_006_007.sfx.exe?authparam=1675409805_014cc34fc3e3355372095ca163157140"
+          },
+          {
+            "label": "Part 7",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/RVT/45AD2BD9-8738-40BB-A298-9D6E03CDD6CD/SFX/Revit_2020_G1_Win_64bit_r3_dlm_007_007.sfx.exe?authparam=1675409805_1314c9752f74de2eb16817f975fd8b69"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/RVT/8B325A05-E1B5-47F3-B009-F417B08869CA/SFX/Revit_2019_G1_Win_64bit_R1_dlm_001_003.sfx.exe?authparam=1675408175_abd91efe89675e98317bed721bec8321"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/RVT/8B325A05-E1B5-47F3-B009-F417B08869CA/SFX/Revit_2019_G1_Win_64bit_R1_dlm_002_003.sfx.exe?authparam=1675408175_cb3c8ea7f500f0a1b5b0832ab3ce6166"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/RVT/8B325A05-E1B5-47F3-B009-F417B08869CA/SFX/Revit_2019_G1_Win_64bit_R1_dlm_003_003.sfx.exe?authparam=1675408175_6f8549ded33dec5ae1ca93705af90398"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Revit LT",
+    "icon": "🏠",
+    "group": "Revit & BIM",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RVTLT/94BF3D5E-F8D4-30BB-B5D7-B1C6FCD04204/SFX/RVTLT_2027_NA_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RVTLT/94BF3D5E-F8D4-30BB-B5D7-B1C6FCD04204/SFX/RVTLT_2027_NA_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/RVTLT/1C329069-94F8-36BA-B5C2-8328925E9347/SFX/RVTLT_2026_NA_win_db_001_002.exe?authparam=1746952323_0529433f945f258c92744c42c553d487"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/RVTLT/1C329069-94F8-36BA-B5C2-8328925E9347/SFX/RVTLT_2026_NA_win_db_002_002.7z?authparam=1746952323_4da19371c2f5732005b0c822118284d7"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/RVTLT/0A79D52A-BF9F-3650-BB68-74B632AB815E/SFX/RevitLT_2025_English_Win_64bit_dlm_001_002.exe?authparam=1724311000_6c30ff7d3cc9effedb85a6ed9325801a"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/RVTLT/0A79D52A-BF9F-3650-BB68-74B632AB815E/SFX/RevitLT_2025_English_Win_64bit_dlm_002_002.7z?authparam=1713841461_a314ec40a81dd9c3ae3771a0b331012c"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVTLT/E1B90D22-904A-35F3-A698-34A173D18ADF/SFX/RevitLT_2024_G1_Win_64bit_dlm_001_004.sfx.exe?authparam=1683797985_ee4a0696670a73cf80dc063b2d40935a&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVTLT/E1B90D22-904A-35F3-A698-34A173D18ADF/SFX/RevitLT_2024_G1_Win_64bit_dlm_002_004.sfx.exe?authparam=1683797986_e563d48470b21a9efbb86ac12f255f0a&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVTLT/E1B90D22-904A-35F3-A698-34A173D18ADF/SFX/RevitLT_2024_G1_Win_64bit_dlm_003_004.sfx.exe?authparam=1683797986_9b9c4fe7a59697a57d65a369099cfbf0&ext=.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/RVTLT/E1B90D22-904A-35F3-A698-34A173D18ADF/SFX/RevitLT_2024_G1_Win_64bit_dlm_004_004.sfx.exe?authparam=1683797986_cd777e35f10f6507722ac4e27aaa84f8&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/RVTLT/95354954-2739-3008-A6E4-CB7A968B612E/SFX/RevitLT_2023_G1_Win_64bit_dlm_001_003.sfx.exe?authparam=1683797914_3a1fd98403e15948d3e3701f14563cc1&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/RVTLT/95354954-2739-3008-A6E4-CB7A968B612E/SFX/RevitLT_2023_G1_Win_64bit_dlm_002_003.sfx.exe?authparam=1683797914_b735ed24e62b215ee3ae14f59da9b36b&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/RVTLT/95354954-2739-3008-A6E4-CB7A968B612E/SFX/RevitLT_2023_G1_Win_64bit_dlm_003_003.sfx.exe?authparam=1683797914_83e2798e6372e554847387abad36222e&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/RVTLT/78B46141-E345-3230-A38E-CC9F925C2859/SFX/RevitLT_2022_G1_Win_64bit_dlm_001_004.sfx.exe?authparam=1683798466_09ba782e0100726b0e6b5c01585a7fbc&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/RVTLT/78B46141-E345-3230-A38E-CC9F925C2859/SFX/RevitLT_2022_G1_Win_64bit_dlm_002_004.sfx.exe?authparam=1683798466_5bbed908f076bef222bbee79ee10c504&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/RVTLT/78B46141-E345-3230-A38E-CC9F925C2859/SFX/RevitLT_2022_G1_Win_64bit_dlm_003_004.sfx.exe?authparam=1683798466_447f351c6454c3f703d1955c47104741&ext=.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/RVTLT/78B46141-E345-3230-A38E-CC9F925C2859/SFX/RevitLT_2022_G1_Win_64bit_dlm_004_004.sfx.exe?authparam=1683798466_f2d5181c6166027fe1ac26ef8989c63a&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/RVTLT/F3235FF6-17F5-47EE-A906-41C699EE74AD/SFX/RevitLT_2021_r1_G1_Win_64bit_dlm_001_003.sfx.exe?authparam=1683798363_91ddd7723919f000c70aadea71a06ec4&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/RVTLT/F3235FF6-17F5-47EE-A906-41C699EE74AD/SFX/RevitLT_2021_r1_G1_Win_64bit_dlm_002_003.sfx.exe?authparam=1683798364_43a8b296efe4d727ee5cc37b7bb9fdc9&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/RVTLT/F3235FF6-17F5-47EE-A906-41C699EE74AD/SFX/RevitLT_2021_r1_G1_Win_64bit_dlm_003_003.sfx.exe?authparam=1683798364_df660560d9c1269304ea9ff784fd3717&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2020/RVTLT/2D1115AE-913F-4C43-9522-5B3DE1AC75D6/SFX/RevitLT_2020_G1_Win_64bit_r3_dlm_001_004.sfx.exe?authparam=1684464306_c86a43347df96726e435e296756e7ebb&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2020/RVTLT/2D1115AE-913F-4C43-9522-5B3DE1AC75D6/SFX/RevitLT_2020_G1_Win_64bit_r3_dlm_002_004.sfx.exe?authparam=1684464307_5949164fed4856f39aecdf9838ae24db&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2020/RVTLT/2D1115AE-913F-4C43-9522-5B3DE1AC75D6/SFX/RevitLT_2020_G1_Win_64bit_r3_dlm_003_004.sfx.exe?authparam=1684464307_98946cdeca910000731c9828bb97da03&ext=.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2020/RVTLT/2D1115AE-913F-4C43-9522-5B3DE1AC75D6/SFX/RevitLT_2020_G1_Win_64bit_r3_dlm_004_004.sfx.exe?authparam=1684464307_6fc51244c1abf2723bb2e282314515a7&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/RVTLT/25198313-0259-4A8B-A539-CBEAF66C3FC4/SFX/RevitLT_2019_G1_Win_64bit_Trial_dlm_001_004.sfx.exe?authparam=1684461883_aee439a1361c1c23dfb71fc1c5c10c88&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/RVTLT/25198313-0259-4A8B-A539-CBEAF66C3FC4/SFX/RevitLT_2019_G1_Win_64bit_Trial_dlm_002_004.sfx.exe?authparam=1684461884_815b7f359534e5e0e9acd7596b5c6736&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/RVTLT/25198313-0259-4A8B-A539-CBEAF66C3FC4/SFX/RevitLT_2019_G1_Win_64bit_Trial_dlm_003_004.sfx.exe?authparam=1684461884_badc0e4cb4d3b68fdde0c5925a95c5a4&ext=.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/RVTLT/25198313-0259-4A8B-A539-CBEAF66C3FC4/SFX/RevitLT_2019_G1_Win_64bit_Trial_dlm_004_004.sfx.exe?authparam=1684461884_9988d0b48cbcc0f85cc79e61a4d01f0f&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NET18SWDLD/2018/RVTLT/3C898AE8-745B-4C90-AD33-4E56C83FE665/SFX/Revit_LT_2018_G1_Win_64bit_dlm_001_002.sfx.exe?authparam=1684462118_32e37989d641a87439f797e8c0abce54&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NET18SWDLD/2018/RVTLT/3C898AE8-745B-4C90-AD33-4E56C83FE665/SFX/Revit_LT_2018_G1_Win_64bit_dlm_002_002.sfx.exe?authparam=1684462119_61e2ccd0c9d6556627396c8ecf1e0ac0&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Revit Update",
+    "icon": "🔄",
+    "group": "Revit & BIM",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027.0.1",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://up1.autodesk.com/prd/2027/RVT/6E6E58A3-176B-322D-AD62-83415301145B//Revit_2027_0_1.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022.1.8",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://up1.autodesk.com/NetSWCOM/prd/2022/RVT/CFAEE3C8-36F0-3DF4-964A-185EB42271F5//Revit_2022_1_8.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022.1",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://up1.autodesk.com/2022/RVT/F049ACC2-8F1C-38C2-8CC9-9C39672807B1/Revit_2022_1.exe"
+          }
+        ]
+      },
+      {
+        "v": "2021.1.10",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://up1.autodesk.com/NetSWCOM/prd/RVT/9CA05B9A-2116-0510-A1B4-FFF7A680FE55/Revit_2021_1_10.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Navisworks Manage",
+    "icon": "🏗️",
+    "group": "Revit & BIM",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/NAVMAN/FA0367AA-72F6-3F1A-98A9-675153208871/SFX/Autodesk_Navisworks_Manage_2027_Win_64bit_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/NAVMAN/FA0367AA-72F6-3F1A-98A9-675153208871/SFX/Autodesk_Navisworks_Manage_2027_Win_64bit_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/NAVMAN/71168559-1BF3-326F-B57F-B5E00F4E697F/SFX/Autodesk_Navisworks_Manage_2026_Win_64bit_db_001_002.exe?authparam=1747189572_cc3f830bb9a4bc51d8e2fe9e4117f672&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/NAVMAN/71168559-1BF3-326F-B57F-B5E00F4E697F/SFX/Autodesk_Navisworks_Manage_2026_Win_64bit_db_002_002.7z?authparam=1747189573_95333509241e551c1e0dae3b67ed569d&ext=.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/NAVMAN/D87B131B-2A64-3A01-822F-3FB63EBEDD3B/SFX/Autodesk_Navisworks_Manage_2025_Win_64bit_db_001_002.exe?authparam=1724310911_1ea71dde962bf14714c01c72ed1522a3"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/NAVMAN/D87B131B-2A64-3A01-822F-3FB63EBEDD3B/SFX/Autodesk_Navisworks_Manage_2025_Win_64bit_db_002_002.7z?authparam=1713841289_e5628eb0f0d8f16f2ced39aefb736ffc"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/NAVMAN/1BB907BC-4F14-3ED2-950C-39A3D99D2EFE/SFX/Autodesk_Navisworks_Manage_2024_Win_64bit_dlm_001_002.sfx.exe?authparam=1690619995_4ca387e444270cfef56d2e9c4bd1e069&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/NAVMAN/1BB907BC-4F14-3ED2-950C-39A3D99D2EFE/SFX/Autodesk_Navisworks_Manage_2024_Win_64bit_dlm_002_002.sfx.exe?authparam=1690619996_3fbf4bcc64f4129e320df9aaafce7e78&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/NAVMAN/54026284-5924-352E-895D-2DAE5162F3DE/SFX/Autodesk_Navisworks_Manage_2023_Win_64bit_dlm_001_002.sfx.exe?authparam=1675407934_4f6a221c3b8f4e9d839921551742faf8"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/NAVMAN/54026284-5924-352E-895D-2DAE5162F3DE/SFX/Autodesk_Navisworks_Manage_2023_Win_64bit_dlm_002_002.sfx.exe?authparam=1675407934_47ce84f75cc1907fc926a6232e351bc5"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/NAVMAN/C132C0F6-7203-34CF-B8A4-F5A68F1DD494/SFX/Autodesk_Navisworks_Manage_2022_Win_64bit_dlm_001_002.sfx.exe?authparam=1690620404_79f8c6901862ce495f67abacf2cc2637&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/NAVMAN/C132C0F6-7203-34CF-B8A4-F5A68F1DD494/SFX/Autodesk_Navisworks_Manage_2022_Win_64bit_dlm_002_002.sfx.exe?authparam=1690620404_c62bf282f11387db516babc585d9d49e&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/NAVMAN/1C098CC8-132C-489B-AD24-8AB7A70168CB/SFX/Autodesk_Navisworks_Manage_2021_Multilingual_Win_64bit_dlm_001_002.sfx.exe?authparam=1690620084_9353986726686ae40df66d98c6e1eee2&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/NAVMAN/1C098CC8-132C-489B-AD24-8AB7A70168CB/SFX/Autodesk_Navisworks_Manage_2021_Multilingual_Win_64bit_dlm_002_002.sfx.exe?authparam=1690620084_f24d6e524cc81d72f6db1e84a7f7bb4e&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2020/NAVMAN/89ED309E-DEA4-4070-9CE7-DB285722CD73/SFX/Autodesk_Navisworks_Manage_2020_Multilingual_Win_64bit_dlm_001_002.sfx.exe?authparam=1691718382_a608edf22f69d3a4a2521263a1b31964&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2020/NAVMAN/89ED309E-DEA4-4070-9CE7-DB285722CD73/SFX/Autodesk_Navisworks_Manage_2020_Multilingual_Win_64bit_dlm_002_002.sfx.exe?authparam=1691718383_0c0975e711c0650b1216631a39d3f6f5&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/NAVMAN/9EF86405-F84E-4A9B-B4C9-36529E8C4832/SFX/Autodesk_Navisworks_Manage_2019_Multilingual_Win_64bit_dlm_001_002.sfx.exe?authparam=1691717973_0833457adfe2dfc03ce1ce5723182752&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/NAVMAN/9EF86405-F84E-4A9B-B4C9-36529E8C4832/SFX/Autodesk_Navisworks_Manage_2019_Multilingual_Win_64bit_dlm_002_002.sfx.exe?authparam=1691717974_5bc0d29191434242236057ff33fb07e9&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Navisworks Simulate",
+    "icon": "⏱️",
+    "group": "Revit & BIM",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/NAVSIM/9B534C4A-7D98-3AEB-9F32-7759C9065DE7/SFX/Autodesk_Navisworks_Simulate_2027_Win_64bit_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/NAVSIM/9B534C4A-7D98-3AEB-9F32-7759C9065DE7/SFX/Autodesk_Navisworks_Simulate_2027_Win_64bit_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/NAVSIM/AFC44CB9-1170-3C9F-BDF0-BB98BBD7A2F1/SFX/Autodesk_Navisworks_Simulate_2026_Win_64bit_db_001_002.exe?authparam=1747191522_81535271bdaa791a4bb29b4de2201f72&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/NAVSIM/AFC44CB9-1170-3C9F-BDF0-BB98BBD7A2F1/SFX/Autodesk_Navisworks_Simulate_2026_Win_64bit_db_002_002.7z?authparam=1747191522_68d72e39ed1b06d9fde109338853baa3&ext=.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/NAVSIM/F74BDA04-F362-3D2C-BE40-309FBB5222B5/SFX/Autodesk_Navisworks_Simulate_2025_Win_64bit_db_001_002.exe?authparam=1724310951_d86a49df21f415e3041a032afdb19f9e"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/NAVSIM/F74BDA04-F362-3D2C-BE40-309FBB5222B5/SFX/Autodesk_Navisworks_Simulate_2025_Win_64bit_db_002_002.7z?authparam=1713841353_db52dd5ee844a6d12439adefefc02089"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/NAVSIM/E65CCB8B-D2C0-3012-AD33-F36606FA7794/SFX/Autodesk_Navisworks_Simulate_2024_Win_64bit_dlm_001_002.sfx.exe?authparam=1690099862_f796beed845563a433507e16f46f7dba"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/NAVSIM/E65CCB8B-D2C0-3012-AD33-F36606FA7794/SFX/Autodesk_Navisworks_Simulate_2024_Win_64bit_dlm_002_002.sfx.exe?authparam=1690099862_578e3d913e135750ac3a360d6cef073e"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/NAVSIM/AA4F8D65-4DB7-364A-A2AD-ADED13570B23/SFX/Autodesk_Navisworks_Simulate_2023_Win_64bit_dlm_001_002.sfx.exe?authparam=1675408086_f9979b5c24719d5f7060a2758fd992d3"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/NAVSIM/AA4F8D65-4DB7-364A-A2AD-ADED13570B23/SFX/Autodesk_Navisworks_Simulate_2023_Win_64bit_dlm_002_002.sfx.exe?authparam=1675408086_659c43e86f520afdbb4257026b921c32"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/NAVSIM/1C47B54C-DC8E-3B8B-BE6A-B9A43506452F/SFX/Autodesk_Navisworks_Simulate_2022_Win_64bit_dlm_001_002.sfx.exe?authparam=1690099910_a90545c196fbeb03fcf30d7638489d6d"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/NAVSIM/1C47B54C-DC8E-3B8B-BE6A-B9A43506452F/SFX/Autodesk_Navisworks_Simulate_2022_Win_64bit_dlm_002_002.sfx.exe?authparam=1690099910_4a27ca7334d80897316a4d5a225fbeed"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/NAVSIM/98222A0F-3248-4894-8D87-78D5855F4789/SFX/Autodesk_Navisworks_Simulate_2021_Multilingual_Win_64bit_dlm_001_002.sfx.exe?authparam=1690099950_582a0cee6a5b2bab621253a395fbd989"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/NAVSIM/98222A0F-3248-4894-8D87-78D5855F4789/SFX/Autodesk_Navisworks_Simulate_2021_Multilingual_Win_64bit_dlm_002_002.sfx.exe?authparam=1690099950_e494e6df9c995f84571d71e0ced98f8c"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/NAVSIM/57A5CFFD-773D-4741-8DF6-CE51F5847396/SFX/Autodesk_Navisworks_Simulate_2020_Multilingual_Win_64bit_dlm_001_002.sfx.exe?authparam=1690099988_2dfc2e6a1bda127f8a9c4c8b53ad9883"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/NAVSIM/57A5CFFD-773D-4741-8DF6-CE51F5847396/SFX/Autodesk_Navisworks_Simulate_2020_Multilingual_Win_64bit_dlm_002_002.sfx.exe?authparam=1690099988_d5b1907c6e39e2905432c99fe6a1df95"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/NAVSIM/F70C49BA-56D4-44E6-83DE-940DED7A65AF/SFX/Autodesk_Navisworks_Simulate_2019_Multilingual_Win_64bit_dlm_001_002.sfx.exe?authparam=1690100027_817e1e27078361d0b4c3686010a04432"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/NAVSIM/F70C49BA-56D4-44E6-83DE-940DED7A65AF/SFX/Autodesk_Navisworks_Simulate_2019_Multilingual_Win_64bit_dlm_002_002.sfx.exe?authparam=1690100027_38af6c1d23aeea49b97e4a1428255eb5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Recap Pro",
+    "icon": "📡",
+    "group": "Revit & BIM",
+    "note": "Link Part 1 hiện đang trỏ tới bộ cài Navisworks Simulate 2027 – cần kiểm tra lại.",
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/NAVSIM/9B534C4A-7D98-3AEB-9F32-7759C9065DE7/SFX/Autodesk_Navisworks_Simulate_2027_Win_64bit_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RECAP/6F33CCE3-6888-3D07-97B1-53A51CA5A13D/SFX/RECAP_2027_ML_db_002_002.7z"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Civil 3D",
+    "icon": "🛣️",
+    "group": "Hạ tầng & Kết cấu",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/CIV3D/01D11119-5E52-3ED3-8B05-87AAED2B0754/SFX/CIV3D_2027_english_us_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/CIV3D/01D11119-5E52-3ED3-8B05-87AAED2B0754/SFX/CIV3D_2027_english_us_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/CIV3D/E81FE5B0-6BD9-3DD6-8B47-B286F77596F3/SFX/CIV3D_2026_English_win_db_001_002.exe?authparam=1747191666_8370e37578e07ef54a0b03a18da9500f&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/CIV3D/E81FE5B0-6BD9-3DD6-8B47-B286F77596F3/SFX/CIV3D_2026_English_win_db_002_002.7z?authparam=1747191666_128dc64da923b8ef6d187b26d8f7d135&ext=.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/CIV3D/3D456298-946E-369A-852A-56ADD40547D0/SFX/CIV3D_2025_English_Win_64bit_db_001_002.exe?authparam=1724311390_5be6f5765611eef75327307c3324c6c4"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/CIV3D/3D456298-946E-369A-852A-56ADD40547D0/SFX/CIV3D_2025_English_Win_64bit_db_002_002.7z?authparam=1713841177_f1d5a3b6d00de311b352a530d33439d4"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/CIV3D/3B06A92C-EE4A-3D14-88CF-052164D19B8C/SFX/Autodesk_Civil_3D_2024_English_Win_64bit_dlm_001_003.sfx.exe?authparam=1690691775_0761618bee189546d3900018c854917c&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/CIV3D/3B06A92C-EE4A-3D14-88CF-052164D19B8C/SFX/Autodesk_Civil_3D_2024_English_Win_64bit_dlm_002_003.sfx.exe?authparam=1690691775_d1b588a6d471dea82583f125d730af20&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/CIV3D/3B06A92C-EE4A-3D14-88CF-052164D19B8C/SFX/Autodesk_Civil_3D_2024_English_Win_64bit_dlm_003_003.sfx.exe?authparam=1690691775_2a2078ca959caff188d8fccd8d0b8a72&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/CIV3D/AD211D5C-0BFF-3956-8998-C5C1F8FB5884/SFX/Autodesk_Civil_3D_2023_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690691648_f59353532e1cd64955c147e7c80775ce&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/CIV3D/AD211D5C-0BFF-3956-8998-C5C1F8FB5884/SFX/Autodesk_Civil_3D_2023_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690691649_fa6f6708f6f3b9a393c6fd6177ccab01&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/CIV3D/10D9CD4B-857C-31F4-9BDD-281EA33D53A7/SFX/Autodesk_Civil_3D_2022_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690098556_d2583115306217d26c3eb48c7a7eab32"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/CIV3D/10D9CD4B-857C-31F4-9BDD-281EA33D53A7/SFX/Autodesk_Civil_3D_2022_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098556_81760d56f5321cb07fbce1a390d104e3"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/CIV3D/478CFBB4-5693-4B38-8E20-FF3C00F0A81B/SFX/Autodesk_Civil_3D_2021_English_Win_64bit_dlm_001_003.sfx.exe?authparam=1690691532_d91d04c85249d2d140e2ea3d7a85f3fe&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/CIV3D/478CFBB4-5693-4B38-8E20-FF3C00F0A81B/SFX/Autodesk_Civil_3D_2021_English_Win_64bit_dlm_002_003.sfx.exe?authparam=1690691532_0443b1846b9e4aec626e51a609034370&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/CIV3D/478CFBB4-5693-4B38-8E20-FF3C00F0A81B/SFX/Autodesk_Civil_3D_2021_English_Win_64bit_dlm_003_003.sfx.exe?authparam=1690691533_3f8df2f883bbecabae1c769812137280&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/CIV3D/05CC55D9-39BD-4E72-988B-D9303B20AB80/SFX/Autodesk_Civil_3D_2020_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690098626_85267b51d095994f33258690fef77b55"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/CIV3D/05CC55D9-39BD-4E72-988B-D9303B20AB80/SFX/Autodesk_Civil_3D_2020_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098626_20dac38d28fcd5509c2d44546f06375f"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/CIV3D/30B1667D-DDD5-4C61-B1C0-B8D3657F5B70/SFX/Autodesk_Civil3D_2019_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1690098691_06d80c63728153cd8f40c2f1e7098e7c"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/CIV3D/30B1667D-DDD5-4C61-B1C0-B8D3657F5B70/SFX/Autodesk_Civil3D_2019_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098691_94123e43db7c6e50d4ba98a1bbf6d3db"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "InfraWorks",
+    "icon": "🌉",
+    "group": "Hạ tầng & Kết cấu",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/IW360P/FAA15ED1-6796-37AA-8A10-F46BDE0C6C49/SFX/IW360P_2027_NA_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/IW360P/FAA15ED1-6796-37AA-8A10-F46BDE0C6C49/SFX/IW360P_2027_NA_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/IW360P/C8EF68B9-77E5-38BF-9031-4DE24EAAB477/SFX/IW360P_2026_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/IW360P/C8EF68B9-77E5-38BF-9031-4DE24EAAB477/SFX/IW360P_2026_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/IW360P/542B1175-4B50-372B-BFEE-B2B6B325AB71/SFX/InfraWorks_2025_English_Win_64bit_dlm_001_002.exe?authparam=1711704168_46b5f69d1783d2e3538cd766ae76e638"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/IW360P/542B1175-4B50-372B-BFEE-B2B6B325AB71/SFX/InfraWorks_2025_English_Win_64bit_dlm_002_002.7z?authparam=1711648380_b5efc0a3d526b600384170339b0597e1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Advance Steel",
+    "icon": "⛓️",
+    "group": "Hạ tầng & Kết cấu",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ADSTPR/2C2E4C90-82B3-32BE-B84F-0F444D3F2B8D/SFX/ADSTPR_2027_english_us_win_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/ADSTPR/2C2E4C90-82B3-32BE-B84F-0F444D3F2B8D/SFX/ADSTPR_2027_english_us_win_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026 (Czech)",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ADSTPR/73D395D7-974C-3D10-839A-FC94F21A4677/SFX/Advance_Steel_2026_Czech_Win_db_001_002.exe?authparam=1746953848_0ce09abb0a144b1ede1205571bd792cd"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/ADSTPR/73D395D7-974C-3D10-839A-FC94F21A4677/SFX/Advance_Steel_2026_Czech_Win_db_002_002.7z?authparam=1746953848_ea877f8ca0b8b35b2700ec6e86911d1a"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ADSTPR/7F3CBF21-C701-352B-B7D4-8395E9A2C127/SFX/Adavnce_Steel_2025_English_Win_db_001_002.exe?authparam=1724311438_71ca2db87f87e65a6548189051c2588c"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/ADSTPR/7F3CBF21-C701-352B-B7D4-8395E9A2C127/SFX/Adavnce_Steel_2025_English_Win_db_002_002.7z?authparam=1713841229_e60d795d7fd47bfe10b48c7527636264"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/ADSTPR/B781357C-99C9-3AA0-8975-CF1ABC19F923/SFX/Autodesk_Advance_Steel_2024_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1700539342_613f8794f6715b4dbc3a5c5458c7da58"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/ADSTPR/B781357C-99C9-3AA0-8975-CF1ABC19F923/SFX/Autodesk_Advance_Steel_2024_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1700539342_65e5b6690e4c23b8b65d435990f2bfd1"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ADSTPR/AF28637E-02A7-32C4-BFF9-05BDBA5E25A4/SFX/Autodesk_Advance_Steel_2023_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1725761307_53a22d8755335ed541ed9af7719c07d5"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/ADSTPR/AF28637E-02A7-32C4-BFF9-05BDBA5E25A4/SFX/Autodesk_Advance_Steel_2023_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1725761307_423061883ee2ccc6af55020bf1b0daf6"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/ADSTPR/A6C08877-90C3-3396-81F4-F51C3D14D25F/SFX/Advance_Steel_2022_English_Win_64bit_dlm_001_002.sfx.exe?authparam=1725761243_57a06d46e19b8c4036e19f45d4d4ad9c"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/ADSTPR/A6C08877-90C3-3396-81F4-F51C3D14D25F/SFX/Advance_Steel_2022_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1725761243_017a8335c59671c15a8941c4c9957c51"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/ADSTPR/057AF00B-8163-4C44-8BF7-D0EE141B9968/SFX/Advance_Steel_2021_G1_Win_64bit_dlm_001_002.sfx.exe?authparam=1725761156_9e1e514e9e1f4baa68f4995c16393da1"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/ADSTPR/057AF00B-8163-4C44-8BF7-D0EE141B9968/SFX/Advance_Steel_2021_G1_Win_64bit_dlm_002_002.sfx.exe?authparam=1725761156_a6b0ada31b1d6111901d798c08e498c3"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ADSTPR/B54BBF04-D500-4E79-874D-E6F94185E03B/SFX/Advance_Steel_2020_G1_Win_64bit_dlm_001_002.sfx.exe?authparam=1725761036_decaa02461daeac77616caa58b0b75aa"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ADSTPR/B54BBF04-D500-4E79-874D-E6F94185E03B/SFX/Advance_Steel_2020_G1_Win_64bit_dlm_002_002.sfx.exe?authparam=1725761036_faf355019f561e37e5aaf4b7e1527409"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Inventor",
+    "icon": "🔩",
+    "group": "Cơ khí & Gia công",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/INVPROSA/447AF3F0-5A11-3D54-B8C1-9D1C88C26148/SFX/Inventor_Professional_2027_English_Win_64bit_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/INVPROSA/447AF3F0-5A11-3D54-B8C1-9D1C88C26148/SFX/Inventor_Professional_2027_English_Win_64bit_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/INVPROSA/4262E5C6-0D93-3251-AD48-1E947463A640/SFX/Inventor_Professional_2026_English_Win_64bit_db_001_002.exe?authparam=1746935328_2cdc9daa6e93a18c0c5c0632c16b64bb&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/INVPROSA/4262E5C6-0D93-3251-AD48-1E947463A640/SFX/Inventor_Professional_2026_English_Win_64bit_db_002_002.7z?authparam=1746935328_dd99689f23482e3e989d1f77470e59c1&ext=.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/INVPROSA/E578CB4E-CF55-3E4D-9A8A-213245140B78/SFX/Inventor_Professional_2025_English_Win_64bit_db_001_002.exe?authparam=1724310723_e2249bb103c470950402f0ac1f519253"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/INVPROSA/E578CB4E-CF55-3E4D-9A8A-213245140B78/SFX/Inventor_Professional_2025_English_Win_64bit_db_002_002.7z?authparam=1717144544_62676e5cb0681b15140bbc60753cc9ad"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/INVPROSA/0B739F57-E75B-3A3D-B2A3-BFB7B2346754/SFX/Inventor_Pro_2024_English_Win_64bit_Dlm_001_003.sfx.exe?authparam=1682822176_2873f24a7c4d573016b592fbf12389f9&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/INVPROSA/0B739F57-E75B-3A3D-B2A3-BFB7B2346754/SFX/Inventor_Pro_2024_English_Win_64bit_Dlm_002_003.sfx.exe?authparam=1682822176_971d90df77e2bfa1fc8115b7515703a7&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/INVPROSA/0B739F57-E75B-3A3D-B2A3-BFB7B2346754/SFX/Inventor_Pro_2024_English_Win_64bit_Dlm_003_003.sfx.exe?authparam=1682822176_5aad38e818a3d4d9bf848d0828bbff0d&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/INVPROSA/829A197F-80D8-354C-9253-8D34B508F89C/SFX/Inventor_Pro_2023_English_Win_64bit_Dlm_001_003.sfx.exe?authparam=1672626572_f776ce4aa2d278805b2a67a220c5f7c3"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/INVPROSA/829A197F-80D8-354C-9253-8D34B508F89C/SFX/Inventor_Pro_2023_English_Win_64bit_Dlm_002_003.sfx.exe?authparam=1672626572_12ffa62d9e696d15c221a831956a7d35"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2023/INVPROSA/829A197F-80D8-354C-9253-8D34B508F89C/SFX/Inventor_Pro_2023_English_Win_64bit_Dlm_003_003.sfx.exe?authparam=1672626572_fec3f9e9256add3b2e922bd19c884433"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/INVPROSA/15FAE334-7AC7-3147-BA02-CD075026EA49/SFX/Inventor_Pro_2022_English_Win_64bit_Dlm_001_003.sfx.exe?authparam=1672626318_6a051df0a3636923693e05fbfaf8586f"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/INVPROSA/15FAE334-7AC7-3147-BA02-CD075026EA49/SFX/Inventor_Pro_2022_English_Win_64bit_Dlm_002_003.sfx.exe?authparam=1672626318_e1e44aebe98f63d49c9436d6345674f9"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2022/INVPROSA/15FAE334-7AC7-3147-BA02-CD075026EA49/SFX/Inventor_Pro_2022_English_Win_64bit_Dlm_003_003.sfx.exe?authparam=1672626318_36b067c0ac230189838a3bc2fad09cff"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/INVPROSA/4259FA38-2218-4FF7-80E2-5464B7969683/SFX/Inventor_Pro_2021_English_Win_64bit_Dlm_001_003.sfx.exe?authparam=1672457687_9c6fa399d9e68280129fc1dcca8ff23a"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/INVPROSA/4259FA38-2218-4FF7-80E2-5464B7969683/SFX/Inventor_Pro_2021_English_Win_64bit_Dlm_002_003.sfx.exe?authparam=1672457687_04b6f9d71325c579ad165d5998df1cc3"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/INVPROSA/4259FA38-2218-4FF7-80E2-5464B7969683/SFX/Inventor_Pro_2021_English_Win_64bit_Dlm_003_003.sfx.exe?authparam=1672457687_0d0d8656f0266dbd67c56ee27347a2ce"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/INVPROSA/D6156F59-2F22-4AB0-A9C0-C2D2C6E9D1EA/SFX/Inventor_Pro_2020_English_Win_64bit_dlm_001_003.sfx.exe?authparam=1672457611_403db1f0fc8bfb1f1eb27dd2b0305d4d"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/INVPROSA/D6156F59-2F22-4AB0-A9C0-C2D2C6E9D1EA/SFX/Inventor_Pro_2020_English_Win_64bit_dlm_002_003.sfx.exe?authparam=1672457611_df22264123f7e7cf6b9492cd7aebd54e"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/INVPROSA/D6156F59-2F22-4AB0-A9C0-C2D2C6E9D1EA/SFX/Inventor_Pro_2020_English_Win_64bit_dlm_003_003.sfx.exe?authparam=1672457611_b4b948e79fbe131270d31bc13636627c"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/INVPROSA/3F333A5F-4A60-4DCE-9D09-918FFFCE2B6B/SFX/Inventor_Pro_2019_English_Win_64bit_dlm_001_003.sfx.exe?authparam=1672456898_66495ee50ddeeb292280b1824e310bbf"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/INVPROSA/3F333A5F-4A60-4DCE-9D09-918FFFCE2B6B/SFX/Inventor_Pro_2019_English_Win_64bit_dlm_002_003.sfx.exe?authparam=1672456898_6d07f9e6fa3e1b8f69045a3f120f23b2"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/INVPROSA/3F333A5F-4A60-4DCE-9D09-918FFFCE2B6B/SFX/Inventor_Pro_2019_English_Win_64bit_dlm_003_003.sfx.exe?authparam=1672456898_629d30862b897bbf8982bf474a2a4378"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/INVNTOR/74CC861E-A18E-4EE5-A4B6-ECD5F68B4106/SFX/Inventor_2018_English_Win_64bit_dlm_001_003.sfx.exe?authparam=1672456750_37ac3c2d5eeca0b136540f234813783c"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/INVNTOR/74CC861E-A18E-4EE5-A4B6-ECD5F68B4106/SFX/Inventor_2018_English_Win_64bit_dlm_002_003.sfx.exe?authparam=1672456732_23182a0b20f4d12c3361001f41f12dea"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/INVNTOR/74CC861E-A18E-4EE5-A4B6-ECD5F68B4106/SFX/Inventor_2018_English_Win_64bit_dlm_003_003.sfx.exe?authparam=1672456750_f7952cca9ce82c9e9c2f28b76ee36cf0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PowerMill",
+    "icon": "⚙️",
+    "group": "Cơ khí & Gia công",
+    "note": null,
+    "versions": [
+      {
+        "v": "2020 Premium",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/PWRMP/DCC7B605-8A46-4A43-B9FD-1AF9FADF8A62/SFX/PowerMill_Premium_2020_ML_Win_64bit_dlm.sfx.exe?authparam=1781668203_8c5774bb7deb57edc591fae28dd44df3&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PowerShape",
+    "icon": "🔷",
+    "group": "Cơ khí & Gia công",
+    "note": null,
+    "versions": [
+      {
+        "v": "2020 Premium",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/PWRSP/B0FFE740-0003-4B2E-965F-214B74BAE08D/SFX/PowerShape_Premium_2020_ML_Win_64bit_dlm.sfx.exe?authparam=1781668292_1e52dce1fff85d8ef20af1009f063396&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vault Professional Client",
+    "icon": "🗄️",
+    "group": "Vault",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/PLC0000004/B1BE7148-6D7D-3518-B45B-38A666CBEC85/SFX/VPC2027_ENU_64bit_DB_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/PLC0000004/B1BE7148-6D7D-3518-B45B-38A666CBEC85/SFX/VPC2027_ENU_64bit_DB_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Web installer",
+            "url": "https://upload2.delivery.autodesk.com/WebInstall3StubGUI-1746668953346.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Autodesk_Vault_Professional_Client_2026_en-US_setup_webinstall.exe%22%20%3B%20filename%2A%3DUTF-8%27%27Autodesk_Vault_Professional_Client_2026_en-US_setup_webinstall.exe"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/PLC0000004/CC278706-AD33-3DCE-A253-4013546B5CFB/SFX/VPC2025_ENU_64bit_DB_001_002.exe?authparam=1724311054_ce8f23eabc7eddffe3444f1a4d8a78ff"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/PLC0000004/CC278706-AD33-3DCE-A253-4013546B5CFB/SFX/VPC2025_ENU_64bit_DB_002_002.7z?authparam=1713841537_1831a7c7eef076d77b3535c688ba0ab2"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/PLC0000004/9686E09B-CE28-3917-97B8-F4DB1B2487C0/SFX/VPC2024_ENU_64bit_dlm_001_002.sfx.exe?authparam=1688714651_bb8ede7a671d0ec7dc0595556101c44b&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/PLC0000004/9686E09B-CE28-3917-97B8-F4DB1B2487C0/SFX/VPC2024_ENU_64bit_dlm_002_002.sfx.exe?authparam=1688714651_d3414a358f9f1f66aa6b9c854b81ec94&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/PLC0000004/025FA2BB-AE6E-3684-B2DB-FCB57371628F/SFX/VPC2023_ENU_64bit_dlm_001_002.sfx.exe?authparam=1688714477_076aa965d234366e2d124046494e24bc&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/PLC0000004/025FA2BB-AE6E-3684-B2DB-FCB57371628F/SFX/VPC2023_ENU_64bit_dlm_002_002.sfx.exe?authparam=1688714477_be22d303a8910d5e65d84a3b280ee2ce&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/PLC0000004/547127E5-2B55-3E73-B51B-F13D5E7EF173/SFX/VPC2022_ENU_64bit_dlm_001_002.sfx.exe?authparam=1688714334_39777afbb5e041674653185609e8b6d0&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/PLC0000004/547127E5-2B55-3E73-B51B-F13D5E7EF173/SFX/VPC2022_ENU_64bit_dlm_002_002.sfx.exe?authparam=1688714334_f83e7702970b2c0352173f1f7a54dc79&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/PLC0000004/489C2EA4-9484-4A66-80CD-022EB6519EB0/SFX/VPC2021_ENU_64bit_dlm_001_002.sfx.exe?authparam=1688713958_9fcbd01a58e751282813de0d8ecf4118&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/PLC0000004/489C2EA4-9484-4A66-80CD-022EB6519EB0/SFX/VPC2021_ENU_64bit_dlm_002_002.sfx.exe?authparam=1688713959_c65e5f2345b407ba8b93cbfb04d51d57&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2020/PLC0000004/FED7357A-D3A2-44D8-9186-ED1106E1C71B/SFX/VPC2020_ENU_64bit_dlm_001_002.sfx.exe?authparam=1688714815_a1de836149ae50440ab8933cb821f4ee&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2020/PLC0000004/FED7357A-D3A2-44D8-9186-ED1106E1C71B/SFX/VPC2020_ENU_64bit_dlm_002_002.sfx.exe?authparam=1688714815_6628e5bec3dc81a69c23a0bc8f3268db&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vault Professional Server",
+    "icon": "🖥️",
+    "group": "Vault",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/VLTM/9C6157FA-5668-3C42-A003-4137FF73A9ED/SFX/VPS2027_ENU_64bit_DB_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/VLTM/9C6157FA-5668-3C42-A003-4137FF73A9ED/SFX/VPS2027_ENU_64bit_DB_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/VLTM/607FE3BA-7874-3A22-BB27-DB66DB08433C/SFX/VPS2026_ENU_64bit_DB_001_002.exe?authparam=1746935645_6ed0eac929978bc44cbf24f49338391f&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/VLTM/607FE3BA-7874-3A22-BB27-DB66DB08433C/SFX/VPS2026_ENU_64bit_DB_002_002.7z?authparam=1746935646_b4e35def7d1a28da87b5a57d21a6f47b&ext=.7z"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2025/VLTM/E07FD7E1-74EC-4AB9-A916-51B443EC9D29/SFX/VPS2025_ENU_64bit_dlm_001_003.sfx.exe?authparam=1729130187_1799b288b0c42848777f513ceb9e8f1e"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2025/VLTM/E07FD7E1-74EC-4AB9-A916-51B443EC9D29/SFX/VPS2025_ENU_64bit_dlm_002_003.sfx.exe?authparam=1729130187_6e7c5b612ba8b194cb6600664e44e226"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2025/VLTM/E07FD7E1-74EC-4AB9-A916-51B443EC9D29/SFX/VPS2025_ENU_64bit_dlm_003_003.sfx.exe?authparam=1729130187_d5c010b68aced4a2b936f060eee1934b"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/VLTM/1FF038B0-DAA2-4401-BC9A-A858B202FCCE/SFX/VPS2024_ENU_64bit_dlm_001_003.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/VLTM/1FF038B0-DAA2-4401-BC9A-A858B202FCCE/SFX/VPS2024_ENU_64bit_dlm_002_003.sfx.exe?authparam=1701262602_4d3128ee8544d4a7d5c32c7e94bb18ee"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2024/VLTM/1FF038B0-DAA2-4401-BC9A-A858B202FCCE/SFX/VPS2024_ENU_64bit_dlm_003_003.sfx.exe?authparam=1701262602_c81f660efd3520ef28ef88485449efab"
+          }
+        ]
+      },
+      {
+        "v": "2021 (Vault Basic Server)",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/INVVAU/D3C09D91-6B1C-4E8B-A336-3CEB6FD6F30A/SFX/VBS2021_ENU_64bit_dlm.sfx.exe?authparam=1731661407_d003ce0b3d471cf7c54e9891f61af1f9&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2019 (Vault Basic Server)",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/INVVAU/E3246DD0-5354-4CE8-8B2B-257B3C2AC2D1/SFX/VBS2019_ENU_64bit_dlm.sfx.exe?authparam=1731661235_eb303dbacf7763b80ff67ab11ae6953d&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vault Basic Client",
+    "icon": "📁",
+    "group": "Vault",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/PLC0000006/481F0022-49CE-3CEE-BF2C-1DD58BBC28C5/SFX/VBC2027_ENU_64bit_DB_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/PLC0000006/481F0022-49CE-3CEE-BF2C-1DD58BBC28C5/SFX/VBC2027_ENU_64bit_DB_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026 (Vault Basic Server)",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/INVVAU/09C18C3F-9BE9-355E-AEF4-EF868D1B2F29/SFX/VBS2026_ENU_64bit_DB.sfx.exe?authparam=1746935571_d1098be1c9b23d8b702ebbe231a5ab51&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/PLC0000006/A8257C51-E161-3BF4-9EBF-FDBB0CE46056/SFX/VBC2025_ENU_64bit_DB_001_002.exe?authparam=1724311522_c6867efe50a1f497b0f75a693a27fc3a"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2025/PLC0000006/A8257C51-E161-3BF4-9EBF-FDBB0CE46056/SFX/VBC2025_ENU_64bit_DB_002_002.7z?authparam=1713843529_af38cc2f4bfd892459bbe16b91e0812b"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/PLC0000006/4446653E-E4E3-35AE-B143-329DB3943D99/SFX/VBC2024_ENU_64bit_dlm_001_002.sfx.exe?authparam=1704363275_ac7f0afade6aaae67951eb67dcc9e280&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/PLC0000006/4446653E-E4E3-35AE-B143-329DB3943D99/SFX/VBC2024_ENU_64bit_dlm_002_002.sfx.exe?authparam=1704363275_665068f9735b4dd3cbc678805b4388ba&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2021/PLC0000006/E9F31AA2-1F47-4210-9448-A98A4D191E8C/SFX/VBC2021_ENU_64bit_dlm.sfx.exe?authparam=1731661686_b8ea856b22bc38856b3937c7a4ff5ee9&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/PLC0000006/35AD8E6A-3B71-46A8-BFBD-257B3C2AC2D1/SFX/VBC2019_ENU_64bit_dlm.sfx.exe?authparam=1731661529_24f44039c1f1725bb48105183edbc170&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "3ds Max",
+    "icon": "🎨",
+    "group": "Đồ họa 3D",
+    "note": null,
+    "versions": [
+      {
+        "v": "2027",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/3DSMAX/F157F7D2-C9E6-3D58-BADD-20AF6B16F6BF/SFX/Autodesk_3ds_Max_2027_EFGJKPS_Win_64bit_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/3DSMAX/F157F7D2-C9E6-3D58-BADD-20AF6B16F6BF/SFX/Autodesk_3ds_Max_2027_EFGJKPS_Win_64bit_db_002_002.7z"
+          }
+        ]
+      },
+      {
+        "v": "2026",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/3DSMAX/8FB6F810-D9F5-3A65-8827-2D63690057DA/SFX/Autodesk_3ds_Max_2026_EFGJKPS_Win_64bit_001_002.exe?authparam=1746953994_becc96625b0ab827630d7872ad1b9c57"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2026/3DSMAX/8FB6F810-D9F5-3A65-8827-2D63690057DA/SFX/Autodesk_3ds_Max_2026_EFGJKPS_Win_64bit_002_002.7z?authparam=1746953994_f9a2c83d4468dda97edccbf1a05093ef"
+          }
+        ]
+      },
+      {
+        "v": "2025",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2025/3DSMAX/14FA05D6-D56B-3FDC-8E00-9025FE259283/SFX/Autodesk_3ds_Max_2025__EFGJKPS_Win_64bit_001_003.sfx.exe?authparam=1713840988_adbc36fa52dc2f9a79e5e3278f4aea54"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2025/3DSMAX/14FA05D6-D56B-3FDC-8E00-9025FE259283/SFX/Autodesk_3ds_Max_2025__EFGJKPS_Win_64bit_002_003.sfx.exe?authparam=1713839831_3819229fef4e94900e7fdde6be6cf062"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2025/3DSMAX/14FA05D6-D56B-3FDC-8E00-9025FE259283/SFX/Autodesk_3ds_Max_2025__EFGJKPS_Win_64bit_003_003.sfx.exe?authparam=1713839831_0f23fe5f91f059b069affc0117dbf804"
+          }
+        ]
+      },
+      {
+        "v": "2024",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/3DSMAX/A54AED8B-2D32-3795-8962-12E42ED4A767/SFX/Autodesk_3ds_Max_2024_EFGJKPS_Win_64bit_001_003.sfx.exe?authparam=1683253881_4555430a51d89965a0a4bd944650d9af&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/3DSMAX/A54AED8B-2D32-3795-8962-12E42ED4A767/SFX/Autodesk_3ds_Max_2024_EFGJKPS_Win_64bit_002_003.sfx.exe?authparam=1683253881_4555430a51d89965a0a4bd944650d9af&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2024/3DSMAX/A54AED8B-2D32-3795-8962-12E42ED4A767/SFX/Autodesk_3ds_Max_2024_EFGJKPS_Win_64bit_003_003.sfx.exe?authparam=1683253881_4555430a51d89965a0a4bd944650d9af&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2023",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/3DSMAX/96DD678F-C87E-3029-9ACE-7176F9175685/SFX/Autodesk_3ds_Max_2023_EFGJKPS_Win_64bit_001_004.sfx.exe?authparam=1683254011_6ea68ae08d96e6ede594e0f365767a24&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/3DSMAX/96DD678F-C87E-3029-9ACE-7176F9175685/SFX/Autodesk_3ds_Max_2023_EFGJKPS_Win_64bit_002_004.sfx.exe?authparam=1683254011_6ea68ae08d96e6ede594e0f365767a24&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/3DSMAX/96DD678F-C87E-3029-9ACE-7176F9175685/SFX/Autodesk_3ds_Max_2023_EFGJKPS_Win_64bit_003_004.sfx.exe?authparam=1683254011_6ea68ae08d96e6ede594e0f365767a24&ext=.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2023/3DSMAX/96DD678F-C87E-3029-9ACE-7176F9175685/SFX/Autodesk_3ds_Max_2023_EFGJKPS_Win_64bit_004_004.sfx.exe?authparam=1683254011_6ea68ae08d96e6ede594e0f365767a24&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2022",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/3DSMAX/B2EF7E27-4824-3656-A115-BFF401F11F7C/SFX/Autodesk_3ds_Max_2022_EFGJKPS_Win_64bit_001_004.sfx.exe?authparam=1683254104_9cd943ff9351267a05d5e78ed46cca6b&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/3DSMAX/B2EF7E27-4824-3656-A115-BFF401F11F7C/SFX/Autodesk_3ds_Max_2022_EFGJKPS_Win_64bit_002_004.sfx.exe?authparam=1683254104_9cd943ff9351267a05d5e78ed46cca6b&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/3DSMAX/B2EF7E27-4824-3656-A115-BFF401F11F7C/SFX/Autodesk_3ds_Max_2022_EFGJKPS_Win_64bit_003_004.sfx.exe?authparam=1683254104_9cd943ff9351267a05d5e78ed46cca6b&ext=.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://efulfillment.autodesk.com/NetSWDLD/2022/3DSMAX/B2EF7E27-4824-3656-A115-BFF401F11F7C/SFX/Autodesk_3ds_Max_2022_EFGJKPS_Win_64bit_004_004.sfx.exe?authparam=1683254104_9cd943ff9351267a05d5e78ed46cca6b&ext=.exe"
+          }
+        ]
+      },
+      {
+        "v": "2021",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/3DSMAX/35156605-CE91-4AF6-8207-56211CB30369/SFX/Autodesk_3ds_Max_2021_EFGJKPS_Win_64bit_r2_1_001_004.sfx.exe?authparam=1690099424_1543a043c3c2024d645fe771675334dd"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/3DSMAX/35156605-CE91-4AF6-8207-56211CB30369/SFX/Autodesk_3ds_Max_2021_EFGJKPS_Win_64bit_r2_1_002_004.sfx.exe?authparam=1690099424_bd885a53c087ad858bc326e31454b53d"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/3DSMAX/35156605-CE91-4AF6-8207-56211CB30369/SFX/Autodesk_3ds_Max_2021_EFGJKPS_Win_64bit_r2_1_003_004.sfx.exe?authparam=1690099424_bc2dedc53bba5678b733e1c5e18ca14e"
+          },
+          {
+            "label": "Part 4",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2021/3DSMAX/35156605-CE91-4AF6-8207-56211CB30369/SFX/Autodesk_3ds_Max_2021_EFGJKPS_Win_64bit_r2_1_004_004.sfx.exe?authparam=1690099424_4dd87daf97260936533a08062b4166d3"
+          }
+        ]
+      },
+      {
+        "v": "2020",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/3DSMAX/519D393B-EFBD-4714-B627-F8BC87BEA59A/SFX/Autodesk_3ds_Max_2020_EFGJKPS_Win_64bit_001_002.sfx.exe?authparam=1690099711_667748f37f358f81017e474430167edc"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/3DSMAX/519D393B-EFBD-4714-B627-F8BC87BEA59A/SFX/Autodesk_3ds_Max_2020_EFGJKPS_Win_64bit_002_002.sfx.exe?authparam=1690099711_541a730ea8a40e0b6d0e44b6266fb320"
+          }
+        ]
+      },
+      {
+        "v": "2019",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/3DSMAX/64B9B03E-3B7C-4A3B-9C33-A9A8A87B761A/SFX/Autodesk_3ds_Max_2019_EFGJKPS_Win_64bit_001_003.sfx.exe?authparam=1690099785_3ce8310995c2f376e5fc5d8dfb5db126"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/3DSMAX/64B9B03E-3B7C-4A3B-9C33-A9A8A87B761A/SFX/Autodesk_3ds_Max_2019_EFGJKPS_Win_64bit_002_003.sfx.exe?authparam=1690099785_45cf1c3efa65216c4390b76bee1bc92e"
+          },
+          {
+            "label": "Part 3",
+            "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/3DSMAX/64B9B03E-3B7C-4A3B-9C33-A9A8A87B761A/SFX/Autodesk_3ds_Max_2019_EFGJKPS_Win_64bit_003_003.sfx.exe?authparam=1690099785_186655d8e529bbb332e0d46dec163227"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Maya",
+    "icon": "🎬",
+    "group": "Đồ họa 3D",
+    "note": null,
+    "versions": [
+      {
+        "v": "2022.5.1",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "https://dds.autodesk.com/NetSWDLD/ODIS/prd/2022/MAYA/15719EED-B266-3AFE-9C42-6FDEE054EE2B/SFX/Autodesk_Maya_2022_5_1_Windows_db_001_002.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "https://dds.autodesk.com/NetSWDLD/ODIS/prd/2022/MAYA/15719EED-B266-3AFE-9C42-6FDEE054EE2B/SFX/Autodesk_Maya_2022_5_1_Windows_db_002_002.7z"
+          }
+        ]
+      }
+    ]
+  }
+]
