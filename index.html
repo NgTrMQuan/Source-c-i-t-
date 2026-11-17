@@ -49,8 +49,8 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 .scene{position:absolute;inset:0;perspective:1300px;display:flex;align-items:center;justify-content:center;pointer-events:none}
 .ring{position:relative;width:0;height:0;transform-style:preserve-3d;transform:rotateX(-12deg) rotateY(calc(var(--a,0) * 1deg));top:-2vh}
 .orb{position:absolute;left:0;top:0;width:var(--s);height:var(--s);margin:calc(var(--s) / -2) 0 0 calc(var(--s) / -2);
-  transform:rotateY(var(--ry)) translateZ(var(--rad));transform-style:preserve-3d;pointer-events:auto;cursor:pointer;transition:filter .2s}
-.orb .face{position:absolute;inset:0;border-radius:24%;display:grid;place-items:center;backface-visibility:hidden;
+  transform:rotateY(var(--ry)) translateZ(var(--rad)) rotateY(calc(var(--ry) * -1 - var(--a,0) * 1deg - var(--t,0) * 1deg));transform-style:preserve-3d;pointer-events:auto;cursor:pointer;transition:filter .2s}
+.orb .face{position:absolute;inset:0;border-radius:24%;display:grid;place-items:center;
   box-shadow:0 30px 40px -18px rgba(0,0,0,.8)}
 .orb img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.6))}
 .orb .ph{width:86%;height:86%;border-radius:22%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:calc(var(--s) * .32);color:#fff;background:linear-gradient(150deg,var(--c1),var(--c2))}
@@ -329,12 +329,16 @@ function buildRing(){
 function spin(){
   speed += (target - speed) * .05; angle = (angle + speed) % 360;
   $('ring').style.setProperty('--a', angle.toFixed(2));
+  const orbs = $('ring').children, n = orbs.length;
+  for (let i = 0; i < n; i++){ const c = Math.cos((i * 360 / n + angle) * Math.PI / 180); // 1 = front, -1 = back
+    orbs[i].style.filter = c < 0 ? `brightness(${.55 + .45 * (1 + c)}) saturate(${.6 + .4 * (1 + c)})` : '';
+    orbs[i].style.opacity = orbs[i].dataset.hide ? .15 : (c < 0 ? .45 + .55 * (1 + c) : 1); }
   if (!reduced) requestAnimationFrame(spin);
 }
 $('ring').addEventListener('pointerenter', () => target = .02);
 $('ring').addEventListener('pointerleave', () => target = .12);
 $('ring').addEventListener('click', e => { const o = e.target.closest('.orb'); if (o) openFrom(o, e); });
-addEventListener('pointermove', e => { const t = (e.clientX / innerWidth - .5) * 10; $('ring').style.transform = `rotateX(${-12 + (e.clientY / innerHeight - .5) * -6}deg) rotateY(calc(var(--a,0) * 1deg + ${t}deg))`; }, {passive:true});
+addEventListener('pointermove', e => { const t = (e.clientX / innerWidth - .5) * 10; $('ring').style.setProperty('--t', t.toFixed(2)); $('ring').style.transform = `rotateX(${-12 + (e.clientY / innerHeight - .5) * -6}deg) rotateY(calc(var(--a,0) * 1deg + ${t}deg))`; }, {passive:true});
 
 /* ---------- library ---------- */
 function start(){
@@ -374,7 +378,7 @@ function filter(){
   DATA.forEach(p => {
     const ok = (active === 'Tất cả' || p.group === active) && words.every(w => norm(p.name+' '+p.group+' '+p.versions.map(v=>v.v).join(' ')).includes(w));
     $('grid').querySelector(`[data-id="${p.id}"]`).classList.toggle('dim', !ok);
-    const o = $('ring').querySelector(`[data-id="${p.id}"]`); if (o) o.style.opacity = ok ? 1 : .15;
+    const o = $('ring').querySelector(`[data-id="${p.id}"]`); if (o){ if (ok) delete o.dataset.hide; else o.dataset.hide = 1; }
     if (ok) n++;
   });
   $('libTitle').textContent = (active === 'Tất cả' ? 'Thư viện' : active) + (words.length ? ` · ${n} kết quả` : '');
