@@ -7,7 +7,7 @@ https://ngtrmquan.github.io/Source-c-i-t-/ (nhánh `main`, thư mục gốc). Ng
 
 | File | Vai trò |
 |---|---|
-| `index.html` | Trang chủ: tiêu đề "Tải, cài và fix lỗi Autodesk", nền vòng xoắn 3D (Three.js r128 từ cdnjs), hai cổng dẫn sang hai trang con |
+| `index.html` | Trang chủ: tiêu đề "Tải, cài và fix lỗi Autodesk", nền sao bay như hai trang con, hai cổng dẫn sang hai trang con |
 | `cai-dat.html` | Bộ cài đặt: vòng xoay 3D icon, lưới thẻ theo nhóm, bảng tải theo phiên bản. Đọc `data.json` |
 | `loi.html` | Lỗi thường gặp: tìm kiếm, lọc theo nhóm, thẻ mở rộng (Dấu hiệu / Nguyên nhân / Cách khắc phục). Đọc `errors.json` |
 | `data.json` | Danh sách phần mềm: `{name, icon, group, note, versions:[{v, links:[{label, url}]}]}`. Phiên bản mới đặt đầu mảng |
