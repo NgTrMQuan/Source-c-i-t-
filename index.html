@@ -6,393 +6,378 @@
 <title>Source cài đặt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Semi+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#e8edec; --paper-2:#dfe6e5; --sheet:#f3f6f5;
-  --ink:#1d2b33; --ink-2:#4b5b64; --ink-3:#7d8b92;
-  --grid:rgba(47,94,134,.09); --grid-major:rgba(47,94,134,.16);
-  --dim:#2f5e86; --red:#c7361f; --red-soft:rgba(199,54,31,.08);
-  --line:1.5px solid var(--ink);
-  --thin:1px solid rgba(29,43,51,.35);
+  --bg:#e6e6e8; --bg-2:#d9d9dc; --ink:#151517; --ink-2:#55555c; --ink-3:#8b8b93;
+  --glass:rgba(255,255,255,.62); --glass-line:rgba(255,255,255,.75);
+  --tray:#f4f4f6; --tray-edge:#c9c9ce;
+  --font:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{
-  font-family:"Barlow","Arial Narrow",Arial,sans-serif;color:var(--ink);background:var(--paper);
-  -webkit-font-smoothing:antialiased;font-size:16px;line-height:1.5;
-}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--red);outline-offset:3px}
-.cond{font-family:"Barlow Semi Condensed","Arial Narrow",sans-serif,sans-serif}
-.num{font-variant-numeric:tabular-nums}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 
-/* ---------- drawing sheet ---------- */
-.sheet{
-  position:relative;margin:28px auto;max-width:1240px;
+/* window-light streaks */
+.light{position:fixed;inset:-20vh -20vw;pointer-events:none;z-index:0;
   background:
-    linear-gradient(var(--grid-major) 1px,transparent 1px) 0 0/50px 50px,
-    linear-gradient(90deg,var(--grid-major) 1px,transparent 1px) 0 0/50px 50px,
-    linear-gradient(var(--grid) 1px,transparent 1px) 0 0/10px 10px,
-    linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/10px 10px,
-    var(--sheet);
-  box-shadow:0 1px 0 rgba(29,43,51,.08),0 18px 40px -24px rgba(29,43,51,.35);
-  padding:34px;
-}
-.frame{position:absolute;inset:14px;pointer-events:none;border:1.6px solid var(--ink);outline:1px solid rgba(29,43,51,.35);outline-offset:-6px}
-.frame svg{width:100%;height:100%;overflow:visible}
-.frame rect{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s cubic-bezier(.6,.1,.2,1) .1s forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-.zones-x,.zones-y{position:absolute;display:flex;font:600 11px "Barlow Semi Condensed","Arial Narrow",sans-serif;color:var(--ink-3);pointer-events:none}
-.zones-x{left:14px;right:14px;justify-content:space-around}
-.zones-x.top{top:0}.zones-x.bot{bottom:0}
-.zones-y{top:14px;bottom:14px;flex-direction:column;justify-content:space-around;width:14px;text-align:center}
-.zones-y.l{left:0}.zones-y.r{right:0}
-.inner{position:relative;padding:22px 26px 10px}
+    radial-gradient(60vw 40vh at 78% 18%,rgba(255,255,255,.75),transparent 70%),
+    repeating-linear-gradient(118deg,transparent 0 9vw,rgba(255,255,255,.28) 9vw 12vw,transparent 12vw 21vw),
+    radial-gradient(50vw 50vh at 20% 90%,rgba(190,170,210,.22),transparent 70%);
+  filter:blur(18px);transform:translateY(calc(var(--sy,0) * -0.08px))}
+.wrap{position:relative;z-index:1}
 
-/* ---------- title block (hero) ---------- */
-.hero{display:grid;grid-template-columns:1fr minmax(320px,430px);gap:36px;align-items:end;margin-bottom:46px}
-.hero h1{
-  font-family:"Barlow Semi Condensed","Arial Narrow",sans-serif;font-weight:800;margin:0;
-  font-size:clamp(54px,9vw,124px);line-height:.86;letter-spacing:-.015em;
-}
-.hero h1 .stroke{color:transparent;-webkit-text-stroke:1.6px var(--ink);display:block}
-.hero p{margin:34px 0 0;max-width:46ch;color:var(--ink-2);font-size:17px}
-.tb{border:var(--line);background:rgba(243,246,245,.92);display:grid;grid-template-columns:repeat(4,1fr);font-size:13px}
-.tb > div{border-right:var(--thin);border-bottom:var(--thin);padding:7px 10px 8px;min-height:54px}
-.tb > div:nth-child(4n){border-right:0}
-.tb .k{color:var(--ink-3);font-size:11.5px;display:block;line-height:1.2}
-.tb .v{font-family:"Barlow Semi Condensed","Arial Narrow",sans-serif;font-weight:700;font-size:21px;line-height:1.15;display:block}
-.tb .wide{grid-column:span 2}
-.tb .full{grid-column:1/-1;border-right:0}
-.tb .full .v{font-size:26px}
-.tb .last{border-bottom:0}
+/* nav */
+nav.top{position:sticky;top:0;z-index:15;display:flex;align-items:center;gap:28px;padding:18px clamp(18px,4vw,48px);
+  background:linear-gradient(var(--bg) 40%,rgba(230,230,232,0));}
+.brand{font-weight:800;font-size:19px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.brand i{width:22px;height:22px;border-radius:7px;background:conic-gradient(from 210deg,#c76a8a,#8e7cc3,#5f86b8,#5fa59a,#d39a5b,#c76a8a);box-shadow:inset 0 0 0 4px rgba(255,255,255,.55)}
+.brand small{display:block;font-weight:500;font-size:10.5px;color:var(--ink-2);letter-spacing:0;line-height:1.25;max-width:150px}
+.navlinks{display:flex;gap:22px;margin-left:auto;font-size:13px;font-weight:600}
+.navlinks a{color:var(--ink-2)}
+.navlinks a:hover{color:var(--ink)}
+.who{font-size:12.5px;font-weight:600;border:1px solid var(--ink);border-radius:999px;padding:7px 14px;white-space:nowrap}
 
-/* ---------- controls ---------- */
-.controls{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;margin-bottom:34px;padding-bottom:18px;border-bottom:var(--line)}
-.find{flex:1 1 300px;border-radius:12px;display:flex;align-items:center;gap:12px;height:50px;padding:0 14px;background:#fff;border:1.5px solid var(--ink);box-shadow:4px 4px 0 rgba(29,43,51,.14);transition:box-shadow .15s,border-color .15s}
-.find:focus-within{border-color:var(--dim);box-shadow:4px 4px 0 var(--dim)}
-.find svg{flex:none;color:var(--ink-2)}
-.find input{flex:1;border:0;background:transparent;font:500 18px "Barlow";color:var(--ink);outline:none;padding:4px 0}
-.find input::placeholder{color:var(--ink-3)}
-.find kbd{font:600 12px "Barlow Semi Condensed","Arial Narrow",sans-serif;border:var(--thin);padding:1px 6px;color:var(--ink-3)}
-.filters{display:flex;flex-wrap:wrap;gap:4px}
-.filters button{font:600 15px "Barlow Semi Condensed","Arial Narrow",sans-serif;padding:6px 12px;color:var(--ink-2);position:relative}
-.filters button:hover{color:var(--ink)}
-.filters button{--acc:var(--ink)}
-.filters button i{display:inline-block;width:9px;height:9px;background:var(--acc);margin-right:7px;vertical-align:1px}
-.filters button[aria-pressed="true"]{color:var(--acc)}
-.filters button[aria-pressed="true"]::after{content:"";position:absolute;left:10px;right:10px;bottom:0;height:2px;background:var(--acc)}
+/* hero */
+.hero{padding:clamp(28px,6vh,70px) clamp(18px,4vw,48px) 10px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:end;max-width:1360px;margin:0 auto}
+.meta{font-size:12.5px;color:var(--ink-2);font-weight:600;margin:0 0 18px;display:flex;gap:14px;align-items:center}
+.meta b{color:var(--ink)}
+.meta span+span::before{content:"";display:inline-block;width:18px;height:1px;background:var(--ink-3);vertical-align:middle;margin-right:14px}
+h1{font-size:clamp(40px,6.4vw,92px);line-height:.95;font-weight:800;letter-spacing:-.035em;margin:0;text-transform:uppercase}
+.lede{max-width:44ch;color:var(--ink-2);font-size:16px;margin:0 0 22px}
+.search{display:flex;align-items:center;gap:10px;height:52px;border-radius:999px;padding:0 8px 0 20px;
+  background:var(--glass);border:1px solid var(--glass-line);box-shadow:0 10px 30px -14px rgba(20,20,30,.35),inset 0 1px 0 #fff;backdrop-filter:blur(14px)}
+.search svg{flex:none;color:var(--ink-2)}
+.search input{flex:1;min-width:0;border:0;background:transparent;font:500 15px var(--font);color:var(--ink);outline:none}
+.search input::placeholder{color:var(--ink-3)}
+.search .go{height:38px;padding:0 16px;border-radius:999px;background:var(--ink);color:#fff;font-size:13px;font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 14px 0 10px;border-radius:999px;font-size:13px;font-weight:600;
+  background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.8);color:var(--ink-2);transition:background .15s,color .15s}
+.chip i{width:14px;height:14px;border-radius:5px;background:var(--g)}
+.chip:hover{background:#fff;color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
 
-/* ---------- groups ---------- */
-.group{margin-bottom:46px}
-.ghead{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}
-.ghead .sw{width:14px;height:14px;background:var(--acc);align-self:center;box-shadow:inset 0 0 0 1.5px rgba(29,43,51,.35)}
-.ghead .ly{font:600 12.5px "Barlow Semi Condensed","Arial Narrow",sans-serif;color:var(--acc)}
-.ghead h2{font:700 24px "Barlow Semi Condensed","Arial Narrow",sans-serif;margin:0}
-.ghead span{color:var(--ink-3);font-size:14px}
-.ghead::after{content:"";flex:1;border-bottom:var(--thin);transform:translateY(-6px)}
+/* stage: sticky 3D tray that flattens into the grid on scroll */
+.stage{position:relative;height:210vh}
+.stage.flat{height:auto}
+.sticky{position:sticky;top:64px;height:calc(100vh - 64px);display:flex;align-items:center;justify-content:center;perspective:1800px;overflow:visible}
+.stage.flat .sticky{position:relative;top:0;height:auto;padding:30px 0 60px}
+.tray{position:relative;width:min(1180px,92vw);padding:26px;border-radius:30px;transform-style:preserve-3d;
+  background:linear-gradient(160deg,#fbfbfc,var(--tray) 55%,#e9e9ec);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 0 0 1px rgba(255,255,255,.9),
+    0 2px 0 6px var(--tray-edge),
+    0 60px 90px -40px rgba(30,30,45,.55),
+    0 30px 40px -30px rgba(30,30,45,.4);
+  will-change:transform}
+.tray::before{content:"";position:absolute;inset:10px;border-radius:22px;border:1px dashed rgba(0,0,0,.08);pointer-events:none}
+.trayhead{display:flex;justify-content:space-between;align-items:center;margin:0 4px 18px;font-size:12.5px;font-weight:700;color:var(--ink-2)}
+.trayhead .dots{display:flex;gap:6px}
+.trayhead .dots i{width:9px;height:9px;border-radius:50%;background:#cfcfd4}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;transform-style:preserve-3d}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));border-top:var(--line);border-left:var(--line)}
-.tile{
-  aspect-ratio:1/1;border-right:var(--line);border-bottom:var(--line);position:relative;text-align:left;
-  display:flex;flex-direction:column;padding:14px 14px 12px;background:rgba(243,246,245,.55);
-  transition:background .15s;
-}
-.tile:hover{background:color-mix(in srgb,var(--acc) 9%,transparent)}
-.tile .code{
-  flex:1;display:flex;align-items:center;justify-content:center;
-  font:800 clamp(34px,3.6vw,46px) "Barlow Semi Condensed","Arial Narrow",sans-serif;letter-spacing:-.01em;
-  color:transparent;-webkit-text-stroke:1.3px var(--ink);transition:color .15s,-webkit-text-stroke-color .15s;
-}
-.tile:hover .code{color:var(--acc);-webkit-text-stroke-color:var(--acc)}
-.tile .name{font:600 16.5px/1.2 "Barlow Semi Condensed","Arial Narrow",sans-serif}
-.tile .dimline{margin-top:8px;height:22px}
-.tile .dimline svg{width:100%;height:22px;overflow:visible}
-.dimline line,.dimline path{stroke:var(--dim);stroke-width:1;fill:none}
-.dimline .arr{fill:var(--dim);stroke:none}
-.dimline text{font:600 10.5px "Barlow Semi Condensed","Arial Narrow",sans-serif;fill:var(--dim)}
-.tile .cnt{position:absolute;top:10px;right:12px;font:600 12px "Barlow Semi Condensed","Arial Narrow",sans-serif;color:var(--ink-3)}
-.tile .flag{position:absolute;top:10px;left:12px;width:9px;height:9px;background:var(--red);transform:rotate(45deg)}
-/* corner crop marks on hover */
-.tile::before,.tile::after{content:"";position:absolute;width:14px;height:14px;opacity:0;transition:opacity .15s}
-.tile::before{top:5px;left:5px;border-top:2px solid var(--acc);border-left:2px solid var(--acc)}
-.tile::after{bottom:5px;right:5px;border-bottom:2px solid var(--acc);border-right:2px solid var(--acc)}
-.tile:hover::before,.tile:hover::after,.tile:focus-visible::before,.tile:focus-visible::after{opacity:1}
-.tile:focus-visible{outline:0;background:color-mix(in srgb,var(--acc) 9%,transparent)}
-.tile .bar{position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .2s}
-.tile:hover .bar,.tile:focus-visible .bar{transform:none}
-.empty{padding:70px 0;text-align:center;font:600 22px "Barlow Semi Condensed","Arial Narrow",sans-serif;color:var(--ink-2)}
-.empty small{display:block;font:400 15px "Barlow";color:var(--ink-3);margin-top:6px}
-.note-foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:var(--line);padding-top:12px;margin-top:10px;color:var(--ink-3);font-size:13.5px}
+.card{position:relative;aspect-ratio:1/.92;border-radius:18px;padding:14px 14px 12px;text-align:left;color:#fff;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;
+  background:linear-gradient(150deg,var(--c1),var(--c2));
+  box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 -10px 20px -12px rgba(0,0,0,.35) inset,0 14px 22px -12px rgba(20,20,40,.55),0 3px 0 0 color-mix(in srgb,var(--c2) 70%,#000);
+  transform:translateZ(calc(var(--lift,0) * 1px));transition:transform .22s cubic-bezier(.3,.7,.2,1),opacity .2s,filter .2s,box-shadow .22s}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.32),transparent 38%,transparent 70%,rgba(255,255,255,.08));pointer-events:none}
+.card:hover,.card:focus-visible{--lift:28;outline:0;box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 26px 34px -14px rgba(20,20,40,.6),0 3px 0 0 color-mix(in srgb,var(--c2) 70%,#000)}
+.stage.flat .card:hover,.stage.flat .card:focus-visible{transform:translateY(-6px)}
+.card.dim{opacity:.18;filter:grayscale(.8)}
+.card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.card .code{font-weight:800;font-size:clamp(15px,1.5vw,20px);letter-spacing:-.01em;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);border-radius:9px;padding:3px 8px;line-height:1.2}
+.card .n{font-size:11.5px;font-weight:600;opacity:.85;white-space:nowrap}
+.card .name{display:block;font-weight:700;font-size:clamp(13px,1.15vw,15.5px);line-height:1.2;margin-bottom:6px}
+.card .yrs{font-size:11.5px;font-weight:600;opacity:.88;display:flex;align-items:center;gap:6px}
+.card .yrs b{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.28);position:relative;overflow:hidden}
+.card .yrs b::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--span);background:#fff;border-radius:2px}
+.card .warn{position:absolute;right:10px;bottom:34px;width:9px;height:9px;border-radius:50%;background:#ffd84a;box-shadow:0 0 0 3px rgba(255,216,74,.3)}
+.hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:12px;font-weight:600;color:var(--ink-2);display:flex;align-items:center;gap:8px;transition:opacity .3s}
+.hint svg{animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(4px)}}
+.empty{grid-column:1/-1;padding:50px 0;text-align:center;color:var(--ink-2);font-weight:600}
 
-/* ---------- detail drawer ---------- */
-.scrim{position:fixed;inset:0;background:rgba(29,43,51,.38);opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
+footer{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:40px clamp(18px,4vw,48px) 50px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--ink-2)}
+
+/* detail sheet */
+.scrim{position:fixed;inset:0;z-index:30;background:rgba(40,40,50,.25);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .25s}
 .scrim.open{opacity:1;pointer-events:auto}
-.drawer{
-  position:fixed;top:0;right:0;bottom:0;width:min(760px,100%);z-index:21;
-  background:
-    linear-gradient(var(--grid) 1px,transparent 1px) 0 0/10px 10px,
-    linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/10px 10px,var(--sheet);
-  border-left:var(--line);box-shadow:-30px 0 60px -30px rgba(29,43,51,.5);
-  transform:translateX(102%);transition:transform .32s cubic-bezier(.3,.7,.2,1);
-  display:flex;flex-direction:column;
-}
-.drawer.open{transform:none}
-.dtop{display:grid;grid-template-columns:auto 1fr auto;border-bottom:var(--line)}
-.drawer{--acc:var(--red)}
-.dtop{border-top:6px solid var(--acc)}
-.dtop .bigcode{padding:16px 22px;border-right:var(--line);font:800 46px/1 "Barlow Semi Condensed","Arial Narrow",sans-serif;color:var(--acc);display:flex;align-items:center;min-width:120px;justify-content:center}
-.dtop .ttl{padding:14px 20px}
-.dtop .ttl small{color:var(--ink-3);font-size:12.5px;display:block}
-.dtop h3{margin:2px 0 0;font:700 30px/1.05 "Barlow Semi Condensed","Arial Narrow",sans-serif}
-.dtop .x{border-left:var(--line);width:64px;display:grid;place-items:center}
-.dtop .x:hover{background:var(--acc);color:#fff}
-.dbody{display:grid;grid-template-columns:150px 1fr;flex:1;min-height:0}
-.revs{border-right:var(--line);overflow:auto;background:rgba(223,230,229,.6)}
-.revs .rh{font:600 12px "Barlow Semi Condensed","Arial Narrow",sans-serif;color:var(--ink-3);padding:10px 14px 6px;border-bottom:var(--thin)}
-.rev{display:flex;justify-content:space-between;align-items:baseline;width:100%;padding:11px 14px;border-bottom:var(--thin);text-align:left;font:700 18px "Barlow Semi Condensed","Arial Narrow",sans-serif}
-.rev small{font:500 12.5px "Barlow";color:var(--ink-3)}
-.rev:hover{background:color-mix(in srgb,var(--acc) 10%,transparent)}
-.rev[aria-selected="true"]{background:var(--ink);color:var(--sheet);box-shadow:inset 5px 0 0 var(--acc)}
-.rev[aria-selected="true"] small{color:#b9c5cb}
-.files{overflow:auto;padding:22px 24px 30px}
-.fh{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:14px}
-.fh h4{margin:0;font:700 26px/1 "Barlow Semi Condensed","Arial Narrow",sans-serif}
-.fh p{margin:4px 0 0;color:var(--ink-3);font-size:14px}
-.warn{border:1.5px solid var(--red);background:var(--red-soft);padding:10px 14px;margin-bottom:16px;font-size:14.5px;color:#7d2112}
-.bom{width:100%;border-collapse:collapse;border:var(--line);background:rgba(243,246,245,.92)}
-.bom th{font:600 12.5px "Barlow Semi Condensed","Arial Narrow",sans-serif;color:var(--ink-3);text-align:left;padding:7px 10px;border-bottom:var(--line);border-right:var(--thin)}
-.bom td{padding:12px 10px;border-bottom:var(--thin);border-right:var(--thin);vertical-align:top}
-.bom th:last-child,.bom td:last-child{border-right:0}
-.bom tr:last-child td{border-bottom:0}
-.bom .pt{color:var(--acc);font:800 22px/1 "Barlow Semi Condensed","Arial Narrow",sans-serif;width:64px;text-align:center;padding-top:15px}
-.bom .fn{font:600 15px/1.3 "Barlow Semi Condensed","Arial Narrow",sans-serif;word-break:break-all}
-.bom .lab{font-size:12.5px;color:var(--ink-3);display:block;margin-bottom:2px}
-.bom .u{display:block;margin-top:5px;font-size:12px;color:var(--ink-3);word-break:break-all;max-height:3.2em;overflow:hidden}
-.bom .act{width:1%;white-space:nowrap}
-.b{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 13px;font:700 15px "Barlow Semi Condensed","Arial Narrow",sans-serif;border:1.5px solid var(--ink);text-decoration:none;transition:background .12s,color .12s}
-.b + .b{margin-left:6px}
-.b.dl{background:var(--ink);color:var(--sheet)}
-.b.dl:hover{background:var(--acc);border-color:var(--acc)}
-.b.cp:hover{background:var(--ink);color:var(--sheet)}
-.b.ok{border-color:var(--dim);color:var(--dim)}
-.b.all{height:38px}
-.tip{margin-top:16px;padding-left:12px;border-left:3px solid var(--acc);color:var(--ink-2);font-size:14.5px;max-width:60ch}
-.stamp{position:fixed;left:50%;bottom:30px;transform:translate(-50%,16px) rotate(-2deg);border:2px solid var(--acc,var(--dim));color:var(--acc,var(--dim));background:var(--sheet);font:700 17px "Barlow Semi Condensed","Arial Narrow",sans-serif;padding:7px 16px;opacity:0;pointer-events:none;transition:all .18s;z-index:40}
-.stamp.show{opacity:1;transform:translate(-50%,0) rotate(-2deg)}
+.sheet{position:fixed;z-index:31;top:16px;right:16px;bottom:16px;width:min(720px,calc(100% - 32px));border-radius:26px;overflow:hidden;
+  background:rgba(246,246,248,.86);backdrop-filter:blur(24px) saturate(1.2);border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 40px 80px -30px rgba(20,20,40,.55);display:flex;flex-direction:column;
+  transform:translateX(calc(100% + 30px)) rotateY(-8deg);transform-origin:right center;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.sheet.open{transform:none}
+.shead{position:relative;padding:22px 24px 20px;color:#fff;background:linear-gradient(140deg,var(--c1),var(--c2));display:flex;gap:16px;align-items:center}
+.shead::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.28),transparent 45%);pointer-events:none}
+.shead .code{font-weight:800;font-size:26px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:14px;padding:10px 14px;line-height:1}
+.shead small{display:block;font-size:12.5px;font-weight:600;opacity:.85}
+.shead h3{margin:2px 0 0;font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.shead .x{margin-left:auto;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;position:relative;z-index:1}
+.shead .x:hover{background:rgba(255,255,255,.38)}
+.vers{display:flex;gap:8px;overflow-x:auto;padding:16px 24px 6px;scrollbar-width:thin}
+.ver{flex:none;height:36px;padding:0 14px;border-radius:999px;font-size:14px;font-weight:700;background:#fff;border:1px solid #e1e1e5;color:var(--ink-2)}
+.ver small{font-weight:500;color:var(--ink-3);margin-left:6px;font-size:12px}
+.ver:hover{color:var(--ink)}
+.ver[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.ver[aria-selected="true"] small{color:#c9c9d0}
+.files{flex:1;overflow:auto;padding:12px 24px 26px}
+.fhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 14px}
+.fhead h4{margin:0;font-size:20px;font-weight:800;letter-spacing:-.02em}
+.fhead p{margin:2px 0 0;font-size:13.5px;color:var(--ink-2)}
+.note{border-radius:14px;padding:11px 14px;margin-bottom:14px;background:#fff6d6;color:#6b4d00;font-size:14px;font-weight:500}
+.file{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #e6e6ea;border-radius:18px;padding:14px;margin-bottom:10px;box-shadow:0 8px 18px -14px rgba(20,20,40,.35)}
+.file .pt{flex:none;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-weight:800;font-size:18px;color:#fff;background:linear-gradient(150deg,var(--c1),var(--c2))}
+.file .info{flex:1;min-width:0}
+.file .lab{font-size:12px;font-weight:600;color:var(--ink-3)}
+.file .fn{font-weight:700;font-size:14.5px;word-break:break-all;line-height:1.3}
+.file .u{font-size:12px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.file .acts{display:flex;gap:8px;flex:none}
+.btn{height:40px;padding:0 16px;border-radius:999px;font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;gap:7px;transition:transform .12s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn.dl{background:var(--ink);color:#fff}
+.btn.dl:hover{background:#2c2c31}
+.btn.cp{background:#f0f0f3;color:var(--ink)}
+.btn.cp:hover{background:#e4e4e9}
+.btn.ok{background:#e3f4ea;color:#1c6b40}
+.tip{font-size:13.5px;color:var(--ink-2);margin:14px 2px 0;max-width:62ch}
+.toast{position:fixed;left:50%;bottom:28px;z-index:40;transform:translate(-50%,20px);opacity:0;pointer-events:none;transition:all .2s;
+  background:var(--ink);color:#fff;padding:11px 18px;border-radius:999px;font-size:14px;font-weight:600;box-shadow:0 14px 30px -10px rgba(0,0,0,.4)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
 
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr}
+@media (max-width:1000px){
+  .hero{grid-template-columns:1fr;gap:22px}
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .navlinks{display:none}
 }
 @media (max-width:640px){
-  .sheet{margin:0;padding:20px 16px}
-  .frame,.zones-x,.zones-y{display:none}
-  .inner{padding:8px 4px}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .tb{grid-template-columns:repeat(2,1fr)}
-  .tb > div:nth-child(4n){border-right:var(--thin)}
-  .tb > div:nth-child(2n){border-right:0}
-  .dbody{grid-template-columns:1fr;grid-template-rows:auto 1fr}
-  .revs{display:flex;overflow-x:auto;border-right:0;border-bottom:var(--line)}
-  .revs .rh{display:none}
-  .rev{border-bottom:0;border-right:var(--thin);white-space:nowrap;gap:8px}
-  .bom .u{display:none}
-  .bom td.act{white-space:normal}
-  .b + .b{margin:6px 0 0}
-  .dtop .bigcode{font-size:32px;min-width:80px;padding:12px}
-  .dtop h3{font-size:24px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .tray{padding:14px;border-radius:22px}
+  .who{display:none}
+  .file{flex-wrap:wrap}
+  .file .acts{width:100%}
+  .file .acts .btn{flex:1;justify-content:center}
+  .sheet{top:auto;left:0;right:0;bottom:0;width:100%;height:88vh;border-radius:24px 24px 0 0;transform:translateY(100%)}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.frame rect{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="sheet">
-  <div class="frame"></div>
-  <div class="zones-x top"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span></div>
-  <div class="zones-x bot"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span></div>
-  <div class="zones-y l"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
-  <div class="zones-y r"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+<div class="light" aria-hidden="true"></div>
+<div class="wrap">
+  <nav class="top">
+    <div class="brand"><i></i><div>Source cài đặt<small>Thư viện bộ cài Autodesk của nhóm</small></div></div>
+    <div class="navlinks" id="navlinks"></div>
+    <div class="who">Người cập nhật: Minh Quân</div>
+  </nav>
 
-  <div class="inner">
-    <section class="hero">
-      <div>
-        <h1>Source<span class="stroke">cài đặt</span></h1>
-        <p>Bộ cài phần mềm Autodesk dùng chung trong nhóm. Chọn một phần mềm, chọn năm, rồi tải về hoặc sao chép link.</p>
-      </div>
-      <div class="tb" aria-label="Thông tin thư viện">
-        <div class="full"><span class="k">Tên bản vẽ</span><span class="v">Thư viện bộ cài</span></div>
-        <div class="wide"><span class="k">Người cập nhật</span><span class="v">Minh Quân</span></div>
-        <div class="wide"><span class="k">Cập nhật</span><span class="v num">16.11.2026</span></div>
-        <div class="last"><span class="k">Phần mềm</span><span class="v num" id="sP"></span></div>
-        <div class="last"><span class="k">Phiên bản</span><span class="v num" id="sV"></span></div>
-        <div class="last"><span class="k">File</span><span class="v num" id="sL"></span></div>
-        <div class="last"><span class="k">Tỷ lệ</span><span class="v num">1 : 1</span></div>
-      </div>
-    </section>
-
-    <div class="controls">
-      <label class="find">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+  <header class="hero">
+    <div>
+      <p class="meta"><span>Cập nhật <b>16.11.2026</b></span><span><b id="sP"></b> phần mềm</span><span><b id="sL"></b> file</span></p>
+      <h1>Mọi bộ cài<br>Autodesk,<br>một chỗ.</h1>
+    </div>
+    <div>
+      <p class="lede">Chọn một thẻ để xem các phiên bản từ 2015 đến 2027. Tải thẳng từ máy chủ Autodesk hoặc sao chép link gửi đồng nghiệp.</p>
+      <label class="search">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input id="q" type="search" placeholder="Tìm phần mềm hoặc năm…" autocomplete="off" aria-label="Tìm phần mềm">
-        <kbd>/</kbd>
+        <button class="go" id="go" type="button">Tìm</button>
       </label>
-      <div class="filters" id="filters" role="group" aria-label="Lọc theo nhóm"></div>
+      <div class="legend" id="legend" role="group" aria-label="Lọc theo nhóm"></div>
     </div>
+  </header>
 
-    <main id="groups"></main>
-
-    <div class="note-foot">
-      <span>Link tải trỏ thẳng tới máy chủ Autodesk. Link có mã authparam cũ có thể đã hết hạn.</span>
-      <span>Bộ nhiều phần: tải đủ vào một thư mục, chạy file Part 1.</span>
+  <section class="stage" id="stage">
+    <div class="sticky">
+      <div class="tray" id="tray">
+        <div class="trayhead"><span id="trayTitle">Tất cả phần mềm</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="grid" id="grid"></div>
+      </div>
+      <div class="hint" id="hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14m0 0-5-5m5 5 5-5"/></svg>Cuộn xuống để mở khay</div>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    <span>Link trỏ thẳng tới máy chủ Autodesk. Link có mã authparam cũ có thể đã hết hạn.</span>
+    <span>Bộ nhiều phần: tải đủ vào một thư mục rồi chạy Part 1.</span>
+  </footer>
 </div>
 
 <div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle" aria-hidden="true">
-  <div class="dtop">
-    <div class="bigcode" id="dCode"></div>
-    <div class="ttl"><small id="dGroup"></small><h3 id="dTitle"></h3></div>
-    <button class="x" id="dClose" aria-label="Đóng"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sTitle" aria-hidden="true">
+  <div class="shead">
+    <div class="code" id="sCode"></div>
+    <div><small id="sGroup"></small><h3 id="sTitle"></h3></div>
+    <button class="x" id="sClose" aria-label="Đóng"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
-  <div class="dbody">
-    <nav class="revs" id="revs" role="tablist" aria-label="Phiên bản"></nav>
-    <div class="files" id="files"></div>
-  </div>
+  <div class="vers" id="vers" role="tablist" aria-label="Phiên bản"></div>
+  <div class="files" id="files"></div>
 </aside>
-<div class="stamp" id="stamp" role="status" aria-live="polite"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-let DATA = [];
-const CODES = {"AutoCAD":"ACD","AutoCAD LT":"LT","AutoCAD Architecture":"ARCH","AutoCAD Electrical":"ELEC","AutoCAD Mechanical":"MECH","AutoCAD Plant 3D":"PLNT","DWG TrueView":"DWG","Revit":"RVT","Revit LT":"RVT·LT","Revit Update":"UPD","Navisworks Manage":"NAVM","Navisworks Simulate":"NAVS","Recap Pro":"RCP","Civil 3D":"C3D","InfraWorks":"IW","Advance Steel":"ASTL","Inventor":"INV","PowerMill":"PMILL","PowerShape":"PSHP","Vault Professional Client":"VPC","Vault Professional Server":"VPS","Vault Basic Client":"VBC","3ds Max":"3DS","Maya":"MAYA"};
-const LAYERS = {"AutoCAD":["#c7361f","Layer 1 · Đỏ"],"Revit & BIM":["#1f5fae","Layer 5 · Xanh dương"],"Hạ tầng & Kết cấu":["#2b8a3e","Layer 3 · Xanh lá"],"Cơ khí & Gia công":["#c27c00","Layer 2 · Vàng"],"Vault":["#a1307f","Layer 6 · Tím hồng"],"Đồ họa 3D":["#0b8797","Layer 4 · Xanh lơ"]};
-const acc = g => (LAYERS[g]||['#c7361f'])[0];
+let DATA = null;
+const CODES = {"AutoCAD":"ACD","AutoCAD LT":"LT","AutoCAD Architecture":"ARCH","AutoCAD Electrical":"ELEC","AutoCAD Mechanical":"MECH","AutoCAD Plant 3D":"PLNT","DWG TrueView":"DWG","Revit":"RVT","Revit LT":"RVT LT","Revit Update":"UPD","Navisworks Manage":"NAVM","Navisworks Simulate":"NAVS","Recap Pro":"RCP","Civil 3D":"C3D","InfraWorks":"IW","Advance Steel":"ASTL","Inventor":"INV","PowerMill":"PMILL","PowerShape":"PSHP","Vault Professional Client":"VPC","Vault Professional Server":"VPS","Vault Basic Client":"VBC","3ds Max":"3DS","Maya":"MAYA"};
+const COLORS = {
+  "AutoCAD":["#d97a8f","#a84a6c"],
+  "Revit & BIM":["#7d9fcf","#4a6894"],
+  "Hạ tầng & Kết cấu":["#6fb3a7","#3e7c74"],
+  "Cơ khí & Gia công":["#dca267","#a8703a"],
+  "Vault":["#9a8fd0","#62569c"],
+  "Đồ họa 3D":["#c97bbf","#8a4a88"]
+};
+const col = g => COLORS[g] || ["#9a9aa3","#5f5f68"];
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d');
 const slug = s => norm(s).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const fileName = u => { try { const x = new URL(u); const m = /filename\s*=\s*"([^"]+)"/.exec(decodeURIComponent(x.search)); return m ? m[1] : decodeURIComponent(x.pathname.split('/').pop()); } catch(e){ return u; } };
 const years = p => p.versions.map(v => +(v.v.match(/^\d{4}/)||[])[0]).filter(Boolean);
-let active = 'Tất cả';
-function init(){
-DATA.forEach(p => { p.id = slug(p.name); p.code = CODES[p.name] || p.name.slice(0,3).toUpperCase(); });
-groups = [...new Set(DATA.map(p => p.group))];
-$('sP').textContent = DATA.length;
-$('sV').textContent = DATA.reduce((a,p)=>a+p.versions.length,0);
-$('sL').textContent = DATA.reduce((a,p)=>a+p.versions.reduce((b,v)=>b+v.links.length,0),0);
-}
-let groups = [];
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let groups = [], active = 'Tất cả', cur = null, back = null;
 
-/* dimension line: a technical-drawing dimension spanning the available years */
-function dim(p){
-  const ys = years(p); const lo = Math.min(...ys), hi = Math.max(...ys);
-  if (lo === hi) return `<svg aria-hidden="true"><line x1="1" y1="3" x2="1" y2="21"/><line x1="1" y1="16" x2="28" y2="16"/><path class="arr" d="M1 16 l7 -3 v6z"/><text x="33" y="20">${lo}</text></svg>`;
-  return `<svg aria-hidden="true">
-    <line x1="1" y1="3" x2="1" y2="21"/><line x1="99%" y1="3" x2="99%" y2="21"/>
-    <line x1="2" y1="16" x2="99%" y2="16" />
-    <path class="arr" d="M1 16 l7 -3 v6z"/>
-    <svg x="99%" y="0" overflow="visible"><path class="arr" d="M0 16 l-7 -3 v6z"/></svg>
-    <text x="5" y="10">${lo}</text><text x="99%" y="10" text-anchor="end" dx="-4">${hi}</text>
-  </svg>`;
+function start(){
+  DATA.forEach(p => { p.id = slug(p.name); p.code = CODES[p.name] || p.name.slice(0,3).toUpperCase(); });
+  groups = [...new Set(DATA.map(p => p.group))];
+  $('sP').textContent = DATA.length;
+  $('sL').textContent = DATA.reduce((a,p)=>a+p.versions.reduce((b,v)=>b+v.links.length,0),0);
+  $('navlinks').innerHTML = groups.slice(0,4).map(g => `<a href="#" data-g="${esc(g)}">${esc(g)}</a>`).join('');
+  renderLegend(); renderGrid(); route(); onScroll();
 }
 
-function renderFilters(){
-  $('filters').innerHTML = ['Tất cả',...groups].map(g => `<button aria-pressed="${g===active}" data-g="${esc(g)}" ${g!=='Tất cả'?`style="--acc:${acc(g)}"`:''}>${g!=='Tất cả'?'<i></i>':''}${esc(g)}</button>`).join('');
+function renderLegend(){
+  $('legend').innerHTML = ['Tất cả',...groups].map(g => {
+    const [a,b] = col(g);
+    return `<button class="chip" aria-pressed="${g===active}" data-g="${esc(g)}" style="--g:${g==='Tất cả'?'conic-gradient(#d97a8f,#9a8fd0,#7d9fcf,#6fb3a7,#dca267,#d97a8f)':`linear-gradient(150deg,${a},${b})`}"><i></i>${esc(g)}</button>`;
+  }).join('');
 }
-$('filters').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; active = b.dataset.g; renderFilters(); render(); });
+function pickGroup(g){ active = g; renderLegend(); filter(); }
+$('legend').addEventListener('click', e => { const b = e.target.closest('.chip'); if (b) pickGroup(b.dataset.g); });
+$('navlinks').addEventListener('click', e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); pickGroup(a.dataset.g); $('stage').scrollIntoView({behavior: reduced ? 'auto' : 'smooth'}); });
 
-function render(){
+function renderGrid(){
+  const minY = 2015, maxY = 2027;
+  $('grid').innerHTML = DATA.map(p => {
+    const [a,b] = col(p.group); const ys = years(p); const lo = Math.min(...ys), hi = Math.max(...ys);
+    const span = Math.max(8, (hi - lo) / (maxY - minY) * 100);
+    return `<button class="card" data-id="${p.id}" style="--c1:${a};--c2:${b}" aria-label="${esc(p.name)}, ${p.versions.length} phiên bản">
+      <span class="top"><span class="code">${esc(p.code)}</span><span class="n">${p.versions.length} bản</span></span>
+      ${p.note ? '<i class="warn" title="Có link cần kiểm tra"></i>' : ''}
+      <span><span class="name">${esc(p.name)}</span><span class="yrs">${lo}<b style="--span:${span}%"></b>${hi}</span></span>
+    </button>`;
+  }).join('');
+}
+function filter(){
   const words = norm($('q').value).split(/[^a-z0-9]+/).filter(Boolean);
-  const ok = p => (active === 'Tất cả' || p.group === active) &&
-    words.every(w => norm(p.name+' '+p.code+' '+p.group+' '+p.versions.map(v=>v.v).join(' ')).includes(w));
-  let html = '';
-  for (const g of groups){
-    const items = DATA.filter(p => p.group === g && ok(p));
-    if (!items.length) continue;
-    html += `<section class="group" style="--acc:${acc(g)}"><div class="ghead"><i class="sw"></i><h2>${esc(g)}</h2><span>${items.length} phần mềm</span></div><div class="grid">` +
-      items.map(p => `<button class="tile" data-id="${p.id}" aria-label="${esc(p.name)}, ${p.versions.length} phiên bản">
-        ${p.note ? '<i class="flag" title="Cần kiểm tra link"></i>' : ''}
-        <span class="cnt num">${p.versions.length} bản</span>
-        <span class="code">${esc(p.code)}</span>
-        <span class="name">${esc(p.name)}</span>
-        <span class="dimline">${dim(p)}</span><i class="bar"></i>
-      </button>`).join('') + `</div></section>`;
-  }
-  $('groups').innerHTML = html || `<div class="empty">Không có phần mềm khớp với “${esc($('q').value)}”<small>Thử tên ngắn hơn, ví dụ “revit” hoặc “2024”.</small></div>`;
+  let shown = 0;
+  DATA.forEach(p => {
+    const ok = (active === 'Tất cả' || p.group === active) && words.every(w => norm(p.name+' '+p.code+' '+p.group+' '+p.versions.map(v=>v.v).join(' ')).includes(w));
+    $('grid').querySelector(`[data-id="${p.id}"]`).classList.toggle('dim', !ok);
+    if (ok) shown++;
+  });
+  $('trayTitle').textContent = (active === 'Tất cả' ? 'Tất cả phần mềm' : active) + (words.length ? ` · ${shown} kết quả` : '');
 }
-$('q').addEventListener('input', render);
-document.addEventListener('keydown', e => {
-  if (e.key === '/' && document.activeElement !== $('q') && !cur){ e.preventDefault(); $('q').focus(); }
-});
-$('groups').addEventListener('click', e => { const t = e.target.closest('.tile'); if (t) location.hash = t.dataset.id; });
+$('q').addEventListener('input', filter);
+$('q').addEventListener('keydown', e => { if (e.key === 'Enter') goFirst(); });
+$('go').addEventListener('click', goFirst);
+function goFirst(){
+  filter();
+  const first = $('grid').querySelector('.card:not(.dim)');
+  if (!first) { toast('Không có phần mềm khớp'); return; }
+  $('stage').scrollIntoView({behavior: reduced ? 'auto' : 'smooth'});
+  setTimeout(() => first.focus({preventScroll:true}), reduced ? 0 : 500);
+}
+$('grid').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) location.hash = c.dataset.id; });
 
-/* drawer */
-let cur = null, back = null;
+/* scroll-driven 3D: tilted isometric tray flattens into the grid */
+const ease = t => 1 - Math.pow(1 - t, 3);
+function onScroll(){
+  document.documentElement.style.setProperty('--sy', scrollY);
+  const st = $('stage');
+  if (reduced || innerWidth < 640){ st.classList.add('flat'); $('tray').style.transform = 'none'; $('hint').style.opacity = 0; return; }
+  st.classList.remove('flat');
+  const r = st.getBoundingClientRect();
+  const total = st.offsetHeight - innerHeight * .9;
+  const p = Math.min(1, Math.max(0, (-r.top + innerHeight * .35) / total));
+  const e = ease(p);
+  const tr = $('tray'); const fit = Math.min(1, (innerHeight - 96) / tr.offsetHeight);
+  const rx = 54 * (1 - e), rz = -34 * (1 - e), s = .78 * fit + (fit - .78 * fit) * e, ty = 40 * (1 - e);
+  $('tray').style.transform = `translateY(${ty}px) rotateX(${rx}deg) rotateZ(${rz}deg) scale(${s})`;
+  $('grid').querySelectorAll('.card').forEach((c,i) => { if (!c.matches(':hover')) c.style.setProperty('--lift', ((1 - e) * (10 + (i % 6) * 5)).toFixed(1)); });
+  $('hint').style.opacity = p > .15 ? 0 : 1;
+}
+addEventListener('scroll', onScroll, {passive:true});
+addEventListener('resize', onScroll);
+
+/* detail sheet */
 function open(p){
   cur = p; back = document.activeElement;
-  $('drawer').style.setProperty('--acc', acc(p.group)); $('stamp').style.setProperty('--acc', acc(p.group));
-  $('dCode').textContent = p.code; $('dGroup').textContent = p.group; $('dTitle').textContent = p.name;
-  $('revs').innerHTML = `<div class="rh">Phiên bản</div>` + p.versions.map((v,i) => `<button class="rev" role="tab" data-i="${i}" aria-selected="${i===0}">${esc(v.v)}<small>${v.links.length} file</small></button>`).join('');
+  const [a,b] = col(p.group);
+  $('sheet').style.setProperty('--c1', a); $('sheet').style.setProperty('--c2', b);
+  $('sCode').textContent = p.code; $('sGroup').textContent = p.group; $('sTitle').textContent = p.name;
+  $('vers').innerHTML = p.versions.map((v,i) => `<button class="ver" role="tab" data-i="${i}" aria-selected="${i===0}">${esc(v.v)}<small>${v.links.length}</small></button>`).join('');
   show(0);
-  $('drawer').classList.add('open'); $('scrim').classList.add('open'); $('drawer').setAttribute('aria-hidden','false');
+  $('sheet').classList.add('open'); $('scrim').classList.add('open'); $('sheet').setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
-  setTimeout(() => $('revs').querySelector('.rev')?.focus(), 60);
+  setTimeout(() => $('vers').querySelector('.ver')?.focus(), 80);
 }
 function show(i){
-  const v = cur.versions[i]; $('files').dataset.v = i;
-  $('revs').querySelectorAll('.rev').forEach((b,j) => b.setAttribute('aria-selected', j===i));
-  const n = v.links.length;
+  const v = cur.versions[i], n = v.links.length; $('files').dataset.v = i;
+  $('vers').querySelectorAll('.ver').forEach((b,j) => b.setAttribute('aria-selected', j===i));
+  $('vers').querySelectorAll('.ver')[i]?.scrollIntoView({block:'nearest',inline:'nearest'});
   $('files').innerHTML =
-    `<div class="fh"><div><h4>${esc(cur.name)} ${esc(v.v)}</h4><p>${n === 1 ? '1 file cài đặt' : `${n} file — cần tải đủ cả ${n}`}</p></div>
-      ${n > 1 ? `<button class="b cp all" data-all>Sao chép ${n} link</button>` : ''}</div>` +
-    (cur.note ? `<div class="warn">${esc(cur.note)}</div>` : '') +
-    `<table class="bom"><thead><tr><th>Phần</th><th>File</th><th>Thao tác</th></tr></thead><tbody>` +
-    v.links.map((l,k) => `<tr>
-      <td class="pt num">${n > 1 ? k+1 : '—'}</td>
-      <td><span class="lab">${esc(l.label)}</span><span class="fn">${esc(fileName(l.url))}</span><span class="u" title="${esc(l.url)}">${esc(l.url)}</span></td>
-      <td class="act"><a class="b dl" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 3v13m0 0-5-5m5 5 5-5M4 21h16"/></svg>Tải về</a><button class="b cp" data-k="${k}">Sao chép link</button></td>
-    </tr>`).join('') + `</tbody></table>` +
-    (n > 1 ? `<p class="tip">Đặt cả ${n} file vào cùng một thư mục, giữ nguyên tên file, rồi chạy file Part 1. Trình cài đặt sẽ tự ghép các phần còn lại.</p>` : '');
+    `<div class="fhead"><div><h4>${esc(cur.name)} ${esc(v.v)}</h4><p>${n === 1 ? '1 file cài đặt' : `${n} file, cần tải đủ cả ${n}`}</p></div>
+      ${n > 1 ? `<button class="btn cp" data-all>Sao chép ${n} link</button>` : ''}</div>` +
+    (cur.note ? `<div class="note">${esc(cur.note)}</div>` : '') +
+    v.links.map((l,k) => `<div class="file">
+      <span class="pt">${n > 1 ? k + 1 : '↓'}</span>
+      <div class="info"><div class="lab">${esc(l.label)}</div><div class="fn">${esc(fileName(l.url))}</div><div class="u" title="${esc(l.url)}">${esc(l.url)}</div></div>
+      <div class="acts"><a class="btn dl" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">Tải về</a><button class="btn cp" data-k="${k}">Sao chép</button></div>
+    </div>`).join('') +
+    (n > 1 ? `<p class="tip">Đặt cả ${n} file vào cùng một thư mục, giữ nguyên tên, rồi chạy Part 1. Trình cài đặt tự ghép các phần còn lại.</p>` : '');
   $('files').scrollTop = 0;
 }
 function close(){
-  if (!cur) return;
-  cur = null;
-  $('drawer').classList.remove('open'); $('scrim').classList.remove('open'); $('drawer').setAttribute('aria-hidden','true');
+  if (!cur) return; cur = null;
+  $('sheet').classList.remove('open'); $('scrim').classList.remove('open'); $('sheet').setAttribute('aria-hidden','true');
   document.body.style.overflow = '';
   if (location.hash) history.replaceState(null,'',location.pathname+location.search);
-  back?.focus?.();
+  back?.focus?.({preventScroll:true});
 }
-$('revs').addEventListener('click', e => { const b = e.target.closest('.rev'); if (b) show(+b.dataset.i); });
-$('revs').addEventListener('keydown', e => {
-  if (!['ArrowDown','ArrowUp','ArrowLeft','ArrowRight'].includes(e.key)) return;
+$('vers').addEventListener('click', e => { const b = e.target.closest('.ver'); if (b) show(+b.dataset.i); });
+$('vers').addEventListener('keydown', e => {
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
   e.preventDefault(); const n = cur.versions.length, i = +$('files').dataset.v;
-  const j = (i + (e.key==='ArrowDown'||e.key==='ArrowRight' ? 1 : -1) + n) % n;
-  show(j); $('revs').querySelectorAll('.rev')[j].focus();
+  const j = (i + (e.key === 'ArrowRight' ? 1 : -1) + n) % n; show(j); $('vers').querySelectorAll('.ver')[j].focus();
 });
-$('dClose').addEventListener('click', close);
+$('sClose').addEventListener('click', close);
 $('scrim').addEventListener('click', close);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') close();
+  if (e.key === '/' && !cur && document.activeElement !== $('q')){ e.preventDefault(); $('q').focus(); }
+});
 
 async function copy(t){
   try { await navigator.clipboard.writeText(t); return true; }
   catch(e){ try { const a = document.createElement('textarea'); a.value = t; a.style.cssText='position:fixed;opacity:0'; document.body.appendChild(a); a.select(); const r = document.execCommand('copy'); a.remove(); return r; } catch(_){ return false; } }
 }
-let st;
-function stamp(m){ const s = $('stamp'); s.textContent = m; s.classList.add('show'); clearTimeout(st); st = setTimeout(()=>s.classList.remove('show'),1700); }
+let tt;
+function toast(m){ const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(tt); tt = setTimeout(()=>t.classList.remove('show'),1700); }
 $('files').addEventListener('click', async e => {
   const v = cur?.versions[+$('files').dataset.v]; if (!v) return;
   const one = e.target.closest('[data-k]'), all = e.target.closest('[data-all]');
   if (one){
     const r = await copy(v.links[+one.dataset.k].url);
-    if (r){ one.classList.add('ok'); one.textContent = 'Đã sao chép'; setTimeout(()=>{ one.classList.remove('ok'); one.textContent = 'Sao chép link'; },1500); }
-    stamp(r ? 'Đã sao chép link' : 'Trình duyệt chặn sao chép. Bôi đen link để copy.');
+    if (r){ one.classList.add('ok'); one.textContent = 'Đã chép'; setTimeout(()=>{ one.classList.remove('ok'); one.textContent = 'Sao chép'; },1500); }
+    toast(r ? 'Đã sao chép link' : 'Trình duyệt chặn sao chép. Bôi đen link để copy.');
   } else if (all){
     const r = await copy(v.links.map(l => l.url).join('\n'));
-    stamp(r ? `Đã sao chép ${v.links.length} link` : 'Trình duyệt chặn sao chép. Bôi đen link để copy.');
+    toast(r ? `Đã sao chép ${v.links.length} link` : 'Trình duyệt chặn sao chép. Bôi đen link để copy.');
   }
 });
 
@@ -402,7 +387,11 @@ function route(){
   else if (!p) close();
 }
 addEventListener('hashchange', route);
-fetch('data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{DATA=d;init();renderFilters();render();route();}).catch(()=>{$('groups').innerHTML='<div class="empty">Không tải được data.json<small>Kiểm tra file data.json nằm cùng thư mục với index.html.</small></div>';});
+
+if (DATA) start();
+else fetch('data.json',{cache:'no-store'}).then(r => { if (!r.ok) throw 0; return r.json(); })
+  .then(d => { DATA = d; start(); })
+  .catch(() => { $('grid').innerHTML = '<div class="empty">Không tải được data.json. Kiểm tra file nằm cùng thư mục với index.html.</div>'; });
 </script>
 </body>
 </html>
