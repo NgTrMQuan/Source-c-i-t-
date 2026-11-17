@@ -43,3 +43,7 @@ Mỗi phần mềm có dạng:
 ## Bật GitHub Pages
 
 Settings → Pages → Source: **Deploy from a branch** → Branch: `main` / `(root)` → Save.
+
+## Icon phần mềm
+
+Đặt ảnh PNG vào thư mục `icons/` theo tên file liệt kê trong `icons/README.md`. Trang tự hiển thị icon sau khi tải lên.

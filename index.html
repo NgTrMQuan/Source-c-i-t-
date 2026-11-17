@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Source cài đặt</title>
+<title>Bộ cài đặt Autodesk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#e6e6e8; --bg-2:#d9d9dc; --ink:#151517; --ink-2:#55555c; --ink-3:#8b8b93;
+  --bg:#eef0f4; --bg-2:#d9d9dc; --ink:#151517; --ink-2:#55555c; --ink-3:#8b8b93;
   --glass:rgba(255,255,255,.62); --glass-line:rgba(255,255,255,.75);
   --tray:#f4f4f6; --tray-edge:#c9c9ce;
   --font:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -32,9 +32,9 @@ a{color:inherit;text-decoration:none}
 
 /* nav */
 nav.top{position:sticky;top:0;z-index:15;display:flex;align-items:center;gap:28px;padding:18px clamp(18px,4vw,48px);
-  background:linear-gradient(var(--bg) 40%,rgba(230,230,232,0));}
+  background:linear-gradient(var(--bg) 40%,rgba(238,240,244,0));}
 .brand{font-weight:800;font-size:19px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
-.brand i{width:22px;height:22px;border-radius:7px;background:conic-gradient(from 210deg,#c76a8a,#8e7cc3,#5f86b8,#5fa59a,#d39a5b,#c76a8a);box-shadow:inset 0 0 0 4px rgba(255,255,255,.55)}
+.brand i{width:22px;height:22px;border-radius:7px;background:conic-gradient(from 210deg,#ff6b8b,#a678ff,#4fa3ff,#2fe0b5,#ffc04a,#ff6b8b);animation:spin 8s linear infinite;box-shadow:inset 0 0 0 4px rgba(255,255,255,.55)}
 .brand small{display:block;font-weight:500;font-size:10.5px;color:var(--ink-2);letter-spacing:0;line-height:1.25;max-width:150px}
 .navlinks{display:flex;gap:22px;margin-left:auto;font-size:13px;font-weight:600}
 .navlinks a{color:var(--ink-2)}
@@ -165,13 +165,49 @@ footer{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:40px c
   .sheet{top:auto;left:0;right:0;bottom:0;width:100%;height:88vh;border-radius:24px 24px 0 0;transform:translateY(100%)}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---- live concept ---- */
+@keyframes spin{to{transform:rotate(1turn)}}
+.blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blobs i{position:absolute;width:46vmax;height:46vmax;border-radius:50%;filter:blur(70px);opacity:.38;mix-blend-mode:multiply;animation:drift 22s ease-in-out infinite alternate}
+.blobs i:nth-child(1){background:#ff6b8b;left:-10vmax;top:-12vmax}
+.blobs i:nth-child(2){background:#4fa3ff;right:-14vmax;top:10vh;animation-duration:26s;animation-delay:-6s}
+.blobs i:nth-child(3){background:#2fe0b5;left:20vw;bottom:-22vmax;animation-duration:30s;animation-delay:-12s}
+.blobs i:nth-child(4){background:#ffc04a;right:10vw;bottom:-18vmax;opacity:.28;animation-duration:24s;animation-delay:-3s}
+@keyframes drift{0%{transform:translate(0,0) scale(1)}50%{transform:translate(8vw,6vh) scale(1.15)}100%{transform:translate(-6vw,10vh) scale(.92)}}
+.title span{display:block;overflow:hidden;padding-bottom:.04em}
+.title i{display:block;font-style:normal;animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.title span:nth-child(2) i{animation-delay:.12s;background:linear-gradient(90deg,#e0245e,#a678ff,#2754e6,#0a9a82,#f2661b,#e0245e);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:rise .9s .12s cubic-bezier(.2,.8,.2,1) both,flow 9s linear infinite}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+@keyframes flow{to{background-position:300% 0}}
+.meta,.lede,.search,.legend{animation:fadeup .8s .35s cubic-bezier(.2,.8,.2,1) both}
+.lede{animation-delay:.45s}.search{animation-delay:.55s}.legend{animation-delay:.65s}
+@keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.card{animation:deal .9s cubic-bezier(.2,.9,.25,1.15) both;animation-delay:calc(.5s + var(--i) * 45ms)}
+@keyframes deal{from{opacity:0;translate:0 -90px;scale:.7}to{opacity:1;translate:0 0;scale:1}}
+.card .float{position:absolute;inset:0;pointer-events:none}
+.stage:not(.flat) .card.ready{animation:bob 4.8s ease-in-out infinite;animation-delay:calc(var(--i) * -310ms)}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -7px}}
+.card::before{content:"";position:absolute;top:0;bottom:0;width:45%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);animation:shine 7s ease-in-out infinite;animation-delay:calc(var(--i) * 290ms);pointer-events:none;z-index:1}
+@keyframes shine{0%,72%{left:-60%}88%,100%{left:130%}}
+.ic{position:relative;width:46px;height:46px;border-radius:14px;flex:none;display:grid;place-items:center;overflow:hidden;
+  background:rgba(255,255,255,.95);box-shadow:0 6px 14px -6px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.6)}
+.ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:5px;background:#fff;z-index:1}
+.ic b{font-weight:800;font-size:17px;letter-spacing:-.02em;background:linear-gradient(150deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sicon .ic{width:58px;height:58px;border-radius:17px}
+.sicon .ic b{font-size:22px}
+.card .name{font-size:clamp(14.5px,1.35vw,18px)!important;font-weight:800!important;letter-spacing:-.01em;line-height:1.18!important;text-shadow:0 1px 8px rgba(0,0,0,.18)}
+.spark{position:fixed;z-index:50;pointer-events:none;width:8px;height:8px;border-radius:50%;animation:pop .7s ease-out forwards}
+@keyframes pop{from{opacity:1;transform:translate(0,0) scale(1)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.3)}}
+@media (prefers-reduced-motion:reduce){.blobs i,.card,.card::before,.title i{animation:none!important}}
 </style>
 </head>
 <body>
+<div class="blobs" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <div class="light" aria-hidden="true"></div>
 <div class="wrap">
   <nav class="top">
-    <div class="brand"><i></i><div>Source cài đặt<small>Thư viện bộ cài Autodesk của nhóm</small></div></div>
+    <div class="brand"><i></i><div>Bộ cài đặt Autodesk<small>Thư viện bộ cài Autodesk của nhóm</small></div></div>
     <div class="navlinks" id="navlinks"></div>
     <div class="who">Người cập nhật: Minh Quân</div>
   </nav>
@@ -179,13 +215,13 @@ footer{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:40px c
   <header class="hero">
     <div>
       <p class="meta"><span>Cập nhật <b>16.11.2026</b></span><span><b id="sP"></b> phần mềm</span><span><b id="sL"></b> file</span></p>
-      <h1>Mọi bộ cài<br>Autodesk,<br>một chỗ.</h1>
+      <h1 class="title"><span><i>Bộ cài đặt</i></span><span><i>Autodesk</i></span></h1>
     </div>
     <div>
       <p class="lede">Chọn một thẻ để xem các phiên bản từ 2015 đến 2027. Tải thẳng từ máy chủ Autodesk hoặc sao chép link gửi đồng nghiệp.</p>
       <label class="search">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Tìm phần mềm hoặc năm…" autocomplete="off" aria-label="Tìm phần mềm">
+        <input id="q" type="search" placeholder="Tìm phần mềm hoặc năm, ví dụ Revit 2024" autocomplete="off" aria-label="Tìm phần mềm">
         <button class="go" id="go" type="button">Tìm</button>
       </label>
       <div class="legend" id="legend" role="group" aria-label="Lọc theo nhóm"></div>
@@ -211,7 +247,7 @@ footer{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:40px c
 <div class="scrim" id="scrim"></div>
 <aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sTitle" aria-hidden="true">
   <div class="shead">
-    <div class="code" id="sCode"></div>
+    <div class="sicon" id="sCode"></div>
     <div><small id="sGroup"></small><h3 id="sTitle"></h3></div>
     <button class="x" id="sClose" aria-label="Đóng"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
@@ -224,13 +260,18 @@ footer{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:40px c
 let DATA = null;
 const CODES = {"AutoCAD":"ACD","AutoCAD LT":"LT","AutoCAD Architecture":"ARCH","AutoCAD Electrical":"ELEC","AutoCAD Mechanical":"MECH","AutoCAD Plant 3D":"PLNT","DWG TrueView":"DWG","Revit":"RVT","Revit LT":"RVT LT","Revit Update":"UPD","Navisworks Manage":"NAVM","Navisworks Simulate":"NAVS","Recap Pro":"RCP","Civil 3D":"C3D","InfraWorks":"IW","Advance Steel":"ASTL","Inventor":"INV","PowerMill":"PMILL","PowerShape":"PSHP","Vault Professional Client":"VPC","Vault Professional Server":"VPS","Vault Basic Client":"VBC","3ds Max":"3DS","Maya":"MAYA"};
 const COLORS = {
-  "AutoCAD":["#d97a8f","#a84a6c"],
-  "Revit & BIM":["#7d9fcf","#4a6894"],
-  "Hạ tầng & Kết cấu":["#6fb3a7","#3e7c74"],
-  "Cơ khí & Gia công":["#dca267","#a8703a"],
-  "Vault":["#9a8fd0","#62569c"],
-  "Đồ họa 3D":["#c97bbf","#8a4a88"]
+  "AutoCAD":["#ff6b8b","#e0245e"],
+  "Revit & BIM":["#4fa3ff","#2754e6"],
+  "Hạ tầng & Kết cấu":["#2fe0b5","#0a9a82"],
+  "Cơ khí & Gia công":["#ffc04a","#f2661b"],
+  "Vault":["#a678ff","#5a37e0"],
+  "Đồ họa 3D":["#ff6be0","#b52bc0"]
 };
+const initials = n => n.replace(/^AutoCAD /,'').replace(/^Vault /,'V ').split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
+function iconHTML(p){
+  const src = p.img || `icons/${p.id}.png`;
+  return `<span class="ic"><img src="${esc(src)}" alt="" loading="lazy" onerror="this.remove()"><b>${esc(initials(p.name))}</b></span>`;
+}
 const col = g => COLORS[g] || ["#9a9aa3","#5f5f68"];
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -253,7 +294,7 @@ function start(){
 function renderLegend(){
   $('legend').innerHTML = ['Tất cả',...groups].map(g => {
     const [a,b] = col(g);
-    return `<button class="chip" aria-pressed="${g===active}" data-g="${esc(g)}" style="--g:${g==='Tất cả'?'conic-gradient(#d97a8f,#9a8fd0,#7d9fcf,#6fb3a7,#dca267,#d97a8f)':`linear-gradient(150deg,${a},${b})`}"><i></i>${esc(g)}</button>`;
+    return `<button class="chip" aria-pressed="${g===active}" data-g="${esc(g)}" style="--g:${g==='Tất cả'?'conic-gradient(#ff6b8b,#a678ff,#4fa3ff,#2fe0b5,#ffc04a,#ff6b8b)':`linear-gradient(150deg,${a},${b})`}"><i></i>${esc(g)}</button>`;
   }).join('');
 }
 function pickGroup(g){ active = g; renderLegend(); filter(); }
@@ -262,15 +303,16 @@ $('navlinks').addEventListener('click', e => { const a = e.target.closest('a'); 
 
 function renderGrid(){
   const minY = 2015, maxY = 2027;
-  $('grid').innerHTML = DATA.map(p => {
+  $('grid').innerHTML = DATA.map((p,i) => {
     const [a,b] = col(p.group); const ys = years(p); const lo = Math.min(...ys), hi = Math.max(...ys);
     const span = Math.max(8, (hi - lo) / (maxY - minY) * 100);
-    return `<button class="card" data-id="${p.id}" style="--c1:${a};--c2:${b}" aria-label="${esc(p.name)}, ${p.versions.length} phiên bản">
-      <span class="top"><span class="code">${esc(p.code)}</span><span class="n">${p.versions.length} bản</span></span>
+    return `<button class="card" data-id="${p.id}" style="--c1:${a};--c2:${b};--i:${i}" aria-label="${esc(p.name)}, ${p.versions.length} phiên bản">
+      <span class="top">${iconHTML(p)}<span class="n">${p.versions.length} bản</span></span>
       ${p.note ? '<i class="warn" title="Có link cần kiểm tra"></i>' : ''}
       <span><span class="name">${esc(p.name)}</span><span class="yrs">${lo}<b style="--span:${span}%"></b>${hi}</span></span>
     </button>`;
   }).join('');
+  setTimeout(() => $('grid').querySelectorAll('.card').forEach(c => c.classList.add('ready')), 2200);
 }
 function filter(){
   const words = norm($('q').value).split(/[^a-z0-9]+/).filter(Boolean);
@@ -292,7 +334,7 @@ function goFirst(){
   $('stage').scrollIntoView({behavior: reduced ? 'auto' : 'smooth'});
   setTimeout(() => first.focus({preventScroll:true}), reduced ? 0 : 500);
 }
-$('grid').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) location.hash = c.dataset.id; });
+$('grid').addEventListener('click', e => { const c = e.target.closest('.card'); if (!c) return; const r = c.getBoundingClientRect(); const p = DATA.find(x => x.id === c.dataset.id); const [a,b] = col(p.group); sparks(e.clientX || r.left + r.width/2, e.clientY || r.top + r.height/2, a, b); setTimeout(() => location.hash = c.dataset.id, 140); });
 
 /* scroll-driven 3D: tilted isometric tray flattens into the grid */
 const ease = t => 1 - Math.pow(1 - t, 3);
@@ -307,9 +349,21 @@ function onScroll(){
   const e = ease(p);
   const tr = $('tray'); const fit = Math.min(1, (innerHeight - 96) / tr.offsetHeight);
   const rx = 54 * (1 - e), rz = -34 * (1 - e), s = .78 * fit + (fit - .78 * fit) * e, ty = 40 * (1 - e);
-  $('tray').style.transform = `translateY(${ty}px) rotateX(${rx}deg) rotateZ(${rz}deg) scale(${s})`;
+  const tx = my * -7 * (1 - e * .6), tyy = mx * 9 * (1 - e * .6);
+  $('tray').style.transform = `translateY(${ty}px) rotateX(${rx + tx}deg) rotateY(${tyy}deg) rotateZ(${rz}deg) scale(${s})`;
   $('grid').querySelectorAll('.card').forEach((c,i) => { if (!c.matches(':hover')) c.style.setProperty('--lift', ((1 - e) * (10 + (i % 6) * 5)).toFixed(1)); });
   $('hint').style.opacity = p > .15 ? 0 : 1;
+}
+let mx = 0, my = 0;
+addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; if (!reduced) requestAnimationFrame(onScroll); }, {passive:true});
+function sparks(x, y, c1, c2){
+  if (reduced) return;
+  for (let k = 0; k < 14; k++){
+    const s = document.createElement('i'); s.className = 'spark';
+    const a = Math.random() * Math.PI * 2, d = 40 + Math.random() * 60;
+    s.style.cssText = `left:${x}px;top:${y}px;background:${k % 2 ? c1 : c2};--dx:${Math.cos(a)*d}px;--dy:${Math.sin(a)*d}px`;
+    document.body.appendChild(s); setTimeout(() => s.remove(), 720);
+  }
 }
 addEventListener('scroll', onScroll, {passive:true});
 addEventListener('resize', onScroll);
@@ -319,7 +373,7 @@ function open(p){
   cur = p; back = document.activeElement;
   const [a,b] = col(p.group);
   $('sheet').style.setProperty('--c1', a); $('sheet').style.setProperty('--c2', b);
-  $('sCode').textContent = p.code; $('sGroup').textContent = p.group; $('sTitle').textContent = p.name;
+  $('sCode').innerHTML = iconHTML(p); $('sGroup').textContent = p.group; $('sTitle').textContent = p.name;
   $('vers').innerHTML = p.versions.map((v,i) => `<button class="ver" role="tab" data-i="${i}" aria-selected="${i===0}">${esc(v.v)}<small>${v.links.length}</small></button>`).join('');
   show(0);
   $('sheet').classList.add('open'); $('scrim').classList.add('open'); $('sheet').setAttribute('aria-hidden','false');
