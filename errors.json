@@ -1,0 +1,72 @@
+[
+  {
+    "id": "loi-1603",
+    "code": "Error 1603",
+    "title": "Cài đặt không hoàn tất: \"Some products failed to install\"",
+    "category": "Cài đặt",
+    "software": ["Tất cả phần mềm"],
+    "symptoms": "Trình cài đặt chạy gần xong thì dừng, báo một hoặc nhiều sản phẩm cài thất bại. Log cài đặt có dòng `Error 1603` hoặc `Return value 3`.",
+    "cause": "Lỗi chung của Windows Installer. Hay gặp nhất: không chạy với quyền quản trị, còn sót bản cài cũ, phần mềm diệt virus chặn file, hoặc thiếu .NET Framework / Visual C++ Redistributable.",
+    "steps": [
+      "Chuột phải vào file cài đặt (Setup.exe hoặc file Part 1), chọn `Run as administrator`.",
+      "Tạm tắt phần mềm diệt virus và Windows Defender trong lúc cài.",
+      "Gỡ sạch bản cài cũ cùng phiên bản bằng `Autodesk Uninstall Tool` (Start menu, thư mục Autodesk), rồi khởi động lại máy.",
+      "Cài lại .NET Framework và Visual C++ Redistributable bản mới nhất từ trang Microsoft.",
+      "Nếu vẫn lỗi, mở thư mục `%TEMP%`, tìm file log cài đặt Autodesk mới nhất và tìm dòng `Return value 3` để biết thành phần nào hỏng."
+    ],
+    "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu và chỉnh lại theo kinh nghiệm xử lý thực tế của nhóm.",
+    "updated": "17.11.2026",
+    "draft": true
+  },
+  {
+    "id": "loi-1308",
+    "code": "Error 1308",
+    "title": "Không tìm thấy file nguồn: \"Source file not found\"",
+    "category": "Cài đặt",
+    "software": ["Tất cả phần mềm"],
+    "symptoms": "Đang cài thì báo không tìm thấy một file trong bộ cài, kèm đường dẫn tới file bị thiếu.",
+    "cause": "Bộ cài tải về chưa đủ các Part hoặc bị hỏng khi tải, giải nén vào thư mục có đường dẫn quá dài, hoặc chạy cài đặt trực tiếp từ ổ mạng hay USB.",
+    "steps": [
+      "Kiểm tra đã tải đủ tất cả các Part của phiên bản đó và đặt chung một thư mục.",
+      "Giải nén vào thư mục ngắn ở ổ cứng máy, ví dụ `C:\\Autodesk`.",
+      "Xóa thư mục giải nén cũ, tải lại Part bị lỗi nếu dung lượng không khớp, rồi chạy lại Part 1."
+    ],
+    "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu và chỉnh lại theo kinh nghiệm xử lý thực tế của nhóm.",
+    "updated": "17.11.2026",
+    "draft": true
+  },
+  {
+    "id": "loi-licensing-service",
+    "code": "Licensing",
+    "title": "Báo lỗi giấy phép khi mở phần mềm do dịch vụ Autodesk Licensing không chạy",
+    "category": "Kích hoạt & giấy phép",
+    "software": ["Tất cả phần mềm"],
+    "symptoms": "Mở phần mềm thì báo lỗi license, không hiện màn hình đăng nhập, hoặc đăng nhập xong vẫn không vào được.",
+    "cause": "Dịch vụ `Autodesk Desktop Licensing Service` bị dừng, bị tắt khởi động cùng Windows, hoặc phiên bản dịch vụ đã cũ.",
+    "steps": [
+      "Nhấn `Win + R`, gõ `services.msc` rồi nhấn Enter.",
+      "Tìm `Autodesk Desktop Licensing Service`, chuột phải chọn `Properties`, đặt Startup type là `Automatic`, rồi bấm `Start`.",
+      "Khởi động lại phần mềm. Nếu vẫn lỗi, tải và cài bản Autodesk Licensing Service mới nhất từ trang hỗ trợ Autodesk, rồi khởi động lại máy."
+    ],
+    "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu và chỉnh lại theo kinh nghiệm xử lý thực tế của nhóm.",
+    "updated": "17.11.2026",
+    "draft": true
+  },
+  {
+    "id": "loi-dotnet",
+    "code": ".NET",
+    "title": "Thiếu hoặc lỗi .NET Framework khi cài phần mềm",
+    "category": "Môi trường Windows",
+    "software": ["AutoCAD", "Revit", "Inventor", "Civil 3D"],
+    "symptoms": "Trình cài đặt báo cần .NET Framework, cài .NET thất bại, hoặc phần mềm cài xong nhưng không mở được.",
+    "cause": "Máy chưa có phiên bản .NET Framework mà phần mềm yêu cầu, hoặc .NET trên máy bị hỏng do Windows Update dang dở.",
+    "steps": [
+      "Chạy Windows Update cho đến khi không còn bản cập nhật nào, rồi khởi động lại máy.",
+      "Tải bộ cài .NET Framework phiên bản phần mềm yêu cầu từ trang Microsoft và cài thủ công.",
+      "Chạy lại trình cài đặt Autodesk với quyền `Run as administrator`."
+    ],
+    "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu yêu cầu .NET của từng phiên bản trong trang System Requirements của Autodesk.",
+    "updated": "17.11.2026",
+    "draft": true
+  }
+]
