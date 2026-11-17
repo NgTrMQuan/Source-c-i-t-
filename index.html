@@ -203,31 +203,6 @@ footer{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:40px c
 .spark{position:fixed;z-index:50;pointer-events:none;width:8px;height:8px;border-radius:50%;animation:pop .7s ease-out forwards}
 @keyframes pop{from{opacity:1;transform:translate(0,0) scale(1)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.3)}}
 @media (prefers-reduced-motion:reduce){.blobs i,.card,.card::before,.title i{animation:none!important}}
-/* ---- one-screen layout ---- */
-html,body{height:100%}
-.wrap{height:100vh;display:flex;flex-direction:column}
-nav.top{position:relative;flex:none;padding:14px clamp(18px,3vw,40px)}
-main.one{flex:1;min-height:0;display:grid;grid-template-columns:minmax(290px,370px) minmax(0,1fr);gap:clamp(20px,3vw,44px);padding:0 clamp(18px,3vw,40px) clamp(16px,2.4vh,28px);max-width:1600px;width:100%;margin:0 auto}
-.hero{display:flex;flex-direction:column;justify-content:center;padding:0;gap:0;max-width:none;margin:0}
-.hero h1{font-size:clamp(34px,3.7vw,62px);margin-bottom:18px}
-.meta{margin-bottom:12px;flex-wrap:wrap}
-.lede{font-size:15px;margin-bottom:16px}
-.legend{margin-top:14px}
-.stage,.stage.flat{height:auto;min-height:0;display:flex}
-.sticky,.stage.flat .sticky{position:relative;top:0;height:100%;width:100%;padding:0;display:flex;align-items:stretch;justify-content:center}
-.tray{width:100%;height:100%;display:flex;flex-direction:column;padding:18px;border-radius:26px}
-.trayhead{margin:0 4px 12px}
-.grid{flex:1;min-height:0;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:12px}
-.card{aspect-ratio:auto;min-height:0;padding:12px 12px 10px}
-.card .name{font-size:clamp(13px,1.1vw,16.5px)!important}
-.ic{width:clamp(34px,3vw,46px);height:clamp(34px,3vw,46px)}
-@media (max-width:1000px){
-  .wrap{height:auto}
-  main.one{grid-template-columns:1fr}
-  .grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:none}
-  .card{aspect-ratio:1/.95}
-}
-@media (max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -240,15 +215,16 @@ main.one{flex:1;min-height:0;display:grid;grid-template-columns:minmax(290px,370
     <div class="who">Người cập nhật: Minh Quân</div>
   </nav>
 
-  <main class="one">
   <header class="hero">
     <div>
       <p class="meta"><span>Cập nhật <b>16.11.2026</b></span><span><b id="sP"></b> phần mềm</span><span><b id="sL"></b> file</span></p>
       <h1 class="title"><span><i>Bộ cài đặt</i></span><span><i>Autodesk</i></span></h1>
-      <p class="lede">Chọn một thẻ để xem các phiên bản từ 2015 đến 2027, rồi tải về hoặc sao chép link.</p>
+    </div>
+    <div>
+      <p class="lede">Chọn một thẻ để xem các phiên bản từ 2015 đến 2027. Tải thẳng từ máy chủ Autodesk hoặc sao chép link gửi đồng nghiệp.</p>
       <label class="search">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Tìm phần mềm hoặc năm…" autocomplete="off" aria-label="Tìm phần mềm">
+        <input id="q" type="search" placeholder="Tìm phần mềm hoặc năm, ví dụ Revit 2024" autocomplete="off" aria-label="Tìm phần mềm">
         <button class="go" id="go" type="button">Tìm</button>
       </label>
       <div class="legend" id="legend" role="group" aria-label="Lọc theo nhóm"></div>
@@ -261,9 +237,14 @@ main.one{flex:1;min-height:0;display:grid;grid-template-columns:minmax(290px,370
         <div class="trayhead"><span id="trayTitle">Tất cả phần mềm</span><span class="dots"><i></i><i></i><i></i></span></div>
         <div class="grid" id="grid"></div>
       </div>
+      <div class="hint" id="hint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14m0 0-5-5m5 5 5-5"/></svg>Cuộn xuống để mở khay</div>
     </div>
   </section>
-  </main>
+
+  <footer>
+    <span>Link trỏ thẳng tới máy chủ Autodesk. Link có mã authparam cũ có thể đã hết hạn.</span>
+    <span>Bộ nhiều phần: tải đủ vào một thư mục rồi chạy Part 1.</span>
+  </footer>
 </div>
 
 <div class="scrim" id="scrim"></div>
@@ -310,7 +291,7 @@ function start(){
   $('sP').textContent = DATA.length;
   $('sL').textContent = DATA.reduce((a,p)=>a+p.versions.reduce((b,v)=>b+v.links.length,0),0);
   $('navlinks').innerHTML = groups.slice(0,4).map(g => `<a href="#" data-g="${esc(g)}">${esc(g)}</a>`).join('');
-  renderLegend(); renderGrid(); route(); apply();
+  renderLegend(); renderGrid(); route(); onScroll();
 }
 
 function renderLegend(){
@@ -321,7 +302,7 @@ function renderLegend(){
 }
 function pickGroup(g){ active = g; renderLegend(); filter(); }
 $('legend').addEventListener('click', e => { const b = e.target.closest('.chip'); if (b) pickGroup(b.dataset.g); });
-$('navlinks').addEventListener('click', e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); pickGroup(a.dataset.g); });
+$('navlinks').addEventListener('click', e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); pickGroup(a.dataset.g); $('stage').scrollIntoView({behavior: reduced ? 'auto' : 'smooth'}); });
 
 function renderGrid(){
   const minY = 2015, maxY = 2027;
@@ -353,27 +334,31 @@ function goFirst(){
   filter();
   const first = $('grid').querySelector('.card:not(.dim)');
   if (!first) { toast('Không có phần mềm khớp'); return; }
-  first.focus();
+  $('stage').scrollIntoView({behavior: reduced ? 'auto' : 'smooth'});
+  setTimeout(() => first.focus({preventScroll:true}), reduced ? 0 : 500);
 }
 $('grid').addEventListener('click', e => { const c = e.target.closest('.card'); if (!c) return; const r = c.getBoundingClientRect(); const p = DATA.find(x => x.id === c.dataset.id); const [a,b] = col(p.group); sparks(e.clientX || r.left + r.width/2, e.clientY || r.top + r.height/2, a, b); setTimeout(() => location.hash = c.dataset.id, 140); });
 
-/* intro: tray lands from an isometric tilt to flat, then follows the pointer */
+/* scroll-driven 3D: tilted isometric tray flattens into the grid */
 const ease = t => 1 - Math.pow(1 - t, 3);
-let introP = reduced ? 1 : 0, mx = 0, my = 0, t0 = null;
-function frame(ts){
-  if (t0 === null) t0 = ts;
-  introP = Math.max(0, Math.min(1, (ts - t0 - 250) / 1500));
-  apply();
-  if (introP < 1) requestAnimationFrame(frame);
+function onScroll(){
+  document.documentElement.style.setProperty('--sy', scrollY);
+  const st = $('stage');
+  if (reduced || innerWidth < 640){ st.classList.add('flat'); $('tray').style.transform = 'none'; $('hint').style.opacity = 0; return; }
+  st.classList.remove('flat');
+  const r = st.getBoundingClientRect();
+  const total = st.offsetHeight - innerHeight * .9;
+  const p = Math.min(1, Math.max(0, (-r.top + innerHeight * .35) / total));
+  const e = ease(p);
+  const tr = $('tray'); const fit = Math.min(1, (innerHeight - 96) / tr.offsetHeight);
+  const rx = 54 * (1 - e), rz = -34 * (1 - e), s = .78 * fit + (fit - .78 * fit) * e, ty = 40 * (1 - e);
+  const tx = my * -7 * (1 - e * .6), tyy = mx * 9 * (1 - e * .6);
+  $('tray').style.transform = `translateY(${ty}px) rotateX(${rx + tx}deg) rotateY(${tyy}deg) rotateZ(${rz}deg) scale(${s})`;
+  $('grid').querySelectorAll('.card').forEach((c,i) => { if (!c.matches(':hover')) c.style.setProperty('--lift', ((1 - e) * (10 + (i % 6) * 5)).toFixed(1)); });
+  $('hint').style.opacity = p > .15 ? 0 : 1;
 }
-function apply(){
-  if (innerWidth < 1000){ $('tray').style.transform = 'none'; return; }
-  const e = ease(introP);
-  const rx = 52 * (1 - e) - my * 5 * e, ry = mx * 6 * e, rz = -30 * (1 - e), s = .82 + .18 * e;
-  $('tray').style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg) scale(${s})`;
-}
-addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; if (!reduced && introP >= 1) requestAnimationFrame(apply); }, {passive:true});
-addEventListener('resize', apply);
+let mx = 0, my = 0;
+addEventListener('pointermove', e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; if (!reduced) requestAnimationFrame(onScroll); }, {passive:true});
 function sparks(x, y, c1, c2){
   if (reduced) return;
   for (let k = 0; k < 14; k++){
@@ -383,8 +368,8 @@ function sparks(x, y, c1, c2){
     document.body.appendChild(s); setTimeout(() => s.remove(), 720);
   }
 }
-requestAnimationFrame(frame);
-
+addEventListener('scroll', onScroll, {passive:true});
+addEventListener('resize', onScroll);
 
 /* detail sheet */
 function open(p){
