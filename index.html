@@ -190,9 +190,12 @@ footer{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:40px c
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -7px}}
 .card::before{content:"";position:absolute;top:0;bottom:0;width:45%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);animation:shine 7s ease-in-out infinite;animation-delay:calc(var(--i) * 290ms);pointer-events:none;z-index:1}
 @keyframes shine{0%,72%{left:-60%}88%,100%{left:130%}}
-.ic{position:relative;width:46px;height:46px;border-radius:14px;flex:none;display:grid;place-items:center;overflow:hidden;
+.ic{position:relative;width:50px;height:50px;border-radius:14px;flex:none;display:grid;place-items:center;overflow:hidden;
   background:rgba(255,255,255,.95);box-shadow:0 6px 14px -6px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.6)}
 .ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:5px;background:#fff;z-index:1}
+.ic:has(img){background:transparent;box-shadow:none;overflow:visible}
+.ic:has(img) img{padding:0;background:transparent;filter:drop-shadow(0 6px 8px rgba(0,0,0,.28))}
+.ic:has(img) b{display:none}
 .ic b{font-weight:800;font-size:17px;letter-spacing:-.02em;background:linear-gradient(150deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .sicon .ic{width:58px;height:58px;border-radius:17px}
 .sicon .ic b{font-size:22px}
