@@ -30,7 +30,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- nav ---------- */
 nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;gap:26px;padding:18px clamp(18px,4vw,52px);
-  background:linear-gradient(rgba(5,7,11,.85),rgba(5,7,11,0))}
+  background:rgba(6,9,14,.62);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-bottom:1px solid rgba(255,255,255,.06)}
 .brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.06em;display:flex;align-items:center;gap:10px}
 .brand i{width:18px;height:18px;border-radius:50%;background:conic-gradient(#ff6b8b,#a678ff,#4fa3ff,#2fe0b5,#ffc04a,#ff6b8b);box-shadow:0 0 18px rgba(98,216,255,.6);animation:spin 6s linear infinite}
 @keyframes spin{to{transform:rotate(1turn)}}
@@ -82,8 +82,10 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 
 /* ---------- library ---------- */
 .lib{position:relative;z-index:2;max-width:1320px;margin:0 auto;padding:90px clamp(18px,4vw,52px) 80px}
-.libhead{position:sticky;top:64px;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 0;margin-bottom:22px;
-  background:linear-gradient(rgba(5,7,11,.92),rgba(5,7,11,.7));backdrop-filter:blur(12px)}
+.libhead{position:sticky;top:72px;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:14px 20px;flex-wrap:wrap;padding:14px 16px 14px 24px;margin:0 0 24px;
+  border-radius:24px;background:rgba(12,16,24,.55);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);
+  box-shadow:0 20px 40px -24px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.06)}
+.chip:not(:has(i)){padding-left:15px}
 .libhead h2{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(22px,2.4vw,32px)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 15px 0 11px;border-radius:999px;font-size:13px;font-weight:600;color:var(--ink-2);background:var(--glass);border:1px solid var(--line);transition:all .15s}
