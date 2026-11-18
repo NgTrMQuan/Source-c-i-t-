@@ -28,7 +28,8 @@
    {
     "title": "Công cụ tự động làm gì (đúng 5 bước trong bài hướng dẫn của Autodesk)",
     "steps": [
-     "Dừng các chương trình và dịch vụ Autodesk đang chạy.",
+     "Bảo vệ Vault: nếu máy có Vault Server hoặc cơ sở dữ liệu Vault (SQL `AUTODESKVAULT`), công cụ chỉ cho chạy chế độ kiểm tra và chặn chế độ xóa, để không làm mất kho dữ liệu Vault.",
+     "Dừng các chương trình và dịch vụ của Autodesk đang chạy (không đụng dịch vụ của hãng khác như SolidWorks, FlexNet, SQL Server).",
      "Bước 1: gỡ mọi phần mềm Autodesk (trừ Autodesk Genuine Service), gỡ ODIS bằng `RemoveODIS.exe`, gỡ Autodesk Licensing Desktop Service.",
      "Bước 2: gỡ Autodesk Identity Manager.",
      "Bước 3: xóa file trong `%temp%`, 3 file `adsk*` trong `C:\\ProgramData\\FLEXnet`, và các thư mục: `C:\\Program Files\\Autodesk`, `C:\\Program Files\\Common Files\\Autodesk Shared`, `C:\\Program Files (x86)\\Autodesk`, `C:\\Program Files (x86)\\Common Files\\Autodesk Shared`, `C:\\ProgramData\\Autodesk`, `%localappdata%\\Autodesk`, `%appdata%\\Autodesk`.",

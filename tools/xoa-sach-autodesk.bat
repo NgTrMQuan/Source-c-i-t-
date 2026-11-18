@@ -94,18 +94,35 @@ Log "Bắt đầu. Máy: $env:COMPUTERNAME  -  Người dùng: $env:USERNAME"
 Log "Log: $logFile"
 
 $apps = @(Get-AdskApps | Sort-Object Name -Unique)
+
+# Bảo vệ máy chủ Vault: không xóa nếu phát hiện Vault Server / CSDL Vault (dữ liệu nằm trong C:\ProgramData\Autodesk)
+$vaultSrv = @()
+$vaultSrv += @($apps | Where-Object { $_.Name -match 'Vault.*Server|ADMS|Data Management Server' } | ForEach-Object { "Phần mềm: $($_.Name)" })
+$vaultSrv += @(Get-Service -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'AUTODESKVAULT' } | ForEach-Object { "Dịch vụ: $($_.DisplayName)" })
+if (Test-Path 'C:\ProgramData\Autodesk\VaultServer') { $vaultSrv += 'Thư mục: C:\ProgramData\Autodesk\VaultServer' }
 Write-Host ''
 Write-Host "Tìm thấy $($apps.Count) mục Autodesk đã cài:" -ForegroundColor White
 $apps | ForEach-Object { Write-Host ("   - {0} {1}" -f $_.Name, $_.Version) }
 Write-Host ''
 Write-Host 'CẢNH BÁO: Công cụ sẽ gỡ TOÀN BỘ phần mềm Autodesk, xóa thư mục, registry và thông tin license.' -ForegroundColor Yellow
 Write-Host 'Nếu có family, template, thư viện tùy biến trong thư mục Autodesk, hãy sao lưu trước.' -ForegroundColor Yellow
+if ($vaultSrv.Count) { Write-Host 'PHÁT HIỆN VAULT SERVER / CSDL VAULT: chỉ được chạy chế độ KIỂM TRA trên máy này.' -ForegroundColor Red; $vaultSrv | ForEach-Object { Log "  Vault: $_" 'Red' } }
 Write-Host ''
 Write-Host '  1 = Chỉ KIỂM TRA (liệt kê những gì sẽ bị xóa, không xóa gì)'
 Write-Host '  2 = XÓA SẠCH'
 Write-Host '  Phím khác = Thoát'
 $mode = Read-Host 'Chọn'
 $dry = $true
+if ($mode -eq '2' -and $vaultSrv.Count) {
+  Write-Host ''
+  Write-Host 'DỪNG LẠI: máy này có Vault Server hoặc cơ sở dữ liệu Vault:' -ForegroundColor Red
+  $vaultSrv | ForEach-Object { Write-Host "   - $_" -ForegroundColor Red }
+  Write-Host 'Xóa sạch có thể làm mất kho dữ liệu Vault. Công cụ không xóa trên máy này.' -ForegroundColor Red
+  Write-Host 'Hãy sao lưu Vault bằng ADMS Console và gỡ thủ công theo hướng dẫn của Autodesk.' -ForegroundColor Red
+  Log ('Đã chặn chế độ xóa vì phát hiện Vault Server: ' + ($vaultSrv -join '; ')) 'Red'
+  Start-Process notepad.exe $logFile
+  return
+}
 if ($mode -eq '2') {
   $ok = Read-Host 'Gõ XOA (chữ in hoa) để xác nhận xóa sạch'
   if ($ok -ne 'XOA') { Log 'Đã hủy, không thay đổi gì.' 'Yellow'; return }
@@ -120,7 +137,7 @@ foreach ($p in $procs) {
   if ($dry) { Result '0' "Tiến trình $($p.ProcessName)" 'BỎ QUA' '(kiểm tra)'; continue }
   try { Stop-Process -Id $p.Id -Force -ErrorAction Stop; Result '0' "Tiến trình $($p.ProcessName)" 'OK' 'đã dừng' } catch { Result '0' "Tiến trình $($p.ProcessName)" 'LỖI' $_.Exception.Message }
 }
-$svcs = Get-CimInstance Win32_Service -ErrorAction SilentlyContinue | Where-Object { $_.PathName -match 'Autodesk|AdskLicensing|AdODIS|FLEXnet' -or $_.DisplayName -match 'Autodesk' }
+$svcs = Get-CimInstance Win32_Service -ErrorAction SilentlyContinue | Where-Object { ($_.PathName -match '\\Autodesk|AdskLicensing|AdODIS' -or $_.DisplayName -match '^Autodesk') -and $_.Name -notmatch '^MSSQL|^SQL' }
 foreach ($s in $svcs) {
   if ($dry) { Result '0' "Dịch vụ $($s.DisplayName)" 'BỎ QUA' '(kiểm tra)'; continue }
   try { Stop-Service -Name $s.Name -Force -ErrorAction Stop; Result '0' "Dịch vụ $($s.DisplayName)" 'OK' 'đã dừng' } catch { Result '0' "Dịch vụ $($s.DisplayName)" 'BỎ QUA' 'không dừng được hoặc đã dừng' }
