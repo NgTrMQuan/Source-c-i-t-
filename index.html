@@ -295,6 +295,29 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 .ptext{display:block}
 @media (max-width:900px){.portals{grid-template-columns:1fr}.portal{min-height:560px}}
 @media (prefers-reduced-motion:reduce){.portal::after,.orb .rg,.orb .ic img,.radar,.sparks i,.orb .hub svg{animation:none}}
+/* v5: quỹ đạo 3D nghiêng như bản trước + cảnh báo sáng nhấp nháy, vòng tròn xoay */
+.orb{perspective:1000px;transform-style:preserve-3d}
+.orb .trk{transform:rotateX(66deg)}
+.orb .rg{transform-style:preserve-3d;animation:orb3d var(--t) linear infinite;animation-direction:var(--dir,normal)}
+@keyframes orb3d{from{transform:rotateX(66deg) rotateZ(0)}to{transform:rotateX(66deg) rotateZ(360deg)}}
+.orb .ic{transform-style:preserve-3d;transform:rotateZ(var(--a)) translateY(calc(var(--R) * -1)) rotateZ(calc(var(--a) * -1)) rotateX(-66deg)}
+.orb .ic img{animation:icspin var(--t) linear infinite;animation-direction:var(--rev,normal)}
+@keyframes icspin{to{transform:rotate(-360deg)}}
+.orb .hub{z-index:2}
+.warn svg{animation:flash 1.1s ease-in-out infinite}
+@keyframes flash{0%,100%{filter:drop-shadow(0 0 10px rgba(255,179,71,.5)) brightness(.9);transform:scale(1)}50%{filter:drop-shadow(0 0 34px rgba(255,200,90,1)) drop-shadow(0 0 70px rgba(255,77,109,.8)) brightness(1.35);transform:scale(1.07)}}
+.rcirc{border:2px dashed rgba(255,179,71,.35);animation:spin var(--sp,18s) linear infinite}
+.rcirc:nth-of-type(2){border-style:dotted;border-color:rgba(255,77,109,.4);animation-direction:reverse}
+.rcirc::after{content:"";position:absolute;top:-5px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:#ffb347;box-shadow:0 0 12px #ffb347}
+@media (prefers-reduced-motion:reduce){.orb .rg,.orb .ic img,.warn svg,.rcirc{animation:none}}
+/* v6: quỹ đạo elip tính bằng JS, icon luôn đứng thẳng */
+.orb .rg{animation:none!important;transform:none!important}
+.orb .ic{margin:0!important;left:0!important;top:0!important;will-change:transform}
+.orb .ic img{animation:none!important}
+.orb .trk{inset:auto!important;left:50%!important;top:50%!important;width:var(--w);height:var(--h);margin:calc(var(--h) / -2) 0 0 calc(var(--w) / -2);transform:none!important}
+.orb .rg{z-index:auto!important;position:absolute;inset:0;transform-style:flat!important}
+.orb .hub{width:96px!important;height:96px!important;margin:-48px!important;z-index:2!important}
+.orb .hub svg{width:38px;height:38px}
 </style>
 </head>
 <body data-cosmos="off">
@@ -502,9 +525,9 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
         <span class="vis2" aria-hidden="true">
           <span class="sparks" data-n="18"></span>
           <span class="orb">
-            <span class="trk" style="--in:0"></span><span class="trk b" style="--in:24%"></span>
-            <span class="rg" id="ringO" style="--t:40s"></span>
-            <span class="rg" id="ringI" style="--t:26s;--dir:reverse;--rev:normal"></span>
+            <span class="trk" style="--w:132cqw;--h:48cqw"></span><span class="trk b" style="--w:80cqw;--h:28cqw"></span>
+            <span class="rg" id="ringO" style="--t:22s"></span>
+            <span class="rg" id="ringI" style="--t:16s;--dir:reverse;--rev:reverse"></span>
             <span class="hub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5"/><path d="M5 19h14"/></svg></span>
           </span>
         </span>
@@ -519,7 +542,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
         <span class="shine"></span>
         <span class="vis2" aria-hidden="true">
           <span class="sparks" data-n="14"></span>
-          <span class="rcirc" style="--d:150px"></span><span class="rcirc" style="--d:270px"></span><span class="rcirc" style="--d:380px"></span>
+          <span class="rcirc" style="--d:170px;--sp:9s"></span><span class="rcirc" style="--d:280px;--sp:14s"></span><span class="rcirc" style="--d:390px;--sp:24s"></span>
           <span class="radar"></span>
           <span class="warn"><i></i><i></i><i></i>
             <svg viewBox="0 0 24 24"><defs><linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#ff4d6d"/></linearGradient></defs><path d="M12 2.8 22.2 20.5H1.8z" fill="url(#wg)" stroke="#fff3d6" stroke-width=".8" stroke-linejoin="round"/><rect x="11" y="8.4" width="2" height="6.6" rx="1" fill="#2a0d05"/><circle cx="12" cy="17.6" r="1.25" fill="#2a0d05"/></svg>
@@ -626,6 +649,27 @@ document.querySelectorAll('.portal').forEach(p => {
 
 /* glow follows the cursor */
 document.querySelectorAll('.portal').forEach(p => p.addEventListener('pointermove', e => { const r = p.getBoundingClientRect(); p.style.setProperty('--mx', (e.clientX - r.left) + 'px'); p.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
+
+
+/* quỹ đạo icon: elip nghiêng, gần thì to + nổi lên trước */
+(() => {
+  const orb = document.querySelector('.orb'); if (!orb) return;
+  const rings = [[document.getElementById('ringO'), .66, .24, 22, 1], [document.getElementById('ringI'), .4, .14, 14, -1]];
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches, t0 = performance.now();
+  function tick(now){
+    const W = orb.clientWidth, t = (now - t0) / 1000, lim = (orb.parentElement.clientWidth / 2 - 34) / W;
+    for (const [el, rx, ry, per, dir] of rings){
+      const ics = el.children, n = ics.length;
+      for (let i = 0; i < n; i++){
+        const a = i / n * 6.283 + dir * t / per * 6.283, z = Math.sin(a), sz = parseFloat(getComputedStyle(ics[i]).width) || 40;
+        const x = W / 2 + Math.cos(a) * Math.min(rx, lim * (rx / .66)) * W - sz / 2, y = W / 2 + z * ry * W - sz / 2, k = .72 + (z + 1) * .2;
+        ics[i].style.transform = `translate(${x}px,${y}px) scale(${k})`; ics[i].style.zIndex = z > 0 ? 3 : 1; ics[i].style.opacity = .55 + (z + 1) * .225;
+      }
+    }
+    if (!still) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
 
 /* live counts */
 fetch('data.json',{cache:'no-store'}).then(r => r.json()).then(d => { $('cP').textContent = d.length; $('cL').textContent = d.reduce((a,p)=>a+p.versions.reduce((b,v)=>b+v.links.length,0),0); }).catch(()=>{});
