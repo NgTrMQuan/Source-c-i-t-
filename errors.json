@@ -43,7 +43,8 @@
   "refs": [
    "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Clean-uninstall.html"
   ],
-  "updated": "2026-11-18"
+  "updated": "2026-11-18",
+  "source": "autodesk"
  },
  {
   "id": "pc-kiem-tra-ban-quyen",
@@ -70,7 +71,8 @@
    "img/loi/1211737739284363.webp",
    "img/loi/1211737739284364.webp",
    "img/loi/1211737739284367.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "pc-doi-contract-manager",
@@ -103,7 +105,8 @@
    "img/loi/1211737739284355.webp",
    "img/loi/1211737739284357.webp",
    "img/loi/1211737739284359.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "pc-livechat",
@@ -168,7 +171,8 @@
    "img/loi/1211737739284380.webp",
    "img/loi/1211737739284384.webp",
    "img/loi/1211737739284386.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "pc-moldflow-license-file",
@@ -186,7 +190,8 @@
   "refs": [],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859401",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "pc-khong-nhan-otp",
@@ -222,7 +227,8 @@
    }
   ],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1212060652032677",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "lic-kiem-tra-thong-tin",
@@ -242,7 +248,8 @@
   "refs": [],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859326",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "lic-restart-nhieu-lan",
@@ -265,7 +272,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369958295751",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "lic-time-out",
@@ -294,7 +302,8 @@
   "images": [
    "img/loi/1211380473832876.webp",
    "img/loi/1211380473832878.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "lic-mo-khong-len",
@@ -316,7 +325,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369958295760",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "lic-1603",
@@ -339,7 +349,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211382157228750",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "lic-go-sach",
@@ -360,7 +371,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211391293312787",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "lic-required-connection",
@@ -385,7 +397,8 @@
   "updated": "2026-11-17",
   "images": [
    "img/loi/1213622732914873.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "cad-kiem-tra-thong-tin",
@@ -407,7 +420,8 @@
   "refs": [],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859300",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "cad-font",
@@ -433,7 +447,8 @@
   "updated": "2026-11-17",
   "images": [
    "img/loi/1211737739284332.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "cad-dong-bo-thiet-lap",
@@ -458,7 +473,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211737739284329",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "rvt-cannot-open",
@@ -480,7 +496,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859368",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "rvt-crash",
@@ -505,7 +522,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370086286619",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "rvt-cloud-model-crash",
@@ -528,7 +546,8 @@
   "refs": [],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370086286623",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "rvt-cloud-cache-mat-dien",
@@ -551,7 +570,8 @@
   "refs": [],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370086286625",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "rvt-link-acc",
@@ -578,7 +598,8 @@
   "refs": [],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370086286627",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "rvt-steel-connection",
@@ -606,7 +627,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370088075213",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "rvt-tat-addin",
@@ -631,7 +653,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370088075215",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "rvt-2021-2022",
@@ -655,7 +678,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211753380365414",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "acc-huong-dan",
@@ -677,7 +701,8 @@
   "refs": [],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859339",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "acc-backup",
@@ -698,7 +723,8 @@
   "refs": [],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859355",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "acc-viewer",
@@ -721,7 +747,8 @@
   "updated": "2026-11-17",
   "images": [
    "img/loi/1211737739284412.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "acc-xoa-cache",
@@ -749,7 +776,8 @@
    "img/loi/1212060655192492.webp",
    "img/loi/1212060655192494.webp",
    "img/loi/1212060655192496.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "inv-content-center",
@@ -772,7 +800,8 @@
   ],
   "subs": [],
   "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370454686856",
-  "updated": "2026-11-17"
+  "updated": "2026-11-17",
+  "source": "asana"
  },
  {
   "id": "inv-dong-bo-thiet-lap",
@@ -797,7 +826,8 @@
   "updated": "2026-11-17",
   "images": [
    "img/loi/1211779674542418.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "os-sai-quy-dao",
@@ -823,7 +853,8 @@
   "images": [
    "img/loi/1211425029380240.webp",
    "img/loi/1211425029380242.webp"
-  ]
+  ],
+  "source": "asana"
  },
  {
   "id": "loi-1308",
@@ -844,7 +875,8 @@
   "updated": "17.11.2026",
   "draft": true,
   "section": "License & cài đặt",
-  "kind": "loi"
+  "kind": "loi",
+  "source": "autodesk"
  },
  {
   "id": "loi-licensing-service",
@@ -865,7 +897,8 @@
   "updated": "17.11.2026",
   "draft": true,
   "section": "License & cài đặt",
-  "kind": "loi"
+  "kind": "loi",
+  "source": "autodesk"
  },
  {
   "id": "loi-dotnet",
@@ -889,6 +922,7 @@
   "updated": "17.11.2026",
   "draft": true,
   "section": "License & cài đặt",
-  "kind": "loi"
+  "kind": "loi",
+  "source": "autodesk"
  }
 ]

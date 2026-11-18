@@ -9,9 +9,9 @@ https://ngtrmquan.github.io/Source-c-i-t-/ (nhánh `main`, thư mục gốc). Ng
 |---|---|
 | `index.html` | Trang chủ: tiêu đề "Tải, cài và fix lỗi Autodesk", nền sao bay như hai trang con, hai cổng dẫn sang hai trang con |
 | `cai-dat.html` | Bộ cài đặt: vòng xoay 3D icon, lưới thẻ theo nhóm (lọc thì ẩn hẳn thẻ không khớp và cuộn tới đầu thư viện), bảng tải theo phiên bản. Đọc `data.json` |
-| `loi.html` | Lỗi thường gặp: ô tìm kiếm + ô chọn phần mềm (theo `section`, giống Asana) → danh sách tiêu đề → ngăn chi tiết trượt từ phải (Dấu hiệu / Nguyên nhân / Cách khắc phục / Hình minh họa `images[]` / Tham khảo). Link sâu: `#pm=<section>` và `#<id>`. Đọc `errors.json` |
+| `loi.html` | Lỗi thường gặp: ô tìm kiếm + 2 phần: “Kinh nghiệm xử lý” (`source: "asana"`, chép từ Asana project “2. Kinh nghiệm xử lý”) và “Hướng dẫn từ Autodesk” (`source: "autodesk"`, người dùng gửi dần). Mỗi phần có ô chọn phần mềm (theo `section`) → danh sách tiêu đề → ngăn chi tiết trượt từ phải (Dấu hiệu / Nguyên nhân / Cách khắc phục / Hình minh họa `images[]` / Tham khảo). Link sâu: `#pm=<source>|<section>` và `#<id>`. Đọc `errors.json` |
 | `data.json` | Danh sách phần mềm: `{name, icon, group, note, versions:[{v, links:[{label, url}]}]}`. Phiên bản mới đặt đầu mảng |
-| `errors.json` | Danh sách lỗi: `{id, code, title, category, software[], symptoms, cause, steps[], note, updated, draft}`. Trong `symptoms`, `cause`, `steps` có thể dùng `` `code` `` |
+| `errors.json` | Danh sách lỗi: `{id, source, section, code, title, kind ("loi"|"huongdan"), software[], symptoms, cause, steps[], subs[], images[], refs[], asana, download, note, updated, draft}`. Trong `symptoms`, `cause`, `steps` có thể dùng `` `code` `` |
 | `tools/xoa-sach-autodesk.bat` | Công cụ “Xóa sạch” (Clean Uninstall theo bài của Autodesk): file .bat tự xin quyền Admin, chạy phần PowerShell nhúng sau dòng `##PS_START`; chế độ 1 = chỉ kiểm tra, 2 = xóa (gõ `XOA`); ghi log + bảng kết quả ra Desktop. Lưu với xuống dòng CRLF, UTF-8. Ô “Xóa sạch” trong `loi.html` là mục `xoa-sach` của `errors.json` (trường `download`) |
 | `icons/<slug>.png` | Icon phần mềm, tên file là slug của `name` (vd. `civil-3d.png`, `3ds-max.png`). Thiếu icon thì trang hiện chữ cái tạm |
 
