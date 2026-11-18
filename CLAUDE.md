@@ -12,6 +12,7 @@ https://ngtrmquan.github.io/Source-c-i-t-/ (nhánh `main`, thư mục gốc). Ng
 | `loi.html` | Lỗi thường gặp: ô tìm kiếm + ô chọn phần mềm (theo `section`, giống Asana) → danh sách tiêu đề → ngăn chi tiết trượt từ phải (Dấu hiệu / Nguyên nhân / Cách khắc phục / Hình minh họa `images[]` / Tham khảo). Link sâu: `#pm=<section>` và `#<id>`. Đọc `errors.json` |
 | `data.json` | Danh sách phần mềm: `{name, icon, group, note, versions:[{v, links:[{label, url}]}]}`. Phiên bản mới đặt đầu mảng |
 | `errors.json` | Danh sách lỗi: `{id, code, title, category, software[], symptoms, cause, steps[], note, updated, draft}`. Trong `symptoms`, `cause`, `steps` có thể dùng `` `code` `` |
+| `tools/xoa-sach-autodesk.bat` | Công cụ “Xóa sạch” (Clean Uninstall theo bài của Autodesk): file .bat tự xin quyền Admin, chạy phần PowerShell nhúng sau dòng `##PS_START`; chế độ 1 = chỉ kiểm tra, 2 = xóa (gõ `XOA`); ghi log + bảng kết quả ra Desktop. Lưu với xuống dòng CRLF, UTF-8. Ô “Xóa sạch” trong `loi.html` là mục `xoa-sach` của `errors.json` (trường `download`) |
 | `icons/<slug>.png` | Icon phần mềm, tên file là slug của `name` (vd. `civil-3d.png`, `3ds-max.png`). Thiếu icon thì trang hiện chữ cái tạm |
 
 Mỗi file HTML tự chứa CSS/JS của nó (không có bước build). Ba trang dùng chung một bộ CSS và đoạn JS nền sao (sao bay, dải Ngân Hà, sao băng, đá trôi) — khi sửa phần dùng chung, sửa cả ba file cho đồng bộ.

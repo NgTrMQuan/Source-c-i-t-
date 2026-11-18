@@ -1,5 +1,50 @@
 [
  {
+  "id": "xoa-sach",
+  "section": "Xóa sạch",
+  "category": "Xóa sạch",
+  "software": [
+   "Tất cả phần mềm Autodesk",
+   "Windows"
+  ],
+  "code": "XS",
+  "kind": "huongdan",
+  "title": "Xóa sạch Autodesk tự động (Clean Uninstall)",
+  "download": {
+   "href": "tools/xoa-sach-autodesk.bat",
+   "label": "Tải công cụ xóa sạch (.bat)"
+  },
+  "symptoms": "Nâng cấp phiên bản mới nhưng liên tục lỗi; cài lần đầu bị dừng giữa chừng; cài xong nhưng phần mềm không khởi động. Công cụ gỡ TOÀN BỘ phần mềm Autodesk trên máy, kèm file sót, registry và thông tin license.",
+  "cause": "Máy Windows có quyền Administrator. Đóng hết phần mềm Autodesk. Sao lưu family, template, thư viện tùy biến nếu đang để trong các thư mục Autodesk.",
+  "steps": [
+   "Bấm nút “Tải công cụ xóa sạch” ở trên, lưu file `xoa-sach-autodesk.bat`.",
+   "Bấm đúp vào file, chọn **Yes** khi Windows hỏi quyền Administrator. Nếu Windows SmartScreen chặn, chọn `More info` → `Run anyway`.",
+   "Chọn `1` để chỉ KIỂM TRA: công cụ liệt kê những gì sẽ bị xóa, không xóa gì.",
+   "Chạy lại và chọn `2` rồi gõ `XOA` để xóa sạch thật.",
+   "Xong việc, file log tự mở trong Notepad và được lưu ra Desktop: `XoaSachAutodesk_<ngày-giờ>.log`. Mỗi mục được đánh dấu OK / CÒN SÓT / LỖI / BỎ QUA.",
+   "Khởi động lại máy. Nếu log còn mục CÒN SÓT (file đang bị khóa), chạy lại công cụ thêm 1 lần sau khi khởi động lại."
+  ],
+  "subs": [
+   {
+    "title": "Công cụ tự động làm gì (đúng 5 bước trong bài hướng dẫn của Autodesk)",
+    "steps": [
+     "Dừng các chương trình và dịch vụ Autodesk đang chạy.",
+     "Bước 1: gỡ mọi phần mềm Autodesk (trừ Autodesk Genuine Service), gỡ ODIS bằng `RemoveODIS.exe`, gỡ Autodesk Licensing Desktop Service.",
+     "Bước 2: gỡ Autodesk Identity Manager.",
+     "Bước 3: xóa file trong `%temp%`, 3 file `adsk*` trong `C:\\ProgramData\\FLEXnet`, và các thư mục: `C:\\Program Files\\Autodesk`, `C:\\Program Files\\Common Files\\Autodesk Shared`, `C:\\Program Files (x86)\\Autodesk`, `C:\\Program Files (x86)\\Common Files\\Autodesk Shared`, `C:\\ProgramData\\Autodesk`, `%localappdata%\\Autodesk`, `%appdata%\\Autodesk`.",
+     "Bước 4: sao lưu rồi xóa registry `HKLM\\SOFTWARE\\Autodesk`, `HKLM\\SOFTWARE\\WOW6432Node\\Autodesk`, `HKCU\\SOFTWARE\\Autodesk`. Bản sao lưu `.reg` nằm trong thư mục `XoaSachAutodesk_SaoLuuRegistry_<ngày-giờ>` trên Desktop.",
+     "Bước 5: gỡ Autodesk Genuine Service.",
+     "Kiểm tra lại danh sách Programs and Features và ghi vào log những mục còn sót."
+    ]
+   }
+  ],
+  "note": "Chỉ dùng khi cần gỡ HẾT phần mềm Autodesk trên máy. Muốn gỡ một phần mềm thì dùng Uninstall trong Control Panel. Mục nào log báo LỖI hoặc CÒN SÓT thì gỡ thủ công, hoặc dùng Microsoft Program Install and Uninstall Troubleshooter như bài hướng dẫn.",
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Clean-uninstall.html"
+  ],
+  "updated": "2026-11-18"
+ },
+ {
   "id": "pc-kiem-tra-ban-quyen",
   "section": "Partner Center Autodesk",
   "category": "Partner Center Autodesk",
