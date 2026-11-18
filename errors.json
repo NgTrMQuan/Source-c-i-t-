@@ -857,6 +857,69 @@
   "source": "asana"
  },
  {
+  "id": "adsk-restart-pending",
+  "source": "autodesk",
+  "section": "License & cài đặt",
+  "category": "License & cài đặt",
+  "code": "Restart",
+  "kind": "loi",
+  "software": [
+   "Tất cả phần mềm Autodesk",
+   "Windows"
+  ],
+  "title": "Báo “An operating system restart is pending” khi cài phần mềm Autodesk",
+  "symptoms": "Khi cài phần mềm Autodesk, trình cài đặt báo “An operating system restart is pending. Please restart your computer to install [sản phẩm]” và không cài tiếp, kể cả sau khi đã khởi động lại máy.",
+  "cause": "Windows thiếu bản cập nhật; Microsoft Visual C++ 2015-2022 Redistributable (x64) 14.34.31931 bị hỏng; khóa registry `RebootRequired` của Windows bị hỏng; gói cài đặt bị hỏng.",
+  "steps": [
+   "Làm lần lượt 4 cách bên dưới. Sau mỗi cách, chạy lại trình cài đặt để xem đã hết lỗi chưa rồi mới chuyển sang cách tiếp theo.",
+   "Nếu máy không có quyền Administrator hoặc thuộc môi trường bảo mật của công ty, cần nhờ IT hỗ trợ."
+  ],
+  "subs": [
+   {
+    "title": "Cách 1: Cập nhật Windows",
+    "steps": [
+     "Mở `Start` → `Settings` → `Update & Security` → `Windows Update` → `Check for updates`.",
+     "Cài hết bản cập nhật, khởi động lại máy.",
+     "Chạy lại trình cài đặt."
+    ]
+   },
+   {
+    "title": "Cách 2: Gỡ Microsoft Visual C++ 2015-2022 Redistributable (x64) 14.34.31931",
+    "steps": [
+     "Mở `Control Panel` → `Programs and Features`.",
+     "Tìm Microsoft Visual C++ 2015-2022 Redistributable (x64) 14.34.31931 và gỡ cài đặt.",
+     "Dù gỡ được hay bị lỗi, tải tiếp công cụ Microsoft Program Install and Uninstall Troubleshooter, mở công cụ và chọn `Uninstalling`.",
+     "Trong danh sách, nếu còn Microsoft Visual C++ 2015-2022 Redistributable (x64) 14.34.31931 thì chọn và gỡ. Không thấy thì bỏ qua.",
+     "Khởi động lại máy rồi chạy lại trình cài đặt."
+    ]
+   },
+   {
+    "title": "Cách 3: Xóa khóa registry RebootRequired",
+    "steps": [
+     "Gõ `CMD` vào ô tìm kiếm Windows, chuột phải `Command Prompt` → `Run as administrator`.",
+     "Dán lệnh sau rồi nhấn Enter: `reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WindowsUpdate\\Auto Update\\RebootRequired\" /f`",
+     "Nếu lệnh chạy thành công: cài lại phần mềm Autodesk.",
+     "Nếu báo `ERROR: The system was unable to find the specified registry key or value`: khóa này không tồn tại, chuyển sang Cách 4."
+    ]
+   },
+   {
+    "title": "Cách 4: Cài bằng gói triển khai (deployment) chạy ẩn",
+    "steps": [
+     "Vào Autodesk Account → `Custom Install`, tạo một deployment theo hướng dẫn của Autodesk.",
+     "Trong thư mục deployment, mở file `Install <tên deployment>.bat` bằng Notepad.",
+     "Bỏ chữ `rem` ở dòng lệnh “Install the deployment silently” và thêm `rem` vào dòng “Install the deployment with basic UI”.",
+     "Lưu file `.bat` rồi chạy file đó để cài ẩn.",
+     "Cài ẩn không hiện giao diện. Vài phút sau khi icon phần mềm xuất hiện trên Desktop là cài xong."
+    ]
+   }
+  ],
+  "note": "Các mục Kinh nghiệm xử lý trên Asana có cùng lỗi này: mục 1.2 “Bảng thông báo restart xuất hiện nhiều lần khi cài đặt”.",
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/An-operating-system-restart-is-pending-when-trying-to-install-AutoCAD-2024.html"
+  ],
+  "updated": "2026-11-18"
+ },
+ {
   "id": "loi-1308",
   "code": "1308",
   "title": "Không tìm thấy file nguồn: \"Source file not found\"",

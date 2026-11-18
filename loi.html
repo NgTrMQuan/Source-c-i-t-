@@ -626,7 +626,6 @@ function openD(id){
       <div class="foot"><span>Cập nhật: ${esc(e.updated || '')}</span><button class="btn" data-link="${esc(e.id)}">Sao chép link mục này</button></div>
     </div>`;
   d.scrollTop = 0; d.classList.add('on'); $('scrim2').classList.add('on'); document.body.style.overflow = 'hidden';
-  setTimeout(() => $('back').focus(), 50);
 }
 function closeD(){ $('detail').classList.remove('on'); $('scrim2').classList.remove('on'); document.body.style.overflow = ''; }
 const back = () => { location.hash = sec ? 'pm=' + encodeURIComponent(sec) : ''; };
