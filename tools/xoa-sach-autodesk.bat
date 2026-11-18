@@ -22,6 +22,28 @@ exit /b
 ##PS_START
 $ErrorActionPreference = 'Continue'
 [Console]::OutputEncoding = [Text.Encoding]::UTF8
+# Cửa sổ CMD mặc định có thể dùng font Raster (không có chữ tiếng Việt) -> đổi sang font TrueType có dấu
+try {
+  Add-Type -ErrorAction Stop -TypeDefinition @'
+using System; using System.Runtime.InteropServices;
+public static class XsCon {
+  [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+  public struct CFI { public uint cbSize; public uint nFont; public short X; public short Y; public int Family; public int Weight;
+    [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] public string Face; }
+  [DllImport("kernel32.dll", SetLastError = true)] static extern IntPtr GetStdHandle(int h);
+  [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)] static extern bool SetCurrentConsoleFontEx(IntPtr h, bool max, ref CFI f);
+  [DllImport("kernel32.dll")] static extern bool SetConsoleOutputCP(uint cp);
+  [DllImport("kernel32.dll")] static extern bool SetConsoleCP(uint cp);
+  public static bool Fix(string face) {
+    SetConsoleOutputCP(65001); SetConsoleCP(65001);
+    CFI f = new CFI(); f.cbSize = (uint)Marshal.SizeOf(f); f.Y = 18; f.Family = 54; f.Weight = 400; f.Face = face;
+    return SetCurrentConsoleFontEx(GetStdHandle(-11), false, ref f);
+  }
+}
+'@
+  if (-not [XsCon]::Fix('Consolas')) { [void][XsCon]::Fix('Lucida Console') }
+  [Console]::OutputEncoding = [Text.Encoding]::UTF8
+} catch {}
 $Host.UI.RawUI.WindowTitle = 'Xóa sạch Autodesk'
 
 $stamp   = Get-Date -Format 'yyyyMMdd_HHmmss'
