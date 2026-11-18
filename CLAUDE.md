@@ -8,8 +8,8 @@ https://ngtrmquan.github.io/Source-c-i-t-/ (nhánh `main`, thư mục gốc). Ng
 | File | Vai trò |
 |---|---|
 | `index.html` | Trang chủ: tiêu đề "Tải, cài và fix lỗi Autodesk", nền sao bay như hai trang con, hai cổng dẫn sang hai trang con |
-| `cai-dat.html` | Bộ cài đặt: vòng xoay 3D icon, lưới thẻ theo nhóm, bảng tải theo phiên bản. Đọc `data.json` |
-| `loi.html` | Lỗi thường gặp: tìm kiếm, lọc theo nhóm, thẻ mở rộng (Dấu hiệu / Nguyên nhân / Cách khắc phục). Đọc `errors.json` |
+| `cai-dat.html` | Bộ cài đặt: vòng xoay 3D icon, lưới thẻ theo nhóm (lọc thì ẩn hẳn thẻ không khớp và cuộn tới đầu thư viện), bảng tải theo phiên bản. Đọc `data.json` |
+| `loi.html` | Lỗi thường gặp: ô tìm kiếm + ô chọn phần mềm (theo `section`, giống Asana) → danh sách tiêu đề → ngăn chi tiết trượt từ phải (Dấu hiệu / Nguyên nhân / Cách khắc phục / Hình minh họa `images[]` / Tham khảo). Link sâu: `#pm=<section>` và `#<id>`. Đọc `errors.json` |
 | `data.json` | Danh sách phần mềm: `{name, icon, group, note, versions:[{v, links:[{label, url}]}]}`. Phiên bản mới đặt đầu mảng |
 | `errors.json` | Danh sách lỗi: `{id, code, title, category, software[], symptoms, cause, steps[], note, updated, draft}`. Trong `symptoms`, `cause`, `steps` có thể dùng `` `code` `` |
 | `icons/<slug>.png` | Icon phần mềm, tên file là slug của `name` (vd. `civil-3d.png`, `3ds-max.png`). Thiếu icon thì trang hiện chữ cái tạm |
