@@ -29,5 +29,6 @@ Mỗi file HTML tự chứa CSS/JS của nó (không có bước build). Ba tran
 - Toàn bộ chữ trên giao diện bằng tiếng Việt có dấu.
 - Không đổi tên/đường dẫn file đang được đồng nghiệp bookmark (`index.html`, `cai-dat.html`, `loi.html`).
 - 4 lỗi trong `errors.json` đang là bản nháp (`draft: true`) — chỉ bỏ `draft` khi người dùng xác nhận nội dung.
+- Bài Autodesk người dùng gửi: đọc toàn bộ bài, tóm tắt tiếng Việt vào mục `source: "autodesk"` (Dấu hiệu / Nguyên nhân / các cách trong `subs[]`, link bài gốc ở `refs[]`). Lệnh CMD, đường dẫn, tên file viết trong `` `...` `` → trang tự cho bấm để sao chép (hàm `isCmd` trong `loi.html`); tên nút/menu cũng để trong `` ` `` nhưng không sao chép. Link trong nội dung: bấm = sao chép, Ctrl + bấm = mở.
 - Link tải trỏ thẳng máy chủ Autodesk; giữ nguyên tham số `authparam` khi chép link.
 - Xem thử cục bộ: `python -m http.server` trong thư mục repo rồi mở http://localhost:8000 (mở trực tiếp file sẽ không đọc được JSON).
