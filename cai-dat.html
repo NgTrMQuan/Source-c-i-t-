@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<script>(()=>{let m;try{m=localStorage.getItem('motion')}catch(e){}const c=m?m==='off':matchMedia('(prefers-reduced-motion: reduce)').matches;document.documentElement.classList.toggle('calm',c);window.CALM=c})()</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bộ cài đặt Autodesk</title>
@@ -180,7 +182,8 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
   .sheet{top:auto;left:0;right:0;bottom:0;width:100%;height:88vh;border-radius:26px 26px 0 0;transform:translateY(100%)}
   .scrollcue{display:none}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
+html.calm *{animation:none!important;transition:none!important}html.calm .card{opacity:1;transform:none}
+.mtog{font:inherit;font-size:13px;font-weight:600;color:var(--ink-2);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;margin-left:10px}.mtog:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}.mtog:focus-visible{outline:2px solid #62d8ff;outline-offset:2px}
 </style>
 </head>
 <body>
@@ -192,7 +195,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 (() => {
   if (document.body.dataset.cosmos === 'off') return document.getElementById('cosmos').remove();
   const cv = document.getElementById('cosmos'), cx = cv.getContext('2d');
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const still = window.CALM;
   let W, H, D, gals = [], comets = [], lastComet = 0, t0 = performance.now();
   function galaxy(x, y, r, tilt, hue, n, spin){
     const pts = [];
@@ -299,7 +302,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 <nav class="top">
   <a class="brand" href="index.html" aria-label="Trang chủ"><i></i></a>
   <div class="links"><a href="index.html">Trang chủ</a><a href="cai-dat.html" aria-current="page">Bộ cài đặt</a><a href="loi.html">Lỗi thường gặp</a></div>
-  <div class="who">Người cập nhật: Minh Quân</div>
+  <button class="mtog" id="mtog" type="button" aria-pressed="true">Hiệu ứng: Bật</button><div class="who">Người cập nhật: Minh Quân</div>
 </nav>
 
 <section class="hero" id="top">
@@ -357,7 +360,7 @@ const slug = s => norm(s).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const fileName = u => { try { const x = new URL(u); const m = /filename\s*=\s*"([^"]+)"/.exec(decodeURIComponent(x.search)); return m ? m[1] : decodeURIComponent(x.pathname.split('/').pop()); } catch(e){ return u; } };
 const years = p => p.versions.map(v => +(v.v.match(/^\d{4}/)||[])[0]).filter(Boolean);
 const initials = n => n.replace(/^AutoCAD /,'').replace(/^Vault /,'V ').split(/\s+/).map(w=>w[0]).join('').slice(0,2).toUpperCase();
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduced = window.CALM;
 const iconHTML = p => `<span class="ic"><img src="${esc(p.img || `icons/${p.id}.png`)}" alt="" loading="lazy" onerror="this.remove()"><b>${esc(initials(p.name))}</b></span>`;
 let groups = [], active = 'Tất cả', cur = null, back = null;
 
@@ -565,5 +568,6 @@ if (DATA) start();
 else fetch('data.json',{cache:'no-store'}).then(r => { if (!r.ok) throw 0; return r.json(); }).then(d => { DATA = d; start(); })
   .catch(() => { $('grid').innerHTML = '<div class="empty">Không tải được data.json.</div>'; });
 </script>
+<script>(()=>{const b=document.getElementById('mtog');if(!b)return;b.textContent='Hiệu ứng: '+(window.CALM?'Tắt':'Bật');b.setAttribute('aria-pressed',!window.CALM);b.onclick=()=>{try{localStorage.setItem('motion',window.CALM?'on':'off')}catch(e){}location.reload()}})()</script>
 </body>
 </html>

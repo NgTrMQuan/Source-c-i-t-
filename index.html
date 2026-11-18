@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<script>(()=>{let m;try{m=localStorage.getItem('motion')}catch(e){}const c=m?m==='off':matchMedia('(prefers-reduced-motion: reduce)').matches;document.documentElement.classList.toggle('calm',c);window.CALM=c})()</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tải, cài và fix lỗi Autodesk</title>
@@ -181,7 +183,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
   .sheet{top:auto;left:0;right:0;bottom:0;width:100%;height:88vh;border-radius:26px 26px 0 0;transform:translateY(100%)}
   .scrollcue{display:none}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
+html.calm *{animation:none!important;transition:none!important}html.calm .card{opacity:1;transform:none}
 
 /* ---------- landing: đài quan sát ---------- */
 .land{position:relative;z-index:2;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:110px clamp(18px,4vw,52px) 34px;overflow:hidden}
@@ -229,7 +231,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 .portal{opacity:0;animation:up 1s 2.8s cubic-bezier(.2,.8,.2,1) forwards}
 .portal.err{animation-delay:2.95s}
 .hint{position:relative;z-index:3;text-align:center;margin:14px 0 0;font-size:12.5px;color:var(--ink-3);opacity:0;animation:up 1s 3.4s forwards}
-@media (prefers-reduced-motion:reduce){.intro h1 .w,.intro .eyebrow,.intro p,.portal,.hint{animation:none;opacity:1;transform:none;filter:none}}
+html.calm .intro h1 .w,html.calm .intro .eyebrow,html.calm .intro p,html.calm .portal,html.calm .hint{animation:none;opacity:1;transform:none;filter:none}
 /* ---------- landing v4: hai cổng lớn ---------- */
 @property --ang{syntax:'<angle>';initial-value:0deg;inherits:false}
 .land{grid-template-rows:auto 1fr;padding:92px clamp(16px,3vw,44px) 28px}
@@ -294,7 +296,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 .portal .cta{flex:none;display:grid;place-items:center}
 .ptext{display:block}
 @media (max-width:900px){.portals{grid-template-columns:1fr}.portal{min-height:560px}}
-@media (prefers-reduced-motion:reduce){.portal::after,.orb .rg,.orb .ic img,.radar,.sparks i,.orb .hub svg{animation:none}}
+html.calm .portal::after,html.calm .orb .rg,html.calm .orb .ic img,html.calm .radar,html.calm .sparks i,html.calm .orb .hub svg{animation:none}
 /* v5: quỹ đạo 3D nghiêng như bản trước + cảnh báo sáng nhấp nháy, vòng tròn xoay */
 .orb{perspective:1000px;transform-style:preserve-3d}
 .orb .trk{transform:rotateX(66deg)}
@@ -309,7 +311,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 .rcirc{border:2px dashed rgba(255,179,71,.35);animation:spin var(--sp,18s) linear infinite}
 .rcirc:nth-of-type(2){border-style:dotted;border-color:rgba(255,77,109,.4);animation-direction:reverse}
 .rcirc::after{content:"";position:absolute;top:-5px;left:50%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:#ffb347;box-shadow:0 0 12px #ffb347}
-@media (prefers-reduced-motion:reduce){.orb .rg,.orb .ic img,.warn svg,.rcirc{animation:none}}
+html.calm .orb .rg,html.calm .orb .ic img,html.calm .warn svg,html.calm .rcirc{animation:none}
 /* v6: quỹ đạo elip tính bằng JS, icon luôn đứng thẳng */
 .orb .rg{animation:none!important;transform:none!important}
 .orb .ic{margin:0!important;left:0!important;top:0!important;will-change:transform}
@@ -318,6 +320,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 .orb .rg{z-index:auto!important;position:absolute;inset:0;transform-style:flat!important}
 .orb .hub{width:96px!important;height:96px!important;margin:-48px!important;z-index:2!important}
 .orb .hub svg{width:38px;height:38px}
+.mtog{font:inherit;font-size:13px;font-weight:600;color:var(--ink-2);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;margin-left:10px}.mtog:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}.mtog:focus-visible{outline:2px solid #62d8ff;outline-offset:2px}
 </style>
 </head>
 <body data-cosmos="off">
@@ -328,7 +331,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 /* ---------- hero 3D: dải Ngân Hà xoắn ốc, camera bay vào + xoay theo chuột ---------- */
 (() => {
   const cv = document.getElementById('hero3d'), cx = cv.getContext('2d');
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const still = window.CALM;
   let W, H, D, f, SX, SY;
   const rnd = (a, b) => a + Math.random() * (b - a), gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(6.283 * v); };
   // nhóm màu: lõi vàng, nhánh xanh lam, tím, hồng (vùng sinh sao), trắng, bụi tối
@@ -400,7 +403,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 (() => {
   if (document.body.dataset.cosmos === 'off') return document.getElementById('cosmos').remove();
   const cv = document.getElementById('cosmos'), cx = cv.getContext('2d');
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const still = window.CALM;
   let W, H, D, gals = [], comets = [], lastComet = 0, t0 = performance.now();
   function galaxy(x, y, r, tilt, hue, n, spin){
     const pts = [];
@@ -507,7 +510,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 <nav class="top">
   <a class="brand" href="index.html" aria-label="Trang chủ"><i></i></a>
   <div class="links"><a href="index.html" aria-current="page">Trang chủ</a><a href="cai-dat.html">Bộ cài đặt</a><a href="loi.html">Lỗi thường gặp</a></div>
-  <div class="who">Người cập nhật: Minh Quân</div>
+  <button class="mtog" id="mtog" type="button" aria-pressed="true">Hiệu ứng: Bật</button><div class="who">Người cập nhật: Minh Quân</div>
 </nav>
 
 <div class="vign" aria-hidden="true"></div>
@@ -567,7 +570,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 
 <script>
 const $ = id => document.getElementById(id);
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduced = window.CALM;
 /* ---------- ambient: milky way + drifting stars + shooting stars + floating rocks ---------- */
 (function(){
   const cv = $('stars'), cx = cv.getContext('2d'); let W, H, D, st = [], meteors = [], galaxy, gx = 0, gy = 0, lastMeteor = 0;
@@ -655,7 +658,7 @@ document.querySelectorAll('.portal').forEach(p => p.addEventListener('pointermov
 (() => {
   const orb = document.querySelector('.orb'); if (!orb) return;
   const rings = [[document.getElementById('ringO'), .66, .24, 22, 1], [document.getElementById('ringI'), .4, .14, 14, -1]];
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches, t0 = performance.now();
+  const still = window.CALM, t0 = performance.now();
   function tick(now){
     const W = orb.clientWidth, t = (now - t0) / 1000, lim = (orb.parentElement.clientWidth / 2 - 34) / W;
     for (const [el, rx, ry, per, dir] of rings){
@@ -675,5 +678,6 @@ document.querySelectorAll('.portal').forEach(p => p.addEventListener('pointermov
 fetch('data.json',{cache:'no-store'}).then(r => r.json()).then(d => { $('cP').textContent = d.length; $('cL').textContent = d.reduce((a,p)=>a+p.versions.reduce((b,v)=>b+v.links.length,0),0); }).catch(()=>{});
 fetch('errors.json',{cache:'no-store'}).then(r => r.json()).then(d => { $('cE').textContent = d.length; $('cS').textContent = new Set(d.map(e => e.section || e.category)).size; }).catch(()=>{ $('cE').textContent = '0'; });
 </script>
+<script>(()=>{const b=document.getElementById('mtog');if(!b)return;b.textContent='Hiệu ứng: '+(window.CALM?'Tắt':'Bật');b.setAttribute('aria-pressed',!window.CALM);b.onclick=()=>{try{localStorage.setItem('motion',window.CALM?'on':'off')}catch(e){}location.reload()}})()</script>
 </body>
 </html>

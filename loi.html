@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+<script>(()=>{let m;try{m=localStorage.getItem('motion')}catch(e){}const c=m?m==='off':matchMedia('(prefers-reduced-motion: reduce)').matches;document.documentElement.classList.toggle('calm',c);window.CALM=c})()</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lỗi thường gặp · Autodesk</title>
@@ -181,7 +183,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
   .sheet{top:auto;left:0;right:0;bottom:0;width:100%;height:88vh;border-radius:26px 26px 0 0;transform:translateY(100%)}
   .scrollcue{display:none}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
+html.calm *{animation:none!important;transition:none!important}html.calm .card{opacity:1;transform:none}
 
 /* ---------- errors page: bàn tra cứu ---------- */
 :root{--amber:#ffb347;--rose:#ff4d6d;--panel:rgba(8,11,18,.84);--panel-2:rgba(255,255,255,.035)}
@@ -261,6 +263,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
   .dh{border-radius:0;padding-top:18px}
   .back{display:inline-block}
 }
+.mtog{font:inherit;font-size:13px;font-weight:600;color:var(--ink-2);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;margin-left:10px}.mtog:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}.mtog:focus-visible{outline:2px solid #62d8ff;outline-offset:2px}
 </style>
 </head>
 <body>
@@ -272,7 +275,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 (() => {
   if (document.body.dataset.cosmos === 'off') return document.getElementById('cosmos').remove();
   const cv = document.getElementById('cosmos'), cx = cv.getContext('2d');
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const still = window.CALM;
   let W, H, D, gals = [], comets = [], lastComet = 0, t0 = performance.now();
   function galaxy(x, y, r, tilt, hue, n, spin){
     const pts = [];
@@ -379,7 +382,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 <nav class="top">
   <a class="brand" href="index.html" aria-label="Trang chủ"><i></i></a>
   <div class="links"><a href="index.html">Trang chủ</a><a href="cai-dat.html">Bộ cài đặt</a><a href="loi.html" aria-current="page">Lỗi thường gặp</a></div>
-  <div class="who">Người cập nhật: Minh Quân</div>
+  <button class="mtog" id="mtog" type="button" aria-pressed="true">Hiệu ứng: Bật</button><div class="who">Người cập nhật: Minh Quân</div>
 </nav>
 
 <header class="ehero">
@@ -404,7 +407,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 
 <script>
 const $ = id => document.getElementById(id);
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduced = window.CALM;
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const rich = s => esc(s).replace(/`([^`]+)`/g, '<code>$1</code>');
 const norm = s => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d');
@@ -542,5 +545,6 @@ let tt; function toast(m){ const t = $('toast'); t.textContent = m; t.classList.
 if (ERR) start();
 else fetch('errors.json',{cache:'no-store'}).then(r => r.json()).then(d => { ERR = d; start(); }).catch(() => { $('items').innerHTML = '<p class="none">Không tải được errors.json.</p>'; });
 </script>
+<script>(()=>{const b=document.getElementById('mtog');if(!b)return;b.textContent='Hiệu ứng: '+(window.CALM?'Tắt':'Bật');b.setAttribute('aria-pressed',!window.CALM);b.onclick=()=>{try{localStorage.setItem('motion',window.CALM?'on':'off')}catch(e){}location.reload()}})()</script>
 </body>
 </html>
