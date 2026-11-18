@@ -186,6 +186,9 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 html.calm *{animation:none!important;transition:none!important}html.calm .card{opacity:1;transform:none}
 .brand .gear{width:24px;height:24px;filter:drop-shadow(0 0 8px rgba(98,216,255,.55));animation:spin 8s linear infinite}
 .brand span{font-size:14px;letter-spacing:.08em}
+*:focus{outline:none}
+*:focus-visible{outline:2px solid rgba(255,179,71,.85)!important;outline-offset:3px}
+html{-webkit-tap-highlight-color:transparent}
 </style>
 </head>
 <body>
@@ -304,7 +307,6 @@ html.calm *{animation:none!important;transition:none!important}html.calm .card{o
 <nav class="top">
   <a class="brand" href="index.html"><svg class="gear" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#gg)" d="M10.3 2h3.4l.5 2.6a7.6 7.6 0 0 1 1.9.8l2.2-1.5 2.4 2.4-1.5 2.2c.3.6.6 1.2.8 1.9l2.6.5v3.4l-2.6.5a7.6 7.6 0 0 1-.8 1.9l1.5 2.2-2.4 2.4-2.2-1.5a7.6 7.6 0 0 1-1.9.8l-.5 2.6h-3.4l-.5-2.6a7.6 7.6 0 0 1-1.9-.8l-2.2 1.5-2.4-2.4 1.5-2.2a7.6 7.6 0 0 1-.8-1.9L2 13.7v-3.4l2.6-.5c.2-.7.5-1.3.8-1.9L3.9 5.7l2.4-2.4 2.2 1.5c.6-.3 1.2-.6 1.9-.8zM12 8.4a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2z"/><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#62d8ff"/><stop offset=".5" stop-color="#a678ff"/><stop offset="1" stop-color="#ffb347"/></linearGradient></defs></svg><span>TECHNICAL TEAM</span></a>
   <div class="links"><a href="index.html">Trang chủ</a><a href="cai-dat.html" aria-current="page">Bộ cài đặt</a><a href="loi.html">Lỗi thường gặp</a></div>
-  <div class="who">Người cập nhật: Minh Quân</div>
 </nav>
 
 <section class="hero" id="top">
@@ -315,7 +317,6 @@ html.calm *{animation:none!important;transition:none!important}html.calm .card{o
   <div class="hud">
     <div>
       <h1>Bộ cài đặt Autodesk</h1>
-      <p>Bấm vào một biểu tượng đang xoay, hoặc tìm theo tên và năm. Tải thẳng từ máy chủ Autodesk.</p>
       <label class="search">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input id="q" type="search" placeholder="Tìm phần mềm hoặc năm…" autocomplete="off" aria-label="Tìm phần mềm">

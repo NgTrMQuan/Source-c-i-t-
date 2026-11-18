@@ -9,7 +9,7 @@
   "code": "0.1",
   "title": "Kiểm tra thông tin quản lý bản quyền",
   "kind": "huongdan",
-  "symptoms": "Cần thông tin Contract Manager để trao đổi với khách hàng; cần kiểm tra ngày hết hạn hoặc số lượng license khi OneCAD HUB không có quyền xem.",
+  "symptoms": "Cần thông tin Contract Manager để trao đổi với khách hàng; cần kiểm tra ngày hết hạn hoặc số lượng license khi HUB không có quyền xem.",
   "cause": "Đầu vào cần có: số Contract hoặc Serial number.",
   "steps": [
    "Truy cập Partner Center: https://partner.autodesk.com/",
@@ -621,7 +621,7 @@
   "code": "4.1",
   "title": "Tài liệu hướng dẫn sử dụng nền tảng ACC",
   "kind": "huongdan",
-  "symptoms": "Dùng các tài liệu nội bộ (SharePoint OneCAD) bên dưới.",
+  "symptoms": "Dùng các tài liệu nội bộ (SharePoint nội bộ) bên dưới.",
   "steps": [
    "Docs: https://onecad.sharepoint.com/:w:/s/Technology/EV6DUOMm1vRFuyf0kFyzhoAB79JJU2wbnGjxyMnb4sFP_w?e=28Mjff",
    "ABC Pro: https://onecad.sharepoint.com/:w:/s/Technology/EVRb87Zn7GdEm00RYyoMJ7UBwkYAGzvyWa6inbCYE227Vw?e=kRI6aX",
@@ -644,7 +644,7 @@
   "code": "4.2",
   "title": "Hướng dẫn backup dữ liệu ACC / BIM 360",
   "kind": "huongdan",
-  "symptoms": "Dùng các tài liệu nội bộ (SharePoint OneCAD) bên dưới.",
+  "symptoms": "Dùng các tài liệu nội bộ (SharePoint nội bộ) bên dưới.",
   "steps": [
    "ACC: https://onecad.sharepoint.com/:w:/s/Technology/EaKx2Jf6TJFOgclcKX5Ae5kBtXqZTpR7NA8J593bYtC_iQ?e=JbVQfh",
    "BIM 360: https://onecad.sharepoint.com/:w:/s/Technology/EclV2T1iTZNOljtIKb9pNxIBKrc5dhtvWxR7NU3EcZadMQ?e=vOu3LC"
