@@ -857,6 +857,372 @@
   "source": "asana"
  },
  {
+  "id": "adsk-1603",
+  "source": "autodesk",
+  "section": "License & cài đặt",
+  "code": "1603",
+  "kind": "loi",
+  "software": [
+   "Tất cả phần mềm Autodesk",
+   "Windows Installer"
+  ],
+  "title": "Lỗi 1603: “Fatal error during installation” khi cài phần mềm Autodesk",
+  "keywords": [
+   "1603",
+   "error 1603",
+   "install error 1603",
+   "fatal error during installation",
+   "installation incomplete",
+   "some products failed to install",
+   "the install couldn't finish",
+   "result=1603",
+   "lỗi cài đặt",
+   "cài không được",
+   "msi"
+  ],
+  "symptoms": "Trình cài đặt dừng lại và báo một trong các thông báo: “Installation incomplete. Some products failed to install.”, “Install error 1603: Fatal error during installation.”, “<Tên sản phẩm> The install couldn't finish. Error 1603”. Trong log cài đặt có dòng `Result=1603`, ví dụ khi cài .NET Framework, Microsoft SQL Server Express (AUTODESKVAULT) hoặc Visual C++ Redistributable.",
+  "cause": "1603 là lỗi chung của Microsoft Windows Installer (MSI), thường do hệ thống chứ không riêng phần mềm nào. Nguyên nhân hay gặp: Licensing Service hỏng, file sót từ lần cài trước, Visual C++ hỏng, file bị khóa, thư mục Temp đầy, thiếu dung lượng ổ C, file cài bị hỏng khi giải nén, tắt tính năng tên file ngắn 8.3, hồ sơ người dùng Windows bị lỗi, phần mềm diệt virus chặn.",
+  "steps": [
+   "Làm lần lượt từng cách bên dưới, sau mỗi cách chạy lại trình cài đặt."
+  ],
+  "subs": [
+   {
+    "title": "Cách 1: Gỡ sạch rồi cài lại Autodesk Desktop Licensing Service",
+    "steps": [
+     "Chuẩn bị sẵn bộ cài phần mềm trước khi gỡ.",
+     "Gỡ Autodesk Desktop Licensing Service: chạy `C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\AdskLicensing\\uninstall.exe` bằng quyền Administrator.",
+     "Tải và cài lại Autodesk Desktop Licensing Service bản mới nhất.",
+     "Cài lại phần mềm."
+    ]
+   },
+   {
+    "title": "Cách 2: Xóa file sót từ lần cài trước",
+    "steps": [
+     "Gỡ sạch Autodesk (dùng ô Xóa sạch trên trang này hoặc làm tay theo bài Clean Uninstall). Nếu gỡ không được, dùng Microsoft Program Install and Uninstall Troubleshooter.",
+     "Cài lại bằng cách tải `Download Now`."
+    ]
+   },
+   {
+    "title": "Cách 3: Gỡ và cài lại Microsoft Visual C++ Redistributable",
+    "steps": [
+     "Gỡ các bản Visual C++ Redistributable trong Control Panel, rồi cài lại từ thư mục `3rdParty` trong bộ cài Autodesk."
+    ]
+   },
+   {
+    "title": "Cách 4: File đang bị khóa",
+    "steps": [
+     "Đóng hết phần mềm đang chạy nền.",
+     "Khởi động lại máy.",
+     "Chạy lại trình cài đặt."
+    ]
+   },
+   {
+    "title": "Cách 5: Dọn thư mục Temp",
+    "steps": [
+     "Mở Start, gõ `%TEMP%` rồi nhấn Enter.",
+     "Trong thư mục Temp, nhấn Ctrl + A và xóa hết (file nào đang dùng thì bỏ qua)."
+    ]
+   },
+   {
+    "title": "Cách 6: Thiếu dung lượng ổ hệ điều hành",
+    "steps": [
+     "Dù cài phần mềm sang ổ khác, ổ cài Windows (thường là C) vẫn cần trống ít nhất gấp đôi dung lượng bộ cài. Dọn bớt file không cần."
+    ]
+   },
+   {
+    "title": "Cách 7: File cài bị hỏng khi giải nén",
+    "steps": [
+     "Tắt các chương trình có thể xung đột: phần mềm diệt virus, Word, Excel, trình duyệt…",
+     "Cài lại."
+    ]
+   },
+   {
+    "title": "Cách 8: Bật tạo tên file ngắn 8.3",
+    "steps": [
+     "Mở Registry Editor, vào `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem`.",
+     "Đặt `NtfsDisable8dot3NameCreation` = 0 (bật). Giá trị 1 là tắt.",
+     "Khởi động lại máy rồi cài lại. Cài xong có thể trả giá trị cũ và khởi động lại."
+    ]
+   },
+   {
+    "title": "Cách 9: Hồ sơ người dùng Windows bị lỗi",
+    "steps": [
+     "Tạo một tài khoản người dùng Windows mới và cài từ tài khoản đó."
+    ]
+   },
+   {
+    "title": "Cách 10: Kiểm tra log cài đặt",
+    "steps": [
+     "Xem log cài đặt có bị lỗi ở nhiều thành phần không (C++, .NET, phần mềm chính). Nếu có, khả năng cao là bảo mật đang chặn.",
+     "Tạm tắt phần mềm diệt virus rồi cài lại."
+    ]
+   }
+  ],
+  "note": "Bên Kinh nghiệm xử lý (Asana) có mục 1.5 cùng lỗi 1603.",
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Error-1603-during-installation-of-Autodesk-software.html"
+  ],
+  "category": "License & cài đặt",
+  "updated": "2026-11-18"
+ },
+ {
+  "id": "adsk-dc-save-another-session",
+  "source": "autodesk",
+  "section": "Civil 3D / Desktop Connector",
+  "code": "DC",
+  "kind": "loi",
+  "software": [
+   "Civil 3D",
+   "AutoCAD",
+   "Desktop Connector",
+   "Autodesk Docs / BIM 360"
+  ],
+  "title": "“Unable to save to drawing … as it is being accessed by another session” khi lưu DWG qua Desktop Connector",
+  "keywords": [
+   "unable to save to drawing",
+   "accessed by another session",
+   "being accessed by another session",
+   "drawing file is write protected",
+   "write protected",
+   "qsave",
+   "the process cannot access the file",
+   "being used by another process",
+   "desktop connector",
+   "pending actions",
+   "không lưu được bản vẽ",
+   "civil 3d",
+   "autocad",
+   "bak",
+   "err",
+   "movebak",
+   "acc docs",
+   "bim 360"
+  ],
+  "symptoms": "Lưu file DWG từ Civil 3D hoặc AutoCAD qua Desktop Connector bị lỗi, hiện một trong các thông báo: “Unable to save to drawing …\\filename.dwg as it is being accessed by another session. Drawing saved to …\\savexxxxxxxx.tmp”, “Drawing file is write protected.”, hoặc dòng lệnh báo `_QSAVE Unable to save to drawing`. Trong Pending Actions của Desktop Connector: “The process cannot access the file … because it is being used by another process.”",
+  "cause": "Áp dụng từ Civil 3D 2020.2 / AutoCAD 2020.1.2 / AutoCAD 2022 với Desktop Connector 12.4 trở lên. Thường do phần mềm chưa cập nhật, file bị người khác khóa, có file BAK hoặc ERR trùng tên, dự án có file không được hỗ trợ, hoặc phần mềm diệt virus/xung đột.",
+  "steps": [
+   "Cập nhật Desktop Connector, AutoCAD và Civil 3D lên bản mới nhất.",
+   "Xóa khỏi dự án các loại file không được Collaboration for Civil 3D hỗ trợ, và làm theo Best practices for Collaboration for Civil 3D. Từ Desktop Connector 14.10 có thể dùng Reference Explorer để tìm lỗi trong bản vẽ.",
+   "Nếu vẫn lỗi, mở vị trí file trong Desktop Connector: bản 14.7 trở xuống tại `C:\\Users\\<username>\\BIM 360\\<Account>\\<Project>\\Project Files\\`, bản 14.8 trở lên tại `C:\\Users\\<username>\\ACCDocs\\<Account>\\<Project>\\Project Files\\`, rồi làm các cách bên dưới."
+  ],
+  "subs": [
+   {
+    "title": "Cách 1: Kiểm tra file có bị người khác khóa",
+    "steps": [
+     "Kiểm tra trên giao diện web Autodesk Docs (Document Management) hoặc trong Desktop Connector qua File Explorer.",
+     "Nếu file đang bị khóa: mở khóa, hoặc nhờ admin dự án mở khóa."
+    ]
+   },
+   {
+    "title": "Cách 2: Xóa file BAK trùng tên",
+    "steps": [
+     "Lưu bản vẽ bị lỗi ra một thư mục trên máy để giữ bản sao.",
+     "Vào vị trí file trong Desktop Connector, xóa file `.bak` trùng tên với file DWG không lưu được.",
+     "Lưu lại file trong Civil 3D vào đúng vị trí cũ.",
+     "Để tránh lặp lại: dùng lệnh `MOVEBAK` để đưa file BAK sang thư mục khác."
+    ]
+   },
+   {
+    "title": "Cách 3: Xóa file lỗi ERR",
+    "steps": [
+     "Đóng hết Civil 3D và AutoCAD.",
+     "Chuyển Desktop Connector sang Offline Mode.",
+     "Vào vị trí file qua File Explorer, xóa các file `.err`.",
+     "Thoát Offline Mode."
+    ]
+   },
+   {
+    "title": "Cách 4: Lưu thành tên khác cùng vị trí",
+    "steps": [
+     "Dùng lệnh `SAVEAS` lưu bản vẽ với tên khác vào cùng thư mục. Cách này tạo version 1 mới cho bản vẽ trên Autodesk Docs."
+    ]
+   },
+   {
+    "title": "Cách 5: Lưu ra máy rồi ghi đè",
+    "steps": [
+     "Lưu DWG cùng tên ra một thư mục trên máy.",
+     "Mở Desktop Connector bằng File Explorer, vào đúng vị trí file.",
+     "Kéo thả file vừa lưu vào để ghi đè. Cách này tạo version mới."
+    ]
+   },
+   {
+    "title": "Kiểm tra thêm",
+    "steps": [
+     "Xem danh sách phần mềm xung đột trong bài Desktop Connector Support.",
+     "Thêm ngoại lệ cho phần mềm diệt virus theo bài “Accessed by another session” của Autodesk."
+    ]
+   }
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Unable-to-save-to-drawing-as-it-is-being-accessed-by-another-session-when-saving-a-DWG-file-in-Civil-3D-through-Desktop-Connector.html"
+  ],
+  "category": "Civil 3D / Desktop Connector",
+  "updated": "2026-11-18"
+ },
+ {
+  "id": "adsk-trial-window-blank",
+  "source": "autodesk",
+  "section": "License & cài đặt",
+  "code": "Trial",
+  "kind": "loi",
+  "software": [
+   "Tất cả phần mềm Autodesk"
+  ],
+  "title": "Cửa sổ “Welcome to your trial” bị trống một nửa, không đóng được",
+  "keywords": [
+   "welcome to your trial",
+   "dig into your trial",
+   "trial",
+   "dùng thử",
+   "cửa sổ trống",
+   "half blank",
+   "blank window",
+   "màn hình trắng",
+   "không đóng được",
+   "licensing service",
+   "adsklicensing",
+   "text size",
+   "scale"
+  ],
+  "symptoms": "Khi mở phần mềm Autodesk, cửa sổ “Welcome to your trial” hoặc “Dig into your trial” hiện trống một phần, thiếu nội dung và không đóng được.",
+  "cause": "Autodesk Desktop Licensing Service đã cũ hoặc bị hỏng.",
+  "subs": [
+   {
+    "title": "Cách 1: Gỡ và cài lại Autodesk Desktop Licensing Service bản mới nhất",
+    "steps": [
+     "Mở File Explorer, vào `C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\AdskLicensing`.",
+     "Chuột phải `uninstall.exe` → `Run as administrator`, chờ đến khi thư mục trống.",
+     "Tải và cài Autodesk Desktop Licensing Service bản mới nhất.",
+     "Mở lại phần mềm để kiểm tra."
+    ]
+   },
+   {
+    "title": "Cách 2: Giảm cỡ chữ của Windows về 100%",
+    "steps": [
+     "Mở `Settings` → `System` → `Display`.",
+     "Ở `Scale & layout` chọn `Scale` → `Text size`, kéo thanh trượt về 100%.",
+     "Mở lại phần mềm và thử đóng cửa sổ trial."
+    ]
+   }
+  ],
+  "note": "Lỗi tương tự: hộp thoại “Data Privacy” trống, cửa sổ LGS bị trắng, cửa sổ “Expires in X days” trống một nửa.",
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Welcome-to-your-trial-window-appears-half-blank-when-opening-Autodesk-software.html"
+  ],
+  "category": "License & cài đặt",
+  "updated": "2026-11-18"
+ },
+ {
+  "id": "adsk-installer-nothing-happens",
+  "source": "autodesk",
+  "section": "License & cài đặt",
+  "code": "ODIS",
+  "kind": "loi",
+  "software": [
+   "Tất cả phần mềm Autodesk",
+   "Autodesk Installer (ODIS)"
+  ],
+  "title": "Mở trình cài đặt Autodesk nhưng không có gì xảy ra, không hiện giao diện",
+  "keywords": [
+   "nothing happens",
+   "installer không chạy",
+   "không mở được bộ cài",
+   "bấm setup không lên",
+   "không hiện giao diện",
+   "no user interface",
+   "odis",
+   "adodis",
+   "removeodis",
+   "adskaccessuihost",
+   "adskaccessuihost.exe",
+   "faulting application",
+   "event viewer",
+   "debugger blocked",
+   "image file execution",
+   "applocker",
+   "antivirus",
+   "wi",
+   "run as administrator"
+  ],
+  "symptoms": "Chạy file cài đặt nhưng không có gì xảy ra, không hiện giao diện. Trong `Event Viewer` → `Windows Logs` → `Application` có thể thấy lỗi “Faulting application name: AdskAccessUIHost.exe”.",
+  "cause": "ODIS (Autodesk On-Demand Install Service) cũ hoặc hỏng; thiếu quyền cài đặt; registry có giá trị Debugger = Blocked cho các file của ODIS; Windows đang chờ cập nhật/khởi động lại; phần mềm diệt virus chặn; bộ cài hoặc dữ liệu cài tạm bị hỏng; proxy, mạng, bảo mật hoặc phần mềm xung đột; thiếu dung lượng.",
+  "steps": [
+   "Làm lần lượt từ Cách 1. Sau mỗi cách, chuột phải file cài đặt → `Run as administrator` để thử lại."
+  ],
+  "subs": [
+   {
+    "title": "Cách 1: Gỡ và cài lại Autodesk Installer Component (ODIS)",
+    "steps": [
+     "Vào `C:\\Program Files\\Autodesk\\AdODIS\\V1` (nếu không có thư mục này thì bỏ qua bước 2).",
+     "Chạy `RemoveODIS.exe` bằng quyền Administrator, chờ chạy xong.",
+     "Tải bản mới nhất: https://emsfs.autodesk.com/utility/odis/1/installer/latest/AdODIS-installer.exe",
+     "Chạy `AdODIS-installer.exe` bằng quyền Administrator để cài.",
+     "Chạy lại trình cài đặt phần mềm bằng quyền Administrator."
+    ]
+   },
+   {
+    "title": "Cách 2: Chạy trình cài đặt bằng quyền Administrator",
+    "steps": [
+     "Chỉ thử sau Cách 1: máy bật AppLocker mà chạy bằng quyền admin có thể gây lại lỗi của Cách 1.",
+     "Chuột phải file `setup.exe` → `Run as administrator`, đồng ý hộp thoại UAC.",
+     "Vẫn không được thì đăng nhập Windows bằng tài khoản local administrator và cài lại."
+    ]
+   },
+   {
+    "title": "Cách 3: Xóa giá trị Debugger bị chặn trong registry",
+    "steps": [
+     "Nhấn Windows + R, gõ `regedit` rồi Enter.",
+     "Vào `HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options`.",
+     "Nếu khóa `AdskAccessServiceHost.exe` có giá trị `Debugger` = `Blocked`: chuột phải `Debugger` → `Delete`.",
+     "Làm tương tự cho mọi khóa trùng tên các file .exe trong `C:\\Program Files\\Autodesk\\AdODIS\\V1\\Setup`.",
+     "Làm lại Cách 1 rồi cài lại."
+    ]
+   },
+   {
+    "title": "Cách 4: Cập nhật Windows",
+    "steps": [
+     "Vào `Settings` → `Update & Security` → `Windows Update`, cài hết bản cập nhật và khởi động lại (có thể phải khởi động lại nhiều lần)."
+    ]
+   },
+   {
+    "title": "Cách 5: Tạm tắt phần mềm diệt virus",
+    "steps": [
+     "Tắt phần mềm diệt virus, chạy lại trình cài đặt. Cài xong nhớ bật lại.",
+     "Máy công ty có thể cần IT tắt giúp."
+    ]
+   },
+   {
+    "title": "Cách 6: Xóa dữ liệu cài tạm và tải bộ cài mới",
+    "steps": [
+     "Xóa nội dung các thư mục: `C:\\Autodesk\\WI*`, `%USERPROFILE%\\AppData\\Local\\Temp`, `%USERPROFILE%\\AppData\\Local\\Autodesk\\ODIS`.",
+     "Tải bộ cài mới và cài lại. Nếu cài bằng Custom Install trong Autodesk Account thì tạo lại gói cài.",
+     "Vẫn lỗi thì thử cách tải khác."
+    ]
+   },
+   {
+    "title": "Cách 7: Kiểm tra mạng, proxy, bảo mật và phần mềm xung đột",
+    "steps": [
+     "Thêm ngoại lệ cho phần mềm diệt virus: `C:\\Program Files\\Autodesk`, `%USERPROFILE%\\AppData\\Local\\Autodesk`, và loại `C:\\Autodesk\\WI*` khỏi quét thời gian thực.",
+     "Mở các URL/giao thức cần cho Autodesk Subscription Licensing; hỏi quản trị mạng về proxy và tường lửa.",
+     "Kiểm tra kết nối bằng công cụ Licensing and Sign-in Helper.",
+     "Đối chiếu danh sách phần mềm xung đột với Licensing Service, tạm tắt hoặc gỡ khi cài."
+    ]
+   },
+   {
+    "title": "Cách 8: Giải phóng dung lượng",
+    "steps": [
+     "Gỡ bớt phần mềm, dọn ổ đĩa rồi cài lại."
+    ]
+   }
+  ],
+  "note": "Bên Kinh nghiệm xử lý (Asana) có mục 1.4 cùng lỗi.",
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/When-launching-Autodesk-Installer-nothing-happens-and-no-user-interface-appears.html"
+  ],
+  "category": "License & cài đặt",
+  "updated": "2026-11-18"
+ },
+ {
   "id": "adsk-restart-pending",
   "source": "autodesk",
   "section": "License & cài đặt",
@@ -917,7 +1283,19 @@
   "refs": [
    "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/An-operating-system-restart-is-pending-when-trying-to-install-AutoCAD-2024.html"
   ],
-  "updated": "2026-11-18"
+  "updated": "2026-11-18",
+  "keywords": [
+   "restart pending",
+   "an operating system restart is pending",
+   "please restart your computer",
+   "khởi động lại",
+   "rebootrequired",
+   "reboot required",
+   "visual c++",
+   "14.34.31931",
+   "reg delete",
+   "cài đặt"
+  ]
  },
  {
   "id": "loi-1308",
