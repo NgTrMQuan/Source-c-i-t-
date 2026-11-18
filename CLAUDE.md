@@ -21,7 +21,7 @@ Mỗi file HTML tự chứa CSS/JS của nó (không có bước build). Ba tran
 - Nền vũ trụ tối, font Unbounded (tiêu đề) + Be Vietnam Pro (nội dung).
 - Màu theo nhóm: AutoCAD `#ff6b8b→#e0245e`, Revit & BIM `#4fa3ff→#2754e6`, Hạ tầng & Kết cấu `#2fe0b5→#0a9a82`, Cơ khí & Gia công `#ffc04a→#f2661b`, Vault `#a678ff→#5a37e0`, Đồ họa 3D `#ff6be0→#b52bc0`.
 - Trang lỗi dùng tông cam/hồng `#ffb347→#ff4d6d`.
-- Tôn trọng `prefers-reduced-motion`; kiểm tra cả màn hình điện thoại (≤640px).
+- Hiệu ứng luôn bật theo yêu cầu người dùng (`window.CALM=false` ở đầu mỗi trang, quy tắc tắt chuyển động nằm dưới `html.calm` nên không kích hoạt); kiểm tra cả màn hình điện thoại (≤640px).
 
 ## Quy ước
 

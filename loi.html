@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<script>(()=>{let m;try{m=localStorage.getItem('motion')}catch(e){}const c=m?m==='off':matchMedia('(prefers-reduced-motion: reduce)').matches;document.documentElement.classList.toggle('calm',c);window.CALM=c})()</script>
+<script>window.CALM=false</script>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -263,7 +263,6 @@ html.calm *{animation:none!important;transition:none!important}html.calm .card{o
   .dh{border-radius:0;padding-top:18px}
   .back{display:inline-block}
 }
-.mtog{font:inherit;font-size:13px;font-weight:600;color:var(--ink-2);background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;margin-left:10px}.mtog:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}.mtog:focus-visible{outline:2px solid #62d8ff;outline-offset:2px}
 </style>
 </head>
 <body>
@@ -382,7 +381,7 @@ html.calm *{animation:none!important;transition:none!important}html.calm .card{o
 <nav class="top">
   <a class="brand" href="index.html" aria-label="Trang chủ"><i></i></a>
   <div class="links"><a href="index.html">Trang chủ</a><a href="cai-dat.html">Bộ cài đặt</a><a href="loi.html" aria-current="page">Lỗi thường gặp</a></div>
-  <button class="mtog" id="mtog" type="button" aria-pressed="true">Hiệu ứng: Bật</button><div class="who">Người cập nhật: Minh Quân</div>
+  <div class="who">Người cập nhật: Minh Quân</div>
 </nav>
 
 <header class="ehero">
@@ -545,6 +544,5 @@ let tt; function toast(m){ const t = $('toast'); t.textContent = m; t.classList.
 if (ERR) start();
 else fetch('errors.json',{cache:'no-store'}).then(r => r.json()).then(d => { ERR = d; start(); }).catch(() => { $('items').innerHTML = '<p class="none">Không tải được errors.json.</p>'; });
 </script>
-<script>(()=>{const b=document.getElementById('mtog');if(!b)return;b.textContent='Hiệu ứng: '+(window.CALM?'Tắt':'Bật');b.setAttribute('aria-pressed',!window.CALM);b.onclick=()=>{try{localStorage.setItem('motion',window.CALM?'on':'off')}catch(e){}location.reload()}})()</script>
 </body>
 </html>
