@@ -183,125 +183,362 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
 
-/* ---------- landing ---------- */
-.land{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:96px clamp(18px,4vw,52px) 40px;overflow:hidden}
-.land .giant{top:30%;opacity:.16;filter:blur(1px)}
-.intro{text-align:center;margin:0 auto 34px;max-width:780px;position:relative;z-index:3}
-.intro h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.6vw,64px);line-height:1.08;margin:0 0 14px;letter-spacing:-.015em;animation:up .9s .1s cubic-bezier(.2,.8,.2,1) both}
+/* ---------- landing: đài quan sát ---------- */
+.land{position:relative;z-index:2;min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;padding:110px clamp(18px,4vw,52px) 34px;overflow:hidden}
+.land .giant{display:none}
+.intro{text-align:center;margin:0 auto;max-width:860px;position:relative;z-index:3}
+.intro .eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;color:#cfe9ff;background:rgba(10,14,22,.55);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px)}
+.intro .eyebrow i{width:7px;height:7px;border-radius:50%;background:#2fe0b5;box-shadow:0 0 10px #2fe0b5;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.intro h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,5.6vw,80px);line-height:1.04;margin:0 0 14px;letter-spacing:-.02em;animation:up .9s .1s cubic-bezier(.2,.8,.2,1) both;text-shadow:0 4px 30px rgba(0,0,0,.8)}
 .intro h1 em{font-style:normal;background:linear-gradient(90deg,#62d8ff,#a678ff 45%,#ffb347);-webkit-background-clip:text;background-clip:text;color:transparent}
-.intro p{margin:0 auto;color:var(--ink-2);font-size:16px;max-width:52ch;animation:up .9s .25s cubic-bezier(.2,.8,.2,1) both}
-.portals{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,32px);max-width:1240px;width:100%;margin:0 auto;perspective:1600px}
-.portal{--acc:#62d8ff;--acc2:#2754e6;position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:min(56vh,520px);padding:clamp(22px,2.6vw,36px);border-radius:32px;overflow:hidden;isolation:isolate;
-  background:linear-gradient(165deg,rgba(255,255,255,.08),rgba(255,255,255,.015) 60%);border:1px solid rgba(255,255,255,.12);
-  transform-style:preserve-3d;transform:rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg)) translateZ(0);transition:transform .25s ease-out,border-color .3s,box-shadow .3s,opacity .3s,filter .3s;
-  box-shadow:0 40px 80px -40px rgba(0,0,0,.9);animation:portalIn 1.1s cubic-bezier(.2,.8,.2,1) both}
-.portal.err{--acc:#ffb347;--acc2:#ff4d6d;animation-delay:.15s}
-@keyframes portalIn{from{opacity:0;transform:translateZ(-400px) rotateX(18deg)}to{opacity:1}}
-.portal::before{content:"";position:absolute;inset:-30% -20% 30%;z-index:-1;background:radial-gradient(closest-side,color-mix(in srgb,var(--acc) 45%,transparent),transparent);opacity:.55;transition:opacity .3s;filter:blur(8px)}
-.portal::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:radial-gradient(420px circle at var(--mx,50%) var(--my,30%),rgba(255,255,255,.1),transparent 60%);opacity:0;transition:opacity .3s}
-.portal:hover,.portal:focus-visible{border-color:color-mix(in srgb,var(--acc) 70%,transparent);box-shadow:0 50px 100px -40px color-mix(in srgb,var(--acc) 60%,#000),0 0 0 1px color-mix(in srgb,var(--acc) 40%,transparent);outline:0}
-.portal:hover::before{opacity:.95}.portal:hover::after{opacity:1}
-.portals:hover .portal:not(:hover){opacity:.55;filter:saturate(.6)}
-.vis{position:absolute;left:0;right:0;top:0;height:62%;display:flex;align-items:center;justify-content:center;perspective:900px;pointer-events:none}
-/* installer visual: mini orbit of product icons */
-.orbit{position:relative;width:0;height:0;transform-style:preserve-3d;transform:rotateX(68deg);animation:orbit 18s linear infinite}
-@keyframes orbit{to{transform:rotateX(68deg) rotateZ(360deg)}}
-.orbit .o{position:absolute;width:64px;height:64px;margin:-32px 0 0 -32px;transform:rotateZ(var(--r)) translateY(calc(var(--R) * -1)) rotateZ(calc(var(--r) * -1)) rotateX(-68deg);transform-style:preserve-3d}
-.orbit .o img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(0,0,0,.6));animation:counter 18s linear infinite}
-@keyframes counter{to{transform:rotate(-360deg)}}
-.core{position:absolute;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#bff3ff,#62d8ff 30%,#2754e6 70%,#0b1840);box-shadow:0 0 60px rgba(98,216,255,.7),inset -10px -16px 30px rgba(0,0,0,.4);animation:breathe 4s ease-in-out infinite}
-@keyframes breathe{50%{transform:scale(1.06);box-shadow:0 0 90px rgba(98,216,255,.9),inset -10px -16px 30px rgba(0,0,0,.4)}}
-.ringline{position:absolute;width:var(--d);height:var(--d);border-radius:50%;border:1px solid rgba(98,216,255,.35);transform:rotateX(68deg);box-shadow:0 0 18px rgba(98,216,255,.25)}
-/* error visual: holographic warning prism + floating error codes */
-.holo{position:relative;width:170px;height:170px;transform-style:preserve-3d;animation:holo 9s linear infinite}
-@keyframes holo{to{transform:rotateY(360deg)}}
-.holo .tri{position:absolute;inset:0;transform-style:preserve-3d}
-.holo .tri i{position:absolute;left:50%;top:50%;width:150px;height:130px;margin:-65px 0 0 -75px;clip-path:polygon(50% 0,100% 100%,0 100%);
-  background:linear-gradient(180deg,rgba(255,179,71,.55),rgba(255,77,109,.25));border:0;box-shadow:inset 0 0 30px rgba(255,179,71,.6)}
-.holo .tri i:nth-child(1){transform:rotateY(0deg) translateZ(26px)}
-.holo .tri i:nth-child(2){transform:rotateY(120deg) translateZ(26px)}
-.holo .tri i:nth-child(3){transform:rotateY(240deg) translateZ(26px)}
-.holo b{position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);font-family:var(--display);font-weight:900;font-size:64px;color:#fff;text-shadow:0 0 24px #ffb347,0 0 50px #ff4d6d}
-.codes{position:absolute;inset:0;pointer-events:none}
-.codes span{position:absolute;font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#ffe2b8;padding:6px 11px;border-radius:999px;
-  background:rgba(255,179,71,.1);border:1px solid rgba(255,179,71,.35);box-shadow:0 0 18px -4px rgba(255,140,60,.6);backdrop-filter:blur(6px);animation:drift2 7s ease-in-out infinite alternate}
-@keyframes drift2{to{transform:translate(var(--x,10px),var(--y,-14px))}}
-.scan{position:absolute;left:10%;right:10%;height:2px;top:20%;background:linear-gradient(90deg,transparent,rgba(255,179,71,.9),transparent);box-shadow:0 0 14px rgba(255,179,71,.9);animation:scan 3.2s ease-in-out infinite}
-@keyframes scan{50%{top:58%}}
-.ptext{position:relative}
-.ptext small{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--acc);margin-bottom:8px}
-.ptext small::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 10px var(--acc)}
-.ptext h2{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(26px,3vw,42px);line-height:1.05}
-.ptext p{margin:10px 0 18px;color:var(--ink-2);font-size:15px;max-width:40ch}
-.pfoot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.pstats{display:flex;gap:22px}
-.pstats b{display:block;font-family:var(--display);font-weight:700;font-size:24px;line-height:1}
-.pstats span{font-size:12px;color:var(--ink-3)}
-.cta{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 20px;border-radius:999px;font-weight:700;font-size:14px;color:var(--void);background:var(--ink);transition:box-shadow .2s,transform .2s}
-.portal:hover .cta{box-shadow:0 0 30px -4px var(--acc);transform:translateX(4px)}
-.cta svg{transition:transform .2s}.portal:hover .cta svg{transform:translateX(3px)}
-@media (max-width:860px){.portals{grid-template-columns:1fr}.portal{min-height:420px}.land .giant{top:22%}}
-.land .giant,.ehero .giant{animation:none;opacity:.07;filter:none}
-.ehero{overflow-x:clip}
-.intro p,.intro h1{text-shadow:0 2px 18px rgba(0,0,0,.85)}
-.portal{background:linear-gradient(165deg,rgba(18,22,30,.55),rgba(8,10,14,.35) 60%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.intro p{margin:0 auto;color:#c9d3df;font-size:17px;max-width:50ch;animation:up .9s .25s cubic-bezier(.2,.8,.2,1) both;text-shadow:0 2px 18px rgba(0,0,0,.9)}
+.spacer{min-height:min(34vh,320px)}
+.portals{position:relative;z-index:3;display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,26px);max-width:1180px;width:100%;margin:0 auto}
+.portal{--acc:#62d8ff;position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;padding:22px 24px;border-radius:24px;overflow:hidden;isolation:isolate;
+  background:rgba(8,11,18,.62);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 30px 70px -30px rgba(0,0,0,.9);transition:border-color .25s,transform .25s,box-shadow .25s;animation:up 1s .4s cubic-bezier(.2,.8,.2,1) both}
+.portal.err{--acc:#ffb347;animation-delay:.55s}
+.portal::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(500px circle at var(--mx,0%) var(--my,50%),color-mix(in srgb,var(--acc) 22%,transparent),transparent 60%);opacity:.6;transition:opacity .25s}
+.portal:hover,.portal:focus-visible{transform:translateY(-4px);border-color:color-mix(in srgb,var(--acc) 65%,transparent);box-shadow:0 40px 80px -30px color-mix(in srgb,var(--acc) 55%,#000);outline:0}
+.portal:hover::before{opacity:1}
+.badge{width:74px;height:74px;border-radius:20px;display:grid;place-items:center;position:relative;background:color-mix(in srgb,var(--acc) 14%,rgba(255,255,255,.03));border:1px solid color-mix(in srgb,var(--acc) 40%,transparent)}
+.badge svg{width:34px;height:34px;color:var(--acc)}
+.badge::after{content:"";position:absolute;inset:-6px;border-radius:24px;border:1px dashed color-mix(in srgb,var(--acc) 45%,transparent);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ptext h2{margin:0 0 4px;font-family:var(--display);font-weight:800;font-size:clamp(20px,2vw,26px);line-height:1.15}
+.ptext p{margin:0 0 10px;color:var(--ink-2);font-size:14.5px}
+.pstats{display:flex;gap:18px;font-size:13px;color:var(--ink-3)}
+.pstats b{font-family:var(--display);font-weight:700;font-size:16px;color:var(--ink);margin-right:4px}
+.icons{display:flex;margin-top:12px}
+.icons img{width:28px;height:28px;object-fit:contain;margin-right:-4px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.5))}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{font-size:11.5px;font-weight:700;color:#ffe2b8;padding:3px 9px;border-radius:999px;background:rgba(255,179,71,.1);border:1px solid rgba(255,179,71,.3)}
+.cta{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:var(--void);background:var(--ink);transition:box-shadow .2s,transform .2s}
+.portal:hover .cta{box-shadow:0 0 30px -2px var(--acc);transform:translateX(4px)}
+.legend{position:relative;z-index:3;text-align:center;margin:18px 0 0;font-size:12.5px;color:var(--ink-3)}
+@media (max-width:860px){.portals{grid-template-columns:1fr}.spacer{min-height:42vh}.portal{grid-template-columns:auto 1fr;padding:18px}.cta{display:none}.badge{width:58px;height:58px}}
+
+#hero3d{position:fixed;inset:0;z-index:1;pointer-events:none}
+.vign{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 90% at 50% 55%,transparent 55%,rgba(2,3,6,.75))}
+.intro h1 .w{display:inline-block;opacity:0;transform:translateY(.5em) scale(.96);filter:blur(10px);animation:wIn 1.1s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(1.4s + var(--i) * .12s)}
+@keyframes wIn{to{opacity:1;transform:none;filter:none}}
+.intro h1{animation:none}
+.intro .eyebrow{opacity:0;animation:up .9s 1.2s cubic-bezier(.2,.8,.2,1) forwards}
+.intro p{opacity:0;animation:up .9s 2.3s cubic-bezier(.2,.8,.2,1) forwards}
+.portal{opacity:0;animation:up 1s 2.8s cubic-bezier(.2,.8,.2,1) forwards}
+.portal.err{animation-delay:2.95s}
+.hint{position:relative;z-index:3;text-align:center;margin:14px 0 0;font-size:12.5px;color:var(--ink-3);opacity:0;animation:up 1s 3.4s forwards}
+@media (prefers-reduced-motion:reduce){.intro h1 .w,.intro .eyebrow,.intro p,.portal,.hint{animation:none;opacity:1;transform:none;filter:none}}
+/* ---------- landing v4: hai cổng lớn ---------- */
+@property --ang{syntax:'<angle>';initial-value:0deg;inherits:false}
+.land{grid-template-rows:auto 1fr;padding:92px clamp(16px,3vw,44px) 28px}
+.intro .eyebrow{margin-bottom:10px}
+.intro h1{font-size:clamp(30px,4.2vw,60px);margin-bottom:8px}
+.intro p{font-size:16px}
+.mid{display:flex;align-items:stretch;padding:24px 0 0}
+.portals{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,30px);width:100%;max-width:1440px;margin:0 auto;perspective:1400px}
+.portal{--acc:#62d8ff;--acc2:#a678ff;position:relative;display:flex;flex-direction:column;align-items:stretch;gap:0;min-height:max(480px,calc(100vh - 330px));padding:0 clamp(22px,2.4vw,36px) clamp(22px,2.4vw,32px);border-radius:30px;overflow:hidden;isolation:isolate;text-align:left;
+  background:radial-gradient(120% 80% at 50% 30%,color-mix(in srgb,var(--acc) 14%,rgba(8,11,18,.5)),rgba(6,8,14,.72));border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  transform:rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg));transform-style:preserve-3d;transition:transform .3s ease-out,box-shadow .3s}
+.portal.err{--acc:#ffb347;--acc2:#ff4d6d}
+.portal::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;z-index:3;pointer-events:none;
+  background:conic-gradient(from var(--ang),transparent 0 60%,var(--acc) 75%,var(--acc2) 85%,transparent 95%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ang 5s linear infinite}
+@keyframes ang{to{--ang:360deg}}
+.portal::before{content:"";position:absolute;inset:-40%;z-index:-1;background:radial-gradient(closest-side,color-mix(in srgb,var(--acc) 30%,transparent),transparent);opacity:.5;transform:translate(var(--gx,0),var(--gy,0));transition:transform .3s}
+.portal .shine{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.12) 50%,transparent 60%);transform:translateX(-120%);transition:transform .9s}
+.portal:hover .shine{transform:translateX(120%)}
+.portal:hover{box-shadow:0 50px 120px -40px color-mix(in srgb,var(--acc) 60%,#000);transform:rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg)) translateY(-6px)}
+.portal .vis2{position:relative;flex:1;min-height:300px;margin:0 calc(clamp(22px,2.4vw,36px) * -1);display:grid;place-items:center;overflow:hidden}
+.sparks{position:absolute;inset:0}
+.sparks i{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--acc);box-shadow:0 0 8px var(--acc);animation:rise var(--d) linear infinite;animation-delay:var(--dl);opacity:0}
+@keyframes rise{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(-260px);opacity:0}}
+/* bộ cài đặt: hai vòng icon xoay ngược chiều */
+.orb{position:relative;width:min(340px,76%,calc(100vh - 560px));min-width:260px;aspect-ratio:1;container-type:size}
+.orb .trk{position:absolute;border-radius:50%;border:1px dashed rgba(98,216,255,.35);inset:var(--in)}
+.orb .trk.b{border-style:solid;border-color:rgba(166,120,255,.25);box-shadow:0 0 30px rgba(98,216,255,.12) inset}
+.orb .rg{position:absolute;inset:0;animation:spin var(--t) linear infinite var(--dir,normal)}
+.orb .ic{position:absolute;left:50%;top:50%;width:var(--s);height:var(--s);margin:calc(var(--s) / -2);transform:rotate(var(--a)) translateY(calc(var(--R) * -1)) rotate(calc(var(--a) * -1))}
+.orb .ic img{position:static;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 10px rgba(0,0,0,.6));animation:spin var(--t) linear infinite;animation-direction:var(--rev,reverse);transition:transform .2s}
+.orb .hub{width:118px;height:118px;margin:-59px;box-shadow:0 0 70px rgba(98,216,255,.75),0 0 0 14px rgba(98,216,255,.08),0 0 0 30px rgba(98,216,255,.04)}
+.orb .hub svg{width:46px;height:46px;animation:dl 1.8s ease-in-out infinite}
+@keyframes dl{50%{transform:translateY(5px)}}
+/* lỗi: cảnh báo nhấp nháy + radar */
+.radar{position:absolute;width:380px;height:380px;max-width:92%;aspect-ratio:1;border-radius:50%;background:conic-gradient(from 0deg,rgba(255,140,60,.28),transparent 22%);animation:spin 3.6s linear infinite;-webkit-mask:radial-gradient(closest-side,#000 98%,transparent);mask:radial-gradient(closest-side,#000 98%,transparent)}
+.rcirc{position:absolute;border-radius:50%;border:1px solid rgba(255,179,71,.2);width:var(--d);height:var(--d)}
+.warn{width:220px;height:220px}
+.warn svg{width:170px;height:170px}
+.flt{font-size:12.5px;padding:5px 12px;backdrop-filter:blur(6px)}
+.flt.hot{color:#fff;background:rgba(255,77,109,.25);border-color:rgba(255,77,109,.55);box-shadow:0 0 20px -4px rgba(255,77,109,.8)}
+.glitch{position:relative}
+.portal.err:hover .glitch{animation:gl .5s steps(2) 2}
+@keyframes gl{25%{text-shadow:2px 0 #ff4d6d,-2px 0 #62d8ff;transform:translateX(1px)}50%{text-shadow:-2px 0 #ff4d6d,2px 0 #62d8ff;transform:translateX(-1px)}}
+.portal .ptext{position:relative;z-index:2}
+.portal .ptext h2{font-size:clamp(26px,2.8vw,40px);margin-bottom:6px}
+.portal .ptext p{font-size:15.5px;margin-bottom:6px}
+.portal .pstats b{font-size:22px}
+.portal .cta{width:56px;height:56px}
+.portal .vis2 span{display:block}
+.portal .vis2 .flt{display:inline-block}
+.hub{position:absolute;left:50%;top:50%;border-radius:50%;display:grid!important;place-items:center;color:#062033;background:radial-gradient(circle at 35% 30%,#d6f7ff,#62d8ff 45%,#2754e6);animation:breathe 3.6s ease-in-out infinite}
+.warn{position:relative;display:grid!important;place-items:center}
+.warn svg{position:relative;z-index:2;filter:drop-shadow(0 0 22px rgba(255,179,71,.9));animation:blink 1.3s steps(1,end) infinite,wob 2.6s ease-in-out infinite}
+@keyframes blink{0%,60%{opacity:1}61%,100%{opacity:.25}}
+@keyframes wob{50%{transform:scale(1.06)}}
+.warn i{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,140,60,.6);animation:ripple 2.4s ease-out infinite}
+.warn i:nth-of-type(2){animation-delay:.8s}.warn i:nth-of-type(3){animation-delay:1.6s}
+@keyframes ripple{from{transform:scale(.45);opacity:.9}to{transform:scale(1.6);opacity:0}}
+.flt{position:absolute;z-index:2;font-family:var(--display);font-weight:700;color:#ffe2b8;border-radius:999px;background:rgba(255,179,71,.12);border:1px solid rgba(255,179,71,.35);animation:drift2 6s ease-in-out infinite alternate}
+.portal .row2{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}
+.portal .cta{flex:none;display:grid;place-items:center}
+.ptext{display:block}
+@media (max-width:900px){.portals{grid-template-columns:1fr}.portal{min-height:560px}}
+@media (prefers-reduced-motion:reduce){.portal::after,.orb .rg,.orb .ic img,.radar,.sparks i,.orb .hub svg{animation:none}}
 </style>
 </head>
-<body>
+<body data-cosmos="off">
 <div class="sky" aria-hidden="true"></div>
 <canvas id="stars" aria-hidden="true"></canvas>
+<canvas id="hero3d" aria-hidden="true"></canvas>
+<script>
+/* ---------- hero 3D: dải Ngân Hà xoắn ốc, camera bay vào + xoay theo chuột ---------- */
+(() => {
+  const cv = document.getElementById('hero3d'), cx = cv.getContext('2d');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W, H, D, f, SX, SY;
+  const rnd = (a, b) => a + Math.random() * (b - a), gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(6.283 * v); };
+  // nhóm màu: lõi vàng, nhánh xanh lam, tím, hồng (vùng sinh sao), trắng, bụi tối
+  const COLS = ['255,228,170', '255,200,140', '170,200,255', '140,160,255', '200,150,255', '255,130,200', '235,240,255'];
+  const groups = COLS.map(() => []), dust = [];
+  const N = innerWidth < 760 ? 6000 : 12000, ARMS = 4, R = 10;
+  for (let i = 0; i < N; i++){
+    const core = Math.random() < .22;
+    let r, a, y, g;
+    if (core){ r = Math.abs(gauss()) * 1.5; a = Math.random() * 6.283; y = gauss() * .35 * Math.max(.2, 1 - r / 3); g = r < .7 ? 0 : 1; }
+    else {
+      r = .8 + Math.pow(Math.random(), .85) * R; const arm = i % ARMS;
+      a = arm / ARMS * 6.283 + Math.log(r) * 2.3 + gauss() * (.28 + .25 / r); y = gauss() * .12;
+      const k = Math.random(); g = k < .35 ? 2 : k < .6 ? 3 : k < .78 ? 4 : k < .86 ? 5 : 6;
+    }
+    groups[g].push({r, a, y, s: core ? rnd(.6, 1.6) : rnd(.4, 1.5) * (Math.random() < .03 ? 2.2 : 1)});
+    if (!core && Math.random() < .18) dust.push({r: r * .97, a: a - .05, y: y * .5, s: rnd(2, 5)});
+  }
+  const far = Array.from({length: 600}, () => { const u = Math.random() * 2 - 1, t = Math.random() * 6.283, q = Math.sqrt(1 - u * u); return {x: q * Math.cos(t) * 90, y: u * 90, z: q * Math.sin(t) * 90, b: Math.random()}; });
+  let yaw = 0, pitch = .5, dist = 22, mx = 0, my = 0, tmx = 0, tmy = 0, cy_, sy_, cp, sp;
+  function size(){
+    D = Math.min(devicePixelRatio || 1, 1.75); W = innerWidth; H = innerHeight;
+    cv.width = W * D; cv.height = H * D; cx.setTransform(D, 0, 0, D, 0, 0);
+    SX = W * .5; SY = H * .55; f = Math.max(W, H) * .95;
+  }
+  function cam(){ cy_ = Math.cos(yaw); sy_ = Math.sin(yaw); cp = Math.cos(pitch); sp = Math.sin(pitch); }
+  function P(x, y, z){ const x1 = x * cy_ - z * sy_, z1 = x * sy_ + z * cy_, y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp + dist; const k = f / z2; return [SX + x1 * k, SY - y2 * k, z2, k]; }
+  const t0 = performance.now();
+  function frame(now){
+    const t = (now - t0) / 1000, e = still ? 1 : Math.min(1, t / 3.4), ease = 1 - Math.pow(1 - e, 4);
+    mx += (tmx - mx) * .04; my += (tmy - my) * .04;
+    dist = 95 - 77 * ease; pitch = 1.35 - .87 * ease + my * .18; yaw = 2.2 * (1 - ease) + mx * .5;
+    const spin = still ? 0 : t * .035;
+    cam(); cx.clearRect(0, 0, W, H);
+    for (const s of far){ const q = P(s.x, s.y, s.z); if (q[2] < 1) continue; cx.fillStyle = `rgba(210,225,255,${.2 + s.b * .5})`; const z = .6 + s.b; cx.fillRect(q[0], q[1], z, z); }
+    // quầng sáng lõi
+    const c = P(0, 0, 0), cr = 3.2 * c[3];
+    cx.globalCompositeOperation = 'lighter';
+    let g = cx.createRadialGradient(c[0], c[1], 0, c[0], c[1], cr * 2.6); g.addColorStop(0, 'rgba(255,225,170,.55)'); g.addColorStop(.25, 'rgba(255,170,110,.18)'); g.addColorStop(.6, 'rgba(140,120,255,.06)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    cx.fillStyle = g; cx.beginPath(); cx.ellipse(c[0], c[1], cr * 2.6, cr * 2.6 * Math.max(.3, Math.abs(Math.sin(pitch))) , 0, 0, 6.3); cx.fill();
+    // các nhóm sao (cộng sáng)
+    groups.forEach((grp, gi) => {
+      cx.fillStyle = `rgb(${COLS[gi]})`;
+      for (const p of grp){
+        const a = p.a + spin * (1.6 / (1 + p.r * .25)), q = P(Math.cos(a) * p.r, p.y, Math.sin(a) * p.r);
+        if (q[2] < .5) continue; const z = p.s * q[3] / 55;
+        cx.globalAlpha = Math.min(1, .25 + 1.6 / (1 + p.r * .35)) * (gi > 4 ? .9 : .7);
+        cx.fillRect(q[0], q[1], z, z);
+      }
+    });
+    cx.globalAlpha = 1; cx.globalCompositeOperation = 'source-over';
+    // bụi tối dọc nhánh
+    cx.fillStyle = 'rgba(6,6,14,.22)';
+    for (const p of dust){ const a = p.a + spin * (1.6 / (1 + p.r * .25)), q = P(Math.cos(a) * p.r, p.y, Math.sin(a) * p.r); if (q[2] < .5) continue; const z = p.s * q[3] / 40; cx.beginPath(); cx.arc(q[0], q[1], z, 0, 6.3); cx.fill(); }
+    // nhân sáng trung tâm
+    cx.globalCompositeOperation = 'lighter';
+    g = cx.createRadialGradient(c[0], c[1], 0, c[0], c[1], cr * .7); g.addColorStop(0, 'rgba(255,250,230,.95)'); g.addColorStop(.4, 'rgba(255,215,150,.4)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    cx.fillStyle = g; cx.beginPath(); cx.arc(c[0], c[1], cr * .7, 0, 6.3); cx.fill();
+    cx.globalCompositeOperation = 'source-over';
+    if (!still || t < .1) requestAnimationFrame(frame);
+  }
+  addEventListener('pointermove', ev => { tmx = ev.clientX / innerWidth - .5; tmy = ev.clientY / innerHeight - .5; }, {passive: true});
+  size(); addEventListener('resize', size); requestAnimationFrame(frame);
+})();
+</script>
+<canvas id="cosmos" aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none"></canvas>
+<script>
+/* ---------- cosmos: thiên hà xoắn ốc xoay + hệ mặt trời + sao chổi ---------- */
+(() => {
+  if (document.body.dataset.cosmos === 'off') return document.getElementById('cosmos').remove();
+  const cv = document.getElementById('cosmos'), cx = cv.getContext('2d');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W, H, D, gals = [], comets = [], lastComet = 0, t0 = performance.now();
+  function galaxy(x, y, r, tilt, hue, n, spin){
+    const pts = [];
+    for (let i = 0; i < n; i++){
+      const arm = i % 2, d = Math.pow(Math.random(), 1.6) * r;
+      const a = arm * Math.PI + d / r * 4.2 + (Math.random() - .5) * (0.5 + 1.2 * (1 - d / r));
+      pts.push({d, a, s: Math.random() * 1.3 + .3, h: hue + (Math.random() - .5) * 40, l: 60 + Math.random() * 30, o: .35 + Math.random() * .65});
+    }
+    return {x, y, r, tilt, pts, spin, hue};
+  }
+  const PL = [ // tên, bán kính quỹ đạo (tỉ lệ), kích thước, chu kỳ (giây), màu
+    ['Sao Thủy', .16, 2.2, 9,  ['#d9d2c5','#8a8478']],
+    ['Sao Kim',  .25, 3.6, 15, ['#ffe2a8','#c9965a']],
+    ['Trái Đất', .35, 3.9, 22, ['#8fd3ff','#2d6fd6']],
+    ['Sao Hỏa',  .46, 3.2, 34, ['#ff9a6b','#c2381f']],
+    ['Sao Mộc',  .64, 8.5, 62, ['#f3d3a6','#b07a4a']],
+    ['Sao Thổ',  .86, 7.2, 90, ['#f6e1b0','#b8955a']]];
+  function size(){
+    D = Math.min(devicePixelRatio || 1, 1.5); W = innerWidth; H = innerHeight;
+    cv.width = W * D; cv.height = H * D; cx.setTransform(D, 0, 0, D, 0, 0);
+    const m = Math.min(W, H);
+    gals = [galaxy(W * .8, H * .22, m * .4, .42, 265, W < 700 ? 900 : 2400, .02),
+            galaxy(W * .1, H * .86, m * .15, .6, 200, W < 700 ? 300 : 600, -.03)];
+  }
+  function drawGalaxy(g, t){
+    cx.save(); cx.translate(g.x, g.y);
+    const core = cx.createRadialGradient(0, 0, 0, 0, 0, g.r * .35);
+    core.addColorStop(0, `hsla(${g.hue + 40},90%,88%,.55)`); core.addColorStop(.4, `hsla(${g.hue},80%,60%,.16)`); core.addColorStop(1, 'transparent');
+    cx.scale(1, g.tilt); cx.fillStyle = core; cx.beginPath(); cx.arc(0, 0, g.r * .35, 0, 7); cx.fill();
+    const rot = t * g.spin;
+    for (const p of g.pts){
+      const a = p.a + rot * (1.4 - p.d / g.r * .8);
+      cx.fillStyle = `hsla(${p.h},85%,${p.l}%,${p.o})`;
+      cx.fillRect(Math.cos(a) * p.d, Math.sin(a) * p.d, p.s, p.s / g.tilt * .7);
+    }
+    cx.restore();
+  }
+  function sphere(x, y, r, c){
+    const g = cx.createRadialGradient(x - r * .4, y - r * .4, r * .1, x, y, r);
+    g.addColorStop(0, c[0]); g.addColorStop(1, c[1]);
+    cx.fillStyle = g; cx.beginPath(); cx.arc(x, y, r, 0, 7); cx.fill();
+  }
+  function drawSystem(t){
+    const HERO = document.body.dataset.cosmos === 'hero';
+    const cxp = HERO || W < 760 ? W * .5 : W * .2, cyp = HERO ? H * (W < 760 ? .5 : .56) : W < 760 ? H * .62 : H * .58,
+          R = HERO ? Math.min(W * .5, H * 1.05) : Math.min(W * .26, H * .42, 420), tilt = HERO ? .3 : .32, K = HERO ? Math.max(1.4, R / 330) : 1;
+    // mặt trời
+    const sg = cx.createRadialGradient(cxp, cyp, 0, cxp, cyp, R * .2);
+    sg.addColorStop(0, 'rgba(255,240,200,.95)'); sg.addColorStop(.25, 'rgba(255,190,90,.55)'); sg.addColorStop(1, 'transparent');
+    cx.fillStyle = sg; cx.beginPath(); cx.arc(cxp, cyp, R * .2, 0, 7); cx.fill();
+    sphere(cxp, cyp, HERO ? R * .06 : R * .045 + 4, ['#fff6d6', '#ff9b2f']);
+    if (HERO){ const c2 = cx.createRadialGradient(cxp, cyp, 0, cxp, cyp, R * .45); c2.addColorStop(0, 'rgba(255,170,80,.18)'); c2.addColorStop(1, 'transparent'); cx.fillStyle = c2; cx.beginPath(); cx.arc(cxp, cyp, R * .45, 0, 7); cx.fill(); }
+    const items = [];
+    for (const [n, o, s, per, c] of PL){
+      const r = R * o; cx.strokeStyle = 'rgba(160,190,255,.11)'; cx.lineWidth = 1;
+      cx.beginPath(); cx.ellipse(cxp, cyp, r, r * tilt, 0, 0, 7); cx.stroke();
+      if (HERO){ cx.strokeStyle = 'rgba(160,190,255,.05)'; cx.lineWidth = 6; cx.stroke(); }
+      const a = t / per * 2 * Math.PI + o * 20;
+      items.push({x: cxp + Math.cos(a) * r, y: cyp + Math.sin(a) * r * tilt, z: Math.sin(a), s: s * K * (W < 760 ? .8 : 1) * (1 + Math.sin(a) * .15), c, n, a});
+    }
+    items.sort((p, q) => p.z - q.z);
+    for (const p of items){
+      if (p.z < 0 && Math.hypot(p.x - cxp, (p.y - cyp) / tilt) < R * .05) continue; // khuất sau mặt trời
+      if (p.n === 'Sao Thổ'){ cx.strokeStyle = 'rgba(240,220,170,.55)'; cx.lineWidth = 1.4; cx.beginPath(); cx.ellipse(p.x, p.y, p.s * 2.1, p.s * .7, -.35, 0, 7); cx.stroke(); }
+      sphere(p.x, p.y, p.s, p.c);
+      if (p.n === 'Sao Hỏa'){ const h = cx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.s * 3.4); h.addColorStop(0, 'rgba(255,90,50,.35)'); h.addColorStop(1, 'transparent'); cx.fillStyle = h; cx.beginPath(); cx.arc(p.x, p.y, p.s * 3.4, 0, 7); cx.fill(); }
+      if (HERO && W > 760){ cx.font = '600 12px "Be Vietnam Pro",sans-serif'; cx.fillStyle = `rgba(220,230,255,${.35 + p.z * .2})`; cx.textAlign = 'center'; cx.fillText(p.n, p.x, p.y + p.s + 16); }
+      if (p.n === 'Trái Đất'){ const ma = t * 1.3; sphere(p.x + Math.cos(ma) * p.s * 2.4, p.y + Math.sin(ma) * p.s * 1, 1.3, ['#eee', '#888']); }
+    }
+  }
+  function comet(){
+    const fromLeft = Math.random() < .5;
+    comets.push({x: fromLeft ? -40 : W + 40, y: Math.random() * H * .5, vx: (fromLeft ? 1 : -1) * (1.6 + Math.random()), vy: .45 + Math.random() * .5, life: 0, max: 700});
+  }
+  function drawComets(dt){
+    for (const c of comets){
+      c.x += c.vx * dt / 16; c.y += c.vy * dt / 16; c.life += dt / 16;
+      const tx = c.x - c.vx * 70, ty = c.y - c.vy * 70;
+      const g = cx.createLinearGradient(c.x, c.y, tx, ty);
+      g.addColorStop(0, 'rgba(190,240,255,.85)'); g.addColorStop(.2, 'rgba(120,200,255,.3)'); g.addColorStop(1, 'transparent');
+      cx.strokeStyle = g; cx.lineWidth = 3; cx.lineCap = 'round'; cx.beginPath(); cx.moveTo(c.x, c.y); cx.lineTo(tx, ty); cx.stroke();
+      sphere(c.x, c.y, 2.4, ['#fff', '#9fe7ff']);
+    }
+    comets = comets.filter(c => c.life < c.max && c.x > -300 && c.x < W + 300 && c.y < H + 300);
+  }
+  let prev = performance.now();
+  function frame(ts){
+    const t = (ts - t0) / 1000, dt = Math.min(ts - prev, 50); prev = ts;
+    cx.clearRect(0, 0, W, H);
+    for (const g of gals) drawGalaxy(g, t);
+    drawSystem(t + 40);
+    if (!still){
+      if (ts - lastComet > 9000 + Math.random() * 9000){ comet(); lastComet = ts; }
+      drawComets(dt);
+      requestAnimationFrame(frame);
+    }
+  }
+  size(); addEventListener('resize', size);
+  document.addEventListener('visibilitychange', () => { prev = performance.now(); });
+  requestAnimationFrame(frame);
+})();
+</script>
 
 <nav class="top">
-  <a class="brand" href="index.html"><i></i>ONECAD · KỸ THUẬT</a>
+  <a class="brand" href="index.html" aria-label="Trang chủ"><i></i></a>
   <div class="links"><a href="index.html" aria-current="page">Trang chủ</a><a href="cai-dat.html">Bộ cài đặt</a><a href="loi.html">Lỗi thường gặp</a></div>
   <div class="who">Người cập nhật: Minh Quân</div>
 </nav>
 
+<div class="vign" aria-hidden="true"></div>
 <main class="land">
   <div id="rocks" aria-hidden="true"></div>
-  <p class="giant" aria-hidden="true">AUTODESK</p>
   <div class="intro">
-    <h1>Tải, cài và fix lỗi <em>Autodesk</em></h1>
+    <p class="eyebrow"><i></i>Trung tâm kỹ thuật OneCAD</p>
+    <h1><span class="w" style="--i:0">Tải,</span> <span class="w" style="--i:1">cài</span> <span class="w" style="--i:2">và</span> <span class="w" style="--i:3">fix</span> <span class="w" style="--i:4">lỗi</span> <em class="w" style="--i:5">Autodesk</em></h1>
     <p>Mọi thứ cần để cài đặt và xử lý sự cố phần mềm Autodesk cho khách hàng, gom về một nơi.</p>
   </div>
-  <div class="portals" id="portals">
-    <a class="portal" href="cai-dat.html">
-      <div class="vis" aria-hidden="true">
-        <span class="ringline" style="--d:330px"></span><span class="ringline" style="--d:230px;opacity:.6"></span>
-        <div class="core"></div>
-        <div class="orbit" id="orbit"></div>
-      </div>
-      <div class="ptext">
-        <small>Thư viện</small>
-        <h2>Bộ cài đặt</h2>
-        <p>Link tải chính thức của các phần mềm Autodesk từ 2015 đến 2027, sắp xếp theo năm.</p>
-        <div class="pfoot">
-          <div class="pstats"><div><b id="cP">24</b><span>phần mềm</span></div><div><b id="cL">359</b><span>file tải</span></div></div>
-          <span class="cta">Mở thư viện <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-        </div>
-      </div>
-    </a>
-    <a class="portal err" href="loi.html">
-      <div class="vis" aria-hidden="true">
-        <div class="scan"></div>
-        <div class="holo"><div class="tri"><i></i><i></i><i></i></div><b>!</b></div>
-        <div class="codes">
-          <span style="left:12%;top:22%">Error 1603</span>
-          <span style="right:12%;top:16%;--x:-12px;--y:12px;animation-duration:8s">Error 1308</span>
-          <span style="left:16%;top:62%;--x:14px;--y:-8px;animation-duration:6s">.NET 4.8</span>
-          <span style="right:14%;top:56%;--x:-10px;--y:-16px;animation-duration:9s">Licensing</span>
-        </div>
-      </div>
-      <div class="ptext">
-        <small>Hỗ trợ</small>
-        <h2>Lỗi thường gặp</h2>
-        <p>Các lỗi khách hàng hay gặp khi cài đặt và kích hoạt, kèm nguyên nhân và cách khắc phục từng bước.</p>
-        <div class="pfoot">
-          <div class="pstats"><div><b id="cE">–</b><span>lỗi đã ghi nhận</span></div></div>
-          <span class="cta">Tra cứu lỗi <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
-        </div>
-      </div>
-    </a>
+  <div class="mid">
+    <div class="portals" id="portals">
+      <a class="portal" href="cai-dat.html">
+        <span class="shine"></span>
+        <span class="vis2" aria-hidden="true">
+          <span class="sparks" data-n="18"></span>
+          <span class="orb">
+            <span class="trk" style="--in:0"></span><span class="trk b" style="--in:24%"></span>
+            <span class="rg" id="ringO" style="--t:40s"></span>
+            <span class="rg" id="ringI" style="--t:26s;--dir:reverse;--rev:normal"></span>
+            <span class="hub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5"/><path d="M5 19h14"/></svg></span>
+          </span>
+        </span>
+        <span class="ptext">
+          <h2>Bộ cài đặt</h2>
+          <p>Link tải chính thức các phần mềm Autodesk từ 2015 đến 2027, sắp theo năm.</p>
+          <span class="row2"><span class="pstats"><span><b id="cP">24</b>phần mềm</span><span><b id="cL">359</b>file tải</span></span>
+          <span class="cta" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></span>
+        </span>
+      </a>
+      <a class="portal err" href="loi.html">
+        <span class="shine"></span>
+        <span class="vis2" aria-hidden="true">
+          <span class="sparks" data-n="14"></span>
+          <span class="rcirc" style="--d:150px"></span><span class="rcirc" style="--d:270px"></span><span class="rcirc" style="--d:380px"></span>
+          <span class="radar"></span>
+          <span class="warn"><i></i><i></i><i></i>
+            <svg viewBox="0 0 24 24"><defs><linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#ff4d6d"/></linearGradient></defs><path d="M12 2.8 22.2 20.5H1.8z" fill="url(#wg)" stroke="#fff3d6" stroke-width=".8" stroke-linejoin="round"/><rect x="11" y="8.4" width="2" height="6.6" rx="1" fill="#2a0d05"/><circle cx="12" cy="17.6" r="1.25" fill="#2a0d05"/></svg>
+          </span>
+          <span class="flt hot" style="left:8%;top:14%">Error 1603</span>
+          <span class="flt" style="right:7%;top:12%;--x:-10px;--y:12px;animation-duration:7s">License time out</span>
+          <span class="flt" style="left:5%;top:46%;--x:12px;--y:-10px;animation-duration:5s">OTP</span>
+          <span class="flt hot" style="right:5%;top:44%;--x:-12px;--y:8px;animation-duration:6.5s">Cloud model</span>
+          <span class="flt" style="left:12%;bottom:12%;--x:10px;--y:-12px;animation-duration:8s">Restart pending</span>
+          <span class="flt" style="right:11%;bottom:10%;--x:-8px;--y:-12px;animation-duration:7.5s">Content Center</span>
+        </span>
+        <span class="ptext">
+          <h2 class="glitch">Lỗi thường gặp</h2>
+          <p>Kinh nghiệm xử lý theo từng phần mềm, có nguyên nhân và các bước khắc phục.</p>
+          <span class="row2"><span class="pstats"><span><b id="cE">–</b>mục</span><span><b id="cS">7</b>nhóm phần mềm</span></span>
+          <span class="cta" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></span>
+        </span>
+      </a>
+    </div>
   </div>
 </main>
 
@@ -375,21 +612,24 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   $('rocks').innerHTML = spots.map(([x,y,s],i) => `<i class="rock" style="left:${x}%;top:${y}%;width:${s}px;height:${s*.8}px;clip-path:${shapes[i%3]};--d:${12+i*2}s;--dx:${(i%2?-1:1)*(16+i*4)}px;--dy:${-20-i*5}px;--r0:${i*25}deg;--r1:${i*25+18}deg;opacity:${.55+.06*i}"></i>`).join('');
 })();
 
-/* mini orbit of product icons */
-const ORBIT = ['revit','autocad','inventor','civil-3d','3ds-max','navisworks-manage','autocad-lt','vault-professional-client'];
-$('orbit').innerHTML = ORBIT.map((id,i) => `<span class="o" style="--r:${i * 360 / ORBIT.length}deg;--R:${i % 2 ? 118 : 160}px"><img src="icons/${id}.png" alt="" onerror="this.parentNode.remove()"></span>`).join('');
-
-/* portals tilt toward the cursor */
+/* icon strip */
+const ICO = id => `icons/${id}.png`;
+const mk = (ids, R, sz) => ids.map((id,i) => `<span class="ic" style="--a:${i * 360 / ids.length}deg;--R:${R};--s:${sz}"><img src="${ICO(id)}" alt="" onerror="this.parentNode.remove()"></span>`).join('');
+$('ringO').innerHTML = mk(['revit','autocad','inventor','civil-3d','3ds-max','navisworks-manage','autocad-lt','vault-professional-client','infraworks','advance-steel','recap-pro','powermill'], '47cqw', '15cqw');
+$('ringI').innerHTML = mk(['autocad-mechanical','autocad-electrical','autocad-plant-3d','autocad-architecture','revit-lt','navisworks-simulate'], '27cqw', '12cqw');
+document.querySelectorAll('.sparks').forEach(sp => { sp.innerHTML = Array.from({length: +sp.dataset.n}, () => `<i style="left:${Math.random()*100}%;top:${60+Math.random()*40}%;--d:${4+Math.random()*5}s;--dl:${-Math.random()*8}s"></i>`).join(''); });
 document.querySelectorAll('.portal').forEach(p => {
-  p.addEventListener('pointermove', e => { const r = p.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-    p.style.setProperty('--ry', ((x - .5) * 12).toFixed(2) + 'deg'); p.style.setProperty('--rx', ((.5 - y) * 10).toFixed(2) + 'deg');
-    p.style.setProperty('--mx', (x * 100) + '%'); p.style.setProperty('--my', (y * 100) + '%'); });
+  p.addEventListener('pointermove', e => { const r = p.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    p.style.setProperty('--ry', (x * 8).toFixed(2) + 'deg'); p.style.setProperty('--rx', (-y * 6).toFixed(2) + 'deg'); p.style.setProperty('--gx', (x * 30) + '%'); p.style.setProperty('--gy', (y * 30) + '%'); });
   p.addEventListener('pointerleave', () => { p.style.setProperty('--ry','0deg'); p.style.setProperty('--rx','0deg'); });
 });
 
+/* glow follows the cursor */
+document.querySelectorAll('.portal').forEach(p => p.addEventListener('pointermove', e => { const r = p.getBoundingClientRect(); p.style.setProperty('--mx', (e.clientX - r.left) + 'px'); p.style.setProperty('--my', (e.clientY - r.top) + 'px'); }));
+
 /* live counts */
 fetch('data.json',{cache:'no-store'}).then(r => r.json()).then(d => { $('cP').textContent = d.length; $('cL').textContent = d.reduce((a,p)=>a+p.versions.reduce((b,v)=>b+v.links.length,0),0); }).catch(()=>{});
-fetch('errors.json',{cache:'no-store'}).then(r => r.json()).then(d => { $('cE').textContent = d.length; }).catch(()=>{ $('cE').textContent = '0'; });
+fetch('errors.json',{cache:'no-store'}).then(r => r.json()).then(d => { $('cE').textContent = d.length; $('cS').textContent = new Set(d.map(e => e.section || e.category)).size; }).catch(()=>{ $('cE').textContent = '0'; });
 </script>
 </body>
 </html>

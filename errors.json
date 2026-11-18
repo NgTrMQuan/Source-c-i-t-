@@ -1,72 +1,848 @@
 [
-  {
-    "id": "loi-1603",
-    "code": "Error 1603",
-    "title": "Cài đặt không hoàn tất: \"Some products failed to install\"",
-    "category": "Cài đặt",
-    "software": ["Tất cả phần mềm"],
-    "symptoms": "Trình cài đặt chạy gần xong thì dừng, báo một hoặc nhiều sản phẩm cài thất bại. Log cài đặt có dòng `Error 1603` hoặc `Return value 3`.",
-    "cause": "Lỗi chung của Windows Installer. Hay gặp nhất: không chạy với quyền quản trị, còn sót bản cài cũ, phần mềm diệt virus chặn file, hoặc thiếu .NET Framework / Visual C++ Redistributable.",
+ {
+  "id": "pc-kiem-tra-ban-quyen",
+  "section": "Partner Center Autodesk",
+  "category": "Partner Center Autodesk",
+  "software": [
+   "Partner Center"
+  ],
+  "code": "0.1",
+  "title": "Kiểm tra thông tin quản lý bản quyền",
+  "kind": "huongdan",
+  "symptoms": "Cần thông tin Contract Manager để trao đổi với khách hàng; cần kiểm tra ngày hết hạn hoặc số lượng license khi OneCAD HUB không có quyền xem.",
+  "cause": "Đầu vào cần có: số Contract hoặc Serial number.",
+  "steps": [
+   "Truy cập Partner Center: https://partner.autodesk.com/",
+   "Sao chép số Contract (lấy từ ticket hoặc thông tin được cung cấp) vào ô tìm kiếm.",
+   "Mở Contract và đọc thông tin cần tra."
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211737739284360",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1211737739284363.webp",
+   "img/loi/1211737739284364.webp",
+   "img/loi/1211737739284367.webp"
+  ]
+ },
+ {
+  "id": "pc-doi-contract-manager",
+  "section": "Partner Center Autodesk",
+  "category": "Partner Center Autodesk",
+  "software": [
+   "Partner Center"
+  ],
+  "code": "0.2",
+  "title": "Thay đổi thông tin quản lý bản quyền (Contract Manager)",
+  "kind": "huongdan",
+  "symptoms": "Nhận yêu cầu đổi tài khoản quản lý bản quyền cho khách hàng, tức đổi Contract Manager.",
+  "cause": "Đầu vào cần có: họ tên, email, số điện thoại của Contract Manager mới; số Contract cần đổi.",
+  "steps": [
+   "Truy cập Partner Center: https://partner.autodesk.com/",
+   "Sao chép số Contract vào ô tìm kiếm.",
+   "Mở Contract, chọn `Edit/Change Contract Manager`.",
+   "Chọn `New Contract Manager`.",
+   "Nhập email, tên, số điện thoại của Contract Manager mới, chọn `Continue`.",
+   "Kiểm tra thông tin trước và sau thay đổi, tích ô xác nhận và chọn `Confirm`.",
+   "Hoàn tất và kiểm tra lại thông tin đã thay đổi."
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211737739284342",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1211737739284364.webp",
+   "img/loi/1211737739284351.webp",
+   "img/loi/1211737739284355.webp",
+   "img/loi/1211737739284357.webp",
+   "img/loi/1211737739284359.webp"
+  ]
+ },
+ {
+  "id": "pc-livechat",
+  "section": "Partner Center Autodesk",
+  "category": "Partner Center Autodesk",
+  "software": [
+   "Partner Center"
+  ],
+  "code": "0.3",
+  "title": "Tạo Livechat với Autodesk",
+  "kind": "huongdan",
+  "symptoms": "Chuyển Contract từ Team này sang Team khác trên Autodesk Account; gặp lỗi khó cần hỏi hãng và yêu cầu remote hỗ trợ; cần hãng xác nhận thông tin.",
+  "steps": [
+   "Truy cập Partner Center: https://partner.autodesk.com/",
+   "Chọn `Get Support`.",
+   "Chọn `Installation, Activation & Registration` > `Activation Error`.",
+   "Chọn `Live chat`.",
+   "Điền thông tin hãng yêu cầu (thường bỏ trống hàng cuối).",
+   "Bắt đầu trao đổi với hãng.",
+   "Xử lý xong, yêu cầu hãng gửi email xác nhận vấn đề."
+  ],
+  "refs": [],
+  "subs": [
+   {
+    "title": "Chuyển Contract Team này sang Team khác",
+    "when": "Chuyển Contract sản phẩm Cloud (AECC, ACC); khách muốn chuyển nhưng không cho remote; cần kiểm tra Contract đang gán vào Team nào; vừa mua license nhưng không thấy trong Team (hiện N/A).",
+    "prep": "Số Contract (Serial Number), Contract Manager.",
     "steps": [
-      "Chuột phải vào file cài đặt (Setup.exe hoặc file Part 1), chọn `Run as administrator`.",
-      "Tạm tắt phần mềm diệt virus và Windows Defender trong lúc cài.",
-      "Gỡ sạch bản cài cũ cùng phiên bản bằng `Autodesk Uninstall Tool` (Start menu, thư mục Autodesk), rồi khởi động lại máy.",
-      "Cài lại .NET Framework và Visual C++ Redistributable bản mới nhất từ trang Microsoft.",
-      "Nếu vẫn lỗi, mở thư mục `%TEMP%`, tìm file log cài đặt Autodesk mới nhất và tìm dòng `Return value 3` để biết thành phần nào hỏng."
+     "Tạo Livechat theo các bước ở trên.",
+     "Mô tả vấn đề theo nhu cầu của khách hàng.",
+     "Xong việc, yêu cầu Autodesk gửi ảnh chụp màn hình xác nhận."
     ],
-    "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu và chỉnh lại theo kinh nghiệm xử lý thực tế của nhóm.",
-    "updated": "17.11.2026",
-    "draft": true
-  },
-  {
-    "id": "loi-1308",
-    "code": "Error 1308",
-    "title": "Không tìm thấy file nguồn: \"Source file not found\"",
-    "category": "Cài đặt",
-    "software": ["Tất cả phần mềm"],
-    "symptoms": "Đang cài thì báo không tìm thấy một file trong bộ cài, kèm đường dẫn tới file bị thiếu.",
-    "cause": "Bộ cài tải về chưa đủ các Part hoặc bị hỏng khi tải, giải nén vào thư mục có đường dẫn quá dài, hoặc chạy cài đặt trực tiếp từ ổ mạng hay USB.",
+    "images": [
+     "img/loi/1211737739284375.webp",
+     "img/loi/1211737739284390.webp"
+    ]
+   },
+   {
+    "title": "Gặp lỗi khó, cần gửi hãng và yêu cầu remote hỗ trợ",
+    "when": "Lỗi ngoài khả năng xử lý (đã làm hết các bước trong bài hướng dẫn của Autodesk hoặc nguồn tin cậy).",
+    "prep": "Số Contract, Contract Manager, email người dùng bị lỗi (tài khoản Autodesk đang dùng phần mềm). Nên tóm tắt sẵn nội dung lỗi trong email để gửi hãng khi cần, tránh mất thời gian.",
     "steps": [
-      "Kiểm tra đã tải đủ tất cả các Part của phiên bản đó và đặt chung một thư mục.",
-      "Giải nén vào thư mục ngắn ở ổ cứng máy, ví dụ `C:\\Autodesk`.",
-      "Xóa thư mục giải nén cũ, tải lại Part bị lỗi nếu dung lượng không khớp, rồi chạy lại Part 1."
-    ],
-    "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu và chỉnh lại theo kinh nghiệm xử lý thực tế của nhóm.",
-    "updated": "17.11.2026",
-    "draft": true
-  },
-  {
-    "id": "loi-licensing-service",
-    "code": "Licensing",
-    "title": "Báo lỗi giấy phép khi mở phần mềm do dịch vụ Autodesk Licensing không chạy",
-    "category": "Kích hoạt & giấy phép",
-    "software": ["Tất cả phần mềm"],
-    "symptoms": "Mở phần mềm thì báo lỗi license, không hiện màn hình đăng nhập, hoặc đăng nhập xong vẫn không vào được.",
-    "cause": "Dịch vụ `Autodesk Desktop Licensing Service` bị dừng, bị tắt khởi động cùng Windows, hoặc phiên bản dịch vụ đã cũ.",
+     "Tạo Livechat theo các bước ở trên.",
+     "Mô tả lỗi, gửi kèm nội dung đã chuẩn bị qua email để rút ngắn thời gian.",
+     "Yêu cầu `Remote Session` khi cần hãng remote vào máy khách hàng."
+    ]
+   },
+   {
+    "title": "Cần hãng xác nhận thông tin",
+    "when": "Câu hỏi của Phòng Kinh doanh (về chính sách) hoặc khách hàng cần nguồn uy tín xác nhận; kiểm tra HUB ID / BIM SITE ID.",
+    "prep": "Mô tả rõ vấn đề trong email để gửi ngay khi mở case; số Contract và Contract Manager (khi kiểm tra HUB ID / BIM SITE ID).",
     "steps": [
-      "Nhấn `Win + R`, gõ `services.msc` rồi nhấn Enter.",
-      "Tìm `Autodesk Desktop Licensing Service`, chuột phải chọn `Properties`, đặt Startup type là `Automatic`, rồi bấm `Start`.",
-      "Khởi động lại phần mềm. Nếu vẫn lỗi, tải và cài bản Autodesk Licensing Service mới nhất từ trang hỗ trợ Autodesk, rồi khởi động lại máy."
-    ],
-    "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu và chỉnh lại theo kinh nghiệm xử lý thực tế của nhóm.",
-    "updated": "17.11.2026",
-    "draft": true
-  },
-  {
-    "id": "loi-dotnet",
-    "code": ".NET",
-    "title": "Thiếu hoặc lỗi .NET Framework khi cài phần mềm",
-    "category": "Môi trường Windows",
-    "software": ["AutoCAD", "Revit", "Inventor", "Civil 3D"],
-    "symptoms": "Trình cài đặt báo cần .NET Framework, cài .NET thất bại, hoặc phần mềm cài xong nhưng không mở được.",
-    "cause": "Máy chưa có phiên bản .NET Framework mà phần mềm yêu cầu, hoặc .NET trên máy bị hỏng do Windows Update dang dở.",
+     "Vào Livechat theo các bước ở trên.",
+     "Nhờ hãng gửi email xác nhận nội dung đã trao đổi."
+    ]
+   }
+  ],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211737739284369",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1211737739284381.webp",
+   "img/loi/1211737739284380.webp",
+   "img/loi/1211737739284384.webp",
+   "img/loi/1211737739284386.webp"
+  ]
+ },
+ {
+  "id": "pc-moldflow-license-file",
+  "section": "Partner Center Autodesk",
+  "category": "Partner Center Autodesk",
+  "software": [
+   "Moldflow",
+   "Partner Center"
+  ],
+  "code": "0.4",
+  "title": "Tạo License File (Moldflow – Network License)",
+  "kind": "huongdan",
+  "steps": [],
+  "note": "Mục này trên Asana chưa có nội dung.",
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859401",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "pc-khong-nhan-otp",
+  "section": "Partner Center Autodesk",
+  "category": "Partner Center Autodesk",
+  "software": [
+   "Autodesk Account"
+  ],
+  "code": "0.5",
+  "title": "Không nhận được mã OTP qua email",
+  "kind": "loi",
+  "symptoms": "Người dùng không nhận được email chứa mã OTP của Autodesk.",
+  "steps": [],
+  "refs": [],
+  "subs": [
+   {
+    "title": "Kiểm tra thông tin (nhờ IT phía khách hàng)",
     "steps": [
-      "Chạy Windows Update cho đến khi không còn bản cập nhật nào, rồi khởi động lại máy.",
-      "Tải bộ cài .NET Framework phiên bản phần mềm yêu cầu từ trang Microsoft và cài thủ công.",
-      "Chạy lại trình cài đặt Autodesk với quyền `Run as administrator`."
-    ],
-    "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu yêu cầu .NET của từng phiên bản trong trang System Requirements của Autodesk.",
-    "updated": "17.11.2026",
-    "draft": true
-  }
+     "Allowlist các IP gửi OTP của Autodesk: `159.183.204.205` và `159.183.206.47`.",
+     "Whitelist địa chỉ gửi OTP `noreply@signin.autodesk.com` trên hệ thống email / mạng nội bộ.",
+     "Rà soát các rule/filter đang áp dụng với email từ Autodesk, ưu tiên email từ địa chỉ trên.",
+     "Nếu email rơi vào Spam: đánh dấu `Not Spam` và thêm `noreply@signin.autodesk.com` vào danh bạ."
+    ]
+   },
+   {
+    "title": "Làm việc với hãng",
+    "when": "Sau khi chắc chắn hệ thống email của khách không chặn.",
+    "steps": [
+     "Mở case chat với hãng, mô tả việc không nhận được OTP (đã kiểm tra Junk, Spam và hệ thống không chặn).",
+     "Hãng xác nhận khách không nhận được OTP, sau đó người dùng đăng nhập vào trang Autodesk.",
+     "Hãng sẽ gửi email hoặc gọi điện cho người dùng."
+    ]
+   }
+  ],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1212060652032677",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "lic-kiem-tra-thong-tin",
+  "section": "License & cài đặt",
+  "category": "License & cài đặt",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "code": "1.1",
+  "title": "Kiểm tra thông tin license của user",
+  "kind": "huongdan",
+  "steps": [
+   "Email đã chính xác chưa? Kiểm tra từng ký tự trên tài khoản ADMIN, sai 1 ký tự là email khác.",
+   "Tài khoản đăng nhập (tài khoản USER) đã được gán license chưa?",
+   "Người dùng có đăng nhập đúng phần mềm đang có license không?"
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859326",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "lic-restart-nhieu-lan",
+  "section": "License & cài đặt",
+  "category": "License & cài đặt",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "code": "1.2",
+  "title": "Bảng thông báo restart xuất hiện nhiều lần khi cài đặt",
+  "kind": "loi",
+  "cause": "Windows Registry key bị hỏng; Microsoft Visual C++ 2015-2022 Redistributable (x64) 14.34.31931 bị hỏng; Windows Update cập nhật quá nhiều.",
+  "steps": [
+   "Kiểm tra và cập nhật Windows.",
+   "Gỡ và cài lại Microsoft Visual C++ 2015-2022.",
+   "Xóa subkey `RebootRequired` trong Windows Registry."
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/An-operating-system-restart-is-pending-when-trying-to-install-AutoCAD-2024.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369958295751",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "lic-time-out",
+  "section": "License & cài đặt",
+  "category": "License & cài đặt",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "code": "1.3",
+  "title": "Lỗi license time out (License checkout timed out)",
+  "kind": "loi",
+  "cause": "Autodesk Desktop Licensing Service hoặc Autodesk Identity Manager chưa cập nhật; Licensing Service không chạy; Licensing Component hoặc Single Sign On Component bị hỏng; Licensing Service được đặt ở chế độ “This Account” trong Windows Services; tài khoản hết hạn, không có license; proxy hoặc thiết lập mạng.",
+  "steps": [
+   "Đăng nhập lại bằng tài khoản có bản quyền.",
+   "Cập nhật Autodesk Licensing Service.",
+   "Cập nhật Single Sign On Component.",
+   "Cài lại Autodesk Access.",
+   "Xóa bộ nhớ đệm đăng nhập theo hướng dẫn: https://www.autodesk.com/support/technical/article/caas/tsarticles/ts/6IFPpIksTDfsCzp1JwIH5k.html"
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Error-License-checkout-timed-out-What-do-you-want-to-do-in-AutoCAD-2020.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369958295756",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1211380473832876.webp",
+   "img/loi/1211380473832878.webp"
+  ]
+ },
+ {
+  "id": "lic-mo-khong-len",
+  "section": "License & cài đặt",
+  "category": "License & cài đặt",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "code": "1.4",
+  "title": "Mở phần mềm không thấy gì / không chạy được trình cài đặt",
+  "kind": "loi",
+  "cause": "Windows đang cập nhật hoặc cần khởi động lại; bị hạn chế quyền truy cập vì bảo mật; Autodesk On-Demand Install Service (ODIS) lỗi thời hoặc hỏng; gói tải xuống bị hỏng; không đủ dung lượng trống.",
+  "steps": [
+   "Làm việc với team IT để hoàn tất cài đặt.",
+   "Kiểm tra phần mềm diệt virus có đang chặn không."
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/When-launching-Autodesk-Installer-nothing-happens-and-no-user-interface-appears.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369958295760",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "lic-1603",
+  "section": "License & cài đặt",
+  "category": "License & cài đặt",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "code": "1.5",
+  "title": "Lỗi cài đặt: [Sản phẩm] không thể hoàn tất cài đặt, lỗi 1603",
+  "kind": "loi",
+  "cause": "Autodesk Desktop Licensing Service hoặc ODIS bị hỏng; Microsoft Visual C++ Redistributables bị hỏng; Windows chưa cập nhật; chuyển hướng thư mục (folder redirection); Licensing Service không xác thực được đăng ký khi đăng nhập; bị phần mềm bảo mật chặn; file cài đặt bị hỏng.",
+  "steps": [
+   "Cài lại Autodesk Desktop Licensing Service.",
+   "Cập nhật các component trong Autodesk Access.",
+   "Cài lại Microsoft Visual C++ Redistributables."
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Install-error-the-install-couldn-t-finish-error-code-1603-when-installing-Autodesk-products.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211382157228750",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "lic-go-sach",
+  "section": "License & cài đặt",
+  "category": "License & cài đặt",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "code": "1.6",
+  "title": "Gỡ sạch phần mềm Autodesk (clean uninstall)",
+  "kind": "huongdan",
+  "symptoms": "Nâng cấp lên phiên bản mới nhưng liên tục lỗi; cài ứng dụng đầu tiên nhưng dừng giữa chừng; tưởng đã cài xong nhưng phần mềm không khởi động; báo thành công nhưng không có Vault Server nào được cài.",
+  "steps": [
+   "Làm theo từng bước trong bài hướng dẫn của hãng."
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Clean-uninstall.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211391293312787",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "lic-required-connection",
+  "section": "License & cài đặt",
+  "category": "License & cài đặt",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "code": "1.7",
+  "title": "Lỗi “The required connection to Autodesk for license validation could not be established”",
+  "kind": "loi",
+  "cause": "Xung đột phần mềm hoặc dịch vụ bảo mật; kết nối bị chặn.",
+  "steps": [
+   "Làm theo từng bước trong bài hướng dẫn của hãng.",
+   "Chạy công cụ `AdskLicensingSigninHelper` của hãng; ở mục `Installed Products`, nếu License Method hiển thị `None` thì chạy kết nối User."
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/The-required-connection-to-Autodesk-for-license-validation-could-not-be-established-on-the-Let-s-Get-Started-screen-when-launching-an-Autodesk-software.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1213622732914862",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1213622732914873.webp"
+  ]
+ },
+ {
+  "id": "cad-kiem-tra-thong-tin",
+  "section": "AutoCAD / AutoCAD LT",
+  "category": "AutoCAD / AutoCAD LT",
+  "software": [
+   "AutoCAD",
+   "AutoCAD LT"
+  ],
+  "code": "2.1",
+  "title": "Kiểm tra thông tin: khách dùng AutoCAD hay AutoCAD LT?",
+  "kind": "huongdan",
+  "symptoms": "Bước kiểm tra đầu tiên khi khách báo lỗi AutoCAD / AutoCAD LT. Làm cùng mục 1.1 Kiểm tra thông tin license của user.",
+  "steps": [
+   "Tài khoản có bản quyền AutoCAD hay AutoCAD LT?",
+   "Phần mềm cài trên máy là AutoCAD hay AutoCAD LT?"
+  ],
+  "note": "Phần mềm cài trên máy và bản quyền gán cho người dùng phải cùng một sản phẩm.",
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859300",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "cad-font",
+  "section": "AutoCAD / AutoCAD LT",
+  "category": "AutoCAD / AutoCAD LT",
+  "software": [
+   "AutoCAD",
+   "AutoCAD LT"
+  ],
+  "code": "2.2",
+  "title": "Lỗi font chữ trên AutoCAD / AutoCAD LT",
+  "kind": "loi",
+  "cause": "Máy tính chưa có font chữ đang dùng trong bản vẽ.",
+  "steps": [
+   "Cài bổ sung các font còn thiếu cho máy tính.",
+   "Nếu máy khác xem bản vẽ đầy đủ: chép 2 thư mục font từ máy đó sang máy còn thiếu: `C:\\Windows\\Fonts` và `C:\\Program Files\\Autodesk\\AutoCAD 2026\\Fonts` (đổi theo phiên bản)."
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Fonts-not-being-displayed-as-expected-in-AutoCAD.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211737739284327",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1211737739284332.webp"
+  ]
+ },
+ {
+  "id": "cad-dong-bo-thiet-lap",
+  "section": "AutoCAD / AutoCAD LT",
+  "category": "AutoCAD / AutoCAD LT",
+  "software": [
+   "AutoCAD",
+   "AutoCAD LT"
+  ],
+  "code": "2.3",
+  "title": "Đồng bộ thiết lập giữa 2 phiên bản AutoCAD / AutoCAD LT",
+  "kind": "huongdan",
+  "symptoms": "Cần đồng bộ thiết lập giữa 2 phần mềm AutoCAD khác phiên bản.",
+  "steps": [
+   "Export thiết lập từ phiên bản cũ, import vào phiên bản mới.",
+   "Lưu và dùng lại file CUI.",
+   "Dùng công cụ Migrate của AutoCAD."
+  ],
+  "refs": [
+   "https://onecadvn.com/blog/huong-dan-dong-bo-thiet-lap-cho-cac-may-su-dung-autocad",
+   "https://www.youtube.com/watch?v=4mHz2UTEjFc"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211737739284329",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "rvt-cannot-open",
+  "section": "Revit",
+  "category": "Revit",
+  "software": [
+   "Revit"
+  ],
+  "code": "3.1",
+  "title": "Revit không mở được file: “Cannot open file…” (dừng ở 75–80%)",
+  "kind": "loi",
+  "symptoms": "Tải dừng ở mức 75–80%, lâu không phản hồi; thanh tải không chạy; không có thông báo lỗi và phần mềm không bị sập.",
+  "steps": [
+   "Tắt (unload) tất cả file link, rồi load từng file để tìm file link bị lỗi.",
+   "Với file lỗi: link lại hoặc thay bằng file khác."
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Cannot-open-specific-model-with-links-and-loading-stops-at-75-80-in-Revit.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859368",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "rvt-crash",
+  "section": "Revit",
+  "category": "Revit",
+  "software": [
+   "Revit"
+  ],
+  "code": "3.2",
+  "title": "Revit crash khi mở family hoặc model lớn",
+  "kind": "loi",
+  "cause": "Crash ít xảy ra thì khó xác định vì khó lặp lại; crash thường xuyên gây gián đoạn nhiều hơn nhưng dễ tìm nguyên nhân. Mỗi lần crash có thể khác nguyên nhân: xem journal file để tìm mẫu (pattern); nếu nhiều mẫu khác nhau, cần thêm dữ liệu.",
+  "steps": [
+   "Đảm bảo Revit đã cập nhật bản mới nhất.",
+   "Kiểm tra project đã được Audit chưa: https://help.autodesk.com/view/RVT/2023/ENU/?guid=GUID-5A8746C7-0AC9-41EE-BA21-37A386F2EEA2",
+   "Tắt tất cả Add-in rồi kiểm tra lại (xem mục 3.7).",
+   "Thu hẹp phạm vi: crash chỉ xảy ra với một project? một user account? một máy? một workflow cụ thể?"
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Location-of-journal-files.html",
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-Disable-Add-Ins-for-Revit-Products.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370086286619",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "rvt-cloud-model-crash",
+  "section": "Revit",
+  "category": "Revit",
+  "software": [
+   "Revit"
+  ],
+  "code": "3.3",
+  "title": "Revit bị sập khi mở bất kỳ mô hình cloud nào",
+  "kind": "loi",
+  "symptoms": "Báo “A software problem has caused Revit #### to close unexpectedly”, có thể sau Blue Screen hoặc lỗi Video Driver; không tạo được model lên cloud; khi mở Revit báo “External Tool Failure: Revit cannot run the external application…” hoặc “Failed to save as Cloud Model: Configuration system failed to initialize”. Journal có `KeyNotFoundException`, `Configuration system failed to initialize` (mã 80131902), `Cannot connect to central model`.",
+  "cause": "Dữ liệu không hợp lệ trong file `user.config`.",
+  "steps": [
+   "Cập nhật Revit lên phiên bản mới nhất.",
+   "Mở `C:\\Users\\%USERNAME%\\AppData\\Local`.",
+   "Revit 2025 trở lên: đổi tên các thư mục bắt đầu bằng `DefaultDomain_Path…` thành `…_OLD`. Revit 2024 trở xuống: đổi `Autodesk,_Inc` thành `Autodesk,_Inc_OLD`.",
+   "Mở lại Revit và thử mở model cloud."
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370086286623",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "rvt-cloud-cache-mat-dien",
+  "section": "Revit",
+  "category": "Revit",
+  "software": [
+   "Revit"
+  ],
+  "code": "3.4",
+  "title": "Không mở được cloud model sau khi mất điện đột ngột",
+  "kind": "loi",
+  "cause": "Cloud cache của Revit chứa dữ liệu lỗi, cần xóa cache thủ công.",
+  "steps": [
+   "Revit 2024 trở lên – CollaborationCache: Revit Options → đổi đường dẫn cache (ví dụ `C:\\Users\\%USERNAME%\\AppData\\Local\\Autodesk\\Revit_New`), đóng và mở lại Revit.",
+   "Revit 2024 trở lên – PacCache: tạo thư mục `Cache\\Pac` trên Desktop, chuyển toàn bộ dữ liệu (trừ `Logs` và file JSON) từ `C:\\Users\\%USERNAME%\\AppData\\Local\\Autodesk\\Revit\\PacCache` sang.",
+   "Revit 2023 trở xuống: tạo `Cache\\Collab` và `Cache\\Pac` trên Desktop; chuyển dữ liệu từ `%localappdata%\\Autodesk\\Revit\\Autodesk Revit ####\\CollaborationCache` sang `Collab`, từ `%localappdata%\\Autodesk\\Revit\\PacCache` sang `Pac` (trừ `Logs` và JSON).",
+   "Hết lỗi thì tiếp tục làm việc. Chưa hết thì khôi phục cache (bước tiếp theo).",
+   "Khôi phục (tránh Revit phải cache lại quá nhiều): Revit 2024+ tìm model đã cache lại trong thư mục mới, xác định Project GUID trong CollaborationCache gốc, xóa thư mục GUID đó ở cache cũ, chuyển cache location về thư mục cũ; chuyển dữ liệu Pac về PacCache gốc. Revit 2023 trở xuống: chuyển `Collab` và `Pac` về lại thư mục gốc."
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370086286625",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "rvt-link-acc",
+  "section": "Revit",
+  "category": "Revit",
+  "software": [
+   "Revit",
+   "ACC",
+   "Desktop Connector"
+  ],
+  "code": "3.5",
+  "title": "Không load được link từ ACC về Revit",
+  "kind": "loi",
+  "cause": "Model không phải Revit Cloud Workshared (chỉ loại này mới link được từ External Resource); Desktop Connector chưa đồng bộ xong hoặc đang lỗi; xung đột Add-in; tên project/folder/file có ký tự đặc biệt; Revit và Desktop Connector không tương thích; thiếu quyền trong ACC (cần View + Download + Upload + Edit).",
+  "steps": [
+   "Kiểm tra model là Cloud Workshared: `File → Manage Links → Revit`, cột Path Type phải là Cloud.",
+   "Cập nhật Desktop Connector lên bản mới nhất và đảm bảo đã sync hoàn tất.",
+   "Kiểm tra phân quyền ACC: người tải model cần View + Download + Upload + Edit.",
+   "Tạm vô hiệu Add-in: chuyển các file trong `C:\\ProgramData\\Autodesk\\Revit\\Addins\\<version>` sang chỗ khác rồi mở lại Revit.",
+   "Đổi tên project/folder/file, bỏ ký tự đặc biệt.",
+   "Xóa cache Desktop Connector tại `%LocalAppData%\\Autodesk\\Desktop Connector`, khởi động lại máy, đăng nhập lại.",
+   "Nếu vẫn lỗi: gỡ và cài lại Desktop Connector cùng Revit Cloud Worksharing Add-in."
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370086286627",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "rvt-steel-connection",
+  "section": "Revit",
+  "category": "Revit",
+  "software": [
+   "Revit"
+  ],
+  "code": "3.6",
+  "title": "Không kết nối được Structural Connection Settings trên Revit",
+  "kind": "loi",
+  "cause": "SQL Server LocalDB / SQL Express lỗi hoặc không tương thích; Add-in Steel Connections hỏng hoặc xung đột; cài Revit / Desktop Connector thiếu thành phần cho Steel Connections; CSDL Steel Connections trong TEMP hoặc file `.mdf` / `.ldf` bị hỏng; Revit chưa cập nhật hotfix (nhất là 2022–2024).",
+  "steps": [
+   "Cập nhật Revit lên bản mới nhất, gồm cả hotfix.",
+   "Run → `%TEMP%` → xóa mọi file/thư mục xóa được → khởi động lại máy.",
+   "Gỡ Microsoft SQL Server LocalDB/Express (Control Panel → Uninstall a Program), khởi động lại và cài lại bản phù hợp (hoặc để Revit tự cài khi cài Steel Connections).",
+   "Gỡ và cài lại Steel Connections Add-in đúng phiên bản Revit.",
+   "Xóa file `.ldf`, `.mdf` hỏng trong `C:\\ProgramData\\Autodesk\\Revit Steel Connections <version>\\`, mở lại Revit để tự tạo mới.",
+   "Kiểm tra quyền truy cập và bảo mật (nhất là khi Revit chạy dưới user không có quyền admin).",
+   "Vẫn lỗi: repair SQL Server hoặc gỡ sạch Steel Connections + Revit rồi cài lại."
+  ],
+  "note": "Nếu chỉ vài máy bị, so sánh phiên bản SQL LocalDB giữa các máy. Antivirus hoặc proxy nội bộ có thể chặn `SQLDUMPER.EXE`. Đảm bảo .NET Framework và Visual C++ Redistributable đã cập nhật.",
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/SQLDUMPER-EXE-window-opening-and-closing-when-working-in-Revit.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370088075213",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "rvt-tat-addin",
+  "section": "Revit",
+  "category": "Revit",
+  "software": [
+   "Revit"
+  ],
+  "code": "3.7",
+  "title": "Hướng dẫn tắt Add-in trong Revit",
+  "kind": "huongdan",
+  "symptoms": "Add-in gây xung đột khiến Revit chậm, crash hoặc chạy bất thường; Add-in tự tải mỗi lần mở Revit dù không dùng; cần tạm tắt Add-in để tìm nguyên nhân lỗi hoặc tối ưu hiệu suất.",
+  "steps": [
+   "Đóng Revit.",
+   "Mở các thư mục: `C:\\ProgramData\\Autodesk\\Revit\\Addins\\[Phiên bản]`, `C:\\ProgramData\\Autodesk\\ApplicationPlugins`, `%USERPROFILE%\\AppData\\Roaming\\Autodesk\\Revit\\Addins\\[Phiên bản]`.",
+   "Tạm chuyển hoặc đổi tên file `.addin` / thư mục Add-in (thêm hậu tố `.disabled` hoặc `.old`).",
+   "Mở lại Revit, kiểm tra lỗi còn không."
+  ],
+  "note": "Giữ lại Add-in của Autodesk hoặc Add-in bắt buộc cho tính năng chuyên biệt; chỉ tắt Add-in bên thứ ba hoặc Add-in nghi gây lỗi.",
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/How-to-Disable-Add-Ins-for-Revit-Products.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370088075215",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "rvt-2021-2022",
+  "section": "Revit",
+  "category": "Revit",
+  "software": [
+   "Revit 2021",
+   "Revit 2022"
+  ],
+  "code": "3.8",
+  "title": "Lỗi thường gặp trên Revit 2021, 2022",
+  "kind": "loi",
+  "symptoms": "Xung đột Add-in; phần mềm thoát khi mở file; hiện Report Error không rõ nguyên nhân.",
+  "steps": [
+   "Gỡ SẠCH phần mềm theo hướng dẫn của Autodesk (xem mục 1.6).",
+   "Cài lại mà bản mặc định vẫn lỗi thì cập nhật. Revit 2021: cài bản 2021.1, rồi 2021.1.10: https://up1.autodesk.com/NetSWCOM/prd/RVT/9CA05B9A-2116-0510-A1B4-FFF7A680FE55/Revit_2021_1_10.exe",
+   "Revit 2022: cài bản 2022.1, rồi 2022.1.8: https://up1.autodesk.com/NetSWCOM/prd/2022/RVT/CFAEE3C8-36F0-3DF4-964A-185EB42271F5//Revit_2022_1_8.exe"
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/Clean-uninstall.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211753380365414",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "acc-huong-dan",
+  "section": "ACC",
+  "category": "ACC",
+  "software": [
+   "ACC"
+  ],
+  "code": "4.1",
+  "title": "Tài liệu hướng dẫn sử dụng nền tảng ACC",
+  "kind": "huongdan",
+  "symptoms": "Dùng các tài liệu nội bộ (SharePoint OneCAD) bên dưới.",
+  "steps": [
+   "Docs: https://onecad.sharepoint.com/:w:/s/Technology/EV6DUOMm1vRFuyf0kFyzhoAB79JJU2wbnGjxyMnb4sFP_w?e=28Mjff",
+   "ABC Pro: https://onecad.sharepoint.com/:w:/s/Technology/EVRb87Zn7GdEm00RYyoMJ7UBwkYAGzvyWa6inbCYE227Vw?e=kRI6aX",
+   "Build: https://onecad.sharepoint.com/:w:/s/Technology/EaH_YU1IJM5AtGG9z2qQgm0BNyeOzSURV1F6MvqdVaQskg?e=PXKvJv",
+   "Assemble: https://onecad.sharepoint.com/:w:/s/Technology/Ef23e6pLIqJEgklsK8NLtOMBDnV6J2wPkcv4c2MXVMqnNQ?e=sO7xSN"
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859339",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "acc-backup",
+  "section": "ACC",
+  "category": "ACC",
+  "software": [
+   "ACC",
+   "BIM 360"
+  ],
+  "code": "4.2",
+  "title": "Hướng dẫn backup dữ liệu ACC / BIM 360",
+  "kind": "huongdan",
+  "symptoms": "Dùng các tài liệu nội bộ (SharePoint OneCAD) bên dưới.",
+  "steps": [
+   "ACC: https://onecad.sharepoint.com/:w:/s/Technology/EaKx2Jf6TJFOgclcKX5Ae5kBtXqZTpR7NA8J593bYtC_iQ?e=JbVQfh",
+   "BIM 360: https://onecad.sharepoint.com/:w:/s/Technology/EclV2T1iTZNOljtIKb9pNxIBKrc5dhtvWxR7NU3EcZadMQ?e=vOu3LC"
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211369022859355",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "acc-viewer",
+  "section": "ACC",
+  "category": "ACC",
+  "software": [
+   "ACC"
+  ],
+  "code": "4.3",
+  "title": "Lỗi hiển thị ở giao diện viewer trên ACC",
+  "kind": "loi",
+  "cause": "Trình duyệt lỗi thời; cache rác quá nhiều.",
+  "steps": [
+   "Cập nhật trình duyệt lên bản mới nhất.",
+   "Xóa cache của trình duyệt (xem mục 4.4)."
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211737739284409",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1211737739284412.webp"
+  ]
+ },
+ {
+  "id": "acc-xoa-cache",
+  "section": "ACC",
+  "category": "ACC",
+  "software": [
+   "ACC",
+   "Trình duyệt"
+  ],
+  "code": "4.4",
+  "title": "Xóa cache của trình duyệt",
+  "kind": "huongdan",
+  "symptoms": "Lỗi hiển thị do trình duyệt.",
+  "steps": [
+   "Ví dụ Microsoft Edge: vào `Settings`.",
+   "Chọn `Clear browsing data`.",
+   "Chỉ chọn `Cookies and other site data` và `Cached images and files`, rồi `Clear now`."
+  ],
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1212060655192487",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1212060655192490.webp",
+   "img/loi/1212060655192492.webp",
+   "img/loi/1212060655192494.webp",
+   "img/loi/1212060655192496.webp"
+  ]
+ },
+ {
+  "id": "inv-content-center",
+  "section": "Inventor",
+  "category": "Inventor",
+  "software": [
+   "Inventor"
+  ],
+  "code": "6.1",
+  "title": "Content Center bị lỗi trong file lắp ráp",
+  "kind": "loi",
+  "cause": "Bộ file được đóng gói không kèm Content Center.",
+  "steps": [
+   "Dùng `Pack and Go` để đóng gói file.",
+   "Relocate lại vị trí lưu Content Center.",
+   "Thay bằng đối tượng khác tương đồng."
+  ],
+  "refs": [
+   "https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/When-you-open-an-assembly-Inventor-warns-content-center-files-are-missing-and-need-to-be-resolved.html"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370454686856",
+  "updated": "2026-11-17"
+ },
+ {
+  "id": "inv-dong-bo-thiet-lap",
+  "section": "Inventor",
+  "category": "Inventor",
+  "software": [
+   "Inventor"
+  ],
+  "code": "6.2",
+  "title": "Đồng bộ thiết lập giao diện Inventor",
+  "kind": "huongdan",
+  "symptoms": "Cần đồng bộ settings, đường dẫn template, cấu hình giao diện.",
+  "steps": [
+   "Dùng tính năng Migration.",
+   "Export thiết lập trong Inventor ra file XML rồi import ở máy khác."
+  ],
+  "refs": [
+   "https://help.autodesk.com/view/INVNTOR/2025/ENU/?guid=GUID-16061BA7-A2CD-4D71-905C-D8C417058239"
+  ],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211370454686858",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1211779674542418.webp"
+  ]
+ },
+ {
+  "id": "os-sai-quy-dao",
+  "section": "OpenSpace",
+  "category": "OpenSpace",
+  "software": [
+   "OpenSpace"
+  ],
+  "code": "7.1",
+  "title": "Sai quỹ đạo Capture / sai vị trí mô hình BIM",
+  "kind": "loi",
+  "symptoms": "Ở những lần capture đầu, AI của OpenSpace cần thời gian xử lý và align mô hình BIM, sheet bản vẽ với ảnh capture nên hay sai quỹ đạo hoặc chưa map đúng vị trí. Có trường hợp dự án chạy thường xuyên mà capture về vẫn lỗi.",
+  "steps": [
+   "Sau khi capture được Publish, chờ hệ thống xử lý thêm 3–4 tiếng hoặc 1 ngày rồi kiểm tra lại.",
+   "Nếu khách hàng gấp: gửi email nhờ kỹ thuật OpenSpace hỗ trợ (mẫu bên dưới), kèm link dự án và ảnh.",
+   "Muốn đẩy nhanh: nhắn vào nhóm chat WhatsApp với OpenSpace (liên hệ anh Huy để được thêm vào nhóm)."
+  ],
+  "note": "Mẫu email: “Hi OpenSpace Support Team, My customer captured (vị trí tầng/khu vực bị sai), system aligns incorrectly. They capture in 1st floor, but 3D view show all model (image attached). Please check this issue and explain the cause of this error to the customer to avoid affecting the customer's work progress. Project: (link dự án, mời vào project nếu cần). I am looking forward to hearing from you soon.”",
+  "refs": [],
+  "subs": [],
+  "asana": "https://app.asana.com/1/1137636654201220/project/1211369022208449/task/1211415276161462",
+  "updated": "2026-11-17",
+  "images": [
+   "img/loi/1211425029380240.webp",
+   "img/loi/1211425029380242.webp"
+  ]
+ },
+ {
+  "id": "loi-1308",
+  "code": "1308",
+  "title": "Không tìm thấy file nguồn: \"Source file not found\"",
+  "category": "Cài đặt",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "symptoms": "Đang cài thì báo không tìm thấy một file trong bộ cài, kèm đường dẫn tới file bị thiếu.",
+  "cause": "Bộ cài tải về chưa đủ các Part hoặc bị hỏng khi tải, giải nén vào thư mục có đường dẫn quá dài, hoặc chạy cài đặt trực tiếp từ ổ mạng hay USB.",
+  "steps": [
+   "Kiểm tra đã tải đủ tất cả các Part của phiên bản đó và đặt chung một thư mục.",
+   "Giải nén vào thư mục ngắn ở ổ cứng máy, ví dụ `C:\\Autodesk`.",
+   "Xóa thư mục giải nén cũ, tải lại Part bị lỗi nếu dung lượng không khớp, rồi chạy lại Part 1."
+  ],
+  "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu và chỉnh lại theo kinh nghiệm xử lý thực tế của nhóm.",
+  "updated": "17.11.2026",
+  "draft": true,
+  "section": "License & cài đặt",
+  "kind": "loi"
+ },
+ {
+  "id": "loi-licensing-service",
+  "code": "LIC",
+  "title": "Báo lỗi giấy phép khi mở phần mềm do dịch vụ Autodesk Licensing không chạy",
+  "category": "Kích hoạt & giấy phép",
+  "software": [
+   "Tất cả phần mềm"
+  ],
+  "symptoms": "Mở phần mềm thì báo lỗi license, không hiện màn hình đăng nhập, hoặc đăng nhập xong vẫn không vào được.",
+  "cause": "Dịch vụ `Autodesk Desktop Licensing Service` bị dừng, bị tắt khởi động cùng Windows, hoặc phiên bản dịch vụ đã cũ.",
+  "steps": [
+   "Nhấn `Win + R`, gõ `services.msc` rồi nhấn Enter.",
+   "Tìm `Autodesk Desktop Licensing Service`, chuột phải chọn `Properties`, đặt Startup type là `Automatic`, rồi bấm `Start`.",
+   "Khởi động lại phần mềm. Nếu vẫn lỗi, tải và cài bản Autodesk Licensing Service mới nhất từ trang hỗ trợ Autodesk, rồi khởi động lại máy."
+  ],
+  "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu và chỉnh lại theo kinh nghiệm xử lý thực tế của nhóm.",
+  "updated": "17.11.2026",
+  "draft": true,
+  "section": "License & cài đặt",
+  "kind": "loi"
+ },
+ {
+  "id": "loi-dotnet",
+  "code": ".NET",
+  "title": "Thiếu hoặc lỗi .NET Framework khi cài phần mềm",
+  "category": "Môi trường Windows",
+  "software": [
+   "AutoCAD",
+   "Revit",
+   "Inventor",
+   "Civil 3D"
+  ],
+  "symptoms": "Trình cài đặt báo cần .NET Framework, cài .NET thất bại, hoặc phần mềm cài xong nhưng không mở được.",
+  "cause": "Máy chưa có phiên bản .NET Framework mà phần mềm yêu cầu, hoặc .NET trên máy bị hỏng do Windows Update dang dở.",
+  "steps": [
+   "Chạy Windows Update cho đến khi không còn bản cập nhật nào, rồi khởi động lại máy.",
+   "Tải bộ cài .NET Framework phiên bản phần mềm yêu cầu từ trang Microsoft và cài thủ công.",
+   "Chạy lại trình cài đặt Autodesk với quyền `Run as administrator`."
+  ],
+  "note": "Đây là nội dung mẫu để xem bố cục. Hãy đối chiếu yêu cầu .NET của từng phiên bản trong trang System Requirements của Autodesk.",
+  "updated": "17.11.2026",
+  "draft": true,
+  "section": "License & cài đặt",
+  "kind": "loi"
+ }
 ]
