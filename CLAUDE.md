@@ -13,6 +13,12 @@ https://ngtrmquan.github.io/Source-c-i-t-/ (nhánh `main`, thư mục gốc). Ng
 | `data.json` | Danh sách phần mềm: `{name, icon, group, note, aliases[], ring?, versions:[{v, links:[{label, url}]}]}`. `aliases` = tên tắt để tìm kiếm (không dấu); `ring: false` = không đưa lên vòng xoay (dùng cho phần mềm chưa có icon thật). Phiên bản mới đặt đầu mảng |
 | `errors.json` | Danh sách lỗi: `{id, source, section, code, title, kind ("loi"|"huongdan"), software[], symptoms, cause, steps[], subs[], images[], refs[], asana, download, note, updated, draft}`. Trong `symptoms`, `cause`, `steps` có thể dùng `` `code` `` |
 | `tools/xoa-sach-autodesk.bat` | Công cụ “Xóa sạch” (Clean Uninstall theo bài của Autodesk): file .bat tự xin quyền Admin, chạy phần PowerShell nhúng sau dòng `##PS_START`; chế độ 1 = chỉ kiểm tra, 2 = xóa (gõ `XOA`); ghi log + bảng kết quả ra Desktop. Lưu với xuống dòng CRLF, UTF-8. Ô “Xóa sạch” trong `loi.html` là mục `xoa-sach` của `errors.json` (trường `download`) |
+| `nhap-lieu.html` | Trang nội bộ "Nhập link": dán link → tự nhận phần mềm (theo mã trong đường dẫn Autodesk, học từ `data.json`), năm, Part → hàng đợi (localStorage) → xuất `data.json` mới để dán lên GitHub |
+| `link-status.json` | Kết quả kiểm tra link do GitHub Actions ghi (`{updated, summary, links:{url:{ok,code,size,checked,since,error}}}`), `ok:null` = chưa kết luận. Không sửa tay |
+| `tools/check_links.py` + `.github/workflows/check-links.yml` | Kiểm tra link: sáng thứ Hai hằng tuần (toàn bộ), khi `data.json` đổi (chỉ link mới), hoặc bấm Run workflow |
+| `tools/notion_sync.py` + `.github/workflows/notion-sync.yml` | Lấy link từ Notion (OneCAD Vietnam / Source cài đặt, mỗi trang con một bảng Năm/Link) bổ sung vào `data.json`, chỉ thêm không xóa. Cần secret `NOTION_TOKEN` |
+| `manifest.webmanifest`, `sw.js`, `icon-192/512.png` | PWA: cài ra màn hình chính; mạng trước, mất mạng dùng bản lưu; không đụng link Autodesk. Đổi `V` trong `sw.js` khi cần xóa cache cũ |
+| `robots.txt` | Chặn công cụ tìm kiếm (kèm `noindex` trong các trang) |
 | `icons/<slug>.png` | Icon phần mềm, tên file là slug của `name` (vd. `civil-3d.png`, `3ds-max.png`). Thiếu icon thì trang hiện chữ cái tạm |
 
 Mỗi file HTML tự chứa CSS/JS của nó (không có bước build). Ba trang dùng chung một bộ CSS và đoạn JS nền sao (sao bay, dải Ngân Hà, sao băng, đá trôi) — khi sửa phần dùng chung, sửa cả ba file cho đồng bộ.
@@ -31,4 +37,6 @@ Mỗi file HTML tự chứa CSS/JS của nó (không có bước build). Ba tran
 - 4 lỗi trong `errors.json` đang là bản nháp (`draft: true`) — chỉ bỏ `draft` khi người dùng xác nhận nội dung.
 - Bài Autodesk người dùng gửi: đọc toàn bộ bài, tóm tắt tiếng Việt vào mục `source: "autodesk"` (Dấu hiệu / Nguyên nhân / các cách trong `subs[]`, link bài gốc ở `refs[]`) và luôn điền `keywords[]` (mã lỗi, câu thông báo tiếng Anh, tên tiếng Việt, tên file/dịch vụ liên quan) để ô tìm kiếm tìm ra; kết quả khớp nguyên cụm từ được xếp lên đầu. Lệnh CMD, đường dẫn, tên file viết trong `` `...` `` → trang tự cho bấm để sao chép (hàm `isCmd` trong `loi.html`); tên nút/menu cũng để trong `` ` `` nhưng không sao chép. Link trong nội dung: bấm = sao chép, Ctrl + bấm = mở.
 - Link tải trỏ thẳng máy chủ Autodesk; giữ nguyên tham số `authparam` khi chép link.
+- Chế độ nhẹ `window.LITE` (đặt ở đầu mỗi trang): điện thoại/máy rất yếu vẽ ít hạt hơn, canvas DPR 1, ~30 khung hình/giây — hiệu ứng vẫn bật. Ép bằng `?lite=1` / `?lite=0`. Vòng xoay icon dùng `window.rafFull` để giữ tốc độ.
+- Link sâu: `cai-dat.html#<slug>@<năm>` mở đúng phiên bản; `loi.html#q=<từ khóa>` mở sẵn kết quả tìm.
 - Xem thử cục bộ: `python -m http.server` trong thư mục repo rồi mở http://localhost:8000 (mở trực tiếp file sẽ không đọc được JSON).

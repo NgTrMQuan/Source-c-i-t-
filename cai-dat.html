@@ -18,6 +18,8 @@ document.documentElement.classList.toggle('lite', window.LITE);
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -232,7 +234,7 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
   .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .card{min-height:160px;padding:14px}
   .card .name{font-size:15px}
-  .file{flex-wrap:wrap}.file .acts{width:100%}.file .acts .btn{flex:1;justify-content:center}
+  .file{flex-wrap:wrap}.file .acts{width:100%}.file .acts .btn{flex:1;justify-content:center}.file .acts .btn.rp{flex:none;width:48px}
   .sheet{top:auto;left:0;right:0;bottom:0;width:100%;height:88vh;border-radius:26px 26px 0 0;transform:translateY(100%)}
   .scrollcue{display:none}
 }
@@ -440,8 +442,11 @@ function stHTML(u){
 }
 
 /* ---------- hướng dẫn cài theo loại bộ cài ---------- */
+const variant = l => /32-bit|macos/i.test(l.label) || /32bit|\.dmg$/i.test(fileName(l.url)) ? (/macos/i.test(l.label) || /\.dmg$/i.test(fileName(l.url)) ? 'macOS' : '32-bit') : '64-bit';
+const variants = v => [...new Set(v.links.map(variant))];
 function kindOf(p, v){
   const us = v.links.map(l => fileName(l.url).toLowerCase());
+  if (variants(v).length > 1) return 'mixed';
   if (p.name === 'Revit Update') return 'update';
   if (us.some(u => u.endsWith('.dmg'))) return us.every(u => u.endsWith('.dmg')) ? 'mac' : 'mixed';
   if (us.some(u => u.startsWith('create_installer'))) return 'create';
@@ -469,7 +474,7 @@ function guideHTML(p, v){
              `Mở Revit, vào <b>Help → About</b> để kiểm tra số phiên bản sau khi cập nhật.`],
     mac: [`Mở file <code>.dmg</code>, kéo hoặc chạy trình cài trong cửa sổ hiện ra.`,
           `Nếu macOS chặn, vào <b>System Settings → Privacy &amp; Security</b> → <b>Open Anyway</b>.`],
-    mixed: [`Phiên bản này có cả bộ cài Windows và macOS: chỉ tải file đúng hệ điều hành của máy (xem nhãn <b>32-bit</b>, <b>macOS</b> ở từng file).`,
+    mixed: [`Phiên bản này có nhiều bản (${variants(v).join(', ')}): chỉ tải file đúng với máy. Windows 64-bit dùng các file không ghi nhãn <b>32-bit</b>/<b>macOS</b>.`,
             `Với bộ cài Windows nhiều phần, tải đủ các phần cùng loại vào một thư mục rồi chạy phần đầu tiên bằng quyền Administrator.`]
   }[k];
   const sr = 'https://www.google.com/search?q=' + encodeURIComponent(`site:autodesk.com system requirements ${p.name.replace(/ \(.*\)/, '')} ${(v.v.match(/^\d{4}/) || [''])[0]}`);
@@ -477,7 +482,7 @@ function guideHTML(p, v){
       <li>Ổ <code>C:</code> nên còn trống ít nhất gấp đôi tổng dung lượng bộ cài.</li>
       <li>Thư mục chứa file tải về nên có đường dẫn ngắn, không dấu tiếng Việt, ví dụ <code>D:\\Setup\\${esc(p.name.replace(/[^A-Za-z0-9]+/g, ''))}${esc((v.v.match(/^\d{4}/) || [''])[0])}</code>.</li>
       <li>Nếu máy từng cài bản cùng năm bị lỗi, gỡ sạch trước bằng công cụ <a class="lnk" style="margin:0" href="loi.html#xoa-sach">Xóa sạch</a>.</li></ul>`;
-  return `<details class="box" open><summary><span class="bi">${icoSvg('steps')}</span>Hướng dẫn cài đặt<small>${{odis:'bộ cài .exe + .7z',multi:`bộ cài ${n} phần`,single:'1 file',create:'Create Installer',update:'bản cập nhật',mac:'macOS',mixed:'Windows + macOS'}[k]}</small><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+  return `<details class="box" open><summary><span class="bi">${icoSvg('steps')}</span>Hướng dẫn cài đặt<small>${{odis:'bộ cài .exe + .7z',multi:`bộ cài ${n} phần`,single:'1 file',create:'Create Installer',update:'bản cập nhật',mac:'macOS',mixed:variants(v).join(' + ')}[k]}</small><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></summary>
     <div class="bx"><ol>${steps.map(x => `<li>${x}</li>`).join('')}</ol>${before}
     <a class="lnk" href="${sr}" target="_blank" rel="noopener noreferrer">${icoSvg('cpu')}Tra yêu cầu hệ thống trên Autodesk ↗</a></div></details>`;
 }
@@ -678,10 +683,11 @@ function open(p){
 function show(i){
   const v = cur.versions[i], n = v.links.length; $('files').dataset.v = i;
   $('vers').querySelectorAll('.ver').forEach((b,j) => b.setAttribute('aria-selected', j===i));
-  const sizes = v.links.map(l => stOf(l.url)?.size || 0), total = sizes.every(Boolean) ? sizes.reduce((a, b) => a + b, 0) : 0;
+  const vs = variants(v), main = vs.length > 1 ? v.links.filter(l => variant(l) === '64-bit') : v.links, nm = main.length;
+  const sizes = main.map(l => stOf(l.url)?.size || 0), total = sizes.every(Boolean) ? sizes.reduce((a, b) => a + b, 0) : 0;
   const bad = v.links.filter(l => isBad(l.url)).length;
   $('files').innerHTML =
-    `<div class="fhead"><div><h4>${esc(cur.name)} ${esc(v.v)}</h4><p>${n === 1 ? '1 file cài đặt' : `${n} file, cần tải đủ cả ${n}`}${total ? ` · tổng ${fmtSize(total)}` : ''}</p></div>${n > 1 ? `<button class="btn cp" data-all>Sao chép ${n} link</button>` : ''}</div>` +
+    `<div class="fhead"><div><h4>${esc(cur.name)} ${esc(v.v)}</h4><p>${vs.length > 1 ? `Có ${vs.length} bản: ${vs.join(', ')} · chỉ tải bản đúng với máy${total ? ` · bản 64-bit ${nm > 1 ? nm + ' phần, ' : ''}${fmtSize(total)}` : ''}` : (n === 1 ? '1 file cài đặt' : `${n} file, cần tải đủ cả ${n}`) + (total ? ` · tổng ${fmtSize(total)}` : '')}</p></div>${n > 1 ? `<button class="btn cp" data-all>Sao chép ${n} link</button>` : ''}</div>` +
     (cur.note ? `<div class="note">${esc(cur.note)}</div>` : '') +
     (bad ? `<div class="note" style="background:rgba(255,77,109,.1);border-color:rgba(255,77,109,.4);color:#ffb3bf">${bad === n ? 'Tất cả link của phiên bản này' : `${bad}/${n} link`} đang không tải được ở lần kiểm tra gần nhất. Bấm nút cờ để báo lại nếu bạn đã thử và vẫn lỗi.</div>` : '') +
     v.links.map((l,k) => `<div class="file${isBad(l.url) ? ' broken' : ''}"><span class="pt">${n > 1 ? k+1 : '↓'}</span>
