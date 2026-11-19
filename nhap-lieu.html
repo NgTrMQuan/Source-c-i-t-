@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#05070b">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Nhập link bộ cài · Technical Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--void:#05070b;--ink:#eef3f8;--ink-2:#a9b4c2;--ink-3:#6c7787;--line:rgba(255,255,255,.09);--glass:rgba(255,255,255,.045);
+  --display:"Unbounded","Be Vietnam Pro",sans-serif;--font:"Be Vietnam Pro",system-ui,sans-serif;--c1:#62d8ff;--c2:#a678ff}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:var(--font);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;
+  background:radial-gradient(120% 70% at 50% 0%,#101826 0%,#070b12 55%,#03050a 90%) fixed}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(1px 1px at 12% 18%,#fff8,transparent),radial-gradient(1px 1px at 72% 12%,#fff6,transparent),radial-gradient(1.5px 1.5px at 40% 70%,#fff5,transparent),radial-gradient(1px 1px at 88% 60%,#fff7,transparent),radial-gradient(1px 1px at 25% 85%,#fff5,transparent),radial-gradient(1px 1px at 60% 40%,#fff4,transparent)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:none;border:0;padding:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+*:focus{outline:none}*:focus-visible{outline:2px solid rgba(255,179,71,.85);outline-offset:3px}
+nav.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:26px;padding:18px clamp(18px,4vw,52px);background:rgba(6,9,14,.7);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.brand{font-family:var(--display);font-weight:700;display:flex;align-items:center;gap:10px}
+.brand .gear{width:24px;height:24px;filter:drop-shadow(0 0 8px rgba(98,216,255,.55))}
+.brand span{font-size:14px;letter-spacing:.08em}
+.links{display:flex;gap:6px;margin-left:auto}
+.links a{font-size:13px;font-weight:600;color:var(--ink-2);padding:7px 14px;border-radius:999px;border:1px solid transparent}
+.links a:hover,.links a[aria-current]{color:var(--ink);border-color:var(--line);background:var(--glass)}
+main{position:relative;max-width:1180px;margin:0 auto;padding:36px clamp(16px,4vw,40px) 80px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,40px);margin:0 0 6px;letter-spacing:-.01em}
+.lead{color:var(--ink-2);margin:0 0 28px;max-width:70ch}
+.cols{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:22px;align-items:start}
+.panel{border-radius:24px;padding:22px;background:rgba(12,16,24,.66);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(14px)}
+.panel h2{margin:0 0 4px;font-size:16px;font-weight:800;display:flex;align-items:center;gap:10px}
+.panel h2 i{width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-style:normal;font-size:12px;font-family:var(--display);background:linear-gradient(150deg,var(--c1),var(--c2));color:#fff}
+.panel > p{margin:0 0 14px;color:var(--ink-3);font-size:13.5px}
+label.f{display:block;font-size:12.5px;font-weight:700;color:var(--ink-2);margin:14px 0 6px}
+textarea,input[type=text],select{width:100%;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);padding:11px 14px;font-size:14px;transition:border-color .15s}
+textarea{min-height:170px;resize:vertical;font-family:ui-monospace,Consolas,monospace;font-size:12.5px;line-height:1.55}
+textarea:focus,input:focus,select:focus{border-color:rgba(98,216,255,.55);outline:none}
+select option{background:#0d121b}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{height:42px;padding:0 18px;border-radius:999px;font-size:13.5px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .12s,background .15s,box-shadow .15s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn.pri{background:var(--ink);color:var(--void)}.btn.pri:hover{box-shadow:0 0 24px -4px var(--c1)}
+.btn.sec{background:rgba(255,255,255,.08);border:1px solid var(--line)}.btn.sec:hover{background:rgba(255,255,255,.14)}
+.btn:disabled{opacity:.4;pointer-events:none}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.det{margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.lk{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.lk input{padding:8px 10px;font-size:13px;border-radius:10px}
+.lk .u{font-size:12px;color:var(--ink-2);word-break:break-all;line-height:1.35}
+.lk .u b{display:block;color:var(--ink);font-size:13px}
+.lk .x{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:var(--ink-3);border:1px solid var(--line)}
+.lk .x:hover{color:#ff9aa9;border-color:rgba(255,77,109,.5)}
+.tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:1px}
+.tag.dup{background:rgba(255,216,74,.14);color:#ffe39a}.tag.new{background:rgba(47,224,181,.14);color:#7ff0d2}.tag.warn{background:rgba(255,77,109,.14);color:#ff9aa9}
+.msg{margin-top:12px;border-radius:14px;padding:11px 14px;font-size:13.5px}
+.msg.info{background:rgba(98,216,255,.08);border:1px solid rgba(98,216,255,.3);color:#bfeeff}
+.msg.warn{background:rgba(255,216,74,.08);border:1px solid rgba(255,216,74,.35);color:#ffe39a}
+.queue{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.qi{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:14px}
+.qi b{font-weight:700}.qi small{color:var(--ink-3);display:block;font-size:12.5px}
+.qi .x{margin-left:auto}
+.empty{color:var(--ink-3);font-size:13.5px;padding:14px;border:1px dashed var(--line);border-radius:14px;text-align:center}
+ol.how{margin:10px 0 0;padding-left:20px;color:var(--ink-2);font-size:13.5px}ol.how li{margin:5px 0}
+ol.how code,.panel code{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:6px;padding:1px 6px;color:#e8eef6}
+.newp{display:none}.newp.on{display:block}
+.toast{position:fixed;left:50%;bottom:28px;z-index:40;transform:translate(-50%,20px);opacity:0;pointer-events:none;transition:all .2s;background:var(--ink);color:var(--void);padding:11px 18px;border-radius:999px;font-size:14px;font-weight:700}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:900px){.cols{grid-template-columns:1fr}.links{display:none}}
+@media (max-width:560px){.row{grid-template-columns:1fr}.lk{grid-template-columns:1fr auto}.lk input{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<nav class="top">
+  <a class="brand" href="index.html"><svg class="gear" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#gg)" d="M10.3 2h3.4l.5 2.6a7.6 7.6 0 0 1 1.9.8l2.2-1.5 2.4 2.4-1.5 2.2c.3.6.6 1.2.8 1.9l2.6.5v3.4l-2.6.5a7.6 7.6 0 0 1-.8 1.9l1.5 2.2-2.4 2.4-2.2-1.5a7.6 7.6 0 0 1-1.9.8l-.5 2.6h-3.4l-.5-2.6a7.6 7.6 0 0 1-1.9-.8l-2.2 1.5-2.4-2.4 1.5-2.2a7.6 7.6 0 0 1-.8-1.9L2 13.7v-3.4l2.6-.5c.2-.7.5-1.3.8-1.9L3.9 5.7l2.4-2.4 2.2 1.5c.6-.3 1.2-.6 1.9-.8zM12 8.4a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2z"/><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#62d8ff"/><stop offset=".5" stop-color="#a678ff"/><stop offset="1" stop-color="#ffb347"/></linearGradient></defs></svg><span>TECHNICAL TEAM</span></a>
+  <div class="links"><a href="index.html">Trang chủ</a><a href="cai-dat.html">Bộ cài đặt</a><a href="loi.html">Lỗi thường gặp</a><a href="nhap-lieu.html" aria-current="page">Nhập link</a></div>
+</nav>
+
+<main>
+  <h1>Nhập link bộ cài</h1>
+  <p class="lead">Dán link tải từ Autodesk, trang sẽ tự nhận phần mềm, năm và thứ tự Part. Kiểm tra lại, bấm “Thêm vào danh sách”, xong thì tải về file <code>data.json</code> mới để cập nhật lên GitHub. Không cần biết JSON.</p>
+
+  <div class="cols">
+    <section class="panel">
+      <h2><i>1</i>Dán link</h2>
+      <p>Mỗi dòng một link. Có thể dán cả đoạn văn có lẫn chữ “Part 1:”, trang chỉ lấy các link.</p>
+      <textarea id="paste" placeholder="https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RVT/…/RVT_2027_…_001_002.exe&#10;https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RVT/…/RVT_2027_…_002_002.7z"></textarea>
+
+      <div class="row">
+        <div><label class="f" for="prod">Phần mềm</label><select id="prod"></select></div>
+        <div><label class="f" for="ver">Phiên bản</label><input type="text" id="ver" placeholder="vd. 2027 hoặc 2026 (Czech)"></div>
+      </div>
+      <div class="newp" id="newp">
+        <div class="row">
+          <div><label class="f" for="nName">Tên phần mềm mới</label><input type="text" id="nName" placeholder="vd. AutoCAD MEP"></div>
+          <div><label class="f" for="nGroup">Nhóm</label><select id="nGroup"></select></div>
+        </div>
+        <div class="row">
+          <div><label class="f" for="nIcon">Biểu tượng (emoji)</label><input type="text" id="nIcon" value="📦" maxlength="4"></div>
+          <div><label class="f" for="nAlias">Tên tắt để tìm (cách nhau dấu phẩy)</label><input type="text" id="nAlias" placeholder="vd. mep, acad mep"></div>
+        </div>
+      </div>
+      <div id="det" class="det"></div>
+      <div id="hint"></div>
+      <label style="display:flex;gap:8px;align-items:center;margin-top:14px;font-size:13.5px;color:var(--ink-2)"><input type="checkbox" id="replace"> Thay toàn bộ link cũ của phiên bản đó</label>
+      <div class="acts"><button class="btn pri" id="add" disabled>Thêm vào danh sách</button><button class="btn sec" id="clear">Xóa ô dán</button></div>
+    </section>
+
+    <section class="panel">
+      <h2><i>2</i>Danh sách thay đổi</h2>
+      <p>Các phiên bản sẽ được ghi vào <code>data.json</code>. Danh sách được giữ lại nếu bạn tải lại trang.</p>
+      <div id="queue" class="queue"></div>
+      <div class="acts">
+        <button class="btn pri" id="dl" disabled>Tải data.json mới</button>
+        <button class="btn sec" id="cp" disabled>Sao chép nội dung</button>
+        <a class="btn sec" id="gh" href="https://github.com/NgTrMQuan/Source-c-i-t-/edit/main/data.json" target="_blank" rel="noopener noreferrer">Mở data.json trên GitHub ↗</a>
+      </div>
+      <ol class="how">
+        <li>Bấm <b>Sao chép nội dung</b> (hoặc tải file về).</li>
+        <li>Bấm <b>Mở data.json trên GitHub</b>, đăng nhập, bấm <kbd>Ctrl</kbd>+<kbd>A</kbd> rồi dán đè nội dung mới.</li>
+        <li>Bấm <b>Commit changes…</b> → <b>Commit changes</b>. Khoảng 1–2 phút sau trang Bộ cài đặt sẽ cập nhật, và hệ thống tự kiểm tra các link mới.</li>
+      </ol>
+      <div class="msg info" style="margin-top:16px">Phiên bản đã có trên trang: link mới sẽ được <b>thêm vào</b>, link trùng (cùng tên file) được bỏ qua. Muốn <b>thay</b> link cũ (ví dụ link hết hạn), tích “Thay toàn bộ link cũ” trước khi thêm.</div>
+    </section>
+  </div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm = s => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d');
+const fileName = u => { try { const x = new URL(u); const m = /filename\s*=\s*"([^"]+)"/.exec(decodeURIComponent(x.search)); return m ? m[1] : decodeURIComponent(x.pathname.split('/').pop()); } catch(e){ return u; } };
+const fkey = u => fileName(u).toLowerCase();
+const GROUPS = ["AutoCAD","Revit & BIM","Hạ tầng & Kết cấu","Cơ khí & Gia công","Vault","Đồ họa 3D"];
+let DATA = [], CODES = {}, cur = [], QUEUE = [];
+try { QUEUE = JSON.parse(localStorage.getItem('nhapLieuQueue') || '[]'); } catch(_){ QUEUE = []; }
+const saveQ = () => { try { localStorage.setItem('nhapLieuQueue', JSON.stringify(QUEUE)); } catch(_){} };
+let tt; const toast = m => { const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 1900); };
+
+/* Mã sản phẩm trong đường dẫn Autodesk (…/2027/RVT/…) → phần mềm: học từ chính data.json */
+const pcode = u => { try { const seg = new URL(u).pathname.split('/'); const i = seg.findIndex(s => /^20\d\d$/.test(s)); return i >= 0 && seg[i+1] ? seg[i+1].toUpperCase() : null; } catch(_){ return null; } };
+const yearOf = u => { const m = /\/(20\d\d)\//.exec(u) || /_(20\d\d)_/.exec(fileName(u)); return m ? m[1] : ''; };
+const partOf = u => { const m = /_(\d{3})_(\d{3})\.(?:sfx\.)?(?:exe|7z)$/i.exec(fileName(u)); return m ? [+m[1], +m[2]] : null; };
+const labelFor = (u, n, i) => { const f = fileName(u).toLowerCase();
+  if (f.endsWith('.dmg')) return 'macOS';
+  if (/32bit/.test(f) && n > 1) { const p = partOf(u); return p ? `32-bit Part ${p[0]}` : '32-bit'; }
+  if (/create_installer/.test(f)) return 'Create Installer';
+  if (n === 1) return 'Bộ cài';
+  const p = partOf(u); return `Part ${p ? p[0] : i + 1}`; };
+
+fetch('data.json', {cache:'no-store'}).then(r => r.json()).then(d => {
+  DATA = d;
+  d.forEach((p, i) => p.versions.forEach(v => v.links.forEach(l => { const c = pcode(l.url); if (c) (CODES[c] ||= {})[i] = ((CODES[c] || {})[i] || 0) + 1; })));
+  $('prod').innerHTML = '<option value="">— Chọn phần mềm —</option>' + GROUPS.map(g => `<optgroup label="${esc(g)}">${d.map((p, i) => p.group === g ? `<option value="${i}">${esc(p.name)}</option>` : '').join('')}</optgroup>`).join('') + '<option value="new">＋ Phần mềm mới…</option>';
+  $('nGroup').innerHTML = GROUPS.map(g => `<option>${esc(g)}</option>`).join('');
+  renderQ();
+}).catch(() => { $('hint').innerHTML = '<div class="msg warn">Không đọc được data.json. Mở trang qua địa chỉ web (không mở file trực tiếp).</div>'; });
+
+function parse(){
+  const urls = [...new Set(($('paste').value.match(/https?:\/\/[^\s"'<>]+/g) || []).map(u => u.replace(/[),.;]+$/, '')))];
+  if (!urls.length){ cur = []; render(); return; }
+  // đoán phần mềm theo mã trong đường dẫn
+  const c = pcode(urls[0]), cand = c && CODES[c] ? Object.entries(CODES[c]).sort((a, b) => b[1] - a[1])[0][0] : null;
+  const is32 = urls.every(u => /32bit/i.test(u)), isLT = c === 'INVLT';
+  if (cand !== null && !$('prod').dataset.touched) $('prod').value = cand;
+  if (!$('ver').dataset.touched) $('ver').value = yearOf(urls[0]);
+  // sắp theo số Part
+  const sorted = urls.slice().sort((a, b) => ((partOf(a) || [0])[0] - (partOf(b) || [0])[0]) || (/32bit/i.test(a) - /32bit/i.test(b)));
+  cur = sorted.map((u, i) => ({url: u, label: labelFor(u, sorted.length, i)}));
+  render();
+}
+function target(){ const v = $('prod').value; return v === '' ? null : v === 'new' ? 'new' : DATA[+v]; }
+function render(){
+  $('newp').classList.toggle('on', $('prod').value === 'new');
+  const p = target(), ver = $('ver').value.trim();
+  const ex = p && p !== 'new' ? p.versions.find(v => v.v === ver) : null;
+  const have = new Set(ex ? ex.links.map(l => fkey(l.url)) : []);
+  const all = new Set(DATA.flatMap(q => q.versions.flatMap(v => v.links.map(l => fkey(l.url)))));
+  $('det').innerHTML = cur.map((l, i) => {
+    const tag = have.has(fkey(l.url)) ? '<span class="tag dup">đã có</span>' : all.has(fkey(l.url)) ? '<span class="tag warn">có ở phần mềm khác</span>' : '<span class="tag new">mới</span>';
+    return `<div class="lk"><input type="text" value="${esc(l.label)}" data-i="${i}" aria-label="Nhãn"><div class="u"><b>${esc(fileName(l.url))}${tag}</b>${esc(l.url)}</div><button class="x" data-x="${i}" aria-label="Bỏ link này">✕</button></div>`; }).join('');
+  const parts = cur.map(l => partOf(l.url)).filter(Boolean), tot = parts[0]?.[1];
+  let h = '';
+  if (cur.length && tot && parts.length !== tot && !cur.some(l => /32bit/i.test(l.url))) h += `<div class="msg warn">Bộ cài gồm ${tot} phần nhưng mới dán ${parts.length} link. Kiểm tra còn thiếu phần nào không.</div>`;
+  if (cur.length && !ver) h += '<div class="msg warn">Chưa điền phiên bản.</div>';
+  if (cur.length && p === null) h += '<div class="msg warn">Không nhận ra phần mềm, hãy chọn trong danh sách.</div>';
+  if (ex && cur.length) h += `<div class="msg info">${esc(p.name)} ${esc(ver)} đã có ${ex.links.length} link trên trang.</div>`;
+  $('hint').innerHTML = h;
+  $('add').disabled = !(cur.length && ver && p && (p !== 'new' || $('nName').value.trim()));
+}
+$('paste').addEventListener('input', parse);
+$('prod').addEventListener('change', () => { $('prod').dataset.touched = 1; render(); });
+$('ver').addEventListener('input', () => { $('ver').dataset.touched = 1; render(); });
+$('nName').addEventListener('input', render);
+$('det').addEventListener('input', e => { const i = e.target.dataset.i; if (i !== undefined) cur[+i].label = e.target.value; });
+$('det').addEventListener('click', e => { const x = e.target.closest('[data-x]'); if (x){ cur.splice(+x.dataset.x, 1); render(); } });
+$('clear').addEventListener('click', () => { $('paste').value = ''; delete $('prod').dataset.touched; delete $('ver').dataset.touched; $('ver').value = ''; $('prod').value = ''; cur = []; render(); $('paste').focus(); });
+$('add').addEventListener('click', () => {
+  const p = target(), item = {ver: $('ver').value.trim(), links: cur.map(l => ({label: l.label.trim() || 'Bộ cài', url: l.url})), replace: $('replace').checked};
+  if (p === 'new') Object.assign(item, {isNew: true, name: $('nName').value.trim(), group: $('nGroup').value, icon: $('nIcon').value.trim() || '📦', aliases: $('nAlias').value.split(',').map(s => norm(s).trim()).filter(Boolean)});
+  else item.name = p.name;
+  QUEUE.push(item); saveQ(); renderQ(); $('clear').click(); toast(`Đã thêm ${item.name} ${item.ver}`);
+});
+function renderQ(){
+  $('queue').innerHTML = QUEUE.length ? QUEUE.map((q, i) => `<div class="qi"><div><b>${esc(q.name)} ${esc(q.ver)}</b><small>${q.links.length} link${q.isNew ? ' · phần mềm mới' : ''}${q.replace ? ' · thay link cũ' : ''}</small></div><button class="btn sec x" data-q="${i}" style="height:32px;padding:0 12px">Bỏ</button></div>`).join('') : '<div class="empty">Chưa có thay đổi nào.</div>';
+  $('dl').disabled = $('cp').disabled = !QUEUE.length;
+}
+$('queue').addEventListener('click', e => { const b = e.target.closest('[data-q]'); if (b){ QUEUE.splice(+b.dataset.q, 1); saveQ(); renderQ(); } });
+const yr = v => +((v.match(/^\d{4}/) || [0])[0]);
+function build(){
+  const d = JSON.parse(JSON.stringify(DATA));
+  for (const q of QUEUE){
+    let p = d.find(x => x.name === q.name);
+    if (!p){ p = {name: q.name, icon: q.icon || '📦', group: q.group || 'AutoCAD', note: null, aliases: q.aliases || [], ring: false, versions: []};
+      const last = d.map(x => x.group).lastIndexOf(p.group); d.splice(last < 0 ? d.length : last + 1, 0, p); }
+    let v = p.versions.find(x => x.v === q.ver);
+    if (!v){ v = {v: q.ver, links: []}; const i = p.versions.findIndex(x => yr(x.v) < yr(q.ver)); p.versions.splice(i < 0 ? p.versions.length : i, 0, v); }
+    if (q.replace) v.links = [];
+    const have = new Set(v.links.map(l => fkey(l.url)));
+    q.links.forEach(l => { if (!have.has(fkey(l.url))){ v.links.push(l); have.add(fkey(l.url)); } });
+  }
+  return JSON.stringify(d, null, 2) + '\n';
+}
+$('dl').addEventListener('click', () => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([build()], {type: 'application/json'})); a.download = 'data.json'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); toast('Đã tải data.json'); });
+$('cp').addEventListener('click', async () => { try { await navigator.clipboard.writeText(build()); toast('Đã sao chép · dán đè vào data.json trên GitHub'); } catch(_){ toast('Trình duyệt chặn sao chép, hãy dùng nút Tải'); } });
+</script>
+</body>
+</html>
