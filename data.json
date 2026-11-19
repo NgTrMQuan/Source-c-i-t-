@@ -129,6 +129,14 @@
           {
             "label": "Part 2",
             "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/ACD/F424DCF4-DE2B-4968-BDF2-A1B535AC84BB/SFX/AutoCAD_2018_English_Win_64bit_r1_dlm_002_002.sfx.exe?authparam=1672627700_fc80e6d9e99c8dff5018b055498d1c14"
+          },
+          {
+            "label": "32-bit",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ACD/98E220D3-8EEE-49BC-8A77-0FC24FEE271C/SFX/AutoCAD_2018_English_Win_32bit_Trial.sfx.exe"
+          },
+          {
+            "label": "macOS",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ACDMAC/ESD/Autodesk_AutoCAD_2018_Mac_OSX.dmg"
           }
         ]
       },
@@ -279,6 +287,14 @@
           {
             "label": "Bộ cài",
             "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/ACDLT/98262C1D-3CA8-47DA-9518-0CAD26C11828/SFX/AutoCAD_LT_2018_English_Win_64bit_r1_dlm.sfx.exe?authparam=1672631446_1b139147d6be532ade505357c121487f"
+          },
+          {
+            "label": "32-bit",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ACDLT/3D17C766-34E0-4E24-9B3F-4E10850A5C90/SFX/AutoCAD_LT_2018_English_Win_32bit_dlm.sfx.exe"
+          },
+          {
+            "label": "macOS",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ACDLTM/ESD/Autodesk_AutoCAD_LT_2018_Mac_OSX.dmg"
           }
         ]
       },
@@ -435,6 +451,14 @@
           {
             "label": "Part 2",
             "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/ARCHDESK/98F6C577-BED3-4DA5-8C35-D7166769B09B/SFX/AutoCAD_Architecture_2018_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1713662584_b7f444de1bb4299e3cb759badb89d040&ext=.exe"
+          },
+          {
+            "label": "32-bit Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ARCHDESK/98F6C577-BED3-4DA5-8C35-D7166769B09B/SFX/AutoCAD_Architecture_2018_English_Win_32bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "32-bit Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ARCHDESK/98F6C577-BED3-4DA5-8C35-D7166769B09B/SFX/AutoCAD_Architecture_2018_English_Win_32bit_dlm_002_002.sfx.exe"
           }
         ]
       }
@@ -562,6 +586,27 @@
             "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/ACAD_E/BC02A24C-34A0-4FC1-87F9-482D00978BDF/SFX/AutoCAD_Electrical_2019_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690099168_a4c2c2e65a124da266d9f63fd5211416"
           }
         ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ACAD_E/5A80119F-E4A2-4C7D-8501-D49E3C775A94/SFX/AutoCAD_Electrical_2018_English_Win_64bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ACAD_E/5A80119F-E4A2-4C7D-8501-D49E3C775A94/SFX/AutoCAD_Electrical_2018_English_Win_64bit_dlm_002_002.sfx.exe"
+          },
+          {
+            "label": "32-bit Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ACAD_E/5A80119F-E4A2-4C7D-8501-D49E3C775A94/SFX/AutoCAD_Electrical_2018_English_Win_32bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "32-bit Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ACAD_E/5A80119F-E4A2-4C7D-8501-D49E3C775A94/SFX/AutoCAD_Electrical_2018_English_Win_32bit_dlm_002_002.sfx.exe"
+          }
+        ]
       }
     ]
   },
@@ -682,6 +727,10 @@
           {
             "label": "Part 2",
             "url": "https://efulfillment.autodesk.com/NET18SWDLD/2018/AMECH_PP/555A6FD2-89CE-4870-957E-B2D70C59B863/SFX/AutoCAD_Mechanical_2018_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1703083680_c9e38f743073ad44d30542872a5890c8&ext=.exe"
+          },
+          {
+            "label": "32-bit",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/AMECH_PP/555A6FD2-89CE-4870-957E-B2D70C59B863/SFX/AutoCAD_Mechanical_2018_English_Win_32bit_dlm.sfx.exe"
           }
         ]
       }
@@ -809,6 +858,19 @@
             "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/PLNT3D/C33B2423-14F9-46AE-80CC-353E799129E4/SFX/AutoCAD_Plant_3D_2019_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098921_be6b0548af58b9687391a13a2923b09b"
           }
         ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/PLNT3D/B09F7AE1-5D97-44FE-950C-621100741C7D/SFX/AutoCAD_Plant_3D_2018_English_Win_64bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/PLNT3D/B09F7AE1-5D97-44FE-950C-621100741C7D/SFX/AutoCAD_Plant_3D_2018_English_Win_64bit_dlm_002_002.sfx.exe"
+          }
+        ]
       }
     ]
   },
@@ -846,6 +908,115 @@
           {
             "label": "Create Installer",
             "url": "https://upload1.delivery.autodesk.com/PORTAL_DownloadPackage1266811043473759.exe?response-content-disposition=attachment%3B%20filename%20%3D%22Create_Installer_PLC0000037_2022_English_WIN64.exe%22&"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "64-bit",
+            "url": "http://download.autodesk.com/esd/dwgtrueview/2018/DWGTrueView_2018_Enu_64bit.sfx.exe"
+          },
+          {
+            "label": "32-bit",
+            "url": "http://download.autodesk.com/esd/dwgtrueview/2018/DWGTrueView_2018_Enu_32bit.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD Map 3D",
+    "icon": "🗺️",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/MAP/4E2E92F7-7DA6-4745-8B01-0C1EBFFEBEB7/SFX/Autodesk_Map_2018_English_Win_64bit_DLM_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/MAP/4E2E92F7-7DA6-4745-8B01-0C1EBFFEBEB7/SFX/Autodesk_Map_2018_English_Win_64bit_DLM_002_002.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD Raster Design",
+    "icon": "🖼️",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "64-bit",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ARDES/A53EA8E1-0E3B-4F32-9DC9-4AF9022A2F21/SFX/AutoCAD_Raster_Design_2018_English_Win_64bit_dlm.sfx.exe"
+          },
+          {
+            "label": "32-bit",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ARDES/A53EA8E1-0E3B-4F32-9DC9-4AF9022A2F21/SFX/AutoCAD_Raster_Design_2018_English_Win_32bit_dlm.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD Design Suite Premium",
+    "icon": "🧰",
+    "group": "AutoCAD",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/DSPRM/F459735B-5485-4F17-8BE0-E578C6B5D699/SFX/ADS_Premium_2018_English_Win_64bit_dlm_001_003.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/DSPRM/F459735B-5485-4F17-8BE0-E578C6B5D699/SFX/ADS_Premium_2018_English_Win_64bit_dlm_002_003.sfx.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/DSPRM/F459735B-5485-4F17-8BE0-E578C6B5D699/SFX/ADS_Premium_2018_English_Win_64bit_dlm_003_003.sfx.exe"
+          },
+          {
+            "label": "32-bit Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/DSPRM/A85BC822-781A-4B09-9544-0FC24FEE271C/SFX/ADS_Premium_2018_English_Win_32bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "32-bit Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/DSPRM/A85BC822-781A-4B09-9544-0FC24FEE271C/SFX/ADS_Premium_2018_English_Win_32bit_dlm_002_002.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "AutoCAD Design Suite Standard",
+    "icon": "🧳",
+    "group": "AutoCAD",
+    "note": "Bản 32-bit trên trang nguồn bị lặp link Part 1 (thiếu Part 2) nên chưa đưa vào.",
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/DSSTD/1551E1D8-3DDC-4B8E-B825-E578C6B5D699/SFX/ADS_Standard_2018_English_Win_64bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/DSSTD/1551E1D8-3DDC-4B8E-B825-E578C6B5D699/SFX/ADS_Standard_2018_English_Win_64bit_dlm_002_002.sfx.exe"
           }
         ]
       }
@@ -1047,6 +1218,23 @@
           {
             "label": "Part 3",
             "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/RVT/8B325A05-E1B5-47F3-B009-F417B08869CA/SFX/Revit_2019_G1_Win_64bit_R1_dlm_003_003.sfx.exe?authparam=1675408175_6f8549ded33dec5ae1ca93705af90398"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/RVT/89DB791F-E258-4EB0-AB76-DC1C184D93A6/SFX/Revit_2018_G1_Win_64bit_dlm_001_003.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/RVT/89DB791F-E258-4EB0-AB76-DC1C184D93A6/SFX/Revit_2018_G1_Win_64bit_dlm_002_003.sfx.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/RVT/89DB791F-E258-4EB0-AB76-DC1C184D93A6/SFX/Revit_2018_G1_Win_64bit_dlm_003_003.sfx.exe"
           }
         ]
       }
@@ -1396,6 +1584,19 @@
             "url": "http://efulfillment.autodesk.com/NetSWDLD/2019/NAVMAN/9EF86405-F84E-4A9B-B4C9-36529E8C4832/SFX/Autodesk_Navisworks_Manage_2019_Multilingual_Win_64bit_dlm_002_002.sfx.exe?authparam=1691717974_5bc0d29191434242236057ff33fb07e9&ext=.exe"
           }
         ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/NAVMAN/19BFE77D-0A8D-4054-B0D4-D12CA3E5025F/SFX/Autodesk_Navisworks_Manage_2018_Multilingual_Win_64bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/NAVMAN/19BFE77D-0A8D-4054-B0D4-D12CA3E5025F/SFX/Autodesk_Navisworks_Manage_2018_Multilingual_Win_64bit_dlm_002_002.sfx.exe"
+          }
+        ]
       }
     ]
   },
@@ -1521,6 +1722,19 @@
             "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/NAVSIM/F70C49BA-56D4-44E6-83DE-940DED7A65AF/SFX/Autodesk_Navisworks_Simulate_2019_Multilingual_Win_64bit_dlm_002_002.sfx.exe?authparam=1690100027_38af6c1d23aeea49b97e4a1428255eb5"
           }
         ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/NAVSIM/9502C27A-8815-428B-9DBD-A8EB79DA0BED/SFX/Autodesk_Navisworks_Simulate_2018_Multilingual_Win_64bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/NAVSIM/9502C27A-8815-428B-9DBD-A8EB79DA0BED/SFX/Autodesk_Navisworks_Simulate_2018_Multilingual_Win_64bit_dlm_002_002.sfx.exe"
+          }
+        ]
       }
     ]
   },
@@ -1540,6 +1754,90 @@
           {
             "label": "Part 2",
             "url": "https://efulfillment.autodesk.com/NetSWDLD/ODIS/prd/2027/RECAP/6F33CCE3-6888-3D07-97B1-53A51CA5A13D/SFX/RECAP_2027_ML_db_002_002.7z"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Revit Server",
+    "icon": "🗃️",
+    "group": "Revit & BIM",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://download.autodesk.com/us/support/files/revit_server_2018/RevitServer_2018_Win_64bit_dlm.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Revit Extensions",
+    "icon": "🧩",
+    "group": "Revit & BIM",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://dds.autodesk.com/2018/REVIT/REX_2018_Win_64bit_dlm.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Autodesk LIVE",
+    "icon": "🕶️",
+    "group": "Revit & BIM",
+    "note": "Trang nguồn ghi là \"Revit Live\"; bản V1 dùng cho Revit 2018.",
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Bộ cài",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/LIVE/DLM/Autodesk_LIVE_V1_EN_Win_64bit_dlm.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Building Design Suite Premium",
+    "icon": "🏙️",
+    "group": "Revit & BIM",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/BDSP/C928E4FC-B352-4E6E-BC69-E578C6B5D699/SFX/BDSP_2018_Enu_Win_64bit_dlm_001_005.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/BDSP/C928E4FC-B352-4E6E-BC69-E578C6B5D699/SFX/BDSP_2018_Enu_Win_64bit_dlm_002_005.sfx.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/BDSP/C928E4FC-B352-4E6E-BC69-E578C6B5D699/SFX/BDSP_2018_Enu_Win_64bit_dlm_003_005.sfx.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/BDSP/C928E4FC-B352-4E6E-BC69-E578C6B5D699/SFX/BDSP_2018_Enu_Win_64bit_dlm_004_005.sfx.exe"
+          },
+          {
+            "label": "Part 5",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/BDSP/C928E4FC-B352-4E6E-BC69-E578C6B5D699/SFX/BDSP_2018_Enu_Win_64bit_dlm_005_005.sfx.exe"
           }
         ]
       }
@@ -1673,6 +1971,23 @@
           {
             "label": "Part 2",
             "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/CIV3D/30B1667D-DDD5-4C61-B1C0-B8D3657F5B70/SFX/Autodesk_Civil3D_2019_English_Win_64bit_dlm_002_002.sfx.exe?authparam=1690098691_94123e43db7c6e50d4ba98a1bbf6d3db"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/CIV3D/8AAF1207-A973-4C1C-B5CA-FBDD4376B770/SFX/AutoCAD_Civil3D_2018_English_Win_64bit_dlm_001_003.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/CIV3D/8AAF1207-A973-4C1C-B5CA-FBDD4376B770/SFX/AutoCAD_Civil3D_2018_English_Win_64bit_dlm_002_003.sfx.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/CIV3D/8AAF1207-A973-4C1C-B5CA-FBDD4376B770/SFX/AutoCAD_Civil3D_2018_English_Win_64bit_dlm_003_003.sfx.exe"
           }
         ]
       }
@@ -1832,6 +2147,90 @@
           {
             "label": "Part 2",
             "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/ADSTPR/B54BBF04-D500-4E79-874D-E6F94185E03B/SFX/Advance_Steel_2020_G1_Win_64bit_dlm_002_002.sfx.exe?authparam=1725761036_faf355019f561e37e5aaf4b7e1527409"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ADSTPR/96EA1F73-D45B-4045-B785-49922B621A5A/SFX/Advance_Steel_2018_G1_Win_64bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/ADSTPR/96EA1F73-D45B-4045-B785-49922B621A5A/SFX/Advance_Steel_2018_G1_Win_64bit_dlm_002_002.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vehicle Tracking",
+    "icon": "🚗",
+    "group": "Hạ tầng & Kết cấu",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Bộ cài (32/64-bit)",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/VEHTRK/1BB29454-FDE1-4A79-BFAD-4DAA5FF1E350/SFX/Autodesk_Vehicle_Tracking_2018_English_Win_32_64bit_dlm.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Infrastructure Design Suite Premium",
+    "icon": "🌁",
+    "group": "Hạ tầng & Kết cấu",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/IDSP/911D826F-7A7C-4293-8057-E578C6B5D699/SFX/IDSP_2018_Enu_Win_64bit_dlm_001_005.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/IDSP/911D826F-7A7C-4293-8057-E578C6B5D699/SFX/IDSP_2018_Enu_Win_64bit_dlm_002_005.sfx.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/IDSP/911D826F-7A7C-4293-8057-E578C6B5D699/SFX/IDSP_2018_Enu_Win_64bit_dlm_003_005.sfx.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/IDSP/911D826F-7A7C-4293-8057-E578C6B5D699/SFX/IDSP_2018_Enu_Win_64bit_dlm_004_005.sfx.exe"
+          },
+          {
+            "label": "Part 5",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/IDSP/911D826F-7A7C-4293-8057-E578C6B5D699/SFX/IDSP_2018_Enu_Win_64bit_dlm_005_005.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Infrastructure Design Suite Standard",
+    "icon": "🛤️",
+    "group": "Hạ tầng & Kết cấu",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/IDSS/81280B5A-51E7-4D91-977C-E578C6B5D699/SFX/IDSS_2018_Enu_Win_64bit_dlm_001_002.sfx.exe?authparam=1524597407_107b574900496d3ed4416b2fbed0389e&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/IDSS/81280B5A-51E7-4D91-977C-E578C6B5D699/SFX/IDSS_2018_Enu_Win_64bit_dlm_002_002.sfx.exe?authparam=1524597407_a4d3c5ce4003eefe2ccc8a0628d26c0b&ext=.exe"
           }
         ]
       }
@@ -2032,6 +2431,60 @@
           {
             "label": "Bộ cài",
             "url": "https://efulfillment.autodesk.com/NetSWDLD/2020/PWRSP/B0FFE740-0003-4B2E-965F-214B74BAE08D/SFX/PowerShape_Premium_2020_ML_Win_64bit_dlm.sfx.exe?authparam=1781668292_1e52dce1fff85d8ef20af1009f063396&ext=.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Inventor LT",
+    "icon": "🔧",
+    "group": "Cơ khí & Gia công",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/INVLT/632E699C-B807-47AC-B48C-F3DCDE2E6C58/SFX/Inventor_LT_2018_English_Win_64bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/INVLT/632E699C-B807-47AC-B48C-F3DCDE2E6C58/SFX/Inventor_LT_2018_English_Win_64bit_dlm_002_002.sfx.exe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Product Design Suite Premium",
+    "icon": "🏭",
+    "group": "Cơ khí & Gia công",
+    "note": null,
+    "versions": [
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/PDSP/17FC014B-8AFD-41DF-ADD7-ECD5F68B4106/SFX/PRDSP_2018_Enu_Win_64bit_dlm_001_005.sfx.exe?authparam=1524597407_1998a752fea445a9de17278272e2e1c0&ext=.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/PDSP/17FC014B-8AFD-41DF-ADD7-ECD5F68B4106/SFX/PRDSP_2018_Enu_Win_64bit_dlm_002_005.sfx.exe?authparam=1524597407_188173c990824798cb17092b40eac96e&ext=.exe"
+          },
+          {
+            "label": "Part 3",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/PDSP/17FC014B-8AFD-41DF-ADD7-ECD5F68B4106/SFX/PRDSP_2018_Enu_Win_64bit_dlm_003_005.sfx.exe?authparam=1524597407_2beab6ef8c89c7f415565b362b6769d4&ext=.exe"
+          },
+          {
+            "label": "Part 4",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/PDSP/17FC014B-8AFD-41DF-ADD7-ECD5F68B4106/SFX/PRDSP_2018_Enu_Win_64bit_dlm_004_005.sfx.exe?authparam=1524597407_301afefd8c4998216b9ad306cebfc021&ext=.exe"
+          },
+          {
+            "label": "Part 5",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/PDSP/17FC014B-8AFD-41DF-ADD7-ECD5F68B4106/SFX/PRDSP_2018_Enu_Win_64bit_dlm_005_005.sfx.exe?authparam=1524597407_494be6606fdba762e88d3baef8fb9fb5&ext=.exe"
           }
         ]
       }
@@ -2461,6 +2914,19 @@
           {
             "label": "Part 3",
             "url": "https://efulfillment.autodesk.com/NetSWDLD/2019/3DSMAX/64B9B03E-3B7C-4A3B-9C33-A9A8A87B761A/SFX/Autodesk_3ds_Max_2019_EFGJKPS_Win_64bit_003_003.sfx.exe?authparam=1690099785_186655d8e529bbb332e0d46dec163227"
+          }
+        ]
+      },
+      {
+        "v": "2018",
+        "links": [
+          {
+            "label": "Part 1",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/3DSMAX/2DD64FCB-CEA0-4A63-9D30-2C31C1E56F6C/SFX/Autodesk_3ds_Max_2018_EFGJKPS_Win_64bit_dlm_001_002.sfx.exe"
+          },
+          {
+            "label": "Part 2",
+            "url": "http://dds.autodesk.com/NET18SWDLD/2018/3DSMAX/2DD64FCB-CEA0-4A63-9D30-2C31C1E56F6C/SFX/Autodesk_3ds_Max_2018_EFGJKPS_Win_64bit_dlm_002_002.sfx.exe"
           }
         ]
       }
