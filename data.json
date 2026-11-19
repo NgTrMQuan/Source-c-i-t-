@@ -945,7 +945,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "AutoCAD Raster Design",
@@ -966,7 +967,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "AutoCAD Design Suite Premium",
@@ -999,7 +1001,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "AutoCAD Design Suite Standard",
@@ -1020,7 +1023,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Revit",
@@ -1774,7 +1778,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Revit Extensions",
@@ -1791,7 +1796,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Autodesk LIVE",
@@ -1808,7 +1814,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Building Design Suite Premium",
@@ -1841,7 +1848,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Civil 3D",
@@ -2180,7 +2188,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Infrastructure Design Suite Premium",
@@ -2213,7 +2222,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Infrastructure Design Suite Standard",
@@ -2234,7 +2244,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Inventor",
@@ -2455,7 +2466,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Product Design Suite Premium",
@@ -2488,7 +2500,8 @@
           }
         ]
       }
-    ]
+    ],
+    "ring": false
   },
   {
     "name": "Vault Professional Client",

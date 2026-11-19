@@ -441,9 +441,10 @@ let groups = [], active = 'Tất cả', cur = null, back = null;
 /* ---------- 3D carousel of product icons ---------- */
 let angle = 0, speed = .12, target = .12, dragging = false;
 function buildRing(){
-  const n = DATA.length, s = innerWidth < 640 ? 64 : innerWidth < 1100 ? 84 : 104;
+  const R = DATA.filter(p => p.ring !== false); // chỉ phần mềm đã có icon mới lên vòng xoay, giữ kích thước vòng như cũ
+  const n = R.length, s = innerWidth < 640 ? 64 : innerWidth < 1100 ? 84 : 104;
   const rad = Math.max(260, n * s * 1.18 / (2 * Math.PI));
-  $('ring').innerHTML = DATA.map((p,i) => { const [a,b] = col(p.group);
+  $('ring').innerHTML = R.map((p,i) => { const [a,b] = col(p.group);
     return `<button class="orb" data-id="${p.id}" aria-label="${esc(p.name)}" style="--s:${s}px;--rad:${rad}px;--ry:${i * 360 / n}deg;--c1:${a};--c2:${b}">
       <span class="face"><img src="${esc(p.img || `icons/${p.id}.png`)}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'${initials(p.name)}'}))"></span></button>`; }).join('');
 }
