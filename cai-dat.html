@@ -164,6 +164,40 @@ nav.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:
 .btn.cp:hover{background:rgba(255,255,255,.14)}
 .btn.ok{background:rgba(47,224,181,.16);border-color:rgba(47,224,181,.5);color:#7ff0d2}
 .tip{font-size:13.5px;color:var(--ink-2);margin:14px 2px 0}
+/* trạng thái link (link-status.json do GitHub Actions cập nhật hằng tuần) */
+.st{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;font-weight:600;color:var(--ink-3)}
+.st i{width:7px;height:7px;border-radius:50%;background:#6c7787;flex:none}
+.st.ok{color:#7ff0d2}.st.ok i{background:#2fe0b5;box-shadow:0 0 8px #2fe0b5}
+.st.bad{color:#ff9aa9}.st.bad i{background:#ff4d6d;box-shadow:0 0 8px #ff4d6d}
+.st.unk i{background:#ffd84a}
+.st .sz{color:var(--ink-2);font-weight:700}
+.file.broken{border-color:rgba(255,77,109,.45);background:rgba(255,77,109,.07)}
+.btn.rp{width:40px;padding:0;justify-content:center;background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--ink-3)}
+.btn.rp:hover{color:#ff9aa9;border-color:rgba(255,77,109,.5);background:rgba(255,77,109,.1)}
+.ver.bad::after{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff4d6d;box-shadow:0 0 8px #ff4d6d;margin-left:7px;vertical-align:middle}
+.card .bad{position:absolute;right:16px;bottom:44px;width:8px;height:8px;border-radius:50%;background:#ff4d6d;box-shadow:0 0 10px #ff4d6d}
+.card .warn + .bad{right:30px}
+.chk{font-size:12.5px;color:var(--ink-3);margin:0 4px 16px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.chk i{width:7px;height:7px;border-radius:50%;background:#2fe0b5;box-shadow:0 0 8px #2fe0b5}.chk.bad i{background:#ff4d6d;box-shadow:0 0 8px #ff4d6d}
+.chk button{font-weight:700;color:#ff9aa9;border-bottom:1px solid rgba(255,77,109,.5)}
+/* khối hướng dẫn */
+.box{margin-top:16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid var(--line);overflow:hidden}
+.box > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:14px 16px;font-weight:700;font-size:14.5px}
+.box > summary::-webkit-details-marker{display:none}
+.box > summary .bi{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;flex:none;background:linear-gradient(150deg,var(--c1),var(--c2));color:#fff;box-shadow:0 0 14px -4px var(--c1)}
+.box > summary .chev{margin-left:auto;transition:transform .2s;color:var(--ink-3)}
+.box[open] > summary .chev{transform:rotate(180deg)}
+.box > summary small{font-weight:500;color:var(--ink-3);font-size:12.5px}
+.bx{padding:0 16px 16px;font-size:14px;color:var(--ink-2)}
+.bx ol,.bx ul{margin:0;padding-left:20px}.bx li{margin:6px 0}
+.bx b{color:var(--ink)}
+.bx code{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:7px;padding:1px 6px;color:#e8eef6}
+.bx .lnk{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-weight:700;color:var(--ink);border-bottom:1px solid color-mix(in srgb,var(--c1) 70%,transparent)}
+.rel{display:flex;flex-direction:column;gap:8px}
+.rel a{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line);color:var(--ink);font-size:13.5px;font-weight:600;transition:background .15s,border-color .15s}
+.rel a:hover{background:rgba(255,179,71,.08);border-color:rgba(255,179,71,.4)}
+.rel a span{flex:none;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(255,179,71,.14);color:#ffc98a;margin-top:1px}
+.rel .more{font-size:13px;color:var(--ink-2);margin-top:2px}
 .toast{position:fixed;left:50%;bottom:28px;z-index:40;transform:translate(-50%,20px);opacity:0;pointer-events:none;transition:all .2s;
   background:var(--ink);color:var(--void);padding:11px 18px;border-radius:999px;font-size:14px;font-weight:700}
 .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -323,7 +357,7 @@ html{-webkit-tap-highlight-color:transparent}
       <h1>Bộ cài đặt Autodesk</h1>
       <label class="search">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Tìm phần mềm hoặc năm…" autocomplete="off" aria-label="Tìm phần mềm">
+        <input id="q" type="search" placeholder="Tìm: c3d 2024, rvt, inventor…" autocomplete="off" aria-label="Tìm phần mềm">
         <button class="go" id="go" type="button">Tìm</button>
       </label>
     </div>
@@ -334,6 +368,7 @@ html{-webkit-tap-highlight-color:transparent}
 
 <section class="lib" id="lib">
   <div class="libhead"><h2 id="libTitle">Thư viện</h2><div class="chips" id="chips" role="group" aria-label="Lọc theo nhóm"></div></div>
+  <p class="chk" id="chk" hidden></p>
   <div class="grid" id="grid"></div>
 </section>
 
@@ -370,6 +405,90 @@ const initials = n => n.replace(/^AutoCAD /,'').replace(/^Vault /,'V ').split(/\
 const reduced = window.CALM;
 const iconHTML = p => `<span class="ic"><img src="${esc(p.img || `icons/${p.id}.png`)}" alt="" loading="lazy" onerror="this.remove()"><b>${esc(initials(p.name))}</b></span>`;
 let groups = [], active = 'Tất cả', cur = null, back = null;
+let STATUS = {}, STATUS_AT = null, ERRS = [];
+const REPO = 'https://github.com/NgTrMQuan/Source-c-i-t-';
+const stOf = u => STATUS[u] || null;
+const isBad = u => stOf(u)?.ok === false;
+const verBad = v => v.links.some(l => isBad(l.url));
+const prodBad = p => p.versions.some(verBad);
+const fmtSize = b => { if (!b) return ''; const u = ['B','KB','MB','GB']; let i = 0; while (b >= 1024 && i < 3){ b /= 1024; i++; } return (b >= 100 || i < 2 ? Math.round(b) : b.toFixed(1)).toString().replace('.', ',') + ' ' + u[i]; };
+const fmtDate = d => d ? d.split('-').reverse().slice(0, 2).join('/') : '';
+function stHTML(u){
+  const r = stOf(u);
+  if (!r) return `<span class="st"><i></i>Chưa kiểm tra tự động</span>`;
+  const sz = r.size ? `<span class="sz">${fmtSize(r.size)}</span> · ` : '';
+  if (r.ok === true) return `<span class="st ok"><i></i>${sz}Còn tải được · kiểm tra ${fmtDate(r.checked)}</span>`;
+  if (r.ok === false) return `<span class="st bad"><i></i>${sz}Link hỏng${r.error ? ' (' + esc(r.error) + ')' : ''} · từ ${fmtDate(r.since || r.checked)}</span>`;
+  return `<span class="st unk"><i></i>${sz}Chưa xác định được · kiểm tra ${fmtDate(r.checked)}</span>`;
+}
+
+/* ---------- hướng dẫn cài theo loại bộ cài ---------- */
+function kindOf(p, v){
+  const us = v.links.map(l => fileName(l.url).toLowerCase());
+  if (p.name === 'Revit Update') return 'update';
+  if (us.some(u => u.endsWith('.dmg'))) return us.every(u => u.endsWith('.dmg')) ? 'mac' : 'mixed';
+  if (us.some(u => u.startsWith('create_installer'))) return 'create';
+  if (us.some(u => u.endsWith('.7z'))) return 'odis';
+  if (us.some(u => /_\d{3}_\d{3}\.sfx\.exe$/.test(u))) return 'multi';
+  return 'single';
+}
+function guideHTML(p, v){
+  const k = kindOf(p, v), n = v.links.length, first = fileName(v.links[0].url);
+  const steps = {
+    odis: [`Tải <b>đủ ${n} file</b> (file <code>.exe</code> và file <code>.7z</code>) vào <b>cùng một thư mục</b>, giữ nguyên tên file.`,
+           `Chuột phải file <code>.exe</code> → <b>Run as administrator</b>. File này tự giải nén cả file <code>.7z</code> đi kèm (mặc định vào <code>C:\\Autodesk</code>).`,
+           `Khi giải nén xong, Autodesk Installer tự mở. Chọn thư mục cài, tích các thành phần cần dùng rồi bấm <b>Install</b>.`],
+    multi: [`Tải <b>đủ ${n} phần</b> vào <b>cùng một thư mục</b>, giữ nguyên tên (đuôi <code>_001_00${n}</code>, <code>_002_00${n}</code>…).`,
+            `Chuột phải phần đầu tiên <code>${esc(first)}</code> → <b>Run as administrator</b>. Bộ cài tự ghép các phần còn lại, không cần chạy từng phần.`,
+            `Chọn thư mục giải nén (mặc định <code>C:\\Autodesk</code>), đợi giải nén xong thì trình cài đặt tự mở, bấm <b>Install</b>.`],
+    single: [`Tải file về, chuột phải → <b>Run as administrator</b>.`,
+             `Chọn thư mục giải nén (mặc định <code>C:\\Autodesk</code>), đợi giải nén xong thì trình cài đặt tự mở.`,
+             `Làm theo các bước trên màn hình rồi bấm <b>Install</b>.`],
+    create: [`Đây là công cụ <b>Create Installer</b> của Autodesk, không phải bộ cài đầy đủ.`,
+             `Chạy file khi máy có Internet; công cụ sẽ tải các thành phần và tạo bộ cài vào thư mục bạn chọn.`,
+             `Mở thư mục vừa tạo, chạy <code>Setup.exe</code> bằng quyền Administrator để cài.`],
+    update: [`Bản cập nhật chỉ cài được khi máy <b>đã có Revit cùng năm</b> (ví dụ bản 2022.1.8 cần Revit 2022).`,
+             `Đóng Revit, chuột phải file → <b>Run as administrator</b> và làm theo hướng dẫn.`,
+             `Mở Revit, vào <b>Help → About</b> để kiểm tra số phiên bản sau khi cập nhật.`],
+    mac: [`Mở file <code>.dmg</code>, kéo hoặc chạy trình cài trong cửa sổ hiện ra.`,
+          `Nếu macOS chặn, vào <b>System Settings → Privacy &amp; Security</b> → <b>Open Anyway</b>.`],
+    mixed: [`Phiên bản này có cả bộ cài Windows và macOS: chỉ tải file đúng hệ điều hành của máy (xem nhãn <b>32-bit</b>, <b>macOS</b> ở từng file).`,
+            `Với bộ cài Windows nhiều phần, tải đủ các phần cùng loại vào một thư mục rồi chạy phần đầu tiên bằng quyền Administrator.`]
+  }[k];
+  const sr = 'https://www.google.com/search?q=' + encodeURIComponent(`site:autodesk.com system requirements ${p.name.replace(/ \(.*\)/, '')} ${(v.v.match(/^\d{4}/) || [''])[0]}`);
+  const before = k === 'update' || k === 'mac' ? '' : `<p style="margin:12px 0 6px"><b>Trước khi cài</b></p><ul>
+      <li>Ổ <code>C:</code> nên còn trống ít nhất gấp đôi tổng dung lượng bộ cài.</li>
+      <li>Thư mục chứa file tải về nên có đường dẫn ngắn, không dấu tiếng Việt, ví dụ <code>D:\\Setup\\${esc(p.name.replace(/[^A-Za-z0-9]+/g, ''))}${esc((v.v.match(/^\d{4}/) || [''])[0])}</code>.</li>
+      <li>Nếu máy từng cài bản cùng năm bị lỗi, gỡ sạch trước bằng công cụ <a class="lnk" style="margin:0" href="loi.html#xoa-sach">Xóa sạch</a>.</li></ul>`;
+  return `<details class="box" open><summary><span class="bi">${icoSvg('steps')}</span>Hướng dẫn cài đặt<small>${{odis:'bộ cài .exe + .7z',multi:`bộ cài ${n} phần`,single:'1 file',create:'Create Installer',update:'bản cập nhật',mac:'macOS',mixed:'Windows + macOS'}[k]}</small><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <div class="bx"><ol>${steps.map(x => `<li>${x}</li>`).join('')}</ol>${before}
+    <a class="lnk" href="${sr}" target="_blank" rel="noopener noreferrer">${icoSvg('cpu')}Tra yêu cầu hệ thống trên Autodesk ↗</a></div></details>`;
+}
+function relHTML(p){
+  if (!ERRS.length) return '';
+  const nm = norm(p.name), base = norm(p.name.split(' ')[0]);
+  const general = /^tat ca|autodesk installer|windows installer|^windows$/;
+  const score = e => { const sw = (e.software || []).map(norm), t = norm(e.title + ' ' + (e.section || ''));
+    if (sw.some(s => s === nm || (s.length > 3 && nm.startsWith(s) && !general.test(s)))) return 3;
+    if (t.includes(nm)) return 2;
+    if (sw.some(s => general.test(s)) && /cai dat|license|installer|1603|go cai/.test(t + ' ' + norm(e.section || ''))) return 1;
+    return 0; };
+  const list = ERRS.filter(e => !e.draft).map(e => [score(e), e]).filter(x => x[0]).sort((a, b) => b[0] - a[0]);
+  if (!list.length) return '';
+  const top = list.slice(0, 6);
+  return `<details class="box"><summary><span class="bi">${icoSvg('warn')}</span>Lỗi hay gặp liên quan<small>${list.length} mục</small><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+    <div class="bx"><div class="rel">${top.map(([s, e]) => `<a href="loi.html#${encodeURIComponent(e.id)}">${e.code ? `<span>${esc(e.code)}</span>` : ''}${esc(e.title)}</a>`).join('')}</div>
+    ${list.length > top.length ? `<a class="lnk more" href="loi.html#q=${encodeURIComponent(p.name.split(' ')[0])}">Xem tất cả ${list.length} mục trên trang Lỗi thường gặp →</a>` : ''}</div></details>`;
+}
+function icoSvg(k){
+  const d = {steps:'<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/>', cpu:'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>', warn:'<path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17h.01"/>', flag:'<path d="M5 21V4h11l-1.5 4L16 12H5"/>'}[k];
+  return `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+}
+function reportLink(p, v, l){
+  const body = `Phần mềm: ${p.name} ${v.v}\nFile: ${l.label} – ${fileName(l.url)}\nLink: ${l.url}\n\nMô tả lỗi (ví dụ: báo 404, tải được nhưng file lỗi…):\n`;
+  return { text: `[Báo link hỏng] ${p.name} ${v.v} – ${l.label}\n${l.url}`,
+           url: `${REPO}/issues/new?labels=link-hong&title=${encodeURIComponent(`Link hỏng: ${p.name} ${v.v} – ${l.label}`)}&body=${encodeURIComponent(body)}` };
+}
 
 /* ---------- ambient: milky way + drifting stars + shooting stars + floating rocks ---------- */
 (function(){
@@ -470,6 +589,10 @@ function start(){
   $('sP').textContent = DATA.length;
   $('sV').textContent = DATA.reduce((a,p)=>a+p.versions.length,0);
   $('sL').textContent = DATA.reduce((a,p)=>a+p.versions.reduce((b,v)=>b+v.links.length,0),0);
+  if (STATUS_AT){ const nb = DATA.filter(prodBad).length, c = $('chk');
+    c.hidden = false; c.classList.toggle('bad', nb > 0);
+    c.innerHTML = `<i></i>Link được kiểm tra tự động hằng tuần · lần gần nhất ${fmtDate(STATUS_AT)}` + (nb ? ` · <button type="button" id="onlyBad">${nb} phần mềm có link hỏng</button>` : ' · tất cả link đều tải được');
+    $('onlyBad')?.addEventListener('click', () => { DATA.forEach(p => $('grid').querySelector(`[data-id="${p.id}"]`).classList.toggle('dim', !prodBad(p))); $('libTitle').textContent = `Có link hỏng · ${nb}`; }); }
   buildRing(); requestAnimationFrame(spin);
   renderChips(); renderGrid(); route();
 }
@@ -485,7 +608,7 @@ function renderGrid(){
     const span = Math.max(6, (hi - lo) / 12 * 100);
     return `<button class="card" data-id="${p.id}" style="--c1:${a};--c2:${b};transition-delay:${(i % 6) * 50}ms" aria-label="${esc(p.name)}, ${p.versions.length} phiên bản">
       <span class="row">${iconHTML(p)}<span class="n">${p.versions.length} bản</span></span>
-      ${p.note ? '<i class="warn" title="Có link cần kiểm tra"></i>' : ''}
+      ${p.note ? '<i class="warn" title="Có ghi chú cần kiểm tra"></i>' : ''}${prodBad(p) ? '<i class="bad" title="Có link tải đã hỏng"></i>' : ''}
       <span><span class="name">${esc(p.name)}</span><span class="yrs">${lo}<b style="--span:${span}%"></b>${hi}</span></span>
     </button>`;
   }).join('');
@@ -497,7 +620,7 @@ $('grid').addEventListener('click', e => { const c = e.target.closest('.card'); 
 function filter(){
   const words = norm($('q').value).split(/[^a-z0-9]+/).filter(Boolean); let n = 0;
   DATA.forEach(p => {
-    const ok = (active === 'Tất cả' || p.group === active) && words.every(w => norm(p.name+' '+p.group+' '+p.versions.map(v=>v.v).join(' ')).includes(w));
+    const ok = (active === 'Tất cả' || p.group === active) && words.every(w => (p._hay ||= norm([p.name, p.group, ...(p.aliases || []), ...p.versions.map(v => v.v)].join(' '))).includes(w));
     $('grid').querySelector(`[data-id="${p.id}"]`).classList.toggle('dim', !ok);
     const o = $('ring').querySelector(`[data-id="${p.id}"]`); if (o){ if (ok) delete o.dataset.hide; else o.dataset.hide = 1; }
     if (ok) n++;
@@ -529,7 +652,7 @@ function open(p){
   cur = p; back = document.activeElement; const [a,b] = col(p.group);
   $('sheet').style.setProperty('--c1', a); $('sheet').style.setProperty('--c2', b);
   $('sIcon').innerHTML = iconHTML(p); $('sGroup').textContent = p.group; $('sTitle').textContent = p.name;
-  $('vers').innerHTML = p.versions.map((v,i) => `<button class="ver" role="tab" data-i="${i}" aria-selected="${i===0}">${esc(v.v)}<small>${v.links.length}</small></button>`).join('');
+  $('vers').innerHTML = p.versions.map((v,i) => `<button class="ver${verBad(v) ? ' bad' : ''}" role="tab" data-i="${i}" aria-selected="${i===0}"${verBad(v) ? ' title="Có link hỏng"' : ''}>${esc(v.v)}<small>${v.links.length}</small></button>`).join('');
   show(0);
   $('sheet').classList.add('open'); $('scrim').classList.add('open'); $('sheet').setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
@@ -538,13 +661,16 @@ function open(p){
 function show(i){
   const v = cur.versions[i], n = v.links.length; $('files').dataset.v = i;
   $('vers').querySelectorAll('.ver').forEach((b,j) => b.setAttribute('aria-selected', j===i));
+  const sizes = v.links.map(l => stOf(l.url)?.size || 0), total = sizes.every(Boolean) ? sizes.reduce((a, b) => a + b, 0) : 0;
+  const bad = v.links.filter(l => isBad(l.url)).length;
   $('files').innerHTML =
-    `<div class="fhead"><div><h4>${esc(cur.name)} ${esc(v.v)}</h4><p>${n === 1 ? '1 file cài đặt' : `${n} file, cần tải đủ cả ${n}`}</p></div>${n > 1 ? `<button class="btn cp" data-all>Sao chép ${n} link</button>` : ''}</div>` +
+    `<div class="fhead"><div><h4>${esc(cur.name)} ${esc(v.v)}</h4><p>${n === 1 ? '1 file cài đặt' : `${n} file, cần tải đủ cả ${n}`}${total ? ` · tổng ${fmtSize(total)}` : ''}</p></div>${n > 1 ? `<button class="btn cp" data-all>Sao chép ${n} link</button>` : ''}</div>` +
     (cur.note ? `<div class="note">${esc(cur.note)}</div>` : '') +
-    v.links.map((l,k) => `<div class="file"><span class="pt">${n > 1 ? k+1 : '↓'}</span>
-      <div class="info"><div class="lab">${esc(l.label)}</div><div class="fn">${esc(fileName(l.url))}</div><div class="u" title="${esc(l.url)}">${esc(l.url)}</div></div>
-      <div class="acts"><a class="btn dl" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">Tải về</a><button class="btn cp" data-k="${k}">Sao chép</button></div></div>`).join('') +
-    (n > 1 ? `<p class="tip">Đặt cả ${n} file vào cùng một thư mục, giữ nguyên tên, rồi chạy Part 1.</p>` : '');
+    (bad ? `<div class="note" style="background:rgba(255,77,109,.1);border-color:rgba(255,77,109,.4);color:#ffb3bf">${bad === n ? 'Tất cả link của phiên bản này' : `${bad}/${n} link`} đang không tải được ở lần kiểm tra gần nhất. Bấm nút cờ để báo lại nếu bạn đã thử và vẫn lỗi.</div>` : '') +
+    v.links.map((l,k) => `<div class="file${isBad(l.url) ? ' broken' : ''}"><span class="pt">${n > 1 ? k+1 : '↓'}</span>
+      <div class="info"><div class="lab">${esc(l.label)}</div><div class="fn">${esc(fileName(l.url))}</div><div class="u" title="${esc(l.url)}">${esc(l.url)}</div>${stHTML(l.url)}</div>
+      <div class="acts"><a class="btn dl" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">Tải về</a><button class="btn cp" data-k="${k}">Sao chép</button><button class="btn rp" data-r="${k}" title="Báo link hỏng" aria-label="Báo link hỏng">${icoSvg('flag')}</button></div></div>`).join('') +
+    guideHTML(cur, v) + relHTML(cur);
   $('files').scrollTop = 0;
 }
 function close(){
@@ -564,7 +690,9 @@ async function copy(t){ try { await navigator.clipboard.writeText(t); return tru
 let tt; function toast(m){ const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(tt); tt = setTimeout(()=>t.classList.remove('show'),1700); }
 $('files').addEventListener('click', async e => {
   const v = cur?.versions[+$('files').dataset.v]; if (!v) return;
-  const one = e.target.closest('[data-k]'), all = e.target.closest('[data-all]');
+  const one = e.target.closest('[data-k]'), all = e.target.closest('[data-all]'), rp = e.target.closest('[data-r]');
+  if (rp){ const r = reportLink(cur, v, v.links[+rp.dataset.r]); const ok = await copy(r.text);
+    window.open(r.url, '_blank', 'noopener'); toast(ok ? 'Đã chép nội dung báo lỗi · gửi cho người quản lý nếu không dùng GitHub' : 'Đã mở trang báo lỗi trên GitHub'); return; }
   if (one){ const r = await copy(v.links[+one.dataset.k].url);
     if (r){ one.classList.add('ok'); one.textContent = 'Đã chép'; setTimeout(()=>{ one.classList.remove('ok'); one.textContent = 'Sao chép'; },1500); }
     toast(r ? 'Đã sao chép link' : 'Trình duyệt chặn sao chép. Bôi đen link để copy.'); }
@@ -573,9 +701,12 @@ $('files').addEventListener('click', async e => {
 function route(){ const id = location.hash.slice(1); if (id === 'lib') return; const p = DATA.find(x => x.id === id); if (p && p !== cur){ if (cur) close(); open(p); } else if (!p) close(); }
 addEventListener('hashchange', route);
 
-if (DATA) start();
-else fetch('data.json',{cache:'no-store'}).then(r => { if (!r.ok) throw 0; return r.json(); }).then(d => { DATA = d; start(); })
-  .catch(() => { $('grid').innerHTML = '<div class="empty">Không tải được data.json.</div>'; });
+const getJSON = (u, fb) => fetch(u, {cache:'no-store'}).then(r => r.ok ? r.json() : fb).catch(() => fb);
+Promise.all([DATA ? DATA : getJSON('data.json', null), getJSON('link-status.json', {}), getJSON('errors.json', [])]).then(([d, st, er]) => {
+  if (!d){ $('grid').innerHTML = '<div class="empty">Không tải được data.json.</div>'; return; }
+  DATA = d; STATUS = st.links || {}; STATUS_AT = st.updated || null; ERRS = Array.isArray(er) ? er : [];
+  start();
+});
 </script>
 </body>
 </html>

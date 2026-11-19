@@ -4,6 +4,12 @@
     "icon": "📐",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "acad",
+      "cad",
+      "autocad full",
+      "dwg"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -178,6 +184,11 @@
     "icon": "📏",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "acadlt",
+      "lt",
+      "cad lt"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -323,6 +334,11 @@
     "icon": "🏛️",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "aca",
+      "architecture",
+      "kien truc"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -469,6 +485,11 @@
     "icon": "⚡",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "ace",
+      "electrical",
+      "dien"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -615,6 +636,12 @@
     "icon": "🛠️",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "acm",
+      "amech",
+      "mechanical",
+      "co khi"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -741,6 +768,12 @@
     "icon": "🏭",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "plant",
+      "plnt3d",
+      "p3d",
+      "duong ong"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -879,6 +912,12 @@
     "icon": "👁️",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "trueview",
+      "xem dwg",
+      "dwg viewer",
+      "viewer"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -931,6 +970,12 @@
     "icon": "🗺️",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "map",
+      "map3d",
+      "gis",
+      "ban do"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -953,6 +998,11 @@
     "icon": "🖼️",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "raster",
+      "ardes",
+      "scan"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -975,6 +1025,11 @@
     "icon": "🧰",
     "group": "AutoCAD",
     "note": null,
+    "aliases": [
+      "ads",
+      "design suite",
+      "dsprm"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -1009,6 +1064,11 @@
     "icon": "🧳",
     "group": "AutoCAD",
     "note": "Bản 32-bit trên trang nguồn bị lặp link Part 1 (thiếu Part 2) nên chưa đưa vào.",
+    "aliases": [
+      "ads",
+      "design suite",
+      "dsstd"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -1031,6 +1091,13 @@
     "icon": "🏢",
     "group": "Revit & BIM",
     "note": null,
+    "aliases": [
+      "rvt",
+      "bim",
+      "rac",
+      "rst",
+      "rme"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -1249,6 +1316,10 @@
     "icon": "🏠",
     "group": "Revit & BIM",
     "note": null,
+    "aliases": [
+      "rvtlt",
+      "revitlt"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -1427,6 +1498,12 @@
     "icon": "🔄",
     "group": "Revit & BIM",
     "note": null,
+    "aliases": [
+      "update",
+      "cap nhat",
+      "hotfix",
+      "patch"
+    ],
     "versions": [
       {
         "v": "2027.0.1",
@@ -1471,6 +1548,13 @@
     "icon": "🏗️",
     "group": "Revit & BIM",
     "note": null,
+    "aliases": [
+      "nw",
+      "navis",
+      "nwm",
+      "nwd",
+      "manage"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -1609,6 +1693,12 @@
     "icon": "⏱️",
     "group": "Revit & BIM",
     "note": null,
+    "aliases": [
+      "nw",
+      "navis",
+      "nws",
+      "simulate"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -1747,6 +1837,11 @@
     "icon": "📡",
     "group": "Revit & BIM",
     "note": "Link Part 1 hiện đang trỏ tới bộ cài Navisworks Simulate 2027 – cần kiểm tra lại.",
+    "aliases": [
+      "recap",
+      "point cloud",
+      "dam may diem"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -1768,6 +1863,10 @@
     "icon": "🗃️",
     "group": "Revit & BIM",
     "note": null,
+    "aliases": [
+      "rvt server",
+      "server"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -1786,6 +1885,10 @@
     "icon": "🧩",
     "group": "Revit & BIM",
     "note": null,
+    "aliases": [
+      "rex",
+      "extension"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -1804,6 +1907,11 @@
     "icon": "🕶️",
     "group": "Revit & BIM",
     "note": "Trang nguồn ghi là \"Revit Live\"; bản V1 dùng cho Revit 2018.",
+    "aliases": [
+      "revit live",
+      "live",
+      "vr"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -1822,6 +1930,11 @@
     "icon": "🏙️",
     "group": "Revit & BIM",
     "note": null,
+    "aliases": [
+      "bdsp",
+      "bds",
+      "building suite"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -1856,6 +1969,13 @@
     "icon": "🛣️",
     "group": "Hạ tầng & Kết cấu",
     "note": null,
+    "aliases": [
+      "c3d",
+      "civil",
+      "civil3d",
+      "ha tang",
+      "giao thong"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -2006,6 +2126,10 @@
     "icon": "🌉",
     "group": "Hạ tầng & Kết cấu",
     "note": null,
+    "aliases": [
+      "iw",
+      "infra"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -2053,6 +2177,12 @@
     "icon": "⛓️",
     "group": "Hạ tầng & Kết cấu",
     "note": null,
+    "aliases": [
+      "as",
+      "adstpr",
+      "steel",
+      "ket cau thep"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -2178,6 +2308,11 @@
     "icon": "🚗",
     "group": "Hạ tầng & Kết cấu",
     "note": null,
+    "aliases": [
+      "vt",
+      "vehtrk",
+      "swept path"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -2196,6 +2331,11 @@
     "icon": "🌁",
     "group": "Hạ tầng & Kết cấu",
     "note": null,
+    "aliases": [
+      "idsp",
+      "ids",
+      "infra suite"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -2230,6 +2370,11 @@
     "icon": "🛤️",
     "group": "Hạ tầng & Kết cấu",
     "note": null,
+    "aliases": [
+      "idss",
+      "ids",
+      "infra suite"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -2252,6 +2397,13 @@
     "icon": "🔩",
     "group": "Cơ khí & Gia công",
     "note": null,
+    "aliases": [
+      "inv",
+      "ipt",
+      "iam",
+      "inventor pro",
+      "inventor professional"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -2418,6 +2570,11 @@
     "icon": "⚙️",
     "group": "Cơ khí & Gia công",
     "note": null,
+    "aliases": [
+      "pm",
+      "cam",
+      "powermill ultimate"
+    ],
     "versions": [
       {
         "v": "2020 Premium",
@@ -2435,6 +2592,10 @@
     "icon": "🔷",
     "group": "Cơ khí & Gia công",
     "note": null,
+    "aliases": [
+      "ps",
+      "powershape"
+    ],
     "versions": [
       {
         "v": "2020 Premium",
@@ -2452,6 +2613,10 @@
     "icon": "🔧",
     "group": "Cơ khí & Gia công",
     "note": null,
+    "aliases": [
+      "invlt",
+      "inventorlt"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -2474,6 +2639,11 @@
     "icon": "🏭",
     "group": "Cơ khí & Gia công",
     "note": null,
+    "aliases": [
+      "pdsp",
+      "pds",
+      "product suite"
+    ],
     "versions": [
       {
         "v": "2018",
@@ -2508,6 +2678,11 @@
     "icon": "🗄️",
     "group": "Vault",
     "note": null,
+    "aliases": [
+      "vault",
+      "vault pro",
+      "adms"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -2616,6 +2791,11 @@
     "icon": "🖥️",
     "group": "Vault",
     "note": null,
+    "aliases": [
+      "vault",
+      "vault server",
+      "adms"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -2702,6 +2882,10 @@
     "icon": "📁",
     "group": "Vault",
     "note": null,
+    "aliases": [
+      "vault",
+      "vault basic"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -2776,6 +2960,13 @@
     "icon": "🎨",
     "group": "Đồ họa 3D",
     "note": null,
+    "aliases": [
+      "max",
+      "3dsmax",
+      "3d max",
+      "3dmax",
+      "render"
+    ],
     "versions": [
       {
         "v": "2027",
@@ -2950,6 +3141,11 @@
     "icon": "🎬",
     "group": "Đồ họa 3D",
     "note": null,
+    "aliases": [
+      "maya",
+      "animation",
+      "dung hinh"
+    ],
     "versions": [
       {
         "v": "2022.5.1",

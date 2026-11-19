@@ -1,0 +1,41 @@
+name: Kiểm tra link tải
+
+on:
+  schedule:
+    - cron: '17 1 * * 1'        # 08:17 sáng thứ Hai (giờ Việt Nam)
+  workflow_dispatch:            # bấm "Run workflow" để chạy ngay
+  push:
+    branches: [main]
+    paths: [data.json]          # có link mới thì kiểm tra riêng các link mới
+
+permissions:
+  contents: write
+
+concurrency:
+  group: check-links
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Kiểm tra link
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            python tools/check_links.py --only-new
+          else
+            python tools/check_links.py
+          fi
+      - name: Lưu kết quả
+        run: |
+          git config user.name "link-checker"
+          git config user.email "actions@users.noreply.github.com"
+          git add link-status.json
+          git diff --cached --quiet || git commit -m "Cập nhật trạng thái link tải [skip ci]"
+          git pull --rebase --autostash
+          git push

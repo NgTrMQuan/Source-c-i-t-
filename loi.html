@@ -606,7 +606,8 @@ function view(){
 }
 function route(){
   const h = decodeURIComponent(location.hash.slice(1));
-  if (h.startsWith('pm=')){ sec = h.slice(3); if (!sec.includes('|')) sec = 'asana|' + sec; closeD(); }
+  if (h.startsWith('q=')){ $('q').value = h.slice(2); sec = null; closeD(); history.replaceState(null, '', location.pathname); }
+  else if (h.startsWith('pm=')){ sec = h.slice(3); if (!sec.includes('|')) sec = 'asana|' + sec; closeD(); }
   else if (ERR.find(e => e.id === h)){ const e = ERR.find(x => x.id === h); if (!sec && e.section !== 'Xóa sạch') sec = srcOf(e) + '|' + e.section; openD(h); }
   else { sec = null; closeD(); }
   view();
