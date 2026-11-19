@@ -368,18 +368,8 @@ html{-webkit-tap-highlight-color:transparent}
 .gi > span:nth-child(2){min-width:0;flex:1}
 .gi mark{background:none;color:#7fe3ff}
 .gnone{padding:16px 12px;color:var(--ink-2);font-size:14px}
-.news{display:inline-flex;align-items:center;gap:8px;margin:14px auto 0;max-width:min(620px,100%);min-width:0;padding:7px 14px;border-radius:999px;font-size:13px;color:var(--ink-2);background:rgba(10,14,22,.5);border:1px solid var(--line);backdrop-filter:blur(8px);opacity:0;animation:up .9s 2.4s cubic-bezier(.2,.8,.2,1) forwards}
-.news span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .intro{min-width:0;width:100%}
-.news i{flex:none;width:7px;height:7px;border-radius:50%;background:#62d8ff;box-shadow:0 0 10px #62d8ff}
-.news:hover{color:var(--ink);border-color:rgba(98,216,255,.4)}
-.newsList{position:relative;z-index:19;width:min(620px,100%);margin:10px auto 0;text-align:left;border-radius:20px;padding:10px 14px;background:rgba(10,14,22,.82);border:1px solid var(--line);backdrop-filter:blur(14px)}
-.newsList li{list-style:none;display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
-.newsList li:last-child{border:0}.newsList ul{margin:0;padding:0}
-.newsList time{flex:none;width:44px;font-weight:700;color:var(--ink)}
-.newsList a{display:block;margin-top:6px;font-size:12.5px;color:var(--ink-3)}
-html.calm .gs,html.calm .news{animation:none;opacity:1}
-@media (max-width:640px){.gbox kbd{display:none}.gbox{height:50px}.gbox input{font-size:15px}}
+html.calm .gs,html.calm @media (max-width:640px){.gbox kbd{display:none}.gbox{height:50px}.gbox input{font-size:15px}}
 </style>
 </head>
 <body data-cosmos="off">
@@ -585,8 +575,6 @@ html.calm .gs,html.calm .news{animation:none;opacity:1}
       </label>
       <div class="gres" id="gres" role="listbox" hidden></div>
     </div>
-    <button class="news" id="news" type="button" hidden aria-expanded="false" aria-controls="newsList"><i></i><span id="newsTxt"></span></button>
-    <div class="newsList" id="newsList" hidden></div>
   </div>
   <div class="mid">
     <div class="portals" id="portals">
@@ -793,19 +781,6 @@ $('gq').addEventListener('keydown', e => {
 document.addEventListener('click', e => { if (!e.target.closest('#gs')) $('gres').hidden = true; });
 document.addEventListener('keydown', e => { if (e.key === '/' && document.activeElement !== $('gq')){ e.preventDefault(); $('gq').focus(); } });
 
-/* ---------- mới cập nhật: lấy từ lịch sử commit trên GitHub (công khai, không cần token) ---------- */
-(async () => {
-  try {
-    const r = await fetch('https://api.github.com/repos/NgTrMQuan/Source-c-i-t-/commits?per_page=12'); if (!r.ok) return;
-    const list = (await r.json()).map(c => ({d: new Date(c.commit.author.date), m: c.commit.message.split('\n')[0], u: c.html_url}))
-      .filter(c => !/^(Merge|Cập nhật trạng thái link)/.test(c.m)).slice(0, 6);
-    if (!list.length) return;
-    const dd = d => `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}`;
-    $('newsTxt').textContent = `Mới cập nhật ${dd(list[0].d)}: ${list[0].m}`; $('news').hidden = false;
-    $('newsList').innerHTML = `<ul>${list.map(c => `<li><time>${dd(c.d)}</time><span>${esc(c.m)}</span></li>`).join('')}</ul><a href="https://github.com/NgTrMQuan/Source-c-i-t-/commits/main" target="_blank" rel="noopener noreferrer">Xem toàn bộ lịch sử trên GitHub ↗</a>`;
-    $('news').addEventListener('click', () => { const o = $('newsList').hidden; $('newsList').hidden = !o; $('news').setAttribute('aria-expanded', String(o)); });
-  } catch(_){}
-})();
 </script>
 <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));</script>
 <style>
