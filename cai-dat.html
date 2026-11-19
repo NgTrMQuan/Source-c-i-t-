@@ -698,7 +698,9 @@ $('files').addEventListener('click', async e => {
     toast(r ? 'Đã sao chép link' : 'Trình duyệt chặn sao chép. Bôi đen link để copy.'); }
   else if (all){ const r = await copy(v.links.map(l => l.url).join('\n')); toast(r ? `Đã sao chép ${v.links.length} link` : 'Trình duyệt chặn sao chép. Bôi đen link để copy.'); }
 });
-function route(){ const id = location.hash.slice(1); if (id === 'lib') return; const p = DATA.find(x => x.id === id); if (p && p !== cur){ if (cur) close(); open(p); } else if (!p) close(); }
+function route(){ const [id, ver] = decodeURIComponent(location.hash.slice(1)).split('@'); if (id === 'lib') return; const p = DATA.find(x => x.id === id);
+  if (p && p !== cur){ if (cur) close(); open(p); } else if (!p) close();
+  if (p && ver){ const i = p.versions.findIndex(v => v.v === ver || v.v.startsWith(ver)); if (i > 0){ show(i); setTimeout(() => $('vers').querySelectorAll('.ver')[i]?.scrollIntoView({inline:'center', block:'nearest'}), 120); } } }
 addEventListener('hashchange', route);
 
 const getJSON = (u, fb) => fetch(u, {cache:'no-store'}).then(r => r.ok ? r.json() : fb).catch(() => fb);
