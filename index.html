@@ -2,12 +2,27 @@
 <html lang="vi">
 <head>
 <script>window.CALM=false</script>
+<script>
+/* Máy yếu / điện thoại: giữ nguyên hiệu ứng nhưng vẽ ít hạt hơn, độ phân giải canvas thấp hơn và tối đa ~30 khung hình/giây.
+   Ép bật/tắt: thêm ?lite=1 hoặc ?lite=0 vào địa chỉ (được ghi nhớ). */
+window.LITE = (() => { try {
+  const q = new URLSearchParams(location.search).get('lite'); if (q !== null) localStorage.setItem('lite', q);
+  const s = localStorage.getItem('lite'); if (s === '1' || s === '0') return s === '1';
+} catch(_){}
+  const c = navigator.hardwareConcurrency || 8, m = navigator.deviceMemory || 8, sw = Math.min(screen.width, screen.height);
+  return c <= 2 || m <= 2 || sw <= 760 || !!(navigator.connection && navigator.connection.saveData); })();
+window.rafFull = window.requestAnimationFrame.bind(window);
+if (window.LITE) window.requestAnimationFrame = cb => { const t0 = performance.now(); return window.rafFull(function tick(t){ if (t - t0 < 31) return window.rafFull(tick); cb(t); }); };
+document.documentElement.classList.toggle('lite', window.LITE);
+</script>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#05070b">
 <title>Tải, cài và fix lỗi Autodesk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -351,8 +366,9 @@ html{-webkit-tap-highlight-color:transparent}
 .gi > span:nth-child(2){min-width:0;flex:1}
 .gi mark{background:none;color:#7fe3ff}
 .gnone{padding:16px 12px;color:var(--ink-2);font-size:14px}
-.news{display:inline-flex;align-items:center;gap:8px;margin:14px auto 0;max-width:min(620px,100%);padding:7px 14px;border-radius:999px;font-size:13px;color:var(--ink-2);background:rgba(10,14,22,.5);border:1px solid var(--line);backdrop-filter:blur(8px);opacity:0;animation:up .9s 2.4s cubic-bezier(.2,.8,.2,1) forwards}
-.news span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.news{display:inline-flex;align-items:center;gap:8px;margin:14px auto 0;max-width:min(620px,100%);min-width:0;padding:7px 14px;border-radius:999px;font-size:13px;color:var(--ink-2);background:rgba(10,14,22,.5);border:1px solid var(--line);backdrop-filter:blur(8px);opacity:0;animation:up .9s 2.4s cubic-bezier(.2,.8,.2,1) forwards}
+.news span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.intro{min-width:0;width:100%}
 .news i{flex:none;width:7px;height:7px;border-radius:50%;background:#62d8ff;box-shadow:0 0 10px #62d8ff}
 .news:hover{color:var(--ink);border-color:rgba(98,216,255,.4)}
 .newsList{position:relative;z-index:19;width:min(620px,100%);margin:10px auto 0;text-align:left;border-radius:20px;padding:10px 14px;background:rgba(10,14,22,.82);border:1px solid var(--line);backdrop-filter:blur(14px)}
@@ -394,7 +410,7 @@ html.calm .gs,html.calm .news{animation:none;opacity:1}
   const far = Array.from({length: 600}, () => { const u = Math.random() * 2 - 1, t = Math.random() * 6.283, q = Math.sqrt(1 - u * u); return {x: q * Math.cos(t) * 90, y: u * 90, z: q * Math.sin(t) * 90, b: Math.random()}; });
   let yaw = 0, pitch = .5, dist = 22, mx = 0, my = 0, tmx = 0, tmy = 0, cy_, sy_, cp, sp;
   function size(){
-    D = Math.min(devicePixelRatio || 1, 1.75); W = innerWidth; H = innerHeight;
+    D = Math.min(devicePixelRatio || 1, window.LITE ? 1 : 1.75); W = innerWidth; H = innerHeight;
     cv.width = W * D; cv.height = H * D; cx.setTransform(D, 0, 0, D, 0, 0);
     SX = W * .5; SY = H * .55; f = Math.max(W, H) * .95;
   }
@@ -463,11 +479,11 @@ html.calm .gs,html.calm .news{animation:none;opacity:1}
     ['Sao Mộc',  .64, 8.5, 62, ['#f3d3a6','#b07a4a']],
     ['Sao Thổ',  .86, 7.2, 90, ['#f6e1b0','#b8955a']]];
   function size(){
-    D = Math.min(devicePixelRatio || 1, 1.5); W = innerWidth; H = innerHeight;
+    D = Math.min(devicePixelRatio || 1, window.LITE ? 1 : 1.5); W = innerWidth; H = innerHeight;
     cv.width = W * D; cv.height = H * D; cx.setTransform(D, 0, 0, D, 0, 0);
     const m = Math.min(W, H);
-    gals = [galaxy(W * .8, H * .22, m * .4, .42, 265, W < 700 ? 900 : 2400, .02),
-            galaxy(W * .1, H * .86, m * .15, .6, 200, W < 700 ? 300 : 600, -.03)];
+    gals = [galaxy(W * .8, H * .22, m * .4, .42, 265, (W < 700 ? 900 : 2400) * (window.LITE ? .4 : 1) | 0, .02),
+            galaxy(W * .1, H * .86, m * .15, .6, 200, (W < 700 ? 300 : 600) * (window.LITE ? .4 : 1) | 0, -.03)];
   }
   function drawGalaxy(g, t){
     cx.save(); cx.translate(g.x, g.y);
@@ -562,7 +578,7 @@ html.calm .gs,html.calm .news{animation:none;opacity:1}
     <div class="gs" id="gs">
       <label class="gbox">
         <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="gq" type="search" placeholder="Tìm bộ cài hoặc lỗi: c3d 2024, 1603, OTP…" autocomplete="off" aria-label="Tìm bộ cài hoặc lỗi" aria-controls="gres" aria-expanded="false" role="combobox">
+        <input id="gq" type="search" placeholder="Tìm bộ cài hoặc lỗi: c3d 2024, 1603…" autocomplete="off" aria-label="Tìm bộ cài hoặc lỗi" aria-controls="gres" aria-expanded="false" role="combobox">
         <kbd>/</kbd>
       </label>
       <div class="gres" id="gres" role="listbox" hidden></div>
@@ -645,8 +661,8 @@ const reduced = window.CALM;
   }
   function newStar(any){ return {x: (Math.random() - .5) * 2, y: (Math.random() - .5) * 2, z: any ? Math.random() * .95 + .05 : 1, pz: null}; }
   function size(){
-    D = devicePixelRatio || 1; W = cv.width = innerWidth * D; H = cv.height = innerHeight * D; cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
-    st = Array.from({length: Math.round(Math.min(900, innerWidth * innerHeight / 1800))}, () => newStar(true));
+    D = Math.min(devicePixelRatio || 1, window.LITE ? 1 : 2); W = cv.width = innerWidth * D; H = cv.height = innerHeight * D; cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
+    st = Array.from({length: Math.round(Math.min(900, innerWidth * innerHeight / 1800) * (window.LITE ? .45 : 1))}, () => newStar(true));
     buildGalaxy();
   }
   function meteor(){
@@ -789,5 +805,6 @@ document.addEventListener('keydown', e => { if (e.key === '/' && document.active
   } catch(_){}
 })();
 </script>
+<script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));</script>
 </body>
 </html>

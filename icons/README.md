@@ -11,7 +11,7 @@ Khi chưa có icon, trang tự hiện chữ viết tắt thay thế.
 | AutoCAD Electrical | `icons/autocad-electrical.png` |
 | AutoCAD Mechanical | `icons/autocad-mechanical.png` |
 | AutoCAD Plant 3D | `icons/autocad-plant-3d.png` |
-| DWG TrueView | `icons/dwg-trueview.png` |
+| DWG TrueView | `icons/dwg-trueview.png` (icon riêng của trang) |
 | Revit | `icons/revit.png` |
 | Revit LT | `icons/revit-lt.png` |
 | Revit Update | `icons/revit-update.png` |
@@ -29,3 +29,23 @@ Khi chưa có icon, trang tự hiện chữ viết tắt thay thế.
 | Vault Basic Client | `icons/vault-basic-client.png` |
 | 3ds Max | `icons/3ds-max.png` |
 | Maya | `icons/maya.png` |
+
+## Icon riêng của trang (tạo tự động)
+
+13 phần mềm dưới đây dùng icon do trang tự vẽ (ô bo góc màu theo nhóm + chữ tắt), không phải icon gốc của Autodesk. Muốn thay bằng icon khác thì chép đè file cùng tên.
+
+| Phần mềm | Tên file |
+|---|---|
+| AutoCAD Map 3D | `icons/autocad-map-3d.png` |
+| AutoCAD Raster Design | `icons/autocad-raster-design.png` |
+| AutoCAD Design Suite Premium | `icons/autocad-design-suite-premium.png` |
+| AutoCAD Design Suite Standard | `icons/autocad-design-suite-standard.png` |
+| Revit Server | `icons/revit-server.png` |
+| Revit Extensions | `icons/revit-extensions.png` |
+| Autodesk LIVE | `icons/autodesk-live.png` |
+| Building Design Suite Premium | `icons/building-design-suite-premium.png` |
+| Vehicle Tracking | `icons/vehicle-tracking.png` |
+| Infrastructure Design Suite Premium | `icons/infrastructure-design-suite-premium.png` |
+| Infrastructure Design Suite Standard | `icons/infrastructure-design-suite-standard.png` |
+| Inventor LT | `icons/inventor-lt.png` |
+| Product Design Suite Premium | `icons/product-design-suite-premium.png` |

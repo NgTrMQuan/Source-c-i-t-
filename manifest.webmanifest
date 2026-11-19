@@ -1,0 +1,19 @@
+{
+  "name": "Tải, cài và fix lỗi Autodesk · Technical Team",
+  "short_name": "Autodesk Kit",
+  "description": "Link bộ cài Autodesk và kinh nghiệm xử lý lỗi của nhóm kỹ thuật.",
+  "lang": "vi",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05070b",
+  "theme_color": "#05070b",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Bộ cài đặt", "url": "./cai-dat.html", "icons": [{"src": "icon-192.png", "sizes": "192x192"}]},
+    {"name": "Lỗi thường gặp", "url": "./loi.html", "icons": [{"src": "icon-192.png", "sizes": "192x192"}]}
+  ]
+}

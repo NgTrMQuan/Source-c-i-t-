@@ -233,5 +233,6 @@ function build(){
 $('dl').addEventListener('click', () => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([build()], {type: 'application/json'})); a.download = 'data.json'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); toast('Đã tải data.json'); });
 $('cp').addEventListener('click', async () => { try { await navigator.clipboard.writeText(build()); toast('Đã sao chép · dán đè vào data.json trên GitHub'); } catch(_){ toast('Trình duyệt chặn sao chép, hãy dùng nút Tải'); } });
 </script>
+<script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));</script>
 </body>
 </html>
