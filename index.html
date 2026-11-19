@@ -808,5 +808,22 @@ document.addEventListener('keydown', e => { if (e.key === '/' && document.active
 })();
 </script>
 <script>if ('serviceWorker' in navigator && location.protocol === 'https:') addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));</script>
+<style>
+.who-in{display:flex;align-items:center;gap:8px;margin-left:10px;font-size:12.5px;color:var(--ink-2,#a9b4c2)}
+.who-in span{max-width:190px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.who-in a{font-weight:700;color:var(--ink,#eef3f8);padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}
+.who-in a:hover{background:rgba(255,77,109,.12);border-color:rgba(255,77,109,.45)}
+@media (max-width:900px){.who-in{margin-left:auto}}
+@media (max-width:640px){.who-in span{display:none}}
+</style>
+<script>
+/* Đăng nhập qua Cloudflare Access: hiện email + nút Đăng xuất. Trên GitHub Pages (không có Access) thì không hiện gì. */
+(() => { fetch('/cdn-cgi/access/get-identity', {credentials: 'include'}).then(r => r.ok ? r.json() : null).then(id => {
+  if (!id || !id.email) return; const nav = document.querySelector('nav.top'); if (!nav) return;
+  const w = document.createElement('div'); w.className = 'who-in';
+  w.innerHTML = '<span title="Đang đăng nhập"></span><a href="/cdn-cgi/access/logout">Đăng xuất</a>';
+  w.querySelector('span').textContent = id.email; nav.appendChild(w);
+}).catch(() => {}); })();
+</script>
 </body>
 </html>

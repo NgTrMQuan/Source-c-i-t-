@@ -39,4 +39,5 @@ Mỗi file HTML tự chứa CSS/JS của nó (không có bước build). Ba tran
 - Link tải trỏ thẳng máy chủ Autodesk; giữ nguyên tham số `authparam` khi chép link.
 - Chế độ nhẹ `window.LITE` (đặt ở đầu mỗi trang): điện thoại/máy rất yếu vẽ ít hạt hơn, canvas DPR 1, ~30 khung hình/giây — hiệu ứng vẫn bật. Ép bằng `?lite=1` / `?lite=0`. Vòng xoay icon dùng `window.rafFull` để giữ tốc độ.
 - Link sâu: `cai-dat.html#<slug>@<năm>` mở đúng phiên bản; `loi.html#q=<từ khóa>` mở sẵn kết quả tìm.
+- Đăng nhập: dự kiến chạy trên Cloudflare Pages + Cloudflare Access (đăng nhập bằng mã gửi email, danh sách email do Minh Quân quản lý trong Zero Trust). Cuối mỗi trang có đoạn gọi `/cdn-cgi/access/get-identity` để hiện email + nút Đăng xuất (`/cdn-cgi/access/logout`); không có Access thì tự ẩn. Không làm màn hình đăng nhập bằng JS vì không bảo mật được.
 - Xem thử cục bộ: `python -m http.server` trong thư mục repo rồi mở http://localhost:8000 (mở trực tiếp file sẽ không đọc được JSON).
